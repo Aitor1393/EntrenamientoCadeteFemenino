@@ -1,0 +1,3050 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fichas de sesión · Transición B, M3 y M4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --madera:#E9E1D2; --madera-2:#DED4C1; --tinta:#20180F;
+  --linea:#C3B79F; --pista:#1D3B54; --cuero:#BE5A21;
+  --salvia:#6E8C6B; --gris:#8A8073;
+  --f-cond:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,sans-serif;
+  --px-min:10px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--madera);color:var(--tinta);font-family:var(--f-body);
+  font-size:15px;line-height:1.35;padding-bottom:2rem}
+.top{position:sticky;top:0;z-index:30;background:var(--pista);color:#F3EDE1;
+  padding:.55rem .8rem .5rem;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;gap:.5rem}
+.nav button{flex:0 0 auto;width:2.1rem;height:2.1rem;border:0;border-radius:2px;
+  background:rgba(255,255,255,.13);color:#F3EDE1;font-family:var(--f-cond);
+  font-size:1.2rem;font-weight:700;cursor:pointer}
+.nav button:disabled{opacity:.28;cursor:default}
+.nav button:focus-visible,.acc button:focus-visible,.piz-btn:focus-visible{outline:2px solid var(--cuero);outline-offset:2px}
+.ident{flex:1;min-width:0;text-align:center}
+.ident .n{font-family:var(--f-cond);font-weight:700;font-size:1.45rem;line-height:1.05}
+.ident .d{font-size:.78rem;color:#B9C9D6;line-height:1.3}
+.carga{display:inline-block;margin-top:.15rem;padding:.05rem .4rem;border-radius:2px;
+  font-family:var(--f-cond);font-weight:600;font-size:.72rem;letter-spacing:.04em}
+.carga.alta{background:var(--cuero);color:#fff}
+.carga.media{background:#8E7A4E;color:#fff}
+.carga.baja{background:var(--salvia);color:#fff}
+.reloj{position:sticky;top:74px;z-index:29;display:flex;align-items:center;gap:.6rem;
+  background:var(--madera-2);border-bottom:1px solid var(--linea);padding:.4rem .8rem}
+.reloj .t{font-family:var(--f-cond);font-weight:700;font-size:1.9rem;line-height:1;
+  font-variant-numeric:tabular-nums;min-width:4.1rem}
+.reloj .estado{flex:1;min-width:0;font-size:.78rem;color:#60564A;line-height:1.25}
+.reloj .estado b{font-weight:600;color:var(--tinta)}
+.acc{display:flex;gap:.3rem}
+.acc button{border:1px solid var(--pista);background:transparent;color:var(--pista);
+  border-radius:2px;padding:.32rem .6rem;cursor:pointer;font-family:var(--f-cond);
+  font-weight:600;font-size:.85rem;letter-spacing:.03em}
+.acc button.on{background:var(--pista);color:#F3EDE1}
+.wrap{padding:.7rem .8rem 0;position:relative}
+.tl{position:relative;padding-left:2.9rem}
+.regla{position:absolute;left:2.35rem;top:0;bottom:0;width:1px;background:var(--linea)}
+.playhead{position:absolute;left:1.3rem;right:0;height:0;border-top:2px solid var(--cuero);
+  pointer-events:none;display:none;z-index:12}
+.playhead::before{content:"";position:absolute;left:-5px;top:-5px;width:8px;height:8px;
+  background:var(--cuero);border-radius:50%}
+.blk{position:relative;padding:.35rem 0 .45rem .1rem;border-top:1px solid var(--linea)}
+.blk:first-of-type{border-top:0}
+.blk .min{position:absolute;left:-2.9rem;top:.35rem;width:2.45rem;text-align:right;
+  font-family:var(--f-cond);font-weight:600;font-size:.8rem;color:var(--gris);
+  font-variant-numeric:tabular-nums;line-height:1.2}
+.blk .barra{position:absolute;left:-.45rem;top:.4rem;bottom:.4rem;width:3px;border-radius:2px}
+.b-prev .barra{background:var(--salvia)}
+.b-tec .barra{background:var(--pista)}
+.b-fis .barra{background:var(--cuero)}
+.b-jue .barra{background:#4A6E86}
+.b-org .barra{background:var(--linea)}
+.blk h3{margin:0;font-family:var(--f-cond);font-weight:600;font-size:1.1rem;line-height:1.15}
+.blk h3 .cod{color:var(--cuero);font-weight:700;margin-right:.3rem}
+.sc{display:inline-block;margin-left:.35rem;padding:.02rem .3rem;border:1px solid var(--linea);
+  border-radius:2px;font-family:var(--f-cond);font-size:.7rem;font-weight:600;color:var(--gris);
+  letter-spacing:.03em;vertical-align:.08rem}
+.meta{font-size:.79rem;color:#5E5449;margin-top:.12rem}
+.clave{font-size:.82rem;margin-top:.2rem;padding-left:.6rem;border-left:2px solid var(--linea)}
+.defe{font-size:.82rem;margin-top:.2rem;padding-left:.6rem;border-left:2px solid var(--cuero);color:#7E3A11}
+.comp{display:inline-block;margin-top:.28rem;padding:.12rem .42rem;
+  background:rgba(190,90,33,.13);border:1px solid rgba(190,90,33,.4);
+  border-radius:2px;font-size:.78rem;color:#7E3A11}
+.comp b{font-weight:600}
+.fuente{margin-top:.28rem;font-size:.76rem;color:var(--gris);font-style:italic}
+.blk.ahora{background:rgba(190,90,33,.09)}
+.blk.ahora h3{color:#8A3E12}
+.blk.hecho{opacity:.42}
+.btns{display:flex;gap:.3rem;margin-top:.32rem;flex-wrap:wrap}
+.piz-btn,.lib{background:none;border:1px solid var(--linea);border-radius:2px;
+  color:var(--pista);font-family:var(--f-cond);font-weight:600;font-size:.8rem;
+  letter-spacing:.03em;padding:.14rem .55rem;cursor:pointer;text-decoration:none;display:inline-block}
+.piz-btn[aria-expanded="true"]{background:var(--pista);color:#F3EDE1;border-color:var(--pista)}
+.lib{background:#F7F2E9}
+.det{margin-top:.4rem;background:#F7F2E9;border:1px solid var(--linea);border-radius:2px;
+  padding:.5rem .6rem;display:none;font-size:.85rem}
+.det.abierta{display:block}
+.det h4{margin:.1rem 0 .25rem;font-family:var(--f-cond);font-weight:700;font-size:.88rem;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--cuero)}
+.det h4:not(:first-child){margin-top:.6rem}
+.det ol,.det ul{margin:0;padding-left:1.1rem}
+.det li{margin:.14rem 0;line-height:1.35}
+.det .err li{color:#7E3A11}
+.piz{margin-top:.4rem;background:#F7F2E9;border:1px solid var(--linea);border-radius:2px;
+  padding:.35rem;display:none}
+.piz.abierta{display:block}
+.piz svg{display:block;width:100%;height:auto}
+.piz p{font-size:.76rem;color:#6B6157;margin:.3rem .1rem 0;line-height:1.3}
+.pie{margin:1.3rem .8rem 0;padding-top:.7rem;border-top:1px solid var(--linea);
+  font-size:.78rem;color:#6B6157}
+.pie p{margin:.35rem 0}
+.leyenda,.simbolos{display:flex;flex-wrap:wrap;gap:.75rem;margin:.5rem 0 .2rem;align-items:center}
+.leyenda span,.simbolos span{display:flex;align-items:center;gap:.3rem;font-size:.75rem}
+.leyenda i{width:11px;height:3px;border-radius:2px;display:block}
+@media print{
+  :root{--px-min:0px}
+  body{background:#fff;font-size:10.5pt}
+  .reloj,.nav button,.playhead,.piz-btn,.lib{display:none!important}
+  .top{position:static;background:#fff;color:#000;border-bottom:2px solid #000;padding:0 0 .3rem}
+  .ident .d{color:#333}
+  .carga{border:1px solid #000;background:#fff!important;color:#000!important}
+  .blk{page-break-inside:avoid;min-height:0!important}
+  .blk.hecho,.blk.ahora{opacity:1;background:none}
+  .wrap{padding:.4rem 0 0}
+  .piz{display:block!important;background:#fff}
+  .piz svg{max-width:11cm}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="nav">
+    <button id="prev" aria-label="Sesión anterior">&lsaquo;</button>
+    <div class="ident">
+      <div class="n" id="titulo">Sesión</div>
+      <div class="d" id="fecha">&mdash;</div>
+      <div><span class="carga" id="carga">&mdash;</span></div>
+    </div>
+    <button id="next" aria-label="Sesión siguiente">&rsaquo;</button>
+  </div>
+</header>
+
+<div class="reloj">
+  <div class="t" id="crono">00:00</div>
+  <div class="estado" id="estado">Pulsa empezar cuando arranque el entrenamiento.</div>
+  <div class="acc">
+    <button id="play">Empezar</button>
+    <button id="reset">Reiniciar</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="tl" id="tl">
+    <div class="regla"></div>
+    <div class="playhead" id="playhead"></div>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="leyenda">
+    <span><i style="background:#6E8C6B"></i>Preventivo</span>
+    <span><i style="background:#1D3B54"></i>Técnica</span>
+    <span><i style="background:#BE5A21"></i>Físico</span>
+    <span><i style="background:#4A6E86"></i>Juego</span>
+    <span><i style="background:#C3B79F"></i>Organización</span>
+  </div>
+  <div class="simbolos" id="simbolos"></div>
+  <p>«Pizarra» abre el dibujo y «Cómo se monta» la explicación completa: montaje paso a paso, errores frecuentes y cómo ajustarlo. Con eso no hace falta abrir el PDF en pista.</p>
+  <p>Para que «Libro» funcione, guarda este archivo junto a los PDF. Del libro de 500 se usa la copia «sin_cpr». En el móvil el salto de página es irregular según el visor.</p>
+  <p>12 jugadoras · 4 balones · trío = pasadora, ejecutante, reboteadora.</p>
+</footer>
+
+<script>
+var NAVY="#1D3B54", CUERO="#BE5A21", LIN="#B6A98E", GRIS="#8A8073";
+var P500="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf",
+    P40D="40EjerciciosdeDefensaenBaloncesto.pdf",
+    P75="75EjerciciosdeDesmarqueenBaloncesto.pdf",
+    P25C="25CalentamientosListosparaBaloncesto_pdf.pdf";
+
+function defsSVG(){
+  return '<defs><marker id="fm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="'+NAVY+'"/></marker></defs>';
+}
+function pistaMedia(){
+  return '<rect x="0" y="0" width="150" height="140" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<rect x="50.5" y="0" width="49" height="58" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<circle cx="75" cy="58" r="18" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<path d="M9,0 L9,29.9 A67.5,67.5 0 0 0 141,29.9 L141,0" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<line x1="66" y1="12" x2="84" y2="12" stroke="'+LIN+'" stroke-width="1.7"/>'+
+    '<circle cx="75" cy="15.75" r="2.6" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>';
+}
+function aro(x0,s,sw){
+  return '<rect x="'+(s>0?0:222)+'" y="50.5" width="58" height="49" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<circle cx="'+(x0+s*58)+'" cy="75" r="18" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<line x1="'+(x0+s*12)+'" y1="66" x2="'+(x0+s*12)+'" y2="84" stroke="'+LIN+'" stroke-width="1.7"/>'+
+    '<circle cx="'+(x0+s*15.75)+'" cy="75" r="2.6" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<path d="M'+x0+',9 L'+(x0+s*29.9)+',9 A67.5,67.5 0 0 '+sw+' '+(x0+s*29.9)+',141 L'+x0+',141" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>';
+}
+function pistaCompleta(){
+  return '<rect x="0" y="0" width="280" height="150" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<line x1="140" y1="0" x2="140" y2="150" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<circle cx="140" cy="75" r="18" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    aro(0,1,1)+aro(280,-1,0);
+}
+function ctrl(x1,y1,x2,y2,cv){
+  var mx=(x1+x2)/2,my=(y1+y2)/2,dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1;
+  return [mx-dy/L*cv,my+dx/L*cv];
+}
+function flecha(x1,y1,x2,y2,cv,tipo){
+  var dash=tipo==="p"?' stroke-dasharray="6 4"':'';
+  if(cv){var c=ctrl(x1,y1,x2,y2,cv);
+    return '<path d="M'+x1+','+y1+' Q'+c[0].toFixed(1)+','+c[1].toFixed(1)+' '+x2+','+y2+'" fill="none" stroke="'+NAVY+'" stroke-width="1.7"'+dash+' marker-end="url(#fm)"/>';}
+  return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+NAVY+'" stroke-width="1.7"'+dash+' marker-end="url(#fm)"/>';
+}
+function bote(x1,y1,x2,y2){
+  var dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1,ux=dx/L,uy=dy/L,px=-uy,py=ux;
+  var n=Math.max(4,Math.round(L/7)),d='M'+x1+','+y1;
+  for(var i=1;i<=n;i++){var t=i/n,a=(i%2?1:-1)*2.6;
+    d+=' L'+(x1+ux*L*t+px*a).toFixed(1)+','+(y1+uy*L*t+py*a).toFixed(1);}
+  return '<path d="'+d+'" fill="none" stroke="'+NAVY+'" stroke-width="1.6" marker-end="url(#fm)"/>';
+}
+function atac(x,y,t,bal){
+  var s='<circle cx="'+x+'" cy="'+y+'" r="6.4" fill="'+NAVY+'"/>'+
+    '<text x="'+x+'" y="'+(y+2.6)+'" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="8.4" font-weight="700" fill="#F6F1E7">'+t+'</text>';
+  if(bal) s+='<circle cx="'+(x+8)+'" cy="'+(y-6.4)+'" r="3" fill="none" stroke="'+CUERO+'" stroke-width="1.6"/>';
+  return s;
+}
+function defe(x,y,t){
+  return '<g stroke="'+CUERO+'" stroke-width="2.2" stroke-linecap="round">'+
+    '<line x1="'+(x-4.6)+'" y1="'+(y-4.6)+'" x2="'+(x+4.6)+'" y2="'+(y+4.6)+'"/>'+
+    '<line x1="'+(x+4.6)+'" y1="'+(y-4.6)+'" x2="'+(x-4.6)+'" y2="'+(y+4.6)+'"/></g>'+
+    (t?'<text x="'+(x+7)+'" y="'+(y+7)+'" font-family="Barlow Condensed,sans-serif" font-size="7.6" font-weight="700" fill="'+CUERO+'">'+t+'</text>':'');
+}
+function cono(x,y){
+  return '<path d="M'+x+','+(y-5.2)+' L'+(x+4.6)+','+(y+3.2)+' L'+(x-4.6)+','+(y+3.2)+' z" fill="none" stroke="'+GRIS+'" stroke-width="1.7"/>';
+}
+function lista(a,cls){
+  return '<ul'+(cls?' class="'+cls+'"':'')+'>'+a.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>';
+}
+function detalle(d){
+  var h='';
+  if(d.m) h+='<h4>Cómo se monta</h4>'+lista(d.m);
+  if(d.e) h+='<h4>Errores frecuentes</h4>'+lista(d.e,'err');
+  if(d.a) h+='<h4>Ajuste</h4>'+lista(d.a);
+  return h;
+}
+function cita(l){
+  var p=(l.match(/#page=(\d+)/)||[])[1];
+  var n="500 Ejercicios";
+  if(l.indexOf("40Ejercicios")===0) n="40 Defensa";
+  else if(l.indexOf("75Ejercicios")===0) n="75 Desmarque";
+  else if(l.indexOf("25Calentamientos")===0) n="25 Calentamientos";
+  return "Ver también: " + n + (p? ", p. "+p : "");
+}
+function pizarra(d){
+  if(!d) return "";
+  var full=d.v==="c", vb=full?"-7 -7 294 164":"-7 -7 164 154";
+  var g=defsSVG()+(full?pistaCompleta():pistaMedia());
+  (d.mv||[]).forEach(function(a){g+=flecha(a[0],a[1],a[2],a[3],a[4]||0,"m");});
+  (d.ps||[]).forEach(function(a){g+=flecha(a[0],a[1],a[2],a[3],a[4]||0,"p");});
+  (d.dr||[]).forEach(function(a){g+=bote(a[0],a[1],a[2],a[3]);});
+  (d.k||[]).forEach(function(a){g+=cono(a[0],a[1]);});
+  (d.x||[]).forEach(function(a){g+=defe(a[0],a[1],a[2]||"");});
+  (d.o||[]).forEach(function(a){g+=atac(a[0],a[1],a[2],a[3]);});
+  return '<svg viewBox="'+vb+'" role="img" aria-label="Diagrama del ejercicio en la pista">'+g+'</svg>'+
+         (d.t?'<p>'+d.t+'</p>':'');
+}
+
+/* ===== DIAGRAMAS ===== */
+var D = {
+ "F5-N1": {
+  "v": "m",
+  "o": [
+   [
+    75,
+    86,
+    "P",
+    1
+   ],
+   [
+    16,
+    17,
+    "1"
+   ]
+  ],
+  "x": [
+   [
+    46,
+    60,
+    ""
+   ]
+  ],
+  "ps": [
+   [
+    75,
+    86,
+    50,
+    63
+   ]
+  ],
+  "mv": [
+   [
+    17,
+    22,
+    46,
+    64,
+    -14
+   ]
+  ],
+  "t": "1c1 desde recepción con un paso de ventaja. Máximo 3 botes."
+ },
+ "F4-N1": {
+  "v": "m",
+  "o": [
+   [
+    16,
+    17,
+    "1"
+   ],
+   [
+    134,
+    17,
+    "2"
+   ],
+   [
+    44,
+    62,
+    "3"
+   ],
+   [
+    106,
+    62,
+    "4"
+   ],
+   [
+    75,
+    90,
+    "5"
+   ],
+   [
+    75,
+    27,
+    "P",
+    1
+   ]
+  ],
+  "ps": [
+   [
+    75,
+    32,
+    74,
+    84
+   ]
+  ],
+  "t": "Las cinco posiciones del contraataque: dos esquinas, dos alas y el arrastre central."
+ },
+ "F3-N3": {
+  "v": "c",
+  "o": [
+   [
+    70,
+    42,
+    "1",
+    1
+   ],
+   [
+    70,
+    76,
+    "2"
+   ],
+   [
+    70,
+    112,
+    "3"
+   ]
+  ],
+  "x": [
+   [
+    124,
+    52,
+    ""
+   ],
+   [
+    124,
+    78,
+    ""
+   ],
+   [
+    124,
+    104,
+    ""
+   ]
+  ],
+  "ps": [
+   [
+    78,
+    44,
+    152,
+    58,
+    -16
+   ],
+   [
+    158,
+    62,
+    236,
+    102,
+    -18
+   ]
+  ],
+  "mv": [
+   [
+    70,
+    112,
+    152,
+    118,
+    0
+   ]
+  ],
+  "t": "Dos equipos, un balón, sin bote y sin canasta: plantar el balón en el fondo contrario."
+ },
+ "F4-N2": {
+  "v": "m",
+  "o": [
+   [
+    122,
+    42,
+    "1"
+   ],
+   [
+    75,
+    27,
+    "P",
+    1
+   ]
+  ],
+  "k": [
+   [
+    104,
+    62
+   ]
+  ],
+  "mv": [
+   [
+    121,
+    47,
+    107,
+    59,
+    0
+   ],
+   [
+    100,
+    65,
+    76,
+    86,
+    -10
+   ]
+  ],
+  "ps": [
+   [
+    75,
+    32,
+    72,
+    84
+   ]
+  ],
+  "t": "Cambia de dirección en el cono, se abre y recibe. Llegar al tiro en movimiento."
+ },
+ "F15-N1": {
+  "v": "c",
+  "o": [
+   [
+    20,
+    75,
+    "1",
+    1
+   ]
+  ],
+  "dr": [
+   [
+    27,
+    75,
+    250,
+    75
+   ]
+  ],
+  "t": "Sprint fondo a fondo botando, entrada, vuelta y entrada. 30 seg al máximo, 90 de descanso."
+ },
+ "F15-N3": {
+  "v": "c",
+  "o": [
+   [
+    96,
+    35,
+    "1"
+   ],
+   [
+    96,
+    64,
+    "2",
+    1
+   ],
+   [
+    96,
+    90,
+    "3"
+   ],
+   [
+    96,
+    118,
+    "4"
+   ]
+  ],
+  "x": [
+   [
+    176,
+    35,
+    ""
+   ],
+   [
+    176,
+    64,
+    ""
+   ],
+   [
+    176,
+    90,
+    ""
+   ],
+   [
+    176,
+    118,
+    ""
+   ]
+  ],
+  "mv": [
+   [
+    108,
+    35,
+    240,
+    40,
+    -14
+   ],
+   [
+    108,
+    64,
+    240,
+    70,
+    0
+   ],
+   [
+    108,
+    118,
+    240,
+    112,
+    14
+   ]
+  ],
+  "t": "4c4 continuo. Tiro antes de 14 segundos. Canasta en transición vale 3."
+ },
+ "F10-N3": {
+  "v": "c",
+  "o": [
+   [
+    100,
+    45,
+    "1"
+   ],
+   [
+    100,
+    75,
+    "2",
+    1
+   ],
+   [
+    100,
+    105,
+    "3"
+   ]
+  ],
+  "x": [
+   [
+    168,
+    45,
+    ""
+   ],
+   [
+    168,
+    75,
+    ""
+   ],
+   [
+    168,
+    105,
+    ""
+   ]
+  ],
+  "mv": [
+   [
+    112,
+    45,
+    238,
+    50,
+    -14
+   ],
+   [
+    112,
+    75,
+    238,
+    75,
+    0
+   ],
+   [
+    112,
+    105,
+    238,
+    100,
+    14
+   ],
+   [
+    178,
+    78,
+    246,
+    78,
+    0
+   ]
+  ],
+  "t": "3c3 todo campo sin parar. Al llegar atrás los pares se forman como salgan y hay que ajustarlos."
+ },
+ "F17-N1": {
+  "v": "m",
+  "o": [
+   [
+    30,
+    3,
+    "1",
+    1
+   ],
+   [
+    52,
+    16,
+    "2"
+   ],
+   [
+    98,
+    16,
+    "3"
+   ],
+   [
+    52,
+    54,
+    "4"
+   ],
+   [
+    98,
+    54,
+    "5"
+   ]
+  ],
+  "mv": [
+   [
+    98,
+    50,
+    98,
+    28,
+    0
+   ],
+   [
+    98,
+    18,
+    74,
+    22,
+    -8
+   ],
+   [
+    52,
+    50,
+    52,
+    28,
+    0
+   ],
+   [
+    50,
+    18,
+    20,
+    15,
+    8
+   ],
+   [
+    100,
+    26,
+    84,
+    60,
+    -12
+   ]
+  ],
+  "ps": [
+   [
+    33,
+    5,
+    72,
+    21
+   ]
+  ],
+  "t": "Caja. 5 y 4 bajan a bloquear: 3 corta al aro y 2 sale a la esquina. 5 se abre arriba de seguridad."
+ },
+ "F17-N2": {
+  "v": "m",
+  "x": [
+   [
+    61,
+    46,
+    ""
+   ],
+   [
+    90,
+    46,
+    ""
+   ],
+   [
+    38,
+    26,
+    ""
+   ],
+   [
+    112,
+    26,
+    ""
+   ],
+   [
+    75,
+    18,
+    ""
+   ]
+  ],
+  "o": [
+   [
+    118,
+    3,
+    "1",
+    1
+   ],
+   [
+    136,
+    16,
+    "2"
+   ],
+   [
+    126,
+    58,
+    "3"
+   ],
+   [
+    75,
+    54,
+    "4"
+   ],
+   [
+    22,
+    58,
+    "5"
+   ]
+  ],
+  "mv": [
+   [
+    75,
+    50,
+    104,
+    44,
+    0
+   ]
+  ],
+  "ps": [
+   [
+    121,
+    6,
+    80,
+    50
+   ],
+   [
+    73,
+    56,
+    28,
+    58,
+    -14
+   ]
+  ],
+  "t": "Sobrecarga. La zona marca espacios, no personas: se carga un lado y 5 queda sola en el otro."
+ },
+ "F8-N2": {
+  "v": "m",
+  "o": [
+   [
+    75,
+    68,
+    "L",
+    1
+   ],
+   [
+    61,
+    37,
+    "1"
+   ],
+   [
+    23,
+    58,
+    "R"
+   ]
+  ],
+  "x": [
+   [
+    63,
+    27,
+    ""
+   ]
+  ],
+  "ps": [
+   [
+    75,
+    62,
+    76,
+    20
+   ],
+   [
+    67,
+    26,
+    29,
+    55,
+    16
+   ]
+  ],
+  "mv": [
+   [
+    63,
+    31,
+    62,
+    33,
+    0
+   ]
+  ],
+  "t": "Contacto primero, balón después. Si captura, saque inmediato a R y salida en 2c0."
+ },
+ "F9-N5": {
+  "v": "m",
+  "x": [
+   [
+    60,
+    62,
+    ""
+   ],
+   [
+    90,
+    62,
+    ""
+   ],
+   [
+    40,
+    34,
+    ""
+   ],
+   [
+    110,
+    34,
+    ""
+   ],
+   [
+    75,
+    24,
+    ""
+   ]
+  ],
+  "o": [
+   [
+    52,
+    52,
+    "1"
+   ],
+   [
+    98,
+    52,
+    "2"
+   ],
+   [
+    30,
+    30,
+    "3"
+   ],
+   [
+    120,
+    30,
+    "4"
+   ],
+   [
+    75,
+    82,
+    "5",
+    1
+   ]
+  ],
+  "mv": [
+   [
+    60,
+    58,
+    55,
+    50,
+    0
+   ],
+   [
+    90,
+    58,
+    95,
+    50,
+    0
+   ],
+   [
+    39,
+    31,
+    33,
+    30,
+    0
+   ],
+   [
+    111,
+    31,
+    117,
+    30,
+    0
+   ],
+   [
+    75,
+    29,
+    75,
+    36,
+    0
+   ]
+  ],
+  "t": "Al salir el tiro, contacto con la más cercana antes de ir al balón. Si captura, sale en contraataque."
+ },
+ "F18-N2": {
+  "v": "m",
+  "x": [
+   [
+    60,
+    66,
+    ""
+   ],
+   [
+    90,
+    66,
+    ""
+   ],
+   [
+    36,
+    34,
+    ""
+   ],
+   [
+    114,
+    34,
+    ""
+   ],
+   [
+    75,
+    24,
+    ""
+   ]
+  ],
+  "o": [
+   [
+    28,
+    66,
+    "1",
+    1
+   ],
+   [
+    16,
+    17,
+    "2"
+   ],
+   [
+    122,
+    66,
+    "3"
+   ],
+   [
+    134,
+    17,
+    "4"
+   ],
+   [
+    75,
+    50,
+    "5"
+   ]
+  ],
+  "mv": [
+   [
+    34,
+    64,
+    56,
+    34,
+    -8
+   ],
+   [
+    60,
+    62,
+    54,
+    44,
+    0
+   ],
+   [
+    36,
+    34,
+    47,
+    37,
+    0
+   ]
+  ],
+  "ps": [
+   [
+    56,
+    32,
+    20,
+    20
+   ]
+  ],
+  "t": "Penetrar por el hueco entre la alta y la baja: fija a dos defensoras y se dobla a la que queda sola en la esquina."
+ },
+ "F11-N5": {
+  "v": "c",
+  "o": [
+   [
+    60,
+    30,
+    "1"
+   ],
+   [
+    70,
+    75,
+    "2",
+    1
+   ],
+   [
+    60,
+    120,
+    "3"
+   ]
+  ],
+  "x": [
+   [
+    212,
+    58,
+    ""
+   ],
+   [
+    212,
+    94,
+    ""
+   ],
+   [
+    22,
+    75,
+    "3ª"
+   ]
+  ],
+  "mv": [
+   [
+    72,
+    30,
+    224,
+    32,
+    0
+   ],
+   [
+    82,
+    75,
+    190,
+    75,
+    0
+   ],
+   [
+    72,
+    120,
+    224,
+    118,
+    0
+   ],
+   [
+    32,
+    75,
+    182,
+    75,
+    0
+   ]
+  ],
+  "t": "Encadenado 1c2 → 2c3 → 3c4 sin parar, para que reconozcan sobre la marcha en cuál están."
+ },
+ "F17-N3": {
+  "v": "m",
+  "o": [
+   [
+    148,
+    60,
+    "1",
+    1
+   ],
+   [
+    75,
+    56,
+    "2"
+   ],
+   [
+    75,
+    68,
+    "3"
+   ],
+   [
+    26,
+    62,
+    "4"
+   ],
+   [
+    120,
+    18,
+    "5"
+   ]
+  ],
+  "mv": [
+   [
+    75,
+    54,
+    84,
+    24,
+    8
+   ],
+   [
+    75,
+    70,
+    124,
+    62,
+    -8
+   ]
+  ],
+  "ps": [
+   [
+    144,
+    58,
+    90,
+    26
+   ]
+  ],
+  "t": "Dos cortes. 2 corta al aro desde la fila y 3 sale al balón por detrás. 3 no se mueve antes que 2."
+ },
+ "F9-N7": {
+  "v": "m",
+  "x": [
+   [
+    60,
+    62,
+    ""
+   ],
+   [
+    90,
+    62,
+    ""
+   ],
+   [
+    40,
+    34,
+    ""
+   ],
+   [
+    110,
+    34,
+    ""
+   ],
+   [
+    75,
+    24,
+    ""
+   ]
+  ],
+  "o": [
+   [
+    52,
+    52,
+    "1"
+   ],
+   [
+    98,
+    52,
+    "2"
+   ],
+   [
+    30,
+    30,
+    "3"
+   ],
+   [
+    120,
+    30,
+    "4"
+   ],
+   [
+    75,
+    82,
+    "5",
+    1
+   ]
+  ],
+  "mv": [
+   [
+    60,
+    58,
+    55,
+    50,
+    0
+   ],
+   [
+    90,
+    58,
+    95,
+    50,
+    0
+   ],
+   [
+    39,
+    31,
+    33,
+    30,
+    0
+   ],
+   [
+    111,
+    31,
+    117,
+    30,
+    0
+   ],
+   [
+    75,
+    29,
+    75,
+    36,
+    0
+   ]
+  ],
+  "t": "Cambio de intensidad a la voz: zona normal o trampa. Se canta en el saque, con una palabra corta."
+ },
+ "F17-N4": {
+  "v": "c",
+  "o": [
+   [
+    60,
+    4,
+    "1",
+    1
+   ],
+   [
+    88,
+    46,
+    "2"
+   ],
+   [
+    42,
+    112,
+    "3"
+   ],
+   [
+    146,
+    30,
+    "4"
+   ],
+   [
+    100,
+    20,
+    "5"
+   ]
+  ],
+  "mv": [
+   [
+    84,
+    42,
+    68,
+    24,
+    8
+   ],
+   [
+    98,
+    22,
+    88,
+    38,
+    0
+   ],
+   [
+    152,
+    32,
+    230,
+    42,
+    0
+   ]
+  ],
+  "ps": [
+   [
+    63,
+    7,
+    68,
+    20
+   ]
+  ],
+  "t": "Bajo presión. Una viene al balón, una queda atrás de seguridad y una sale larga. Siempre las tres."
+ },
+ "F5-N3": {
+  "v": "m",
+  "o": [
+   [
+    46,
+    66,
+    "1"
+   ],
+   [
+    75,
+    26,
+    "P",
+    1
+   ]
+  ],
+  "x": [
+   [
+    70,
+    30,
+    ""
+   ]
+  ],
+  "ps": [
+   [
+    75,
+    30,
+    50,
+    64
+   ]
+  ],
+  "mv": [
+   [
+    68,
+    34,
+    50,
+    58,
+    0
+   ]
+  ],
+  "t": "1c1 continuo con closeout: la que defiende pasa a atacar en la repetición siguiente."
+ },
+ "F10-N5": {
+  "v": "c",
+  "o": [
+   [
+    96,
+    30,
+    "1"
+   ],
+   [
+    96,
+    60,
+    "2",
+    1
+   ],
+   [
+    96,
+    90,
+    "3"
+   ],
+   [
+    96,
+    120,
+    "4"
+   ],
+   [
+    70,
+    75,
+    "5"
+   ]
+  ],
+  "x": [
+   [
+    176,
+    30,
+    ""
+   ],
+   [
+    176,
+    60,
+    ""
+   ],
+   [
+    176,
+    90,
+    ""
+   ],
+   [
+    176,
+    120,
+    ""
+   ],
+   [
+    202,
+    75,
+    ""
+   ]
+  ],
+  "mv": [
+   [
+    108,
+    30,
+    238,
+    36,
+    -12
+   ],
+   [
+    108,
+    60,
+    236,
+    60,
+    0
+   ],
+   [
+    108,
+    120,
+    238,
+    114,
+    12
+   ]
+  ],
+  "t": "Cada posesión acaba en tiro antes de 14 segundos. El balance se ejecuta a velocidad de partido."
+ },
+ "F7-N2": {
+  "v": "m",
+  "o": [
+   [
+    30,
+    64,
+    "1"
+   ],
+   [
+    122,
+    64,
+    "2",
+    1
+   ],
+   [
+    75,
+    92,
+    "3"
+   ]
+  ],
+  "x": [
+   [
+    44,
+    56,
+    ""
+   ],
+   [
+    108,
+    56,
+    ""
+   ],
+   [
+    75,
+    40,
+    ""
+   ]
+  ],
+  "ps": [
+   [
+    118,
+    66,
+    36,
+    66,
+    -18
+   ]
+  ],
+  "mv": [
+   [
+    44,
+    54,
+    62,
+    48,
+    0
+   ],
+   [
+    75,
+    40,
+    64,
+    46,
+    0
+   ],
+   [
+    108,
+    54,
+    96,
+    50,
+    0
+   ]
+  ],
+  "t": "Al cambiar el balón de lado, la del lado débil pasa a lado fuerte. Todas ajustan a la vez."
+ }
+};
+
+/* ===== DETALLE ===== */
+var DET = {
+ "F5-N1": {
+  "m": [
+   "Tres cuartetos. La atacante recibe con un paso de ventaja sobre su defensora.",
+   "Máximo tres botes hasta canasta.",
+   "Se juega hasta canasta o hasta que la defensa capture el rebote."
+  ],
+  "e": [
+   "Gastar los tres botes sin avanzar.",
+   "La defensora intenta robar en el primer bote y queda batida."
+  ],
+  "a": [
+   "Marcador: atacante 1, defensora 2 por parada. Primera a 8."
+  ]
+ },
+ "F4-N1": {
+  "m": [
+   "Seis jugadoras por canasta con dos balones: dos tiran, dos pasan, dos rebotean.",
+   "Se tira desde las cinco posiciones del contraataque: dos esquinas, dos alas y el arrastre central.",
+   "Rotación tras cada tiro: tiradora → reboteadora → pasadora."
+  ],
+  "e": [
+   "Recibir con los pies desordenados y tener que colocarlos: se pierde el tiempo que da la ventaja.",
+   "La reboteadora se distrae y el balón se para; con dos balones el ritmo se cae enseguida."
+  ],
+  "a": [
+   "Noventa segundos por posición y se cambia. Si el porcentaje baja del 30%, acerca el tiro."
+  ]
+ },
+ "F3-N3": {
+  "m": [
+   "Dos equipos de seis, un balón, sin canasta y sin botar.",
+   "Se puntúa plantando el balón en el fondo contrario, no lanzando.",
+   "Quien recibe tiene tres segundos para pasar."
+  ],
+  "e": [
+   "Quedarse quieta esperando el pase: sin bote, la única forma de recibir es desmarcarse.",
+   "Amontonarse alrededor del balón."
+  ],
+  "a": [
+   "Si es muy fácil, reduce el ancho a media pista. Si es muy difícil, permite un bote."
+  ]
+ },
+ "F4-N2": {
+  "m": [
+   "Sexteto por canasta con dos balones. La tiradora recorre el perímetro y cambia de dirección en un cono.",
+   "Se abre, recibe y tira sin colocarse.",
+   "Rotación: tiradora, reboteadora, pasadora."
+  ],
+  "e": [
+   "Llegar al cono y frenar: el cambio de dirección es lo que crea la ventaja.",
+   "Recibir mirando al balón en vez de al aro."
+  ],
+  "a": [
+   "Noventa segundos por lado. Si el porcentaje se hunde, acerca la posición al aro."
+  ]
+ },
+ "F15-N1": {
+  "m": [
+   "Tres cuartetos con un balón cada uno. El cuarto balón, a tiros libres.",
+   "Dentro del cuarteto: una sale al máximo, hace el recorrido y entrega el balón a la siguiente.",
+   "Sprint fondo a fondo botando, entrada, sprint de vuelta y entrada."
+  ],
+  "e": [
+   "Bajar el ritmo a mitad de recorrido: son treinta segundos, se hacen al máximo o no sirven.",
+   "Fallar la entrada por ir descontrolada: la entrada cuenta."
+  ],
+  "a": [
+   "Trabajo 30 segundos, descanso 90. Si no aguantan, pasa a cuartetos de cinco."
+  ]
+ },
+ "F15-N3": {
+  "m": [
+   "Tres equipos de cuatro, uno descansa.",
+   "Cada posesión acaba en tiro antes de 14 segundos.",
+   "Sin interrupciones: canasta o rebote y se corre al otro lado."
+  ],
+  "e": [
+   "Estirar la posesión buscando el tiro perfecto.",
+   "El equipo que descansa se sienta y se enfría."
+  ],
+  "a": [
+   "Liga rápida con puntos acumulados. Canasta en transición vale 3."
+  ]
+ },
+ "F10-N3": {
+  "m": [
+   "Doce jugadoras, 3c3 a pista completa sin parar.",
+   "Al llegar atrás los pares se forman como salgan y hay que ajustarlos sobre la marcha.",
+   "Orden al volver: aro, balón, líneas de pase cercanas, atacantes alejadas."
+  ],
+  "e": [
+   "Correr hacia el balón en vez de hacia el aro. Es el instinto natural y hay que corregirlo cada vez.",
+   "Formar los pares en silencio y quedarse dos con la misma atacante."
+  ],
+  "a": [
+   "Marcador: ataque 1, defensa 2 por parada. Primera a 10."
+  ]
+ },
+ "F17-N1": {
+  "m": [
+   "Las cuatro en caja: dos en los codos y dos en los postes bajos. La sacadora en el fondo.",
+   "5 y 4 bajan a bloquear. 3 corta al aro por el centro y 2 sale a la esquina.",
+   "5 se abre arriba como seguridad."
+  ],
+  "e": [
+   "Sacar antes de que se abra el hueco.",
+   "Poner el bloqueo en movimiento: es falta y se pierde la posesión."
+  ],
+  "a": [
+   "Primera opción 3 al aro, segunda 2 en la esquina, seguridad 5 arriba. Tres opciones y ninguna más."
+  ]
+ },
+ "F17-N2": {
+  "m": [
+   "Tres jugadoras al lado del balón, una en poste alto y una sola en el lado débil.",
+   "El balón entra al poste alto y sale invertido al lado contrario.",
+   "La zona marca espacios, no personas: por eso funciona cargar un lado."
+  ],
+  "e": [
+   "No cruzar el balón: si no cruza, la jugada no existe.",
+   "Recibir en el poste alto de espaldas."
+  ],
+  "a": [
+   "Si la zona no se desplaza, añade un pase más por el lado cargado antes de invertir."
+  ]
+ },
+ "F8-N2": {
+  "m": [
+   "Tres cuartetos con tres balones: atacante, defensora, lanzadora y receptora del saque.",
+   "La lanzadora tira a tablero. La defensora localiza a la atacante, hace contacto, bloquea y va al balón.",
+   "Si captura, saque inmediato a la receptora abierta en la banda y salida en 2c0."
+  ],
+  "e": [
+   "Ir al balón directamente sin tocar a la atacante. Es EL error del bloque y hay que cortarlo siempre.",
+   "Bloquear y quedarse quieta mirando el balón en lugar de ir a por él."
+  ],
+  "a": [
+   "Marcador: tres capturas seguidas con contacto previo. Si el ataque coge una, vuelta a cero."
+  ]
+ },
+ "F9-N5": {
+  "m": [
+   "Zona completa, tiro del ataque y cierre de rebote.",
+   "Al salir el tiro, cada defensora busca contacto con la atacante más cercana antes de ir al balón.",
+   "Si el ataque captura el rebote ofensivo, se repite la posesión."
+  ],
+  "e": [
+   "Ir al balón directamente. Es el fallo clásico de la zona y destruye el contraataque.",
+   "Bloquear a quien no está cerca, dejando libre a la que sí."
+  ],
+  "a": [
+   "Marcador: cuatro paradas limpias seguidas. Un rebote ofensivo rival y vuelta a cero."
+  ]
+ },
+ "F18-N2": {
+  "m": [
+   "Primero en 3c2 en espacio limitado, después en 5c5.",
+   "Se penetra por el hueco entre la alta y la baja, fijando a dos defensoras.",
+   "Se dobla a la que queda sola en la esquina o en el lado débil."
+  ],
+  "e": [
+   "Penetrar sin fijar: si nadie sale, el pase no vale nada.",
+   "Botar hacia la línea de fondo y quedarse sin ángulo de pase."
+  ],
+  "a": [
+   "Marcador: canasta de penetración doblada vale 3."
+  ]
+ },
+ "F11-N5": {
+  "m": [
+   "Encadenado 1c2, después 2c3 y después 3c4, sin parar entre situaciones.",
+   "Se van añadiendo defensoras sobre la marcha.",
+   "El objetivo no es defender bien cada una, es reconocer en cuál estás."
+  ],
+  "e": [
+   "Seguir defendiendo como en la situación anterior cuando ya ha cambiado.",
+   "No hablar al entrar la nueva defensora."
+  ],
+  "a": [
+   "Si se lía, para y pregunta en voz alta cuántas son y cuántas hay delante."
+  ]
+ },
+ "F17-N3": {
+  "m": [
+   "Dos jugadoras en fila en la línea de tiro libre.",
+   "La primera corta al aro; la segunda sale al balón por detrás.",
+   "Una arriba y una en la esquina contraria, como espaciado y seguridad."
+  ],
+  "e": [
+   "Que la segunda se mueva antes que la primera: la fila es lo que tapa a la defensora.",
+   "Cortar de lado en vez de al aro."
+  ],
+  "a": [
+   "Si la defensa lo lee, cambia el orden: que salga primero la de detrás."
+  ]
+ },
+ "F9-N7": {
+  "m": [
+   "5c5 alternando zona normal y trampa según la orden.",
+   "El cambio se canta en el saque, con una palabra corta que todas entiendan.",
+   "No se avisa antes: tienen que reconocerlo sobre la marcha."
+  ],
+  "e": [
+   "Cambiar con el juego en marcha: la mitad no se entera.",
+   "Usar una palabra larga o parecida a otra."
+  ],
+  "a": [
+   "Empieza cantando tú y termina dejando que lo cante la base."
+  ]
+ },
+ "F17-N4": {
+  "m": [
+   "No es una jugada, es una colocación que hay que saber siempre.",
+   "Una viene al balón con bloqueo, una queda atrás como receptora de seguridad y una sale larga.",
+   "Si a la que viene le niegan, va puerta atrás y entra la de seguridad."
+  ],
+  "e": [
+   "Que la receptora de seguridad se aleje buscando el balón: si se va, no hay salida.",
+   "Que salgan todas hacia el balón y quede el campo vacío."
+  ],
+  "a": [
+   "Ensáyalo con presión real, no con defensa pasiva. Sin presión no se aprende nada aquí."
+  ]
+ },
+ "F5-N3": {
+  "m": [
+   "Flujo continuo: la que defiende pasa a atacar en la repetición siguiente.",
+   "Arranca con un closeout, así que la atacante siempre tiene algo de ventaja.",
+   "Máximo dos botes."
+  ],
+  "e": [
+   "Pararse a celebrar o a protestar: el ejercicio se corta y pierde el ritmo.",
+   "No cambiar de rol con decisión y que se acumulen dos atacantes."
+  ],
+  "a": [
+   "Si se hace largo, juega a una sola posesión por repetición."
+  ]
+ },
+ "F10-N5": {
+  "m": [
+   "5c5 con tiro obligatorio antes de 14 segundos.",
+   "El balance se ejecuta a velocidad de partido, sin pausa entre posesiones.",
+   "Se puntúa en contra la canasta rival en transición."
+  ],
+  "e": [
+   "Reclamar la falta y no volver.",
+   "Ir tres al rebote ofensivo cuando tocaba volver."
+  ],
+  "a": [
+   "Marcador: canasta rival en transición resta 2 al equipo que atacaba."
+  ]
+ },
+ "F7-N2": {
+  "m": [
+   "Dos grupos de seis. Tres atacantes en el perímetro y tres defensoras ajustando.",
+   "El balón cambia de lado y todas se reajustan: la del lado débil pasa a lado fuerte.",
+   "Primero en seco y después con pase real."
+  ],
+  "e": [
+   "Moverse cuando el balón ya ha llegado, en vez de durante el vuelo del pase.",
+   "Que se muevan dos y una se quede: ese hueco es la penetración."
+  ],
+  "a": [
+   "Cuenta en voz alta el pase y exige que todas estén colocadas al llegar."
+  ]
+ }
+};
+
+/* ===== BANCO ===== */
+var E = {
+ "F16": {
+  "t": "prev",
+  "n": "Activación preventiva",
+  "m": "12 min · multicomponente · 8 con balón",
+  "c": "Movilidad con pases · agilidad y frenada botando · pliometría en el rebote · 4 min de fuerza y core sin balón.",
+  "l": "25CalentamientosListosparaBaloncesto_pdf.pdf#page=4"
+ },
+ "F5-N1": {
+  "t": "jue",
+  "n": "1c1 desde recepción con ventaja",
+  "m": "3 cuartetos · máximo 3 botes",
+  "x": "Atacante 1, defensora 2. Primera a 8.",
+  "l": "500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=271"
+ },
+ "F4-N1": {
+  "t": "tec",
+  "n": "Tiro desde posiciones de contraataque",
+  "m": "Sexteto: 2 balones por canasta",
+  "c": "Pies preparados antes de que llegue el balón.",
+  "x": "Sexteto a 15.",
+  "l": "500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=53"
+ },
+ "C44": {
+  "t": "jue",
+  "n": "4c4 competitivo",
+  "m": "3 equipos de 4 · 1 balón",
+  "x": "Liga rápida. Canasta en transición vale 3."
+ },
+ "TL": {
+  "t": "org",
+  "n": "Tiros libres",
+  "m": "Grupos de 3",
+  "x": "La escalera: 8 aciertos seguidos entre las doce. Un fallo, vuelta a empezar.",
+  "l": "75EjerciciosdeDesmarqueenBaloncesto.pdf#page=29"
+ },
+ "F16L": {
+  "t": "prev",
+  "n": "Activación preventiva ampliada",
+  "m": "18 min · multicomponente",
+  "c": "Mismo bloque, con más movilidad y agilidad. Los 4 min de fuerza y core no se tocan.",
+  "l": "25CalentamientosListosparaBaloncesto_pdf.pdf#page=4"
+ },
+ "F3-N3": {
+  "t": "jue",
+  "n": "Juegos de desmarque sin bote",
+  "m": "Dos equipos · 1 balón · sin canasta",
+  "c": "Plantar el balón en el fondo contrario. Sin bote: solo pase y desmarque.",
+  "x": "Primera a 4 balones plantados.",
+  "l": "75EjerciciosdeDesmarqueenBaloncesto.pdf#page=1"
+ },
+ "F4-N2": {
+  "t": "tec",
+  "n": "Desplazamiento, cambio en cono y tiro",
+  "m": "Sexteto · 2 balones",
+  "c": "Llegar al tiro en movimiento, con el equilibrio comprometido.",
+  "l": "500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=53"
+ },
+ "C55": {
+  "t": "jue",
+  "n": "5c5 controlado",
+  "m": "10 en pista + 2 rotando cada posesión",
+  "c": "Poco volumen, mucha corrección."
+ },
+ "F15-N1": {
+  "t": "fis",
+  "n": "Relevo de transición 30/90",
+  "m": "3 cuartetos · 1 balón cada uno",
+  "c": "30 segundos al máximo, 90 de descanso. El cuarto balón, a tiros libres.",
+  "x": "Cuarteto que más canastas suma."
+ },
+ "F15-N3": {
+  "t": "fis",
+  "n": "4c4 continuo con transición obligada",
+  "m": "3 equipos de 4 · tiro antes de 14 seg",
+  "x": "Liga rápida. Canasta en transición vale 3."
+ },
+ "F10-N3": {
+  "t": "jue",
+  "n": "Balance: 3c3 todo campo",
+  "m": "12 jugadoras · 1 balón · sin parar",
+  "c": "Los pares se forman como salgan y hay que ajustarlos sobre la marcha.",
+  "d": "Orden al volver: aro, balón, líneas cercanas, atacantes alejadas.",
+  "x": "Ataque 1, defensa 2. Primera a 10.",
+  "l": "40EjerciciosdeDefensaenBaloncesto.pdf#page=48"
+ },
+ "F17-N1": {
+  "t": "jue",
+  "n": "Saque de fondo contra individual · «Caja»",
+  "m": "Dos bloqueos abajo",
+  "c": "Los bloqueos con los pies quietos. 1 no saca hasta ver el corte."
+ },
+ "F17-N2": {
+  "t": "jue",
+  "n": "Saque de fondo contra zona · «Sobrecarga»",
+  "m": "Tres al lado del balón, una sola en el débil",
+  "c": "Contra zona el tiro está en el lado contrario al balón. Si el balón no cruza, la jugada no existe."
+ },
+ "SSANTA": {
+  "t": "org",
+  "n": "Entrega del plan de Semana Santa",
+  "m": "Una hoja por jugadora",
+  "c": "Preventivo 3 días/semana y 15 min de manejo y tiro."
+ },
+ "F8-N2": {
+  "t": "tec",
+  "n": "Rebote: 1c1 con bloqueo y salida",
+  "m": "3 cuartetos · 3 balones",
+  "c": "Contacto primero, balón después. El hábito más importante de la temporada.",
+  "x": "Tres seguidas. Si el ataque coge una, vuelta a cero.",
+  "l": "40EjerciciosdeDefensaenBaloncesto.pdf#page=40"
+ },
+ "INTENS": {
+  "t": "fis",
+  "n": "Bloque corto de intensidad",
+  "m": "8 min · sin acumulación",
+  "c": "Mantener el tono. El desarrollo físico del año terminó el 23 de marzo."
+ },
+ "F9-N5": {
+  "t": "jue",
+  "n": "Zona completa, cierre de rebote y salida",
+  "m": "5 + 5 + 2 · 1 balón",
+  "c": "Contacto con la más cercana antes de ir al balón.",
+  "x": "Cuatro paradas limpias. Rebote ofensivo rival, vuelta a cero.",
+  "l": "500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=253"
+ },
+ "F16S": {
+  "t": "prev",
+  "n": "Activación preventiva suave",
+  "m": "15 min · sin exigencia",
+  "c": "Versión de víspera de partido.",
+  "l": "25CalentamientosListosparaBaloncesto_pdf.pdf#page=26"
+ },
+ "MANEJO": {
+  "t": "tec",
+  "n": "Manejo y pase cómodo",
+  "m": "4 tríos · 1 balón · a lo ancho",
+  "c": "Sin exigencia. Manos calientes y cabeza alta."
+ },
+ "F18-N2": {
+  "t": "jue",
+  "n": "Ataque a zona: penetrar y doblar",
+  "m": "Primero 3c2 en espacio limitado, después 5c5",
+  "c": "Fijar a dos defensoras y pasar a la que queda con ventaja. El recurso más rentable contra zona en cadete.",
+  "x": "Canasta de penetración doblada vale 3."
+ },
+ "C55C": {
+  "t": "jue",
+  "n": "5c5 controlado",
+  "m": "10 + 2 rotando · corrección mínima",
+  "c": "Poco volumen. Que salgan convencidas vale más que cualquier contenido añadido."
+ },
+ "CHARLA": {
+  "t": "org",
+  "n": "Charla del partido",
+  "m": "Tres ideas, no más"
+ },
+ "REVIS": {
+  "t": "org",
+  "n": "Revisión del partido",
+  "m": "Dos o tres correcciones concretas, no más",
+  "c": "Se corrige lo que se repitió, no lo que salió mal una vez."
+ },
+ "F11-N5": {
+  "t": "jue",
+  "n": "Inferioridad encadenada 1c2 → 2c3 → 3c4",
+  "m": "12 jugadoras · 1 balón",
+  "c": "Sin parar, para que reconozcan sobre la marcha en cuál están."
+ },
+ "ESPEC": {
+  "t": "jue",
+  "n": "Trabajo específico contra el próximo rival",
+  "m": "Qué defensa de inicio, cómo atacar la suya, a quién no dejar tirar"
+ },
+ "F17-N3": {
+  "t": "jue",
+  "n": "Saque de banda en ataque · «Dos cortes»",
+  "m": "Fila en la línea de tiro libre",
+  "c": "El corte solo funciona si la segunda no se mueve antes: la fila es lo que tapa a la defensora."
+ },
+ "F9-N7": {
+  "t": "jue",
+  "n": "Zona: cambio de intensidad a la voz",
+  "m": "5c5 · alternar zona normal y trampa",
+  "c": "El cambio se canta en el saque, con una palabra corta que todas entiendan."
+ },
+ "F17-N4": {
+  "t": "jue",
+  "n": "Saque de banda bajo presión · «Estructura»",
+  "m": "Pista completa · no es una jugada",
+  "c": "Tres funciones cubiertas siempre: la que viene, la que queda y la que sale.",
+  "d": "Aquí es donde los equipos cadete pierden partidos ganados."
+ },
+ "MEJOR": {
+  "t": "jue",
+  "n": "Lo que mejor hace el equipo, repetido",
+  "m": "Sin contenido nuevo",
+  "c": "Última semana: solo lo que sale bien, ejecutado mejor."
+ },
+ "F17TODO": {
+  "t": "jue",
+  "n": "F17 completo · los cuatro saques",
+  "m": "Repaso de las cuatro situaciones",
+  "x": "Escenarios resueltos: seis situaciones de últimos segundos, se anota cuántas resuelve cada equipo."
+ },
+ "CIERRE1F": {
+  "t": "org",
+  "n": "Charla de cierre de la 1ª Fase",
+  "m": "Tres ideas y el escenario que viene"
+ },
+ "F5-N3": {
+  "t": "jue",
+  "n": "1c1 continuo con closeout",
+  "m": "Flujo permanente: la que defiende ataca después",
+  "l": "75EjerciciosdeDesmarqueenBaloncesto.pdf#page=16"
+ },
+ "INDIV": {
+  "t": "tec",
+  "n": "Trabajo individual por necesidad",
+  "m": "3 grupos de 4 · 1 balón cada uno",
+  "c": "Agrupados por lo que cada una necesita, NO por puesto. Rotan cada dos semanas.",
+  "d": "En el 5c5 todas siguen jugando en todas las posiciones."
+ },
+ "F10-N5": {
+  "t": "jue",
+  "n": "Balance: 5c5 con transición obligada",
+  "m": "10 + 2 rotando · tiro antes de 14 seg",
+  "d": "Orden al volver: aro, balón, líneas cercanas, atacantes alejadas, pares, ajuste.",
+  "x": "Canasta rival en transición resta 2."
+ },
+ "F7-N2": {
+  "t": "jue",
+  "n": "De lado débil a lado fuerte",
+  "m": "2 grupos de 6 · 1 balón",
+  "c": "Todas ajustan a la vez cuando el balón cambia de lado.",
+  "l": "40EjerciciosdeDefensaenBaloncesto.pdf#page=17"
+ },
+ "ESCEN": {
+  "t": "jue",
+  "n": "Preparación del escenario de 2ª Fase",
+  "m": "Sorteo hecho el 28 de abril",
+  "c": "Play-Off: eliminatoria al mejor de 2, la diferencia de puntos decide el empate. Grupos de clasificación: reparto de minutos máximo. Descenso: microciclo de M3."
+ },
+ "SAQUES": {
+  "t": "jue",
+  "n": "Saques de banda y fondo",
+  "m": "Dos jugadas sencillas, nada más"
+ },
+ "PLAN": {
+  "t": "org",
+  "n": "Plan de partido",
+  "m": "Tres ideas, no más"
+ },
+ "CIERRE": {
+  "t": "org",
+  "n": "Cierre de temporada",
+  "m": "Test final · reunión individual · informe de junio"
+ }
+};
+
+/* ===== SESIONES ===== */
+var S = [
+ {
+  "n": 1,
+  "f": "Martes 16 de marzo",
+  "d": 75,
+  "c": "baja",
+  "tema": "Transición B · descarga",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    32,
+    "F5-N1"
+   ],
+   [
+    32,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "C44"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 2,
+  "f": "Viernes 19 de marzo",
+  "d": 105,
+  "c": "baja",
+  "tema": "Transición B · descarga con volumen de tiro",
+  "b": [
+   [
+    0,
+    18,
+    "F16L",
+    "sc"
+   ],
+   [
+    18,
+    30,
+    "F3-N3",
+    "sc"
+   ],
+   [
+    30,
+    60,
+    "F4-N1"
+   ],
+   [
+    60,
+    80,
+    "F4-N2"
+   ],
+   [
+    80,
+    98,
+    "C55"
+   ],
+   [
+    98,
+    105,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 3,
+  "f": "Martes 23 de marzo",
+  "d": 75,
+  "c": "alta",
+  "tema": "Transición B · LA ÚNICA SESIÓN DE CARGA DEL PARÓN",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    22,
+    "F15-N1"
+   ],
+   [
+    22,
+    36,
+    "F15-N3"
+   ],
+   [
+    36,
+    54,
+    "F10-N3"
+   ],
+   [
+    54,
+    64,
+    "F17-N1"
+   ],
+   [
+    64,
+    72,
+    "F17-N2"
+   ],
+   [
+    72,
+    75,
+    "SSANTA"
+   ]
+  ]
+ },
+ {
+  "n": 4,
+  "f": "Martes 30 de marzo",
+  "d": 75,
+  "c": "media",
+  "tema": "M3 · MC1 · reactivación tras el parón",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    24,
+    "F8-N2"
+   ],
+   [
+    24,
+    32,
+    "INTENS"
+   ],
+   [
+    32,
+    52,
+    "F9-N5"
+   ],
+   [
+    52,
+    70,
+    "F10-N3"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 5,
+  "f": "Viernes 2 de abril · víspera de J19",
+  "d": 105,
+  "c": "baja",
+  "tema": "M3 · SESIÓN OBLIGATORIA",
+  "b": [
+   [
+    0,
+    15,
+    "F16S",
+    "sc"
+   ],
+   [
+    15,
+    30,
+    "MANEJO",
+    "sc"
+   ],
+   [
+    30,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "F18-N2"
+   ],
+   [
+    70,
+    84,
+    "F17-N1"
+   ],
+   [
+    84,
+    96,
+    "C55C"
+   ],
+   [
+    96,
+    105,
+    "CHARLA"
+   ]
+  ]
+ },
+ {
+  "n": 6,
+  "f": "Martes 6 de abril",
+  "d": 75,
+  "c": "media",
+  "tema": "M3 · MC2 · inferioridad",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    24,
+    "REVIS"
+   ],
+   [
+    24,
+    32,
+    "INTENS"
+   ],
+   [
+    32,
+    52,
+    "F11-N5"
+   ],
+   [
+    52,
+    70,
+    "F9-N5"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 7,
+  "f": "Viernes 9 de abril · J20",
+  "d": 105,
+  "c": "baja",
+  "tema": "M3 · plan de partido",
+  "b": [
+   [
+    0,
+    15,
+    "F16S",
+    "sc"
+   ],
+   [
+    15,
+    30,
+    "MANEJO",
+    "sc"
+   ],
+   [
+    30,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "ESPEC"
+   ],
+   [
+    70,
+    84,
+    "F17-N3"
+   ],
+   [
+    84,
+    96,
+    "C55C"
+   ],
+   [
+    96,
+    105,
+    "CHARLA"
+   ]
+  ]
+ },
+ {
+  "n": 8,
+  "f": "Martes 13 de abril",
+  "d": 75,
+  "c": "media",
+  "tema": "M3 · MC3 · zona con trampa",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    24,
+    "REVIS"
+   ],
+   [
+    24,
+    32,
+    "INTENS"
+   ],
+   [
+    32,
+    52,
+    "F9-N7"
+   ],
+   [
+    52,
+    70,
+    "F10-N3"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 9,
+  "f": "Viernes 16 de abril · J21",
+  "d": 105,
+  "c": "baja",
+  "tema": "M3 · gestión de faltas y reloj",
+  "b": [
+   [
+    0,
+    15,
+    "F16S",
+    "sc"
+   ],
+   [
+    15,
+    30,
+    "MANEJO",
+    "sc"
+   ],
+   [
+    30,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "ESPEC"
+   ],
+   [
+    70,
+    84,
+    "F17-N4"
+   ],
+   [
+    84,
+    96,
+    "C55C"
+   ],
+   [
+    96,
+    105,
+    "CHARLA"
+   ]
+  ]
+ },
+ {
+  "n": 10,
+  "f": "Martes 20 de abril",
+  "d": 75,
+  "c": "media",
+  "tema": "M3 · MC4 · lo que mejor hacemos",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    24,
+    "REVIS"
+   ],
+   [
+    24,
+    32,
+    "INTENS"
+   ],
+   [
+    32,
+    52,
+    "MEJOR"
+   ],
+   [
+    52,
+    70,
+    "C55C"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 11,
+  "f": "Viernes 23 de abril · J22",
+  "d": 105,
+  "c": "baja",
+  "tema": "M3 · última jornada de la 1ª Fase",
+  "b": [
+   [
+    0,
+    15,
+    "F16S",
+    "sc"
+   ],
+   [
+    15,
+    30,
+    "MANEJO",
+    "sc"
+   ],
+   [
+    30,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "ESPEC"
+   ],
+   [
+    70,
+    86,
+    "F17TODO"
+   ],
+   [
+    86,
+    96,
+    "C55C"
+   ],
+   [
+    96,
+    105,
+    "CIERRE1F"
+   ]
+  ]
+ },
+ {
+  "n": 12,
+  "f": "Martes 27 de abril",
+  "d": 75,
+  "c": "baja",
+  "tema": "M4 · puente · descarga tras M3",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    32,
+    "F5-N1"
+   ],
+   [
+    32,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "C44"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 13,
+  "f": "Viernes 30 de abril",
+  "d": 105,
+  "c": "baja",
+  "tema": "M4 · puente · descarga",
+  "b": [
+   [
+    0,
+    18,
+    "F16L",
+    "sc"
+   ],
+   [
+    18,
+    30,
+    "F3-N3",
+    "sc"
+   ],
+   [
+    30,
+    60,
+    "F4-N1"
+   ],
+   [
+    60,
+    80,
+    "F5-N3"
+   ],
+   [
+    80,
+    98,
+    "C55"
+   ],
+   [
+    98,
+    105,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 14,
+  "f": "Martes 4 de mayo",
+  "d": 75,
+  "c": "alta",
+  "tema": "M4 · puesta a punto",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    22,
+    "INDIV"
+   ],
+   [
+    22,
+    36,
+    "F15-N3"
+   ],
+   [
+    36,
+    58,
+    "F10-N5"
+   ],
+   [
+    58,
+    72,
+    "C44"
+   ],
+   [
+    72,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 15,
+  "f": "Viernes 7 de mayo",
+  "d": 105,
+  "c": "media",
+  "tema": "M4 · sorteo hecho · preparar el escenario",
+  "b": [
+   [
+    0,
+    18,
+    "F16L",
+    "sc"
+   ],
+   [
+    18,
+    30,
+    "F7-N2",
+    "sc"
+   ],
+   [
+    30,
+    48,
+    "F4-N1"
+   ],
+   [
+    48,
+    80,
+    "ESCEN"
+   ],
+   [
+    80,
+    92,
+    "C55"
+   ],
+   [
+    92,
+    100,
+    "SAQUES"
+   ],
+   [
+    100,
+    105,
+    "PLAN"
+   ]
+  ]
+ },
+ {
+  "n": 16,
+  "f": "Martes 11 de mayo",
+  "d": 75,
+  "c": "media",
+  "tema": "M4 · 2ª Fase · microciclo de M3",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    24,
+    "REVIS"
+   ],
+   [
+    24,
+    32,
+    "INTENS"
+   ],
+   [
+    32,
+    52,
+    "ESPEC"
+   ],
+   [
+    52,
+    70,
+    "C55C"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 17,
+  "f": "Viernes 14 de mayo",
+  "d": 105,
+  "c": "baja",
+  "tema": "M4 · víspera de partido",
+  "b": [
+   [
+    0,
+    15,
+    "F16S",
+    "sc"
+   ],
+   [
+    15,
+    30,
+    "MANEJO",
+    "sc"
+   ],
+   [
+    30,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "ESPEC"
+   ],
+   [
+    70,
+    84,
+    "F17TODO"
+   ],
+   [
+    84,
+    96,
+    "C55C"
+   ],
+   [
+    96,
+    105,
+    "CHARLA"
+   ]
+  ]
+ },
+ {
+  "n": 18,
+  "f": "Martes 18 de mayo",
+  "d": 75,
+  "c": "media",
+  "tema": "M4 · 2ª Fase",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    24,
+    "REVIS"
+   ],
+   [
+    24,
+    32,
+    "INTENS"
+   ],
+   [
+    32,
+    52,
+    "ESPEC"
+   ],
+   [
+    52,
+    70,
+    "C55C"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 19,
+  "f": "Viernes 21 de mayo",
+  "d": 105,
+  "c": "baja",
+  "tema": "M4 · víspera de partido",
+  "b": [
+   [
+    0,
+    15,
+    "F16S",
+    "sc"
+   ],
+   [
+    15,
+    30,
+    "MANEJO",
+    "sc"
+   ],
+   [
+    30,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "ESPEC"
+   ],
+   [
+    70,
+    84,
+    "F17TODO"
+   ],
+   [
+    84,
+    96,
+    "C55C"
+   ],
+   [
+    96,
+    105,
+    "CHARLA"
+   ]
+  ]
+ },
+ {
+  "n": 20,
+  "f": "Martes 25 de mayo",
+  "d": 75,
+  "c": "media",
+  "tema": "M4 · 2ª Fase",
+  "b": [
+   [
+    0,
+    12,
+    "F16",
+    "sc"
+   ],
+   [
+    12,
+    24,
+    "REVIS"
+   ],
+   [
+    24,
+    32,
+    "INTENS"
+   ],
+   [
+    32,
+    52,
+    "ESPEC"
+   ],
+   [
+    52,
+    70,
+    "C55C"
+   ],
+   [
+    70,
+    75,
+    "TL"
+   ]
+  ]
+ },
+ {
+  "n": 21,
+  "f": "Viernes 28 de mayo",
+  "d": 105,
+  "c": "baja",
+  "tema": "M4 · última sesión de la temporada",
+  "b": [
+   [
+    0,
+    15,
+    "F16S",
+    "sc"
+   ],
+   [
+    15,
+    30,
+    "MANEJO",
+    "sc"
+   ],
+   [
+    30,
+    52,
+    "F4-N1"
+   ],
+   [
+    52,
+    70,
+    "ESPEC"
+   ],
+   [
+    70,
+    84,
+    "F17TODO"
+   ],
+   [
+    84,
+    96,
+    "C55C"
+   ],
+   [
+    96,
+    105,
+    "CIERRE"
+   ]
+  ]
+ }
+];
+
+var idx=0,t0=null,acc=0,corriendo=false,tick=null,lock=null;
+function $(s){return document.querySelector(s);}
+var tl=$("#tl"),ph=$("#playhead");
+
+$("#simbolos").innerHTML =
+ '<span><svg width="20" height="16" viewBox="-10 -8 20 16"><circle cx="0" cy="0" r="6.4" fill="'+NAVY+'"/></svg>Atacante</span>'+
+ '<span><svg width="20" height="16" viewBox="-10 -8 20 16">'+defe(0,0,"")+'</svg>Defensora</span>'+
+ '<span><svg width="20" height="16" viewBox="-10 -8 20 16">'+cono(0,1)+'</svg>Cono</span>'+
+ '<span><svg width="36" height="12" viewBox="0 0 36 12">'+defsSVG()+'<line x1="1" y1="6" x2="31" y2="6" stroke="'+NAVY+'" stroke-width="1.7" marker-end="url(#fm)"/></svg>Se mueve</span>'+
+ '<span><svg width="36" height="12" viewBox="0 0 36 12"><line x1="1" y1="6" x2="31" y2="6" stroke="'+NAVY+'" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#fm)"/></svg>Pasa</span>'+
+ '<span><svg width="36" height="14" viewBox="0 0 36 14">'+bote(2,7,31,7)+'</svg>Bota</span>';
+
+function elegirInicial(){
+  var F=["2027-03-16", "2027-03-19", "2027-03-23", "2027-03-30", "2027-04-02", "2027-04-06", "2027-04-09", "2027-04-13", "2027-04-16", "2027-04-20", "2027-04-23", "2027-04-27", "2027-04-30", "2027-05-04", "2027-05-07", "2027-05-11", "2027-05-14", "2027-05-18", "2027-05-21", "2027-05-25", "2027-05-28"];
+  var hoy=new Date(); hoy.setHours(0,0,0,0);
+  var m=0,dm=Infinity;
+  F.forEach(function(f,i){var d=Math.abs(new Date(f+"T00:00:00")-hoy); if(d<dm){dm=d;m=i;}});
+  return m;
+}
+
+function pintar(){
+  var s=S[idx];
+  $("#titulo").textContent="Sesión "+s.n+" · "+s.tema;
+  $("#fecha").textContent=s.f;
+  var cg=$("#carga"); cg.textContent="Carga "+s.c+" · "+s.d+" min"; cg.className="carga "+s.c;
+  $("#prev").disabled=(idx===0); $("#next").disabled=(idx===S.length-1);
+  Array.prototype.forEach.call(tl.querySelectorAll(".blk"),function(n){n.remove();});
+  var px=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--px-min"));
+
+  s.b.forEach(function(bl,i){
+    var a=bl[0],z=bl[1],cod=bl[2];
+    var e=E[cod]||{t:"org",n:cod,m:""};
+    var d=document.createElement("section");
+    d.className="blk b-"+e.t; d.dataset.a=a; d.dataset.z=z;
+    d.style.minHeight=((z-a)*px)+"px";
+    var esFam=/^F[0-9]+-N[0-9]+$/.test(cod);
+    var id="pz"+i;
+    var btns="";
+    if(D[cod]) btns+='<button class="piz-btn" type="button" aria-expanded="false" aria-controls="'+id+'">Pizarra</button>';
+    if(DET[cod]) btns+='<button class="piz-btn det-btn" type="button" aria-expanded="false" aria-controls="d'+id+'">Cómo se monta</button>';
+
+    d.innerHTML='<div class="min">'+a+"&ndash;"+z+'</div><div class="barra"></div>'+
+      "<h3>"+(esFam?'<span class="cod">'+cod+"</span>":"")+e.n+(bl[3]==="sc"?'<span class="sc">sin canasta</span>':"")+"</h3>"+
+      (e.m?'<div class="meta">'+e.m+"</div>":"")+
+      (e.c?'<div class="clave">'+e.c+"</div>":"")+
+      (e.d?'<div class="defe">'+e.d+"</div>":"")+
+      (e.x?'<div class="comp"><b>Marcador</b> · '+e.x+"</div>":"")+
+      (e.l?'<div class="fuente">'+cita(e.l)+"</div>":"")+
+      (btns?'<div class="btns">'+btns+"</div>":"")+
+      (D[cod]?'<div class="piz" id="'+id+'">'+pizarra(D[cod])+"</div>":"")+
+      (DET[cod]?'<div class="det" id="d'+id+'">'+detalle(DET[cod])+"</div>":"");
+    tl.appendChild(d);
+  });
+
+  Array.prototype.forEach.call(tl.querySelectorAll(".piz-btn"),function(b){
+    var esDet=b.classList.contains("det-btn");
+    var etiq=esDet?"Cómo se monta":"Pizarra";
+    b.addEventListener("click",function(){
+      var p=document.getElementById(b.getAttribute("aria-controls"));
+      var ab=p.classList.toggle("abierta");
+      b.setAttribute("aria-expanded",ab?"true":"false");
+      b.textContent=ab?"Ocultar":etiq;
+      marcar();
+    });
+  });
+  marcar();
+}
+
+function mins(){return (acc+(corriendo?Date.now()-t0:0))/60000;}
+
+function marcar(){
+  var m=mins(),activo=(corriendo||acc>0),actual=null;
+  Array.prototype.forEach.call(tl.querySelectorAll(".blk"),function(d){
+    var a=+d.dataset.a,z=+d.dataset.z;
+    d.classList.toggle("hecho",activo&&m>=z);
+    var es=activo&&m>=a&&m<z;
+    d.classList.toggle("ahora",es);
+    if(es) actual=d;
+  });
+  if(activo&&actual){
+    var a=+actual.dataset.a,z=+actual.dataset.z,fr=(m-a)/(z-a);
+    ph.style.display="block";
+    ph.style.top=(actual.offsetTop+fr*actual.offsetHeight)+"px";
+    var q=Math.max(0,Math.ceil(z-m));
+    $("#estado").innerHTML="<b>"+actual.querySelector("h3").textContent+"</b><br>"+
+      q+(q===1?" minuto":" minutos")+" para el siguiente bloque";
+  } else if(activo&&m>=S[idx].d){
+    ph.style.display="none";
+    $("#estado").innerHTML="<b>Sesión completada.</b> Recoge y cierra con una idea.";
+  } else {
+    ph.style.display="none";
+    if(!activo) $("#estado").textContent="Pulsa empezar cuando arranque el entrenamiento.";
+  }
+  var t=Math.floor(mins()*60);
+  $("#crono").textContent=String(Math.floor(t/60)).padStart(2,"0")+":"+String(t%60).padStart(2,"0");
+}
+
+function despierta(on){
+  try{
+    if(on&&("wakeLock" in navigator)){navigator.wakeLock.request("screen").then(function(l){lock=l;}).catch(function(){});}
+    else if(lock){lock.release(); lock=null;}
+  }catch(e){}
+}
+
+$("#play").addEventListener("click",function(){
+  if(corriendo){
+    acc+=Date.now()-t0; corriendo=false; clearInterval(tick); tick=null;
+    $("#play").textContent="Seguir"; $("#play").classList.remove("on"); despierta(false);
+  } else {
+    t0=Date.now(); corriendo=true; tick=setInterval(marcar,1000);
+    $("#play").textContent="Pausa"; $("#play").classList.add("on"); despierta(true);
+  }
+  marcar();
+});
+$("#reset").addEventListener("click",function(){
+  acc=0; corriendo=false; clearInterval(tick); tick=null;
+  $("#play").textContent="Empezar"; $("#play").classList.remove("on"); despierta(false); marcar();
+});
+$("#prev").addEventListener("click",function(){if(idx>0){idx--;pintar();}});
+$("#next").addEventListener("click",function(){if(idx<S.length-1){idx++;pintar();}});
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible"&&corriendo) despierta(true);});
+window.addEventListener("resize",marcar);
+
+idx=elegirInicial();
+pintar();
+</script>
+</body>
+</html>

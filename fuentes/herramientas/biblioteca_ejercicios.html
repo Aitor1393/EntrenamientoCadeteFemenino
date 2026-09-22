@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biblioteca de ejercicios · enlaces a fuentes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --madera:#E9E1D2; --madera-2:#DED4C1; --tinta:#20180F;
+  --linea:#C3B79F; --pista:#1D3B54; --cuero:#BE5A21;
+  --salvia:#6E8C6B; --gris:#8A8073;
+  --f-cond:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--madera);color:var(--tinta);font-family:var(--f-body);
+  font-size:15px;line-height:1.4;padding-bottom:3rem}
+header{background:var(--pista);color:#F3EDE1;padding:.7rem .9rem}
+header h1{margin:0;font-family:var(--f-cond);font-weight:700;font-size:1.6rem;line-height:1.1}
+header p{margin:.2rem 0 0;font-size:.8rem;color:#B9C9D6}
+.aviso{margin:.9rem;padding:.6rem .75rem;background:#F7F2E9;border:1px solid var(--linea);
+  border-radius:2px;font-size:.82rem}
+.aviso b{font-family:var(--f-cond);font-weight:700;letter-spacing:.02em}
+.aviso.warn{border-color:var(--cuero);background:rgba(190,90,33,.09)}
+nav{display:flex;flex-wrap:wrap;gap:.35rem;padding:0 .9rem .3rem}
+nav a{font-family:var(--f-cond);font-weight:600;font-size:.85rem;letter-spacing:.03em;
+  text-decoration:none;color:var(--pista);border:1px solid var(--linea);border-radius:2px;
+  padding:.15rem .5rem;background:#F7F2E9}
+h2{margin:1.4rem .9rem .4rem;font-family:var(--f-cond);font-weight:700;font-size:1.15rem;
+  letter-spacing:.04em;color:var(--cuero);text-transform:uppercase}
+.fam{margin:.55rem .9rem;background:#F7F2E9;border:1px solid var(--linea);border-radius:2px}
+.fam > h3{margin:0;padding:.45rem .6rem;background:var(--madera-2);
+  font-family:var(--f-cond);font-weight:600;font-size:1.05rem;border-bottom:1px solid var(--linea)}
+.fam > h3 span{color:var(--cuero);font-weight:700;margin-right:.35rem}
+.src{padding:.4rem .6rem;border-bottom:1px solid rgba(195,183,159,.5)}
+.src:last-child{border-bottom:0}
+.src .lbl{font-size:.78rem;color:#5E5449;margin-bottom:.25rem}
+.src .lbl b{color:var(--pista);font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:.3rem}
+.links a{display:inline-block;font-family:var(--f-cond);font-weight:600;font-size:.82rem;
+  letter-spacing:.02em;text-decoration:none;color:#F3EDE1;background:var(--pista);
+  border-radius:2px;padding:.16rem .5rem}
+.links a.alt{background:transparent;color:var(--pista);border:1px solid var(--pista)}
+.links span.dead{display:inline-block;font-family:var(--f-cond);font-weight:600;font-size:.82rem;
+  color:var(--gris);border:1px dashed var(--linea);border-radius:2px;padding:.16rem .5rem}
+footer{margin:1.6rem .9rem 0;padding-top:.7rem;border-top:1px solid var(--linea);
+  font-size:.78rem;color:#6B6157}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Biblioteca de ejercicios</h1>
+  <p>Enlaces directos a la página de cada fuente · Cadete Femenino Preferente 2026/27</p>
+</header>
+
+<div class="aviso">
+  <b>PARA QUE LOS ENLACES FUNCIONEN</b><br>
+  Guarda este archivo en la misma carpeta que los PDF. Del libro de 500 ejercicios se usa la copia <code>_sin_cpr</code>, que tiene una página menos que la original en todo el libro.
+  Cada botón abre el PDF en la página exacta.<br><br>
+  En ordenador funciona en Chrome, Edge, Firefox y Adobe Reader. <b>En el móvil el salto de página
+  es irregular</b>: algunos visores abren el PDF pero ignoran la página. Si lo vas a usar a pie de
+  pista, mejor desde tablet o con el PDF ya abierto.
+</div>
+
+<div class="aviso warn">
+  <b>UN PROBLEMA CON UNO DE TUS ARCHIVOS</b><br>
+  <code>100_Ejercicios_Extra_de_Baloncesto.pdf</code> no es un PDF: es un archivo de texto plano al
+  que le han puesto la extensión <code>.pdf</code>. Tiene el texto de los ejercicios pero
+  <b>ha perdido los gráficos</b>, y no admite enlaces por página. Convendría que te descargaras
+  otra vez el original de BasketballCO.
+</div>
+
+<div class="aviso warn">
+  <b>SI LOS ENLACES DAN 404</b><br>
+  Los enlaces son relativos: <b>este archivo y los PDF tienen que estar en la misma carpeta</b> de tu ordenador. Desde el visor de Claude o desde el móvil no van a funcionar.<br><br>
+  Si tus PDF se llaman de otra forma, edita el bloque <code>CONFIGURACIÓN</code> que hay al final del archivo: son cuatro líneas y admite rutas absolutas.<br>
+  <span id="aviso-ruta" style="font-size:.9em;color:#6B6157"></span>
+</div>
+<nav>
+  <a href="#tecnica">Técnica individual</a>
+  <a href="#defensa">Defensa</a>
+  <a href="#contra">Contraataque</a>
+  <a href="#transversal">Transversal</a>
+  <a href="#fuentes">Fuentes</a>
+</nav>
+
+<h2 id="tecnica">A · Técnica y táctica individual</h2>
+
+<div class="fam">
+  <h3><span>F1</span>Manejo, salida y primer paso</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · bote y cambios de mano · pp. 21-38</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=20">Abrir p. 21</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · salida y primer paso · pp. 42-49</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=41">Abrir p. 42</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · desplazamientos laterales · hexágono de disociación</div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=3">p. 3</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=4">p. 4</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>25 Calentamientos</b> · drible en zigzag · drible en · cambio de mano</div>
+    <div class="links">
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=9" class="alt">Cal. 6</a>
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=16" class="alt">Cal. 13</a>
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=19" class="alt">Cal. 16</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>+100 Ejercicios</b> · dribbling pp. 7-17 · paradas y arrancadas pp. 55-59</div>
+    <div class="links"><span class="dead">sin enlace · archivo dañado</span></div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F2</span>Finalizaciones, paradas y arrancadas</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · salida y primer paso · pp. 42-49</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=41">Abrir p. 42</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>+100 Ejercicios</b> · finalizaciones pp. 44-54</div>
+    <div class="links"><span class="dead">sin enlace · archivo dañado</span></div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F3</span>Pase y recepción</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · pase · pp. 89-120 · <i>la sección más extensa del libro</i></div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=88">Abrir p. 89</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · juegos sin bote ni canasta · <i>para los 30 min sin canasta del viernes</i></div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=1">Touchdown</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=2">Rombo</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=5">Tic-tac-toe</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=6">Cono</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=18">Plantar cono</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=19">Diagonales</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=20">Australia</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=22">4x2 extra pass</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=26">Sillas</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>25 Calentamientos</b> · pase en triángulo · pase de pecho · pase rápido</div>
+    <div class="links">
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=7" class="alt">Cal. 4</a>
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=12" class="alt">Cal. 9</a>
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=18" class="alt">Cal. 15</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F4</span>Tiro</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · tiro · pp. 54-73</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=53">Abrir p. 54</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · golf de tiro libre · 7-6-5 · <i>formatos competitivos de tiro</i></div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=29">p. 29</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=30">p. 30</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>25 Calentamientos</b> · tiro en · tiro libre bajo presión</div>
+    <div class="links">
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=20" class="alt">Cal. 17</a>
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=27" class="alt">Cal. 24</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F5</span>1c1 de ataque</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · capítulo 3 completo · pp. 272-290</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=271">Abrir p. 272</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · 1x1 a tres pases · 1x1 continuo closeout</div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=15">p. 15</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=16">p. 16</a>
+    </div>
+  </div>
+</div>
+
+<h2 id="defensa">B · Defensa</h2>
+
+<div class="fam">
+  <h3><span>F6</span>Defensa sobre el balón</h3>
+  <div class="src">
+    <div class="lbl"><b>40 Defensa</b> · parte 1 · ejercicios 1 a 5</div>
+    <div class="links">
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=9">1 Progresión</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=10">2 Límite cruzar</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=11">3 Evitar medio</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=12">4 Closeout</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=13">5 Recuperación</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · movimiento básico defensivo pp. 193-202 · closeout pp. 205-210</div>
+    <div class="links">
+      <a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=192">p. 193</a>
+      <a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=204">p. 205</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · progresión defensiva · evitar el centro · hombro ganador · balón a cintura</div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=7">p. 7</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=8">p. 8</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=13">p. 13</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=14">p. 14</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F7</span>Defensa sin balón · ayudas y rotaciones</h3>
+  <div class="src">
+    <div class="lbl"><b>40 Defensa</b> · partes 2 y 3 · ejercicios 6 a 15</div>
+    <div class="links">
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=15">6 Recepción 45º</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=16">7 Línea de pase</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=17">8 Débil a fuerte</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=19">10 Coberturas</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=21">11 Cuatro 1x1</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=24">14 3x3 penetración</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · lado de ayuda y rotación defensiva · pp. 222-235</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=221">Abrir p. 222</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · defensa en lado fuerte · de débil a lado balón · pase y corte defendido</div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=9">p. 9</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=10">p. 10</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=23">p. 23</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F8</span>Rebote defensivo · box-out</h3>
+  <div class="src">
+    <div class="lbl"><b>40 Defensa</b> · parte 6 · ejercicios 26 a 30</div>
+    <div class="links">
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=40">26 Close + Box Out</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=41">27 Rotación de 3</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=42">28 Sumo</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=43">29 Dos balones</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=44">30 Romper espejo</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · box-out · pp. 213-218</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=212">Abrir p. 213</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · sumo · bloquear en carrera &nbsp;·&nbsp; <b>25 Cal.</b> · rebote</div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=11">p. 11</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=12">p. 12</a>
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=17" class="alt">Cal. 14</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F9</span>Zona 2-3 · por miniaturas</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · defensa zonal · pp. 254-258 · <i>ejercicio 417: juego guiado para la 2-3</i></div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=253">Abrir p. 254</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>40 Defensa</b> · parte 8 · shell drill, base de la construcción colectiva</div>
+    <div class="links">
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=52">36 Shell básico</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=54">38 Motion Shell</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F10</span>Balance defensivo</h3>
+  <div class="src">
+    <div class="lbl"><b>40 Defensa</b> · parte 7 completa · ejercicios 31 a 35</div>
+    <div class="links">
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=46">31 Futbolín</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=47">32 Salida lanzada</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=48">33 3x3 continuo</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=49">34 4x3 + anotador</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=50">35 4x4 colores</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · 3x2 + medio campo · 4x3 sacando rápido</div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=27">p. 27</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=28">p. 28</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F11</span>Inferioridad defensiva · último defensor</h3>
+  <div class="src">
+    <div class="lbl"><b>40 Defensa</b> · parte 4 completa · ejercicios 16 a 20</div>
+    <div class="links">
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=27">16 Last 2x2</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=28">17 3x2+1 fondo</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=29">18 3x3 fondo</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=30">19 3x2+1 puerta atrás</a>
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=31">20 4x3+1 última ayuda</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · 3x2+1 chocando mano · ataque a un tercio · 3x2+1 last</div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=21">p. 21</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=24">p. 24</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=25">p. 25</a>
+    </div>
+  </div>
+</div>
+
+<h2 id="contra">C · Contraataque</h2>
+
+<div class="fam">
+  <h3><span>F12</span>Rebote, salida y calles</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · transición · pp. 174-186 · <i>ejercicios 303 en adelante: 2c0, 3c0, 4c0 desde el rebote</i></div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=173">Abrir p. 174</a></div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F13</span>Superioridad ofensiva · 2c1, 3c2, 4c3</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · capítulo 4 completo · pp. 295-314 · <i>20 páginas solo de superioridad numérica</i></div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=294">Abrir p. 295</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · 3x2+1 chocando mano · 4x2 extra pass</div>
+    <div class="links">
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=21">p. 21</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=22">p. 22</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F14</span>Transición · cuando el primario no da canasta</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios</b> · transición · pp. 174-186</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=173">Abrir p. 174</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Desmarque</b> · 4x3 sacando rápido</div>
+    <div class="links"><a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=28">p. 28</a></div>
+  </div>
+</div>
+
+<h2 id="transversal">D · Transversal</h2>
+
+<div class="fam">
+  <h3><span>F15</span>Continuos y físico integrado</h3>
+  <div class="src">
+    <div class="lbl"><b>40 Defensa</b> · 3x3 continuo con activación &nbsp;·&nbsp; <b>75 Desmarque</b> · Australia</div>
+    <div class="links">
+      <a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=48">Ej. 33</a>
+      <a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=20">p. 20</a>
+    </div>
+  </div>
+</div>
+
+<div class="fam">
+  <h3><span>F16</span>Activación preventiva y calentamiento</h3>
+  <div class="src">
+    <div class="lbl"><b>25 Calentamientos</b> · secciones 1 y 2 · activación general, movilidad y agilidad</div>
+    <div class="links">
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=4" class="alt">Sec. 1</a>
+      <a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=10" class="alt">Sec. 2</a>
+    </div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>25 Calentamientos</b> · sección 5 · activación pre-partido · <i>para los viernes D-1</i></div>
+    <div class="links"><a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=26" class="alt">Abrir sec. 5</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl">El bloque de fuerza y core sigue siendo el protocolo propio: excéntrico de isquiotibiales, sentadilla a una pierna, puente de glúteo y plancha. Ninguna de las fuentes lo cubre.</div>
+    <div class="links"><span class="dead">propio · 4 min sin balón</span></div>
+  </div>
+</div>
+
+<h2 id="fuentes">Las cinco fuentes</h2>
+
+<div class="fam">
+  <h3>Portadas</h3>
+  <div class="src">
+    <div class="lbl"><b>500 Ejercicios de Baloncesto de la A a la Z</b> — Dejan Čikić · Basketcoach.net, 2020 · 320 pp · ejercicios numerados 1-500</div>
+    <div class="links"><a href="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf#page=3">Índice</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>Ejercicios de Baloncesto · Defensa, Vol. 2</b> — Pere Purrà, @coachperebcn · 57 pp · ejercicios 1-38</div>
+    <div class="links"><a href="40EjerciciosdeDefensaenBaloncesto.pdf#page=2">Índice</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>75 Ejercicios de Desmarque</b> — Pere Purrà Jr. · 30 pp · <i>un ejercicio por página, sin índice</i></div>
+    <div class="links"><a href="75EjerciciosdeDesmarqueenBaloncesto.pdf#page=1">Abrir</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>25 Calentamientos Listos para Baloncesto</b> — Higor · 30 pp · 5 secciones</div>
+    <div class="links"><a href="25CalentamientosListosparaBaloncesto_pdf.pdf#page=1">Abrir</a></div>
+  </div>
+  <div class="src">
+    <div class="lbl"><b>Libro de Ejercicios · +100 nuevos</b> — BasketballCO · 110 pp</div>
+    <div class="links"><span class="dead">archivo dañado · descargar de nuevo</span></div>
+  </div>
+</div>
+
+<footer>
+  <p>Las páginas indicadas corresponden a la numeración del PDF, que en las cuatro fuentes válidas
+  coincide con la impresa.</p>
+  <p>Esta biblioteca es un índice de tus propias fuentes: no reproduce su contenido. Los ejercicios
+  se consultan en el original, que además trae los gráficos.</p>
+</footer>
+
+
+<script>
+/* ==========================================================================
+   CONFIGURACIÓN · edita solo estas cuatro líneas si tus PDF se llaman de otra
+   forma o están en otra carpeta. Ejemplos de valor válido:
+       "500.pdf"                        (mismo directorio)
+       "libros/500.pdf"                 (subcarpeta)
+       "file:///C:/Users/aitor/libros/500.pdf"   (ruta absoluta en Windows)
+   ========================================================================== */
+var PDF = {
+  "500":  "500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf",
+  "40D":  "40EjerciciosdeDefensaenBaloncesto.pdf",
+  "75DM": "75EjerciciosdeDesmarqueenBaloncesto.pdf",
+  "25C":  "25CalentamientosListosparaBaloncesto_pdf.pdf"
+};
+/* ========================================================================== */
+
+(function(){
+  var mapa = {
+    "500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf": "500",
+    "500_Sesiones_de_Entrenamiento_de_Baloncesto.pdf": "500",
+    "40EjerciciosdeDefensaenBaloncesto.pdf": "40D",
+    "75EjerciciosdeDesmarqueenBaloncesto.pdf": "75DM",
+    "25CalentamientosListosparaBaloncesto_pdf.pdf": "25C"
+  };
+  var links = document.querySelectorAll('a[href*=".pdf#page="]');
+  Array.prototype.forEach.call(links, function(a){
+    var h = a.getAttribute("href"), i = h.indexOf("#");
+    var arch = h.slice(0, i), ancla = h.slice(i);
+    var k = mapa[arch];
+    if (k && PDF[k]) a.setAttribute("href", PDF[k] + ancla);
+  });
+  var n = links.length;
+  var aviso = document.getElementById("aviso-ruta");
+  if (aviso) aviso.textContent = n + " enlaces preparados. Si dan 404, revisa el bloque CONFIGURACIÓN al final del archivo.";
+})();
+</script>
+</body>
+</html>

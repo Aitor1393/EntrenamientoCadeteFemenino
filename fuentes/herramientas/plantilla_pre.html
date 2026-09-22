@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fichas de sesión · M0 · sesiones 5 a 10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --madera:#E9E1D2; --madera-2:#DED4C1; --tinta:#20180F;
+  --linea:#C3B79F; --pista:#1D3B54; --cuero:#BE5A21;
+  --salvia:#6E8C6B; --gris:#8A8073;
+  --f-cond:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,sans-serif;
+  --px-min:10px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--madera);color:var(--tinta);font-family:var(--f-body);
+  font-size:15px;line-height:1.35;padding-bottom:2rem}
+.top{position:sticky;top:0;z-index:30;background:var(--pista);color:#F3EDE1;
+  padding:.55rem .8rem .5rem;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;gap:.5rem}
+.nav button{flex:0 0 auto;width:2.1rem;height:2.1rem;border:0;border-radius:2px;
+  background:rgba(255,255,255,.13);color:#F3EDE1;font-family:var(--f-cond);
+  font-size:1.2rem;font-weight:700;cursor:pointer}
+.nav button:disabled{opacity:.28;cursor:default}
+.nav button:focus-visible,.acc button:focus-visible,.piz-btn:focus-visible{outline:2px solid var(--cuero);outline-offset:2px}
+.ident{flex:1;min-width:0;text-align:center}
+.ident .n{font-family:var(--f-cond);font-weight:700;font-size:1.45rem;line-height:1.05}
+.ident .d{font-size:.78rem;color:#B9C9D6;line-height:1.3}
+.carga{display:inline-block;margin-top:.15rem;padding:.05rem .4rem;border-radius:2px;
+  font-family:var(--f-cond);font-weight:600;font-size:.72rem;letter-spacing:.04em}
+.carga.alta{background:var(--cuero);color:#fff}
+.carga.media{background:#8E7A4E;color:#fff}
+.carga.baja{background:var(--salvia);color:#fff}
+.reloj{position:sticky;top:74px;z-index:29;display:flex;align-items:center;gap:.6rem;
+  background:var(--madera-2);border-bottom:1px solid var(--linea);padding:.4rem .8rem}
+.reloj .t{font-family:var(--f-cond);font-weight:700;font-size:1.9rem;line-height:1;
+  font-variant-numeric:tabular-nums;min-width:4.1rem}
+.reloj .estado{flex:1;min-width:0;font-size:.78rem;color:#60564A;line-height:1.25}
+.reloj .estado b{font-weight:600;color:var(--tinta)}
+.acc{display:flex;gap:.3rem}
+.acc button{border:1px solid var(--pista);background:transparent;color:var(--pista);
+  border-radius:2px;padding:.32rem .6rem;cursor:pointer;font-family:var(--f-cond);
+  font-weight:600;font-size:.85rem;letter-spacing:.03em}
+.acc button.on{background:var(--pista);color:#F3EDE1}
+.wrap{padding:.7rem .8rem 0;position:relative}
+.tl{position:relative;padding-left:2.9rem}
+.regla{position:absolute;left:2.35rem;top:0;bottom:0;width:1px;background:var(--linea)}
+.playhead{position:absolute;left:1.3rem;right:0;height:0;border-top:2px solid var(--cuero);
+  pointer-events:none;display:none;z-index:12}
+.playhead::before{content:"";position:absolute;left:-5px;top:-5px;width:8px;height:8px;
+  background:var(--cuero);border-radius:50%}
+.blk{position:relative;padding:.35rem 0 .45rem .1rem;border-top:1px solid var(--linea)}
+.blk:first-of-type{border-top:0}
+.blk .min{position:absolute;left:-2.9rem;top:.35rem;width:2.45rem;text-align:right;
+  font-family:var(--f-cond);font-weight:600;font-size:.8rem;color:var(--gris);
+  font-variant-numeric:tabular-nums;line-height:1.2}
+.blk .barra{position:absolute;left:-.45rem;top:.4rem;bottom:.4rem;width:3px;border-radius:2px}
+.b-prev .barra{background:var(--salvia)}
+.b-tec .barra{background:var(--pista)}
+.b-fis .barra{background:var(--cuero)}
+.b-jue .barra{background:#4A6E86}
+.b-org .barra{background:var(--linea)}
+.blk h3{margin:0;font-family:var(--f-cond);font-weight:600;font-size:1.1rem;line-height:1.15}
+.blk h3 .cod{color:var(--cuero);font-weight:700;margin-right:.3rem}
+.sc{display:inline-block;margin-left:.35rem;padding:.02rem .3rem;border:1px solid var(--linea);
+  border-radius:2px;font-family:var(--f-cond);font-size:.7rem;font-weight:600;color:var(--gris);
+  letter-spacing:.03em;vertical-align:.08rem}
+.meta{font-size:.79rem;color:#5E5449;margin-top:.12rem}
+.clave{font-size:.82rem;margin-top:.2rem;padding-left:.6rem;border-left:2px solid var(--linea)}
+.defe{font-size:.82rem;margin-top:.2rem;padding-left:.6rem;border-left:2px solid var(--cuero);color:#7E3A11}
+.comp{display:inline-block;margin-top:.28rem;padding:.12rem .42rem;
+  background:rgba(190,90,33,.13);border:1px solid rgba(190,90,33,.4);
+  border-radius:2px;font-size:.78rem;color:#7E3A11}
+.comp b{font-weight:600}
+.fuente{margin-top:.28rem;font-size:.76rem;color:var(--gris);font-style:italic}
+.blk.ahora{background:rgba(190,90,33,.09)}
+.blk.ahora h3{color:#8A3E12}
+.blk.hecho{opacity:.42}
+.btns{display:flex;gap:.3rem;margin-top:.32rem;flex-wrap:wrap}
+.piz-btn,.lib{background:none;border:1px solid var(--linea);border-radius:2px;
+  color:var(--pista);font-family:var(--f-cond);font-weight:600;font-size:.8rem;
+  letter-spacing:.03em;padding:.14rem .55rem;cursor:pointer;text-decoration:none;display:inline-block}
+.piz-btn[aria-expanded="true"]{background:var(--pista);color:#F3EDE1;border-color:var(--pista)}
+.lib{background:#F7F2E9}
+.det{margin-top:.4rem;background:#F7F2E9;border:1px solid var(--linea);border-radius:2px;
+  padding:.5rem .6rem;display:none;font-size:.85rem}
+.det.abierta{display:block}
+.det h4{margin:.1rem 0 .25rem;font-family:var(--f-cond);font-weight:700;font-size:.88rem;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--cuero)}
+.det h4:not(:first-child){margin-top:.6rem}
+.det ol,.det ul{margin:0;padding-left:1.1rem}
+.det li{margin:.14rem 0;line-height:1.35}
+.det .err li{color:#7E3A11}
+.piz{margin-top:.4rem;background:#F7F2E9;border:1px solid var(--linea);border-radius:2px;
+  padding:.35rem;display:none}
+.piz.abierta{display:block}
+.piz svg{display:block;width:100%;height:auto}
+.piz p{font-size:.76rem;color:#6B6157;margin:.3rem .1rem 0;line-height:1.3}
+.pie{margin:1.3rem .8rem 0;padding-top:.7rem;border-top:1px solid var(--linea);
+  font-size:.78rem;color:#6B6157}
+.pie p{margin:.35rem 0}
+.leyenda,.simbolos{display:flex;flex-wrap:wrap;gap:.75rem;margin:.5rem 0 .2rem;align-items:center}
+.leyenda span,.simbolos span{display:flex;align-items:center;gap:.3rem;font-size:.75rem}
+.leyenda i{width:11px;height:3px;border-radius:2px;display:block}
+@media print{
+  :root{--px-min:0px}
+  body{background:#fff;font-size:10.5pt}
+  .reloj,.nav button,.playhead,.piz-btn,.lib{display:none!important}
+  .top{position:static;background:#fff;color:#000;border-bottom:2px solid #000;padding:0 0 .3rem}
+  .ident .d{color:#333}
+  .carga{border:1px solid #000;background:#fff!important;color:#000!important}
+  .blk{page-break-inside:avoid;min-height:0!important}
+  .blk.hecho,.blk.ahora{opacity:1;background:none}
+  .wrap{padding:.4rem 0 0}
+  .piz{display:block!important;background:#fff}
+  .piz svg{max-width:11cm}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="nav">
+    <button id="prev" aria-label="Sesión anterior">&lsaquo;</button>
+    <div class="ident">
+      <div class="n" id="titulo">Sesión</div>
+      <div class="d" id="fecha">&mdash;</div>
+      <div><span class="carga" id="carga">&mdash;</span></div>
+    </div>
+    <button id="next" aria-label="Sesión siguiente">&rsaquo;</button>
+  </div>
+</header>
+
+<div class="reloj">
+  <div class="t" id="crono">00:00</div>
+  <div class="estado" id="estado">Pulsa empezar cuando arranque el entrenamiento.</div>
+  <div class="acc">
+    <button id="play">Empezar</button>
+    <button id="reset">Reiniciar</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="tl" id="tl">
+    <div class="regla"></div>
+    <div class="playhead" id="playhead"></div>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="leyenda">
+    <span><i style="background:#6E8C6B"></i>Preventivo</span>
+    <span><i style="background:#1D3B54"></i>Técnica</span>
+    <span><i style="background:#BE5A21"></i>Físico</span>
+    <span><i style="background:#4A6E86"></i>Juego</span>
+    <span><i style="background:#C3B79F"></i>Organización</span>
+  </div>
+  <div class="simbolos" id="simbolos"></div>
+  <p>«Pizarra» abre el dibujo y «Cómo se monta» la explicación completa: montaje paso a paso, errores frecuentes y cómo ajustarlo. Con eso no hace falta abrir el PDF en pista.</p>
+  <p>Para que «Libro» funcione, guarda este archivo junto a los PDF. Del libro de 500 se usa la copia «sin_cpr». En el móvil el salto de página es irregular según el visor.</p>
+  <p>12 jugadoras · 4 balones · trío = pasadora, ejecutante, reboteadora.</p>
+</footer>
+
+<script>
+var NAVY="#1D3B54", CUERO="#BE5A21", LIN="#B6A98E", GRIS="#8A8073";
+var P500="500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf",
+    P40D="40EjerciciosdeDefensaenBaloncesto.pdf",
+    P75="75EjerciciosdeDesmarqueenBaloncesto.pdf",
+    P25C="25CalentamientosListosparaBaloncesto_pdf.pdf";
+
+function defsSVG(){
+  return '<defs><marker id="fm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="'+NAVY+'"/></marker></defs>';
+}
+function pistaMedia(){
+  return '<rect x="0" y="0" width="150" height="140" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<rect x="50.5" y="0" width="49" height="58" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<circle cx="75" cy="58" r="18" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<path d="M9,0 L9,29.9 A67.5,67.5 0 0 0 141,29.9 L141,0" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<line x1="66" y1="12" x2="84" y2="12" stroke="'+LIN+'" stroke-width="1.7"/>'+
+    '<circle cx="75" cy="15.75" r="2.6" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>';
+}
+function aro(x0,s,sw){
+  return '<rect x="'+(s>0?0:222)+'" y="50.5" width="58" height="49" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<circle cx="'+(x0+s*58)+'" cy="75" r="18" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<line x1="'+(x0+s*12)+'" y1="66" x2="'+(x0+s*12)+'" y2="84" stroke="'+LIN+'" stroke-width="1.7"/>'+
+    '<circle cx="'+(x0+s*15.75)+'" cy="75" r="2.6" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<path d="M'+x0+',9 L'+(x0+s*29.9)+',9 A67.5,67.5 0 0 '+sw+' '+(x0+s*29.9)+',141 L'+x0+',141" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>';
+}
+function pistaCompleta(){
+  return '<rect x="0" y="0" width="280" height="150" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<line x1="140" y1="0" x2="140" y2="150" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    '<circle cx="140" cy="75" r="18" fill="none" stroke="'+LIN+'" stroke-width="1.1"/>'+
+    aro(0,1,1)+aro(280,-1,0);
+}
+function ctrl(x1,y1,x2,y2,cv){
+  var mx=(x1+x2)/2,my=(y1+y2)/2,dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1;
+  return [mx-dy/L*cv,my+dx/L*cv];
+}
+function flecha(x1,y1,x2,y2,cv,tipo){
+  var dash=tipo==="p"?' stroke-dasharray="6 4"':'';
+  if(cv){var c=ctrl(x1,y1,x2,y2,cv);
+    return '<path d="M'+x1+','+y1+' Q'+c[0].toFixed(1)+','+c[1].toFixed(1)+' '+x2+','+y2+'" fill="none" stroke="'+NAVY+'" stroke-width="1.7"'+dash+' marker-end="url(#fm)"/>';}
+  return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+NAVY+'" stroke-width="1.7"'+dash+' marker-end="url(#fm)"/>';
+}
+function bote(x1,y1,x2,y2){
+  var dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1,ux=dx/L,uy=dy/L,px=-uy,py=ux;
+  var n=Math.max(4,Math.round(L/7)),d='M'+x1+','+y1;
+  for(var i=1;i<=n;i++){var t=i/n,a=(i%2?1:-1)*2.6;
+    d+=' L'+(x1+ux*L*t+px*a).toFixed(1)+','+(y1+uy*L*t+py*a).toFixed(1);}
+  return '<path d="'+d+'" fill="none" stroke="'+NAVY+'" stroke-width="1.6" marker-end="url(#fm)"/>';
+}
+function atac(x,y,t,bal){
+  var s='<circle cx="'+x+'" cy="'+y+'" r="6.4" fill="'+NAVY+'"/>'+
+    '<text x="'+x+'" y="'+(y+2.6)+'" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="8.4" font-weight="700" fill="#F6F1E7">'+t+'</text>';
+  if(bal) s+='<circle cx="'+(x+8)+'" cy="'+(y-6.4)+'" r="3" fill="none" stroke="'+CUERO+'" stroke-width="1.6"/>';
+  return s;
+}
+function defe(x,y,t){
+  return '<g stroke="'+CUERO+'" stroke-width="2.2" stroke-linecap="round">'+
+    '<line x1="'+(x-4.6)+'" y1="'+(y-4.6)+'" x2="'+(x+4.6)+'" y2="'+(y+4.6)+'"/>'+
+    '<line x1="'+(x+4.6)+'" y1="'+(y-4.6)+'" x2="'+(x-4.6)+'" y2="'+(y+4.6)+'"/></g>'+
+    (t?'<text x="'+(x+7)+'" y="'+(y+7)+'" font-family="Barlow Condensed,sans-serif" font-size="7.6" font-weight="700" fill="'+CUERO+'">'+t+'</text>':'');
+}
+function cono(x,y){
+  return '<path d="M'+x+','+(y-5.2)+' L'+(x+4.6)+','+(y+3.2)+' L'+(x-4.6)+','+(y+3.2)+' z" fill="none" stroke="'+GRIS+'" stroke-width="1.7"/>';
+}
+function lista(a,cls){
+  return '<ul'+(cls?' class="'+cls+'"':'')+'>'+a.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>';
+}
+function detalle(d){
+  var h='';
+  if(d.m) h+='<h4>Cómo se monta</h4>'+lista(d.m);
+  if(d.e) h+='<h4>Errores frecuentes</h4>'+lista(d.e,'err');
+  if(d.a) h+='<h4>Ajuste</h4>'+lista(d.a);
+  return h;
+}
+function cita(l){
+  var p=(l.match(/#page=(\d+)/)||[])[1];
+  var n="500 Ejercicios";
+  if(l.indexOf("40Ejercicios")===0) n="40 Defensa";
+  else if(l.indexOf("75Ejercicios")===0) n="75 Desmarque";
+  else if(l.indexOf("25Calentamientos")===0) n="25 Calentamientos";
+  return "Ver también: " + n + (p? ", p. "+p : "");
+}
+function pizarra(d){
+  if(!d) return "";
+  var full=d.v==="c", vb=full?"-7 -7 294 164":"-7 -7 164 154";
+  var g=defsSVG()+(full?pistaCompleta():pistaMedia());
+  (d.mv||[]).forEach(function(a){g+=flecha(a[0],a[1],a[2],a[3],a[4]||0,"m");});
+  (d.ps||[]).forEach(function(a){g+=flecha(a[0],a[1],a[2],a[3],a[4]||0,"p");});
+  (d.dr||[]).forEach(function(a){g+=bote(a[0],a[1],a[2],a[3]);});
+  (d.k||[]).forEach(function(a){g+=cono(a[0],a[1]);});
+  (d.x||[]).forEach(function(a){g+=defe(a[0],a[1],a[2]||"");});
+  (d.o||[]).forEach(function(a){g+=atac(a[0],a[1],a[2],a[3]);});
+  return '<svg viewBox="'+vb+'" role="img" aria-label="Diagrama del ejercicio en la pista">'+g+'</svg>'+
+         (d.t?'<p>'+d.t+'</p>':'');
+}
+

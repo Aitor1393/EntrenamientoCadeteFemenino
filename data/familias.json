@@ -1,0 +1,1298 @@
+[
+ {
+  "codigo": "F1",
+  "grupo": "A",
+  "grupo_nombre": "Técnica y táctica individual",
+  "nombre": "Manejo, salida y primer paso",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Bote, cambio en cono, finalización",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Desde media pista, bote hacia un cono, cambio de mano al llegar, aceleración y entrada.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "el cambio se hace pasando el cono, no antes. Cambio de ritmo, no solo de mano."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 21-38 · [25C] cal. 6, p. 9"
+     }
+    ],
+    "html": "<p>Desde media pista, bote hacia un cono, cambio de mano al llegar, aceleración y entrada.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Tres conos en zigzag",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Un cambio distinto en cada uno: por delante, entre piernas, reverso. Finaliza con la mano del último.",
+    "campos": [
+     {
+      "etiqueta": "Integra",
+      "texto": "frenada y cambio de dirección con balón."
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "relevo a 6. Cambio mal hecho, se repite el cono."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 21-38 · [75DM] pp. 3-4"
+     }
+    ],
+    "html": "<p>Un cambio distinto en cada uno: por delante, entre piernas, reverso. Finaliza con la mano del último.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "Salida y primer paso desde parada",
+    "minutos": 8,
+    "formato": "(cuartetos)",
+    "descripcion": "Recepción en parada, lectura del pie de la defensora, salida directa o cruzada. Tres botes máximo.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "el primer paso gana la ventaja; los siguientes solo la mantienen."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 42-49"
+     }
+    ],
+    "html": "<p>Recepción en parada, lectura del pie de la defensora, salida directa o cruzada. Tres botes máximo.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "Defensora semiactiva",
+    "minutos": 9,
+    "formato": "",
+    "descripcion": "Puede desplazarse y tocar el balón, no robar de frente. Cinco segundos para llegar.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "proteger con el cuerpo, cabeza alta."
+     }
+    ],
+    "html": "<p>Puede desplazarse y tocar el balón, no robar de frente. Cinco segundos para llegar.</p>"
+   },
+   {
+    "nivel": "N5",
+    "nombre": "Bote bajo presión a media pista",
+    "minutos": 9,
+    "formato": "",
+    "descripcion": "",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "atacante 1 si llega al fondo, defensora 2 si la para o la saca de la pista."
+     }
+    ],
+    "html": ""
+   }
+  ],
+  "nota": "4 tríos con 1 balón, trabajo a lo ancho. Cabe en los 30 min sin canasta del viernes.",
+  "html": "<p><em>4 tríos con 1 balón, trabajo a lo ancho. Cabe en los 30 min sin canasta del viernes.</em></p><p><strong>N1 · Bote, cambio en cono, finalización</strong> — 8 min Desde media pista, bote hacia un cono, cambio de mano al llegar, aceleración y entrada. <em>Clave:</em> el cambio se hace <strong>pasando</strong> el cono, no antes. Cambio de ritmo, no solo de mano. <em>Fuente:</em> [500] pp. 21-38 · [25C] cal. 6, p. 9</p><p><strong>N2 · Tres conos en zigzag</strong> — 8 min Un cambio distinto en cada uno: por delante, entre piernas, reverso. Finaliza con la mano del último. <em>Integra:</em> frenada y cambio de dirección con balón. <em>Marcador:</em> relevo a 6. Cambio mal hecho, se repite el cono. <em>Fuente:</em> [500] pp. 21-38 · [75DM] pp. 3-4</p><p><strong>N3 · Salida y primer paso desde parada</strong> — 8 min <em>(cuartetos)</em> Recepción en parada, lectura del pie de la defensora, salida directa o cruzada. Tres botes máximo. <em>Clave:</em> el primer paso gana la ventaja; los siguientes solo la mantienen. <em>Fuente:</em> [500] pp. 42-49</p><p><strong>N4 · Defensora semiactiva</strong> — 9 min Puede desplazarse y tocar el balón, no robar de frente. Cinco segundos para llegar. <em>Clave:</em> proteger con el cuerpo, cabeza alta.</p><p><strong>N5 · Bote bajo presión a media pista</strong> — 9 min <em>Marcador:</em> atacante 1 si llega al fondo, defensora 2 si la para o la saca de la pista.</p><hr>"
+ },
+ {
+  "codigo": "F2",
+  "grupo": "A",
+  "grupo_nombre": "Técnica y táctica individual",
+  "nombre": "Finalizaciones, paradas y arrancadas",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Entrada al cono con ambas manos",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Trío: pasadora arriba, ejecutante corta desde la esquina, recibe en carrera, ataca por fuera del cono.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "recibir con los pies ya orientados a canasta."
+     }
+    ],
+    "html": "<p>Trío: pasadora arriba, ejecutante corta desde la esquina, recibe en carrera, ataca por fuera del cono.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Parada en dos tiempos y salida",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Recepción a velocidad, parada equilibrada, y desde ahí entrada o tiro según indique la pasadora.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "la parada no es el final de la acción, es el principio de la siguiente."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 42-49"
+     }
+    ],
+    "html": "<p>Recepción a velocidad, parada equilibrada, y desde ahí entrada o tiro según indique la pasadora.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "Finalización con contacto",
+    "minutos": 8,
+    "formato": "(cuartetos)",
+    "descripcion": "La defensora empuja con las dos manos en el tronco durante el vuelo.",
+    "campos": [
+     {
+      "etiqueta": "Integra",
+      "texto": "aterrizaje estable."
+     }
+    ],
+    "html": "<p>La defensora empuja con las dos manos en el tronco durante el vuelo.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "Defensora que llega tarde",
+    "minutos": 9,
+    "formato": "",
+    "descripcion": "Arranca del aro al salir el pase. La atacante decide: entrada si tiene carril, parada y tiro si no.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "leer los pies de la defensora, no sus brazos."
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "atacante 1, defensora 2. Primera a 8."
+     }
+    ],
+    "html": "<p>Arranca del aro al salir el pase. La atacante decide: entrada si tiene carril, parada y tiro si no.</p>"
+   }
+  ],
+  "nota": "",
+  "html": "<p><strong>N1 · Entrada al cono con ambas manos</strong> — 8 min Trío: pasadora arriba, ejecutante corta desde la esquina, recibe en carrera, ataca por fuera del cono. <em>Clave:</em> recibir con los pies <strong>ya orientados</strong> a canasta.</p><p><strong>N2 · Parada en dos tiempos y salida</strong> — 8 min Recepción a velocidad, parada equilibrada, y desde ahí entrada o tiro según indique la pasadora. <em>Clave:</em> la parada no es el final de la acción, es el principio de la siguiente. <em>Fuente:</em> [500] pp. 42-49</p><p><strong>N3 · Finalización con contacto</strong> — 8 min <em>(cuartetos)</em> La defensora empuja con las dos manos en el tronco durante el vuelo. <em>Integra:</em> aterrizaje estable.</p><p><strong>N4 · Defensora que llega tarde</strong> — 9 min Arranca del aro al salir el pase. La atacante decide: entrada si tiene carril, parada y tiro si no. <em>Clave:</em> leer los pies de la defensora, no sus brazos. <em>Marcador:</em> atacante 1, defensora 2. Primera a 8.</p><hr>"
+ },
+ {
+  "codigo": "F3",
+  "grupo": "A",
+  "grupo_nombre": "Técnica y táctica individual",
+  "nombre": "Pase y recepción",
+  "apostilla": "incluye desmarque sin canasta",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Saque rápido tras rebote",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Trío: una lanza a tablero, la ejecutante captura, pivota hacia fuera y saca a la tercera, abierta en banda.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "el balón no baja de la cintura. El pivote es hacia fuera, nunca al centro."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 89-120"
+     }
+    ],
+    "html": "<p>Trío: una lanza a tablero, la ejecutante captura, pivota hacia fuera y saca a la tercera, abierta en banda.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Pase largo en carrera",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Seis parejas a lo largo. Pase de banda a banda sobre la compañera que corre, sin que frene.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "pasar delante, nunca al cuerpo."
+     }
+    ],
+    "html": "<p>Seis parejas a lo largo. Pase de banda a banda sobre la compañera que corre, sin que frene.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "Juegos de desmarque sin bote",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Dos equipos, un balón, sin bote y sin canasta. El objetivo es plantar el balón en el fondo contrario o en una zona marcada. que es lo que alimenta el contraataque.",
+    "campos": [
+     {
+      "etiqueta": "Por qué funciona aquí",
+      "texto": "no necesita aro, es competitivo por naturaleza y obliga a moverse sin balón,"
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[75DM] pp. 1, 2, 5, 6, 18, 19, 20, 22, 26"
+     }
+    ],
+    "html": "<p>Dos equipos, un balón, sin bote y sin canasta. El objetivo es plantar el balón en el fondo contrario o en una zona marcada. que es lo que alimenta el contraataque.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "4c2 con pase extra",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Cuatro atacantes, dos defensoras dentro. Obligación de dar un pase más antes de puntuar.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[75DM] p. 22"
+     }
+    ],
+    "html": "<p>Cuatro atacantes, dos defensoras dentro. Obligación de dar un pase más antes de puntuar.</p>"
+   }
+  ],
+  "nota": "La familia que resuelve los 30 minutos sin canasta del viernes.",
+  "html": "<p><em>La familia que resuelve los 30 minutos sin canasta del viernes.</em></p><p><strong>N1 · Saque rápido tras rebote</strong> — 8 min Trío: una lanza a tablero, la ejecutante captura, pivota hacia fuera y saca a la tercera, abierta en banda. <em>Clave:</em> el balón no baja de la cintura. El pivote es hacia fuera, nunca al centro. <em>Fuente:</em> [500] pp. 89-120</p><p><strong>N2 · Pase largo en carrera</strong> — 8 min Seis parejas a lo largo. Pase de banda a banda sobre la compañera que corre, sin que frene. <em>Clave:</em> pasar delante, nunca al cuerpo.</p><p><strong>N3 · Juegos de desmarque sin bote</strong> — 12 min Dos equipos, un balón, sin bote y sin canasta. El objetivo es plantar el balón en el fondo contrario o en una zona marcada. <em>Por qué funciona aquí:</em> no necesita aro, es competitivo por naturaleza y obliga a moverse sin balón, que es lo que alimenta el contraataque. <em>Fuente:</em> [75DM] pp. 1, 2, 5, 6, 18, 19, 20, 22, 26</p><p><strong>N4 · 4c2 con pase extra</strong> — 10 min Cuatro atacantes, dos defensoras dentro. Obligación de dar un pase más antes de puntuar. <em>Fuente:</em> [75DM] p. 22</p><hr>"
+ },
+ {
+  "codigo": "F4",
+  "grupo": "A",
+  "grupo_nombre": "Técnica y táctica individual",
+  "nombre": "Tiro",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Tiro desde las posiciones del contraataque",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Dos esquinas, dos alas, arrastre central. Las posiciones reales del modelo.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "pies preparados antes de que llegue el balón."
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "sexteto a 15."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 54-73"
+     }
+    ],
+    "html": "<p>Dos esquinas, dos alas, arrastre central. Las posiciones reales del modelo.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Desplazamiento, cambio en cono y tiro",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "llegar al tiro en movimiento, con el equilibrio comprometido."
+     }
+    ],
+    "html": ""
+   },
+   {
+    "nivel": "N3",
+    "nombre": "Tiro con closeout",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "La defensora sale del aro a cerrar.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "carrera larga, últimos pasos cortos, mano arriba."
+     }
+    ],
+    "html": "<p>La defensora sale del aro a cerrar.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "Tirar o botar según el closeout",
+    "minutos": 9,
+    "formato": "",
+    "descripcion": "",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "la decisión sustituye a la orden."
+     }
+    ],
+    "html": ""
+   },
+   {
+    "nivel": "N5",
+    "nombre": "Tiros libres competitivos",
+    "minutos": 5,
+    "formato": "",
+    "descripcion": "genera tensión buena y no señala a nadie.",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "la escalera. Ocho aciertos seguidos entre las doce; un fallo, vuelta a empezar. Cooperativo,"
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[75DM] pp. 29-30 · [25C] cal. 24, p. 27"
+     }
+    ],
+    "html": "<p>genera tensión buena y no señala a nadie.</p>"
+   }
+  ],
+  "nota": "Sexteto de tiro: 6 jugadoras y 2 balones por canasta.",
+  "html": "<p><em>Sexteto de tiro: 6 jugadoras y 2 balones por canasta.</em></p><p><strong>N1 · Tiro desde las posiciones del contraataque</strong> — 8 min Dos esquinas, dos alas, arrastre central. Las posiciones reales del modelo. <em>Clave:</em> pies preparados antes de que llegue el balón. <em>Marcador:</em> sexteto a 15. <em>Fuente:</em> [500] pp. 54-73</p><p><strong>N2 · Desplazamiento, cambio en cono y tiro</strong> — 8 min <em>Clave:</em> llegar al tiro en movimiento, con el equilibrio comprometido.</p><p><strong>N3 · Tiro con closeout</strong> — 8 min La defensora sale del aro a cerrar. <em>Clave:</em> carrera larga, últimos pasos cortos, mano arriba.</p><p><strong>N4 · Tirar o botar según el closeout</strong> — 9 min <em>Clave:</em> la decisión sustituye a la orden.</p><p><strong>N5 · Tiros libres competitivos</strong> — 5 min <em>Marcador:</em> la escalera. Ocho aciertos seguidos entre las doce; un fallo, vuelta a empezar. Cooperativo, genera tensión buena y no señala a nadie. <em>Fuente:</em> [75DM] pp. 29-30 · [25C] cal. 24, p. 27</p><hr>"
+ },
+ {
+  "codigo": "F5",
+  "grupo": "A",
+  "grupo_nombre": "Técnica y táctica individual",
+  "nombre": "1c1 de ataque",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "1c1 desde recepción con ventaja",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "La atacante recibe con un paso de ventaja, máximo 3 botes.",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "atacante 1, defensora 2. Primera a 8."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 272-290"
+     }
+    ],
+    "html": "<p>La atacante recibe con un paso de ventaja, máximo 3 botes.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "1c1 desde bote a media pista",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Máximo 4 botes.",
+    "campos": [],
+    "html": "<p>Máximo 4 botes.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "1c1 continuo con closeout",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Flujo permanente: la que defiende pasa a atacar en la siguiente repetición.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[75DM] pp. 15-16"
+     }
+    ],
+    "html": "<p>Flujo permanente: la que defiende pasa a atacar en la siguiente repetición.</p>"
+   }
+  ],
+  "nota": "",
+  "html": "<p><strong>N1 · 1c1 desde recepción con ventaja</strong> — 10 min La atacante recibe con un paso de ventaja, máximo 3 botes. <em>Marcador:</em> atacante 1, defensora 2. Primera a 8. <em>Fuente:</em> [500] pp. 272-290</p><p><strong>N2 · 1c1 desde bote a media pista</strong> — 10 min Máximo 4 botes.</p><p><strong>N3 · 1c1 continuo con closeout</strong> — 10 min Flujo permanente: la que defiende pasa a atacar en la siguiente repetición. <em>Fuente:</em> [75DM] pp. 15-16</p><hr>"
+ },
+ {
+  "codigo": "F6",
+  "grupo": "B",
+  "grupo_nombre": "Defensa",
+  "nombre": "Defensa sobre el balón",
+  "apostilla": "contención, closeout",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Contención en pasillo de conos",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Dos filas de conos marcan un pasillo de 4 metros. La atacante busca el fondo, la defensora contiene sin robar.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "pies anchos, culo bajo, sin cruzar. Manos activas, no manoteando."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 1-3, pp. 9-11 · [75DM] pp. 7-8"
+     }
+    ],
+    "html": "<p>Dos filas de conos marcan un pasillo de 4 metros. La atacante busca el fondo, la defensora contiene sin robar.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Contención libre a media pista",
+    "minutos": 9,
+    "formato": "",
+    "descripcion": "Sin conos, todo el ancho. La defensora dirige a la atacante hacia la banda.",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "paradas, primera a 5."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 2, p. 10"
+     }
+    ],
+    "html": "<p>Sin conos, todo el ancho. La defensora dirige a la atacante hacia la banda.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "Closeout",
+    "minutos": 9,
+    "formato": "",
+    "descripcion": "Salida desde el aro a cerrar sobre una tiradora.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "carrera larga, últimos pasos cortos, mano arriba, y frenar equilibrada."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 4, p. 12 · [500] pp. 205-210"
+     }
+    ],
+    "html": "<p>Salida desde el aro a cerrar sobre una tiradora.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "Recuperación desde desventaja",
+    "minutos": 9,
+    "formato": "",
+    "descripcion": "La atacante sale con ventaja; la defensora recupera posición por el camino corto.",
+    "campos": [
+     {
+      "etiqueta": "Nuevo",
+      "texto": "defender desde la desventaja, que es la situación real del partido."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 5, p. 13 · [75DM] pp. 13-14"
+     }
+    ],
+    "html": "<p>La atacante sale con ventaja; la defensora recupera posición por el camino corto.</p>"
+   }
+  ],
+  "nota": "4 tríos con 1 balón, a lo ancho. También cabe sin canasta.",
+  "html": "<p><em>4 tríos con 1 balón, a lo ancho. También cabe sin canasta.</em></p><p><strong>N1 · Contención en pasillo de conos</strong> — 8 min Dos filas de conos marcan un pasillo de 4 metros. La atacante busca el fondo, la defensora contiene sin robar. <em>Clave:</em> pies anchos, culo bajo, sin cruzar. Manos activas, no manoteando. <em>Fuente:</em> [40D] ej. 1-3, pp. 9-11 · [75DM] pp. 7-8</p><p><strong>N2 · Contención libre a media pista</strong> — 9 min Sin conos, todo el ancho. La defensora dirige a la atacante hacia la banda. <em>Marcador:</em> paradas, primera a 5. <em>Fuente:</em> [40D] ej. 2, p. 10</p><p><strong>N3 · Closeout</strong> — 9 min Salida desde el aro a cerrar sobre una tiradora. <em>Clave:</em> carrera larga, últimos pasos cortos, mano arriba, y frenar equilibrada. <em>Fuente:</em> [40D] ej. 4, p. 12 · [500] pp. 205-210</p><p><strong>N4 · Recuperación desde desventaja</strong> — 9 min La atacante sale con ventaja; la defensora recupera posición por el camino corto. <em>Nuevo:</em> defender desde la desventaja, que es la situación real del partido. <em>Fuente:</em> [40D] ej. 5, p. 13 · [75DM] pp. 13-14</p><hr>"
+ },
+ {
+  "codigo": "F7",
+  "grupo": "B",
+  "grupo_nombre": "Defensa",
+  "nombre": "Defensa sin balón",
+  "apostilla": "línea de pase, ayudas, rotaciones",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Defensa de la línea de pase",
+    "minutos": 9,
+    "formato": "",
+    "descripcion": "Negar la recepción a 45º. Mano y pie adelantados, vista al balón y a la atacante.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 6-7, pp. 15-16"
+     }
+    ],
+    "html": "<p>Negar la recepción a 45º. Mano y pie adelantados, vista al balón y a la atacante.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "De lado débil a lado fuerte",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Ajuste al cambiar el balón de lado. Se trabaja primero en seco, después con pase real.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 8, p. 17 · [75DM] pp. 9-10"
+     }
+    ],
+    "html": "<p>Ajuste al cambiar el balón de lado. Se trabaja primero en seco, después con pase real.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "2c2 ayuda y recuperación",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Una penetra, la defensora del lado contrario ayuda y se recupera al pase.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "cantar la ayuda en voz alta. Sin voz no hay ayuda."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 9-10, pp. 18-19 · [500] pp. 222-235"
+     }
+    ],
+    "html": "<p>Una penetra, la defensora del lado contrario ayuda y se recupera al pase.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "3c3 con coberturas",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Situación real con obligación de comunicar cada ayuda.",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "paradas, primera a 5."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 12-15, pp. 22-25"
+     }
+    ],
+    "html": "<p>Situación real con obligación de comunicar cada ayuda.</p>"
+   }
+  ],
+  "nota": "",
+  "html": "<p><strong>N1 · Defensa de la línea de pase</strong> — 9 min Negar la recepción a 45º. Mano y pie adelantados, vista al balón y a la atacante. <em>Fuente:</em> [40D] ej. 6-7, pp. 15-16</p><p><strong>N2 · De lado débil a lado fuerte</strong> — 10 min Ajuste al cambiar el balón de lado. Se trabaja primero en seco, después con pase real. <em>Fuente:</em> [40D] ej. 8, p. 17 · [75DM] pp. 9-10</p><p><strong>N3 · 2c2 ayuda y recuperación</strong> — 10 min Una penetra, la defensora del lado contrario ayuda y se recupera al pase. <em>Clave:</em> <strong>cantar la ayuda en voz alta.</strong> Sin voz no hay ayuda. <em>Fuente:</em> [40D] ej. 9-10, pp. 18-19 · [500] pp. 222-235</p><p><strong>N4 · 3c3 con coberturas</strong> — 12 min Situación real con obligación de comunicar cada ayuda. <em>Marcador:</em> paradas, primera a 5. <em>Fuente:</em> [40D] ej. 12-15, pp. 22-25</p><hr>"
+ },
+ {
+  "codigo": "F8",
+  "grupo": "B",
+  "grupo_nombre": "Defensa",
+  "nombre": "Rebote defensivo · box-out",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Captura, pivote y saque",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Trío: una lanza a tablero, la ejecutante captura en salto con las dos manos, cae con base ancha, protege a la altura de la barbilla y saca a la tercera.",
+    "campos": [
+     {
+      "etiqueta": "Integra",
+      "texto": "aterrizaje estable tras salto."
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "contra el reloj, capturas limpias en 90 segundos."
+     }
+    ],
+    "html": "<p>Trío: una lanza a tablero, la ejecutante captura en salto con las dos manos, cae con base ancha, protege a la altura de la barbilla y saca a la tercera.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "1c1 con bloqueo y salida",
+    "minutos": 10,
+    "formato": "(cuartetos)",
+    "descripcion": "Al tiro, la defensora localiza, contacta, bloquea y captura. Saque inmediato y salida en 2c0.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "contacto primero, balón después. El hábito más importante de la temporada."
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "tres seguidas. Si el ataque coge una, vuelta a cero."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 26, p. 40 · [75DM] pp. 11-12"
+     }
+    ],
+    "html": "<p>Al tiro, la defensora localiza, contacta, bloquea y captura. Saque inmediato y salida en 2c0.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "2c2 con reparto de bloqueos",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Dos defensoras tienen que repartirse dos atacantes sin dejar hueco.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 27, p. 41"
+     }
+    ],
+    "html": "<p>Dos defensoras tienen que repartirse dos atacantes sin dejar hueco.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "3c3 sin bote, la posesión no cambia",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Solo pase y tiro. El ataque mantiene la posesión hasta que la defensa capture. Muy exigente y muy específico.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 29-30, pp. 43-44"
+     }
+    ],
+    "html": "<p>Solo pase y tiro. El ataque mantiene la posesión hasta que la defensa capture. <em>Muy exigente y muy específico.</em></p>"
+   },
+   {
+    "nivel": "N5",
+    "nombre": "5c5 con rebote puntuado",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "cada rebote ofensivo concedido resta 2 a la defensa."
+     }
+    ],
+    "html": ""
+   },
+   {
+    "nivel": "N6",
+    "nombre": "Rebote ofensivo por líneas de penetración",
+    "minutos": 10,
+    "formato": "(cuartetos)",
+    "descripcion": "La atacante no rebotea de frente: ataca por el lado del bloqueo, buscando el hueco que deja la defensora al girar. Si no puede capturar, palmea hacia fuera para prolongar la posesión. a una de 1,75 si elige bien el lado.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "es concepto de línea, no de fuerza bruta. Una jugadora de 1,60 puede ganar el rebote ofensivo"
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 123-132"
+     }
+    ],
+    "html": "<p>La atacante <strong>no rebotea de frente:</strong> ataca por el lado del bloqueo, buscando el hueco que deja la defensora al girar. Si no puede capturar, palmea hacia fuera para prolongar la posesión. a una de 1,75 si elige bien el lado.</p>"
+   },
+   {
+    "nivel": "N7",
+    "nombre": "3c3 sin bote con segundas opciones",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Solo pase y tiro. Cada rebote ofensivo capturado vale 1 punto además de mantener la posesión.",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "primera a 8."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 29-30, pp. 43-44"
+     }
+    ],
+    "html": "<p>Solo pase y tiro. Cada rebote ofensivo capturado vale 1 punto además de mantener la posesión.</p>"
+   }
+  ],
+  "nota": "La familia que sostiene el modelo entero. Aparece en las dos sesiones, todas las semanas.",
+  "html": "<p><em>La familia que sostiene el modelo entero. Aparece en las dos sesiones, todas las semanas.</em> <em>N1 a N5 son rebote defensivo; N6 y N7, ofensivo. Es el mismo gesto visto desde los dos lados.</em></p><p><strong>N1 · Captura, pivote y saque</strong> — 8 min Trío: una lanza a tablero, la ejecutante captura en salto con las dos manos, cae con base ancha, protege a la altura de la barbilla y saca a la tercera. <em>Integra:</em> aterrizaje estable tras salto. <em>Marcador:</em> contra el reloj, capturas limpias en 90 segundos.</p><p><strong>N2 · 1c1 con bloqueo y salida</strong> — 10 min <em>(cuartetos)</em> Al tiro, la defensora localiza, contacta, bloquea y captura. Saque inmediato y salida en 2c0. <em>Clave:</em> <strong>contacto primero, balón después.</strong> El hábito más importante de la temporada. <em>Marcador:</em> tres seguidas. Si el ataque coge una, vuelta a cero. <em>Fuente:</em> [40D] ej. 26, p. 40 · [75DM] pp. 11-12</p><p><strong>N3 · 2c2 con reparto de bloqueos</strong> — 10 min Dos defensoras tienen que repartirse dos atacantes sin dejar hueco. <em>Fuente:</em> [40D] ej. 27, p. 41</p><p><strong>N4 · 3c3 sin bote, la posesión no cambia</strong> — 12 min Solo pase y tiro. El ataque mantiene la posesión hasta que la defensa capture. <em>Muy exigente y muy específico.</em> <em>Fuente:</em> [40D] ej. 29-30, pp. 43-44</p><p><strong>N5 · 5c5 con rebote puntuado</strong> — 12 min <em>Marcador:</em> cada rebote ofensivo concedido resta 2 a la defensa.</p><p><strong>N6 · Rebote ofensivo por líneas de penetración</strong> — 10 min <em>(cuartetos)</em> La atacante <strong>no rebotea de frente:</strong> ataca por el lado del bloqueo, buscando el hueco que deja la defensora al girar. Si no puede capturar, palmea hacia fuera para prolongar la posesión. <em>Clave:</em> es concepto de línea, no de fuerza bruta. Una jugadora de 1,60 puede ganar el rebote ofensivo a una de 1,75 si elige bien el lado. <em>Fuente:</em> [500] pp. 123-132</p><p><strong>N7 · 3c3 sin bote con segundas opciones</strong> — 12 min Solo pase y tiro. Cada rebote ofensivo capturado vale 1 punto además de mantener la posesión. <em>Marcador:</em> primera a 8. <em>Fuente:</em> [40D] ej. 29-30, pp. 43-44</p><hr>"
+ },
+ {
+  "codigo": "F9",
+  "grupo": "B",
+  "grupo_nombre": "Defensa",
+  "nombre": "Zona 2-3, por miniaturas",
+  "apostilla": "N1-N7",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "La 1ª línea, 2c2",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Solo las dos altas contra dos atacantes exteriores. El resto observa con tarea asignada, rotando cada 2-3 minutos. Cuatro cosas y ninguna más: 1. Ajustarse al balón entre las dos 2. Mantenerse por encima de la línea de tiro libre 3. Rotar entre ellas al cambiar el balón de lado 4. Orientar a la atacante más alejada Y la quinta, desde el primer día: al salir el tiro, contacto con la más cercana antes de ir al balón.",
+    "campos": [],
+    "html": "<p>Solo las dos altas contra dos atacantes exteriores. El resto observa con tarea asignada, rotando cada 2-3 minutos. Cuatro cosas y ninguna más:</p><ol><li>Ajustarse al balón entre las dos</li><li><strong>Mantenerse por encima de la línea de tiro libre</strong></li><li>Rotar entre ellas al cambiar el balón de lado</li><li>Orientar a la atacante más alejada</li></ol><p><strong>Y la quinta, desde el primer día:</strong> al salir el tiro, contacto con la más cercana antes de ir al balón.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "La 1ª línea con inversión, 3c2",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Tres atacantes contra las dos altas. Rotaciones rápidas ante el skip-pass y defensa del poste alto.",
+    "campos": [
+     {
+      "etiqueta": "Clave técnica",
+      "texto": "al poste alto, solo brazo interior, nunca el cuerpo por delante."
+     }
+    ],
+    "html": "<p>Tres atacantes contra las dos altas. Rotaciones rápidas ante el skip-pass y defensa del poste alto.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "Las cinco: posiciones y desplazamiento",
+    "minutos": 14,
+    "formato": "",
+    "descripcion": "Cinco atacantes moviendo el balón por el perímetro, ritmo de pase creciente.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "todas se mueven a la vez, en el vuelo del pase. Si una llega tarde, se abre el hueco."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] ej. 417, p. 254"
+     }
+    ],
+    "html": "<p>Cinco atacantes moviendo el balón por el perímetro, ritmo de pase creciente.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "La 2ª línea: sobrecargas en esquina",
+    "minutos": 14,
+    "formato": "(M1)",
+    "descripcion": "",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "la baja del lado del balón nunca abandona el poste. La ayuda al fondo llega de la baja contraria."
+     }
+    ],
+    "html": ""
+   },
+   {
+    "nivel": "N5",
+    "nombre": "Zona completa con cierre de rebote y salida",
+    "minutos": 16,
+    "formato": "(M1)",
+    "descripcion": "Base metodológica: el shell drill es la herramienta para construir cualquier estructura colectiva por partes. Fuente: [40D] ej. 36-38, pp. 52-54",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "cuatro paradas limpias seguidas. Rebote ofensivo rival, vuelta a cero."
+     }
+    ],
+    "html": "<p><strong>Base metodológica:</strong> el shell drill es la herramienta para construir cualquier estructura colectiva por partes. <em>Fuente:</em> [40D] ej. 36-38, pp. 52-54</p>"
+   }
+  ],
+  "nota": "Se construye por partes. Nunca las cinco de entrada.",
+  "html": "<p><em>Se construye por partes. Nunca las cinco de entrada.</em></p><p><strong>N1 · La 1ª línea, 2c2</strong> — 10 min Solo las dos altas contra dos atacantes exteriores. El resto observa con tarea asignada, rotando cada 2-3 minutos. Cuatro cosas y ninguna más:</p><ol><li>Ajustarse al balón entre las dos</li><li><strong>Mantenerse por encima de la línea de tiro libre</strong></li><li>Rotar entre ellas al cambiar el balón de lado</li><li>Orientar a la atacante más alejada</li></ol><p><strong>Y la quinta, desde el primer día:</strong> al salir el tiro, contacto con la más cercana antes de ir al balón.</p><p><strong>N2 · La 1ª línea con inversión, 3c2</strong> — 12 min Tres atacantes contra las dos altas. Rotaciones rápidas ante el skip-pass y defensa del poste alto. <em>Clave técnica:</em> al poste alto, <strong>solo brazo interior, nunca el cuerpo por delante</strong>.</p><p><strong>N3 · Las cinco: posiciones y desplazamiento</strong> — 14 min Cinco atacantes moviendo el balón por el perímetro, ritmo de pase creciente. <em>Clave:</em> todas se mueven a la vez, en el vuelo del pase. Si una llega tarde, se abre el hueco. <em>Fuente:</em> [500] ej. 417, p. 254</p><p><strong>N4 · La 2ª línea: sobrecargas en esquina</strong> — 14 min <em>(M1)</em> <em>Clave:</em> la baja del lado del balón nunca abandona el poste. La ayuda al fondo llega de la baja contraria.</p><p><strong>N5 · Zona completa con cierre de rebote y salida</strong> — 16 min <em>(M1)</em> <em>Marcador:</em> cuatro paradas limpias seguidas. Rebote ofensivo rival, vuelta a cero.</p><p><strong>Base metodológica:</strong> el shell drill es la herramienta para construir cualquier estructura colectiva por partes. <em>Fuente:</em> [40D] ej. 36-38, pp. 52-54</p><hr>"
+ },
+ {
+  "codigo": "F10",
+  "grupo": "B",
+  "grupo_nombre": "Defensa",
+  "nombre": "Balance defensivo",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Salida lanzada",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Una defensora vuelve sola contra dos o tres atacantes que ya corren. Solo tiene que defender el aro y retrasar la decisión del ataque con fintas.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "no ir al balón. Proteger el aro y esperar."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 32, p. 47"
+     }
+    ],
+    "html": "<p>Una defensora vuelve sola contra dos o tres atacantes que ya corren. Solo tiene que <strong>defender el aro</strong> y retrasar la decisión del ataque con fintas.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Formar los pares",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Se añade una segunda defensora que llega tarde. Las dos tienen que repartirse tres atacantes, cantando en voz alta a quién coge cada una.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 34, p. 49"
+     }
+    ],
+    "html": "<p>Se añade una segunda defensora que llega tarde. Las dos tienen que repartirse tres atacantes, cantando en voz alta a quién coge cada una.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "3c3 continuo todo campo",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Sin parar. Al llegar atrás los pares se forman como salgan y hay que ajustar los desajustes sobre la marcha.",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "ataque 1, defensa 2 por parada. Primera a 10."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 33, p. 48 · [75DM] p. 27"
+     }
+    ],
+    "html": "<p>Sin parar. Al llegar atrás los pares se forman como salgan y hay que <strong>ajustar los desajustes</strong> sobre la marcha.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "4c4 con cambio de rol a la voz",
+    "minutos": 14,
+    "formato": "",
+    "descripcion": "El entrenador canta un cambio y el equipo que atacaba pasa a defender en el sitio.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 35, p. 50"
+     }
+    ],
+    "html": "<p>El entrenador canta un cambio y el equipo que atacaba pasa a defender en el sitio.</p>"
+   }
+  ],
+  "nota": "La otra cara del modelo. Un equipo que corre siempre y carga el rebote ofensivo queda expuesto.",
+  "html": "<p><em>La otra cara del modelo. Un equipo que corre siempre y carga el rebote ofensivo queda expuesto.</em></p><p><strong>El orden de prioridades al volver:</strong></p><blockquote><p><strong>aro → balón → líneas de pase cercanas → atacantes alejadas → formar los pares → ajustar los desajustes</strong></p></blockquote><p>En ese orden y no en otro.</p><p><strong>N1 · Salida lanzada</strong> — 10 min Una defensora vuelve sola contra dos o tres atacantes que ya corren. Solo tiene que <strong>defender el aro</strong> y retrasar la decisión del ataque con fintas. <em>Clave:</em> no ir al balón. Proteger el aro y esperar. <em>Fuente:</em> [40D] ej. 32, p. 47</p><p><strong>N2 · Formar los pares</strong> — 12 min Se añade una segunda defensora que llega tarde. Las dos tienen que repartirse tres atacantes, cantando en voz alta a quién coge cada una. <em>Fuente:</em> [40D] ej. 34, p. 49</p><p><strong>N3 · 3c3 continuo todo campo</strong> — 12 min Sin parar. Al llegar atrás los pares se forman como salgan y hay que <strong>ajustar los desajustes</strong> sobre la marcha. <em>Marcador:</em> ataque 1, defensa 2 por parada. Primera a 10. <em>Fuente:</em> [40D] ej. 33, p. 48 · [75DM] p. 27</p><p><strong>N4 · 4c4 con cambio de rol a la voz</strong> — 14 min El entrenador canta un cambio y el equipo que atacaba pasa a defender en el sitio. <em>Fuente:</em> [40D] ej. 35, p. 50</p><hr>"
+ },
+ {
+  "codigo": "F11",
+  "grupo": "B",
+  "grupo_nombre": "Defensa",
+  "nombre": "Inferioridad defensiva · último defensor",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "1c2 · defender el aro",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Una defensora contra dos atacantes que llegan corriendo. Cada décima que gana es una compañera que llega.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "fintas defensivas. Amagar hacia el balón sin comprometerse, para que la atacante dude."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 16, p. 27"
+     }
+    ],
+    "html": "<p>Una defensora contra dos atacantes que llegan corriendo. Cada décima que gana es una compañera que llega.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "2c3 · el tándem",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Dos defensoras contra tres. Una al balón, otra al aro, y rotan según dónde vaya el balón.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "nunca las dos a la misma altura. Si se ponen en línea, el pase interior las parte."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 17-18, pp. 28-29 · [75DM] p. 25"
+     }
+    ],
+    "html": "<p>Dos defensoras contra tres. Una al balón, otra al aro, y rotan según dónde vaya el balón.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "2c3 desde puerta atrás",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "La inferioridad nace de un corte, no de un rebote. Cambia el punto de partida y las referencias.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 19, p. 30"
+     }
+    ],
+    "html": "<p>La inferioridad nace de un corte, no de un rebote. Cambia el punto de partida y las referencias.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "3c4 con última ayuda",
+    "minutos": 14,
+    "formato": "",
+    "descripcion": "Tres defensoras contra cuatro. Aparece el concepto de última ayuda y la rotación que la cubre.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[40D] ej. 20, p. 31"
+     }
+    ],
+    "html": "<p>Tres defensoras contra cuatro. Aparece el concepto de última ayuda y la rotación que la cubre.</p>"
+   }
+  ],
+  "nota": "Contenido nuevo y de primer nivel. En un equipo que corre, esta situación aparece cada partido.",
+  "html": "<p><em>Contenido nuevo y de primer nivel. En un equipo que corre, esta situación aparece cada partido.</em></p><p><strong>N1 · 1c2 · defender el aro</strong> — 10 min Una defensora contra dos atacantes que llegan corriendo. <em>Clave:</em> <strong>fintas defensivas.</strong> Amagar hacia el balón sin comprometerse, para que la atacante dude. Cada décima que gana es una compañera que llega. <em>Fuente:</em> [40D] ej. 16, p. 27</p><p><strong>N2 · 2c3 · el tándem</strong> — 12 min Dos defensoras contra tres. Una al balón, otra al aro, y rotan según dónde vaya el balón. <em>Clave:</em> <strong>nunca las dos a la misma altura.</strong> Si se ponen en línea, el pase interior las parte. <em>Fuente:</em> [40D] ej. 17-18, pp. 28-29 · [75DM] p. 25</p><p><strong>N3 · 2c3 desde puerta atrás</strong> — 12 min La inferioridad nace de un corte, no de un rebote. Cambia el punto de partida y las referencias. <em>Fuente:</em> [40D] ej. 19, p. 30</p><p><strong>N4 · 3c4 con última ayuda</strong> — 14 min Tres defensoras contra cuatro. Aparece el concepto de última ayuda y la rotación que la cubre. <em>Fuente:</em> [40D] ej. 20, p. 31</p><hr>"
+ },
+ {
+  "codigo": "F12",
+  "grupo": "C",
+  "grupo_nombre": "Contraataque",
+  "nombre": "Rebote, salida y calles",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Las calles, 2c0",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Cuatro tríos: dos corren, la tercera lanza a tablero y releva. Saque a la banda, conducción por la calle, pase largo, finalización sin bote extra.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "correr pegadas a la banda. Cerrarse al centro mata el espacio."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] ej. 303, p. 174"
+     }
+    ],
+    "html": "<p>Cuatro tríos: dos corren, la tercera lanza a tablero y releva. Saque a la banda, conducción por la calle, pase largo, finalización sin bote extra.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Tres calles, 3c0",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Base por el centro, aleros por las bandas. Cronometrado: del rebote a la finalización, menos de 5 segundos.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] ej. 304, p. 174"
+     }
+    ],
+    "html": "<p>Base por el centro, aleros por las bandas. Cronometrado: del rebote a la finalización, menos de 5 segundos.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "Cuatro calles con arrastre, 4c0",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Aparece el arrastre, que llega por detrás y ocupa el codo.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] ej. 305, p. 175"
+     }
+    ],
+    "html": "<p>Aparece el arrastre, que llega por detrás y ocupa el codo.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "Desde rebote disputado",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "El contraataque arranca de un 2c2 o 3c3 de rebote real, no de un lanzamiento del entrenador. Aquí se enlaza F8 con F12, que es el nexo del modelo.",
+    "campos": [],
+    "html": "<p>El contraataque arranca de un 2c2 o 3c3 de rebote real, no de un lanzamiento del entrenador. <em>Aquí se enlaza F8 con F12</em>, que es el nexo del modelo.</p>"
+   }
+  ],
+  "nota": "",
+  "html": "<p><strong>N1 · Las calles, 2c0</strong> — 8 min Cuatro tríos: dos corren, la tercera lanza a tablero y releva. Saque a la banda, conducción por la calle, pase largo, finalización sin bote extra. <em>Clave:</em> correr <strong>pegadas a la banda</strong>. Cerrarse al centro mata el espacio. <em>Fuente:</em> [500] ej. 303, p. 174</p><p><strong>N2 · Tres calles, 3c0</strong> — 10 min Base por el centro, aleros por las bandas. Cronometrado: del rebote a la finalización, menos de 5 segundos. <em>Fuente:</em> [500] ej. 304, p. 174</p><p><strong>N3 · Cuatro calles con arrastre, 4c0</strong> — 10 min Aparece el arrastre, que llega por detrás y ocupa el codo. <em>Fuente:</em> [500] ej. 305, p. 175</p><p><strong>N4 · Desde rebote disputado</strong> — 12 min El contraataque arranca de un 2c2 o 3c3 de rebote real, no de un lanzamiento del entrenador. <em>Aquí se enlaza F8 con F12</em>, que es el nexo del modelo.</p><hr>"
+ },
+ {
+  "codigo": "F13",
+  "grupo": "C",
+  "grupo_nombre": "Contraataque",
+  "nombre": "Superioridad ofensiva",
+  "apostilla": "2c1, 3c2, 4c3, 5c4",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "2c1 continuo",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Flujo permanente: tras la finalización, la defensora y una atacante vuelven contra la que espera.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "atacar el aro para obligar a la defensora a decidir. No pasar antes de tiempo."
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "carrera a 8. Ataque 1, defensa 2."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 295-314"
+     }
+    ],
+    "html": "<p>Flujo permanente: tras la finalización, la defensora y una atacante vuelven contra la que espera.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "3c2 continuo",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "escalonadas, ataque por el lado de la de atrás.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "leer el triángulo defensivo. Si las dos defensoras están en línea, pase interior; si están"
+     },
+     {
+      "etiqueta": "Alta intensidad",
+      "texto": "3 min de trabajo, 2 de recuperación con tiros libres."
+     }
+    ],
+    "html": "<p>escalonadas, ataque por el lado de la de atrás.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "3c2 con recuperación diferida",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Una tercera defensora arranca del fondo y llega tarde. La ventaja se disuelve si el ataque tarda.",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "canasta antes de que llegue la tercera, vale doble."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[75DM] p. 21"
+     }
+    ],
+    "html": "<p>Una tercera defensora arranca del fondo y llega tarde. La ventaja se disuelve si el ataque tarda.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "4c3",
+    "minutos": 14,
+    "formato": "",
+    "descripcion": "Aparece la lectura de la última ayuda y el pase extra.",
+    "campos": [
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] pp. 295-314 · [75DM] p. 22"
+     }
+    ],
+    "html": "<p>Aparece la lectura de la última ayuda y el pase extra.</p>"
+   }
+  ],
+  "nota": "",
+  "html": "<p><strong>N1 · 2c1 continuo</strong> — 10 min Flujo permanente: tras la finalización, la defensora y una atacante vuelven contra la que espera. <em>Clave:</em> <strong>atacar el aro</strong> para obligar a la defensora a decidir. No pasar antes de tiempo. <em>Marcador:</em> carrera a 8. Ataque 1, defensa 2. <em>Fuente:</em> [500] pp. 295-314</p><p><strong>N2 · 3c2 continuo</strong> — 12 min <em>Clave:</em> leer el triángulo defensivo. Si las dos defensoras están en línea, pase interior; si están escalonadas, ataque por el lado de la de atrás. <em>Alta intensidad:</em> 3 min de trabajo, 2 de recuperación con tiros libres.</p><p><strong>N3 · 3c2 con recuperación diferida</strong> — 12 min Una tercera defensora arranca del fondo y llega tarde. La ventaja se disuelve si el ataque tarda. <em>Marcador:</em> canasta antes de que llegue la tercera, vale doble. <em>Fuente:</em> [75DM] p. 21</p><p><strong>N4 · 4c3</strong> — 14 min Aparece la lectura de la última ayuda y el pase extra. <em>Fuente:</em> [500] pp. 295-314 · [75DM] p. 22</p><hr>"
+ },
+ {
+  "codigo": "F14",
+  "grupo": "C",
+  "grupo_nombre": "Contraataque",
+  "nombre": "Transición",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Posiciones de llegada, 5c0",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Base con balón arriba, aleros en las esquinas, interior al poste bajo del lado contrario, arrastre al codo.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "nadie se para. Se corre hasta la posición y se sigue moviendo."
+     }
+    ],
+    "html": "<p>Base con balón arriba, aleros en las esquinas, interior al poste bajo del lado contrario, arrastre al codo.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Entrada del arrastre e inversión",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "El arrastre llega al codo y recibe. Dos opciones: poste bajo o inversión al lado débil.",
+    "campos": [],
+    "html": "<p>El arrastre llega al codo y recibe. Dos opciones: poste bajo o inversión al lado débil.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "5c4 · la defensa llega incompleta",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Encontrar la ventaja antes de que se cierre.",
+    "campos": [],
+    "html": "<p>Encontrar la ventaja antes de que se cierre.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "5c5 con obligación de fluir",
+    "minutos": 14,
+    "formato": "",
+    "descripcion": "Si el contraataque no da canasta, hay que ejecutar la transición completa antes de poder tirar. Prohibido parar el balón y organizar.",
+    "campos": [],
+    "html": "<p>Si el contraataque no da canasta, hay que ejecutar la transición completa antes de poder tirar. Prohibido parar el balón y organizar.</p>"
+   }
+  ],
+  "nota": "Cuando el contraataque no da canasta y hay que fluir sin parar el balón.",
+  "html": "<p><em>Cuando el contraataque no da canasta y hay que fluir sin parar el balón.</em></p><p><strong>N1 · Posiciones de llegada, 5c0</strong> — 10 min Base con balón arriba, aleros en las esquinas, interior al poste bajo del lado contrario, arrastre al codo. <em>Clave:</em> nadie se para. Se corre hasta la posición y se sigue moviendo.</p><p><strong>N2 · Entrada del arrastre e inversión</strong> — 12 min El arrastre llega al codo y recibe. Dos opciones: poste bajo o inversión al lado débil.</p><p><strong>N3 · 5c4 · la defensa llega incompleta</strong> — 12 min Encontrar la ventaja antes de que se cierre.</p><p><strong>N4 · 5c5 con obligación de fluir</strong> — 14 min Si el contraataque no da canasta, hay que ejecutar la transición completa antes de poder tirar. Prohibido parar el balón y organizar.</p><hr><hr>"
+ },
+ {
+  "codigo": "F15",
+  "grupo": "D",
+  "grupo_nombre": "Transversal",
+  "nombre": "Continuos y físico integrado",
+  "apostilla": "",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Relevo de transición 30/90",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "3 cuartetos, 1 balón cada uno. Sprint fondo a fondo botando, entrada, sprint de vuelta, entrada, y se entrega el balón. 30 segundos al máximo, 90 de descanso.",
+    "campos": [],
+    "html": "<p>3 cuartetos, 1 balón cada uno. Sprint fondo a fondo botando, entrada, sprint de vuelta, entrada, y se entrega el balón. 30 segundos al máximo, 90 de descanso.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "3c3 continuo a pista completa",
+    "minutos": 10,
+    "formato": "",
+    "descripcion": "Cuatro equipos de 3, dos juegan y dos descansan, cambio cada 90 segundos.",
+    "campos": [
+     {
+      "etiqueta": "Marcador",
+      "texto": "liga rápida entre los cuatro."
+     }
+    ],
+    "html": "<p>Cuatro equipos de 3, dos juegan y dos descansan, cambio cada 90 segundos.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "4c4 continuo con transición obligada",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Tiro antes de 14 segundos. Canasta en transición vale 3.",
+    "campos": [],
+    "html": "<p>Tiro antes de 14 segundos. Canasta en transición vale 3.</p>"
+   }
+  ],
+  "nota": "",
+  "html": "<p><strong>N1 · Relevo de transición 30/90</strong> — 10 min 3 cuartetos, 1 balón cada uno. Sprint fondo a fondo botando, entrada, sprint de vuelta, entrada, y se entrega el balón. 30 segundos al máximo, 90 de descanso.</p><p><strong>N2 · 3c3 continuo a pista completa</strong> — 10 min Cuatro equipos de 3, dos juegan y dos descansan, cambio cada 90 segundos. <em>Marcador:</em> liga rápida entre los cuatro.</p><p><strong>N3 · 4c4 continuo con transición obligada</strong> — 12 min Tiro antes de 14 segundos. Canasta en transición vale 3.</p><hr>"
+ },
+ {
+  "codigo": "F16",
+  "grupo": "D",
+  "grupo_nombre": "Transversal",
+  "nombre": "Activación preventiva",
+  "apostilla": "12 min martes, 18 viernes",
+  "niveles": [],
+  "nota": "",
+  "html": "<p><strong>12 minutos el martes, 18 el viernes.</strong> Multicomponente y <em>es</em> el calentamiento, no un añadido.</p><div class=\"desliza\"><table class=\"tabla\"><thead><tr><th>Componente</th><th>Contenido</th><th>Balón</th></tr></thead><tbody><tr><td>Movilidad</td><td>Desplazamientos a lo ancho con pases en movimiento</td><td>Sí</td></tr><tr><td>Agilidad</td><td>Conos: aceleración, frenada en dos tiempos, cambio a 45º, botando</td><td>Sí</td></tr><tr><td>Pliometría</td><td>Saltos a tablero, captura y caída estable. Caída a una pierna</td><td>Sí</td></tr><tr><td><strong>Fuerza y core</strong></td><td>Excéntrico de isquios 5 rep · sentadilla a una pierna 6 por lado · puente de glúteo 10 · plancha 20 seg</td><td><strong>No · 4 min</strong></td></tr></tbody></table></div><p><em>Fuente:</em> [25C] secciones 1 y 2 para movilidad y agilidad; sección 5 para los viernes D-1. El bloque de fuerza y core es propio: <strong>ninguna de las fuentes lo cubre</strong>, y es el que más importa con una plantilla femenina de 14-15 años.</p><hr>"
+ },
+ {
+  "codigo": "F17",
+  "grupo": "D",
+  "grupo_nombre": "Transversal",
+  "nombre": "Situaciones especiales y cuatro saques dibujados",
+  "apostilla": "desde M3",
+  "niveles": [],
+  "nota": "",
+  "html": "<p><strong>Dos jugadas por situación, no cinco.</strong> En cadete, dos bien ejecutadas valen más que cinco a medias. Los cuatro saques están dibujados en <code>herramientas/F19_rebote_ofensivo_y_F17_saques.html</code>.</p><div class=\"desliza\"><table class=\"tabla\"><thead><tr><th>#</th><th>Saque</th><th>Idea</th></tr></thead><tbody><tr><td>1</td><td><strong>Fondo contra individual · «Caja»</strong></td><td>Dos bloqueos abajo. 3 corta al aro, 2 sale a la esquina, 5 se abre arriba de seguridad</td></tr><tr><td>2</td><td><strong>Fondo contra zona · «Sobrecarga»</strong></td><td>Tres al lado del balón, una sola en el débil. Entra al poste alto y sale invertido</td></tr><tr><td>3</td><td><strong>Banda en ataque · «Dos cortes»</strong></td><td>Fila en el tiro libre: la primera corta al aro, la segunda sale al balón</td></tr><tr><td>4</td><td><strong>Banda en campo propio bajo presión · «Estructura»</strong></td><td>No es jugada: es la colocación que hay que saber siempre</td></tr></tbody></table></div><p><strong>El cuarto es el que más importa.</strong> No se resuelve memorizando una jugada sino teniendo siempre cubiertas tres funciones: <strong>una que viene al balón, una que queda atrás como receptora de seguridad y una que sale larga.</strong> Ahí es donde los equipos cadete pierden partidos ganados.</p><p><strong>Cuándo se enseñan:</strong> la estructura del saque bajo presión, <strong>antes del primer partido</strong> (sesión del 2 de octubre) y repaso cada viernes. Las otras tres, en la Transición B y después cada viernes de M3.</p><p><strong>Y las otras situaciones:</strong> últimos 24 segundos con desventaja · gestión de faltas y del reloj.</p>"
+ },
+ {
+  "codigo": "F18",
+  "grupo": "D",
+  "grupo_nombre": "Transversal",
+  "nombre": "Ataque contra defensas de espacios",
+  "apostilla": "mínimo, 45 min en M2",
+  "niveles": [],
+  "nota": "",
+  "html": ""
+ },
+ {
+  "codigo": "F19",
+  "grupo": "C",
+  "grupo_nombre": "Contraataque",
+  "nombre": "Rebote ofensivo",
+  "apostilla": "numerada así por incorporarse después; pertenece a este bloque",
+  "niveles": [
+   {
+    "nivel": "N1",
+    "nombre": "Tiro propio y palmeo",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "4 tríos, 1 balón, sin oposición. Tira desde distancia media y ataca su propio rebote antes de que el balón caiga. primer paso, no en el último.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "no se trata de saltar más alto sino de salir antes. El rebote ofensivo se gana en el"
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "contra el reloj, segundas opciones en 90 segundos."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] ej. 213 y 223, pp. 122 y 127"
+     }
+    ],
+    "html": "<p>4 tríos, 1 balón, sin oposición. Tira desde distancia media y ataca su propio rebote antes de que el balón caiga. primer paso, no en el último.</p>"
+   },
+   {
+    "nivel": "N2",
+    "nombre": "Líneas de penetración, 1c1",
+    "minutos": 10,
+    "formato": "(cuartetos)",
+    "descripcion": "La defensora hace el bloqueo de rebote; la atacante no empuja de frente, rodea por el lado buscando el hueco. en cadete esa sola corrección cambia el porcentaje más que cualquier otra cosa.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "ir de frente contra un bloqueo bien hecho no funciona nunca. Se ataca por la línea, y"
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "atacante 1 por captura, defensora 2 por bloqueo limpio. Primera a 8."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] ej. 215 y 230, pp. 123 y 130"
+     }
+    ],
+    "html": "<p>La defensora hace el bloqueo de rebote; la atacante <strong>no empuja de frente</strong>, rodea por el lado buscando el hueco. en cadete esa sola corrección cambia el porcentaje más que cualquier otra cosa.</p>"
+   },
+   {
+    "nivel": "N3",
+    "nombre": "Dónde cae el balón",
+    "minutos": 8,
+    "formato": "",
+    "descripcion": "Dos grupos de 6. Se tira desde cinco posiciones distintas y se aprende a anticipar la zona de caída. contrario**. Colocarse antes del tiro vale más que correr después.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "el tiro largo produce rebote largo, y el tiro de lado cae con más frecuencia al **lado"
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] ej. 224 y 232, pp. 128 y 131"
+     }
+    ],
+    "html": "<p>Dos grupos de 6. Se tira desde cinco posiciones distintas y se aprende a anticipar la zona de caída. contrario**. Colocarse antes del tiro vale más que correr después.</p>"
+   },
+   {
+    "nivel": "N4",
+    "nombre": "3c3 sin bote, la posesión no cambia",
+    "minutos": 12,
+    "formato": "",
+    "descripcion": "Solo pase y tiro. El ataque conserva la posesión hasta que la defensa capture. capturar, el problema está en F8, no aquí.",
+    "campos": [
+     {
+      "etiqueta": "Clave",
+      "texto": "es el ejercicio que mejor mide el modelo. Si la defensa tarda cuatro posesiones en"
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "cada rebote ofensivo capturado suma 1 además de mantener la posesión. Primera a 8."
+     },
+     {
+      "etiqueta": "Fuente",
+      "texto": "[500] ej. 234, p. 131"
+     }
+    ],
+    "html": "<p>Solo pase y tiro. El ataque conserva la posesión hasta que la defensa capture. capturar, el problema está en F8, no aquí.</p>"
+   },
+   {
+    "nivel": "N5",
+    "nombre": "La regla de los tres y los dos, 5c5",
+    "minutos": 14,
+    "formato": "",
+    "descripcion": "Situación real. Se corrige la decisión, no el resultado. cercana. Tres o cuatro paradas por sesión y se automatiza. Dónde entra: N1 y N2 en M1, en los bloques técnicos del martes. N3 y N4 en M2. N5 desde la semana 5 de M1, y a partir de ahí se exige en todos los 5c5 sin bloque propio.",
+    "campos": [
+     {
+      "etiqueta": "Cómo corregir",
+      "texto": "parando el juego en el momento del tiro y preguntando quién es la tercera más"
+     },
+     {
+      "etiqueta": "Marcador",
+      "texto": "canasta de segunda opción vale 3; canasta rival en transición resta 2."
+     }
+    ],
+    "html": "<p>Situación real. Se corrige la decisión, no el resultado. cercana. Tres o cuatro paradas por sesión y se automatiza. <strong>Dónde entra:</strong> N1 y N2 en M1, en los bloques técnicos del martes. N3 y N4 en M2. N5 desde la semana 5 de M1, y a partir de ahí se exige en todos los 5c5 sin bloque propio.</p>"
+   }
+  ],
+  "nota": "*Se numera F19 por haberse incorporado después, pero pertenece al bloque de contraataque: es el",
+  "html": "<p><em>Se numera F19 por haberse incorporado después, pero pertenece al bloque de contraataque: es el último eslabón de la cadena, el que genera las segundas opciones.</em></p><p><strong>La regla que lo gobierna, y que ya conocen del ataque posicional:</strong></p><blockquote><p>Al salir el tiro, cada jugadora tiene solo dos opciones: <strong>ir al rebote de ataque, o volver a impedir el contraataque fácil.</strong> Ninguna se queda mirando.</p></blockquote><p><strong>Cuántas van: tres y dos.</strong> Las <strong>tres más cercanas al aro en el momento del tiro</strong> atacan el rebote; las <strong>dos más alejadas</strong> vuelven. Por distancia, no por puesto: así no hay que pensar, se mira dónde se está. Con cuatro al rebote se anota algún punto más y se encajan muchos en contraataque; con dos, se renuncia a las segundas opciones.</p><p><strong>N1 · Tiro propio y palmeo</strong> — 8 min 4 tríos, 1 balón, sin oposición. Tira desde distancia media y ataca su propio rebote antes de que el balón caiga. <em>Clave:</em> no se trata de saltar más alto sino de <strong>salir antes</strong>. El rebote ofensivo se gana en el primer paso, no en el último. <em>Marcador:</em> contra el reloj, segundas opciones en 90 segundos. <em>Fuente:</em> [500] ej. 213 y 223, pp. 122 y 127</p><p><strong>N2 · Líneas de penetración, 1c1</strong> — 10 min <em>(cuartetos)</em> La defensora hace el bloqueo de rebote; la atacante <strong>no empuja de frente</strong>, rodea por el lado buscando el hueco. <em>Clave:</em> ir de frente contra un bloqueo bien hecho no funciona nunca. Se ataca <strong>por la línea</strong>, y en cadete esa sola corrección cambia el porcentaje más que cualquier otra cosa. <em>Marcador:</em> atacante 1 por captura, defensora 2 por bloqueo limpio. Primera a 8. <em>Fuente:</em> [500] ej. 215 y 230, pp. 123 y 130</p><p><strong>N3 · Dónde cae el balón</strong> — 8 min Dos grupos de 6. Se tira desde cinco posiciones distintas y se aprende a anticipar la zona de caída. <em>Clave:</em> el tiro largo produce rebote largo, y el tiro de lado cae con más frecuencia al <strong>lado contrario</strong>. Colocarse antes del tiro vale más que correr después. <em>Fuente:</em> [500] ej. 224 y 232, pp. 128 y 131</p><p><strong>N4 · 3c3 sin bote, la posesión no cambia</strong> — 12 min Solo pase y tiro. El ataque conserva la posesión hasta que la defensa capture. <em>Clave:</em> es el ejercicio que mejor mide el modelo. Si la defensa tarda cuatro posesiones en capturar, el problema está en F8, no aquí. <em>Marcador:</em> cada rebote ofensivo capturado suma 1 además de mantener la posesión. Primera a 8. <em>Fuente:</em> [500] ej. 234, p. 131</p><p><strong>N5 · La regla de los tres y los dos, 5c5</strong> — 14 min Situación real. Se corrige la decisión, no el resultado. <em>Cómo corregir:</em> <strong>parando el juego en el momento del tiro</strong> y preguntando quién es la tercera más cercana. Tres o cuatro paradas por sesión y se automatiza. <em>Marcador:</em> canasta de segunda opción vale 3; canasta rival en transición resta 2.</p><p><strong>Dónde entra:</strong> N1 y N2 en M1, en los bloques técnicos del martes. N3 y N4 en M2. N5 desde la semana 5 de M1, y a partir de ahí se exige en todos los 5c5 sin bloque propio.</p>"
+ }
+]

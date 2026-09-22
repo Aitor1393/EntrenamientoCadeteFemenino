@@ -1,0 +1,529 @@
+/* Cadete Femenino Preferente · Serie B · 2026/2027
+
+   Móvil primero. El uso real es un teléfono en la mano, en un pabellón, con
+   luz mala y cinco minutos antes de empezar: tipografía grande, contraste alto
+   y nada que obligue a afinar la puntería con el dedo.
+
+   Los colores de la paleta de pista —madera, tinta, cuero— vienen de las fichas
+   originales, para que la web y lo impreso se reconozcan como lo mismo. */
+
+:root {
+  --fondo: #F3EEE4;
+  --papel: #FFFDF8;
+  --tinta: #20180F;
+  --tinta-suave: #5E5449;
+  --tinta-tenue: #8A8073;
+  --borde: #DCD2BF;
+  --borde-fuerte: #BCAF97;
+
+  --acento: #1D3B54;          /* pista */
+  --acento-fondo: #E2E9EF;
+  --cuero: #BE5A21;
+  --cuero-fondo: #FAEADF;
+  --salvia: #55704F;
+  --salvia-fondo: #E6EDE3;
+
+  --aviso: #8A4B00;
+  --aviso-fondo: #FBEFD9;
+  --alarma: #A4162A;
+  --alarma-fondo: #FBE7E9;
+
+  --radio: 8px;
+  --sombra: 0 1px 2px rgba(32, 24, 15, .06), 0 4px 14px rgba(32, 24, 15, .05);
+  --ancho: 46rem;
+
+  /* Altura de un minuto en la línea de tiempo. La ficha impresa la pone a 0
+     para que quepa en una página. */
+  --px-min: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    --fondo: #14110D;
+    --papel: #1E1A15;
+    --tinta: #F3EEE4;
+    --tinta-suave: #C3B9AB;
+    --tinta-tenue: #938878;
+    --borde: #342E26;
+    --borde-fuerte: #4D453A;
+    --acento: #8FB6D6;
+    --acento-fondo: #172936;
+    --cuero: #E2884F;
+    --cuero-fondo: #3A2113;
+    --salvia: #9BBD94;
+    --salvia-fondo: #1B2919;
+    --aviso: #F0C07A;
+    --aviso-fondo: #33270F;
+    --alarma: #FF9AA6;
+    --alarma-fondo: #3A1319;
+    --sombra: 0 1px 2px rgba(0, 0, 0, .4);
+  }
+}
+
+:root[data-tema="oscuro"] {
+  --fondo: #14110D; --papel: #1E1A15; --tinta: #F3EEE4; --tinta-suave: #C3B9AB;
+  --tinta-tenue: #938878; --borde: #342E26; --borde-fuerte: #4D453A;
+  --acento: #8FB6D6; --acento-fondo: #172936; --cuero: #E2884F;
+  --cuero-fondo: #3A2113; --salvia: #9BBD94; --salvia-fondo: #1B2919;
+  --aviso: #F0C07A; --aviso-fondo: #33270F; --alarma: #FF9AA6;
+  --alarma-fondo: #3A1319; --sombra: 0 1px 2px rgba(0, 0, 0, .4);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+a { color: var(--acento); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--cuero); outline-offset: 2px; }
+
+.contenedor { max-width: var(--ancho); margin: 0 auto; padding: 0 1rem; }
+
+/* ------------------------------------------------------------- cabecera */
+
+.cabecera {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--acento); color: #F3EDE1;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+:root[data-tema="oscuro"] .cabecera,
+:root:not([data-tema="claro"]) .cabecera { background: var(--papel); color: var(--tinta); }
+@media (prefers-color-scheme: light) {
+  :root:not([data-tema="oscuro"]) .cabecera { background: var(--acento); color: #F3EDE1; }
+}
+
+.cabecera__interior { display: flex; align-items: center; gap: .75rem; height: 3.25rem; }
+
+.marca {
+  display: flex; align-items: baseline; gap: .5rem;
+  font-weight: 700; text-decoration: none; color: inherit; margin-right: auto;
+}
+.marca small { font-weight: 400; opacity: .72; font-size: .78rem; }
+@media (max-width: 26rem) { .marca small { display: none; } }
+
+.btnCabecera {
+  font: inherit; font-weight: 600; color: inherit;
+  background: rgba(255, 255, 255, .14); border: 0;
+  border-radius: var(--radio); padding: .4rem .6rem; cursor: pointer;
+  min-width: 2.5rem; min-height: 2.5rem;
+}
+:root[data-tema="oscuro"] .btnCabecera { background: var(--fondo); }
+
+/* --------------------------------------------------------------- navegación */
+
+.nav {
+  position: sticky; top: 3.25rem; z-index: 19;
+  background: var(--papel); border-bottom: 1px solid var(--borde);
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.nav__interior { display: flex; gap: .25rem; min-width: max-content; padding: .35rem 1rem; }
+.nav a {
+  display: block; padding: .5rem .7rem; border-radius: var(--radio);
+  text-decoration: none; color: var(--tinta-suave); font-weight: 600; font-size: .95rem;
+  white-space: nowrap;
+}
+.nav a[aria-current="page"] { background: var(--acento-fondo); color: var(--acento); }
+
+/* ------------------------------------------------------------------ base */
+
+main { padding: 1rem 0 4rem; }
+
+h1 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 .25rem; letter-spacing: -.01em; }
+h2 { font-size: 1.15rem; margin: 1.75rem 0 .6rem; letter-spacing: -.005em; }
+h3 { font-size: 1rem; margin: 1.25rem 0 .4rem; }
+p { margin: .5rem 0; }
+
+.sub { color: var(--tinta-suave); margin: 0 0 1rem; }
+.silencio { color: var(--tinta-tenue); }
+.pequeno { font-size: .85rem; }
+.migas { font-size: .85rem; color: var(--tinta-tenue); margin: 0 0 .5rem; }
+
+.cod {
+  color: var(--cuero); font-weight: 700;
+  font-variant-numeric: tabular-nums; text-decoration: none;
+}
+
+.tarjeta {
+  background: var(--papel); border: 1px solid var(--borde);
+  border-radius: var(--radio); box-shadow: var(--sombra);
+  padding: .9rem 1rem; margin: 0 0 .75rem;
+}
+
+.btn {
+  font: inherit; font-weight: 600; color: var(--tinta);
+  background: var(--papel); border: 1px solid var(--borde-fuerte);
+  border-radius: var(--radio); padding: .45rem .8rem; cursor: pointer;
+  min-height: 2.5rem; text-decoration: none; display: inline-flex;
+  align-items: center; justify-content: center;
+}
+.btn:hover { border-color: var(--tinta-tenue); }
+.btn--principal { background: var(--cuero); border-color: var(--cuero); color: #fff; }
+.btn--ancho { width: 100%; padding: .7rem 1rem; font-size: 1.05rem; }
+.btn--icono { padding: .4rem .55rem; min-width: 2.75rem; font-size: 1.2rem; }
+.btn--icono[aria-hidden] { opacity: .3; }
+
+/* --------------------------------------------------------------- etiquetas */
+
+.eti {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-size: .78rem; font-weight: 700; letter-spacing: .02em;
+  padding: .18rem .5rem; border-radius: 999px;
+  background: var(--acento-fondo); color: var(--acento);
+  white-space: nowrap; text-decoration: none;
+}
+.eti--gris { background: var(--fondo); color: var(--tinta-suave); border: 1px solid var(--borde); }
+.eti--aviso { background: var(--aviso-fondo); color: var(--aviso); }
+.eti--alarma { background: var(--alarma-fondo); color: var(--alarma); }
+.eti--bien { background: var(--salvia-fondo); color: var(--salvia); }
+.etis { display: flex; flex-wrap: wrap; gap: .35rem; margin: .5rem 0 1rem; }
+
+/* ------------------------------------------------------------------- hoy */
+
+.hoy__cabecera { margin-bottom: .5rem; }
+.hoy__dia {
+  font-size: .9rem; font-weight: 700; color: var(--cuero);
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.hoy__titulo { font-size: 1.7rem; line-height: 1.15; margin: .1rem 0 .35rem; }
+
+.cifras { display: flex; gap: .5rem; flex-wrap: wrap; margin: .6rem 0 1rem; }
+.cifra {
+  flex: 1 1 5.5rem; background: var(--papel); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: .5rem .7rem;
+}
+.cifra__valor { font-size: 1.35rem; font-weight: 700; line-height: 1.1; }
+.cifra__etiqueta {
+  font-size: .75rem; color: var(--tinta-tenue);
+  text-transform: uppercase; letter-spacing: .04em;
+}
+
+/* ------------------------------------------------------------- calendario */
+
+.cal { display: grid; gap: .15rem; }
+.cal__semana {
+  display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+  margin: 1rem 0 .3rem; font-size: .82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .05em; color: var(--tinta-tenue);
+}
+.cal__semana .eti { text-transform: none; letter-spacing: 0; }
+
+.cal__fila {
+  display: grid; grid-template-columns: 2.4rem 3.6rem 1fr 4rem 2.4rem;
+  align-items: center; gap: .5rem;
+  padding: .45rem .5rem; border-radius: var(--radio);
+  text-decoration: none; color: inherit; border: 1px solid transparent;
+}
+.cal__fila:hover { background: var(--papel); border-color: var(--borde); }
+.cal__fila--hoy { background: var(--cuero-fondo); border-color: var(--cuero); }
+.cal__dia {
+  font-weight: 700; font-size: .8rem; text-transform: uppercase;
+  letter-spacing: .04em; color: var(--tinta-tenue);
+}
+.cal__fecha { font-size: .85rem; color: var(--tinta-suave); font-variant-numeric: tabular-nums; }
+.cal__tema { font-size: .92rem; min-width: 0; }
+.cal__min {
+  font-size: .82rem; font-weight: 700; text-align: right;
+  font-variant-numeric: tabular-nums; color: var(--tinta-tenue);
+}
+
+/* La barra de reparto: cuánto preventivo, cuánta técnica, cuánto juego. */
+.reparto {
+  display: flex; height: .55rem; border-radius: 3px; overflow: hidden;
+  background: var(--borde);
+}
+.reparto i { display: block; height: 100%; }
+
+.leyenda, .simbolos {
+  display: flex; flex-wrap: wrap; gap: .75rem; align-items: center;
+  margin: 1rem 0 .25rem; font-size: .78rem; color: var(--tinta-suave);
+}
+.leyenda span, .simbolos span { display: inline-flex; align-items: center; gap: .35rem; }
+.leyenda i { width: .85rem; height: .5rem; border-radius: 2px; display: inline-block; }
+.simbolos svg { display: block; }
+
+/* ---------------------------------------------------------------- listas */
+
+.lista { display: grid; gap: .5rem; }
+.lista:empty { display: none; }
+.enlace-tarjeta {
+  display: block; text-decoration: none; color: inherit;
+  background: var(--papel); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: .75rem .9rem;
+}
+.enlace-tarjeta:hover { border-color: var(--borde-fuerte); }
+.enlace-tarjeta__titulo { font-weight: 700; }
+.enlace-tarjeta__pie { color: var(--tinta-suave); font-size: .88rem; margin-top: .15rem; }
+
+/* --------------------------------------------------------------- filtros */
+
+.filtros { display: flex; flex-wrap: wrap; gap: .35rem; margin: .6rem 0 1rem; }
+.filtro {
+  font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer;
+  background: var(--papel); color: var(--tinta-suave);
+  border: 1px solid var(--borde); border-radius: 999px; padding: .35rem .7rem;
+  min-height: 2.25rem;
+}
+.filtro[aria-pressed="true"] { background: var(--acento); border-color: var(--acento); color: #fff; }
+:root[data-tema="oscuro"] .filtro[aria-pressed="true"] { color: #14110D; }
+
+.buscador {
+  width: 100%; font: inherit; padding: .6rem .75rem; min-height: 2.75rem;
+  border: 1px solid var(--borde-fuerte); border-radius: var(--radio);
+  background: var(--papel); color: var(--tinta);
+}
+
+/* ============================================================== la ficha */
+
+.ficha__paso {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .5rem; margin-bottom: .6rem;
+}
+.ficha__posicion {
+  font-size: .82rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--tinta-tenue);
+}
+
+/* El cronómetro va pegado arriba: se mira de reojo con el ejercicio en marcha. */
+.crono {
+  position: sticky; top: calc(3.25rem + 2.9rem); z-index: 18;
+  display: grid; grid-template-columns: auto 1fr; align-items: center;
+  gap: .3rem .7rem;
+  background: var(--papel); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: .55rem .7rem; margin: .75rem 0;
+  box-shadow: var(--sombra);
+}
+.crono__t {
+  font-size: 1.9rem; font-weight: 700; line-height: 1;
+  font-variant-numeric: tabular-nums; min-width: 4.1rem;
+}
+/* El estado ocupa su propia fila bajo el tiempo: en un móvil estrecho, metido
+   entre el reloj y los botones, se partía en cinco líneas de dos palabras. */
+.crono__estado {
+  grid-column: 1 / -1; min-width: 0;
+  font-size: .8rem; color: var(--tinta-suave); line-height: 1.3;
+}
+.crono__estado b { color: var(--tinta); }
+.crono__acc { display: flex; gap: .3rem; justify-self: end; }
+.crono__acc .btn { padding: .35rem .6rem; min-height: 2.25rem; font-size: .88rem; }
+
+/* La línea de tiempo: la altura de cada bloque es proporcional a su duración,
+   así que la ficha se lee como lo que dura la sesión y no como una lista. */
+.tl { position: relative; padding-left: 3.3rem; margin-top: 1rem; }
+.tl__regla {
+  position: absolute; left: 2.75rem; top: 0; bottom: 0;
+  width: 1px; background: var(--borde);
+}
+.tl__playhead {
+  position: absolute; left: 1.7rem; right: 0; height: 0;
+  border-top: 2px solid var(--cuero); pointer-events: none; display: none; z-index: 12;
+}
+.tl__playhead::before {
+  content: ""; position: absolute; left: -5px; top: -5px;
+  width: 8px; height: 8px; background: var(--cuero); border-radius: 50%;
+}
+
+.blk {
+  position: relative; padding: .45rem 0 .55rem .15rem;
+  border-top: 1px solid var(--borde);
+  min-height: calc(var(--min) * var(--px-min));
+}
+.blk:first-of-type { border-top: 0; }
+.blk__min {
+  position: absolute; left: -3.3rem; top: .45rem; width: 2.85rem; text-align: right;
+  font-size: .78rem; font-weight: 600; color: var(--tinta-tenue);
+  font-variant-numeric: tabular-nums; line-height: 1.2; white-space: nowrap;
+}
+.blk__barra {
+  position: absolute; left: -.5rem; top: .5rem; bottom: .5rem;
+  width: 3px; border-radius: 2px;
+}
+.blk__titulo { margin: 0; font-size: 1.08rem; line-height: 1.2; font-weight: 700; }
+.blk__cod { margin-right: .35rem; }
+.blk__sc {
+  display: inline-block; margin-left: .35rem; padding: .02rem .3rem;
+  border: 1px solid var(--borde-fuerte); border-radius: 2px;
+  font-size: .7rem; font-weight: 600; color: var(--tinta-tenue);
+  letter-spacing: .03em; vertical-align: .1rem;
+}
+.blk__meta { font-size: .8rem; color: var(--tinta-suave); margin-top: .15rem; }
+.blk__clave {
+  font-size: .85rem; margin-top: .25rem; padding-left: .6rem;
+  border-left: 2px solid var(--borde-fuerte);
+}
+/* La consigna de defensa lleva borde naranja: es el segundo objetivo del mismo
+   bloque, y verlo separado es lo que hace que no se olvide. */
+.blk__defe {
+  font-size: .85rem; margin-top: .25rem; padding-left: .6rem;
+  border-left: 2px solid var(--cuero); color: var(--cuero);
+}
+.blk__comp {
+  display: inline-block; margin-top: .3rem; padding: .12rem .45rem;
+  background: var(--cuero-fondo); border: 1px solid var(--cuero);
+  border-radius: 2px; font-size: .8rem; color: var(--cuero);
+}
+.blk__cita { margin-top: .3rem; font-size: .78rem; color: var(--tinta-tenue); font-style: italic; }
+.blk__btns { display: flex; gap: .3rem; margin-top: .4rem; flex-wrap: wrap; }
+
+.blk.ahora { background: var(--cuero-fondo); }
+.blk.hecho { opacity: .45; }
+
+.plega {
+  background: var(--papel); border: 1px solid var(--borde-fuerte); border-radius: var(--radio);
+  color: var(--acento); font: inherit; font-weight: 600; font-size: .85rem;
+  padding: .3rem .7rem; cursor: pointer; min-height: 2.25rem;
+}
+.plega[aria-expanded="true"] { background: var(--acento); border-color: var(--acento); color: #fff; }
+:root[data-tema="oscuro"] .plega[aria-expanded="true"] { color: #14110D; }
+
+.desplegable { display: none; margin-top: .45rem; }
+.desplegable.abierto { display: block; }
+
+/* La pizarra va sobre papel claro en los dos temas. Los colores del motor
+   —azul pista, naranja cuero, línea de madera— están elegidos contra ese fondo,
+   y una pizarra táctica es blanca: en oscuro, sobre el fondo del tema, las
+   atacantes quedaban azul marino sobre casi negro. Además así lo que se ve en
+   pantalla es lo mismo que sale impreso. */
+.pizarra {
+  background: #F7F2E9; border: 1px solid #C3B79F;
+  border-radius: var(--radio); padding: .4rem;
+}
+.pizarra svg { display: block; width: 100%; height: auto; }
+.pizarra__pie { font-size: .78rem; color: #6B6157; margin: .35rem .15rem 0; line-height: 1.35; }
+
+.detalle {
+  background: var(--papel); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: .6rem .75rem; font-size: .9rem;
+}
+.detalle h4 {
+  margin: .1rem 0 .3rem; font-size: .78rem; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--cuero);
+}
+.detalle h4:not(:first-child) { margin-top: .7rem; }
+.detalle ul { margin: 0; padding-left: 1.1rem; }
+.detalle li { margin: .18rem 0; line-height: 1.4; }
+.detalle__err li { color: var(--cuero); }
+
+.ficha__pie { margin-top: 2rem; padding-top: .9rem; border-top: 1px solid var(--borde); }
+
+/* --------------------------------------------------------- familia y plan */
+
+.barras { display: grid; gap: .3rem; margin: .5rem 0; }
+.barras__fila { display: grid; grid-template-columns: 3.2rem 1fr 2.6rem; align-items: center; gap: .5rem; }
+.barras__et { font-size: .82rem; font-weight: 700; color: var(--tinta-tenue); }
+.barras__pista { display: block; height: 1rem; background: var(--borde); border-radius: 3px; overflow: hidden; }
+.barras__pista i { display: block; height: 100%; background: var(--acento); }
+.barras__val { font-size: .82rem; text-align: right; font-variant-numeric: tabular-nums; color: var(--tinta-suave); }
+
+.nivel__titulo { margin: 0 0 .25rem; display: flex; align-items: baseline; gap: .4rem; flex-wrap: wrap; }
+.nivel__min {
+  margin-left: auto; font-size: .78rem; font-weight: 600;
+  color: var(--tinta-tenue); font-variant-numeric: tabular-nums;
+}
+.campo { font-size: .9rem; margin: .3rem 0; }
+.campo__et {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .05em; color: var(--cuero); margin-right: .25rem;
+}
+.comp {
+  display: inline-block; padding: .2rem .5rem; background: var(--cuero-fondo);
+  border: 1px solid var(--cuero); border-radius: var(--radio);
+  font-size: .9rem; color: var(--cuero);
+}
+
+.caja { border-radius: var(--radio); padding: .75rem .9rem; margin: .75rem 0; border: 1px solid; }
+.caja h3 { margin: 0 0 .3rem; font-size: .95rem; }
+.caja p:last-child { margin-bottom: 0; }
+.caja--acento { background: var(--acento-fondo); border-color: var(--acento); }
+.caja--acento h3 { color: var(--acento); }
+.caja--aviso { background: var(--aviso-fondo); border-color: var(--aviso); }
+.caja--aviso h3 { color: var(--aviso); }
+.caja--alarma { background: var(--alarma-fondo); border-color: var(--alarma); }
+
+.plegable { margin: .5rem 0; border-bottom: 1px solid var(--borde); }
+.plegable summary { cursor: pointer; font-weight: 600; padding: .6rem 0; color: var(--acento); }
+
+/* La prosa de los documentos, que viene convertida desde markdown. */
+.prosa { font-size: .96rem; }
+.prosa h2 { font-size: 1.2rem; margin-top: 1.5rem; }
+.prosa h3 { font-size: 1.05rem; }
+.prosa h4, .prosa h5, .prosa h6 { font-size: .95rem; margin: 1rem 0 .3rem; }
+.prosa ul, .prosa ol { padding-left: 1.2rem; }
+.prosa li { margin: .25rem 0; }
+.prosa hr { border: 0; border-top: 1px solid var(--borde); margin: 1.5rem 0; }
+.prosa code {
+  background: var(--papel); border: 1px solid var(--borde); border-radius: 3px;
+  padding: .05rem .25rem; font-size: .88em;
+}
+.prosa pre {
+  background: var(--papel); border: 1px solid var(--borde); border-radius: var(--radio);
+  padding: .7rem; overflow-x: auto; font-size: .85rem;
+}
+.prosa pre code { background: none; border: 0; padding: 0; }
+.prosa blockquote {
+  margin: .75rem 0; padding: .5rem .9rem;
+  border-left: 3px solid var(--cuero); background: var(--cuero-fondo);
+  border-radius: 0 var(--radio) var(--radio) 0;
+}
+.prosa blockquote p:first-child { margin-top: 0; }
+.prosa blockquote p:last-child { margin-bottom: 0; }
+
+.tabla { width: 100%; border-collapse: collapse; margin: .5rem 0; font-size: .92rem; }
+.tabla th, .tabla td {
+  text-align: left; padding: .45rem .5rem;
+  border-bottom: 1px solid var(--borde); vertical-align: top;
+}
+.tabla th {
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--tinta-tenue); white-space: nowrap;
+}
+.desliza { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* ------------------------------------------------------------------- pie */
+
+.pie {
+  border-top: 1px solid var(--borde); padding: 1.25rem 0 2rem;
+  color: var(--tinta-tenue); font-size: .85rem;
+}
+.pie p { margin: .25rem 0; }
+
+.cargando { padding: 3rem 1rem; text-align: center; color: var(--tinta-tenue); }
+
+.saltar {
+  position: absolute; left: -9999px; top: 0; background: var(--papel);
+  padding: .6rem 1rem; border-radius: var(--radio); z-index: 50;
+}
+.saltar:focus { left: 1rem; top: .5rem; }
+
+/* --------------------------------------------------------- pantallas grandes */
+
+@media (min-width: 40rem) {
+  body { font-size: 18px; }
+  .hoy__titulo { font-size: 2rem; }
+  .cal__fila { grid-template-columns: 2.8rem 4.4rem 1fr 5rem 2.8rem; }
+}
+
+/* ------------------------------------------------------------- impresión */
+
+@media print {
+  /* Sin proporción: una sesión de 105 minutos ocuparía metro y medio de papel. */
+  :root { --px-min: 0px; }
+  .cabecera, .nav, .pie, .crono, .tl__playhead, .no-imprimir { display: none !important; }
+  body { background: #fff; color: #000; font-size: 10.5pt; }
+  main { padding: 0; }
+  .contenedor { max-width: none; padding: 0; }
+  .tl { padding-left: 2.9rem; }
+  .blk { break-inside: avoid; min-height: 0 !important; }
+  .blk.ahora, .blk.hecho { opacity: 1; background: none; }
+  /* En papel se despliega todo: es la ficha completa, no una pantalla. */
+  .desplegable { display: block !important; }
+  .pizarra { break-inside: avoid; }
+  .pizarra svg { max-width: 11cm; }
+  .tarjeta, .enlace-tarjeta { box-shadow: none; border-color: #999; break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+  h1 { font-size: 16pt; }
+}

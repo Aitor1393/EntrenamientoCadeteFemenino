@@ -1,0 +1,3614 @@
+[
+ {
+  "id": "M0-5",
+  "bloque": "M0",
+  "numero": 5,
+  "fecha": "2026-09-15",
+  "fechaTexto": "Martes 15 de septiembre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "Rebote y las dos caras de la desigualdad",
+  "lunes": "2026-09-14",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F8-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 34,
+    "codigo": "F15-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 34,
+    "hasta": 46,
+    "codigo": "F13-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 46,
+    "hasta": 60,
+    "codigo": "F13-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 60,
+    "hasta": 72,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M0-6",
+  "bloque": "M0",
+  "numero": 6,
+  "fecha": "2026-09-18",
+  "fechaTexto": "Viernes 18 de septiembre",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "La zona y las calles",
+  "lunes": "2026-09-14",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 42,
+    "codigo": "F8-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 42,
+    "hasta": 52,
+    "codigo": "F12-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 62,
+    "codigo": "F12-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 62,
+    "hasta": 84,
+    "codigo": "F9-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 84,
+    "hasta": 98,
+    "codigo": "F13-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 98,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M0-7",
+  "bloque": "M0",
+  "numero": 7,
+  "fecha": "2026-09-22",
+  "fechaTexto": "Martes 22 de septiembre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "Balance defensivo",
+  "lunes": "2026-09-21",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "F6-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 34,
+    "codigo": "F10-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 34,
+    "hasta": 46,
+    "codigo": "F10-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 46,
+    "hasta": 60,
+    "codigo": "F13-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 60,
+    "hasta": 72,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M0-8",
+  "bloque": "M0",
+  "numero": 8,
+  "fecha": "2026-09-25",
+  "fechaTexto": "Viernes 25 de septiembre",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "La inversión de balón y las reglas",
+  "lunes": "2026-09-21",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F6-N1",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 42,
+    "codigo": "F9-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 42,
+    "hasta": 56,
+    "codigo": "F9-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 56,
+    "hasta": 68,
+    "codigo": "F8-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 68,
+    "hasta": 80,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "F12-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "REGLAS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M0-9",
+  "bloque": "M0",
+  "numero": 9,
+  "fecha": "2026-09-29",
+  "fechaTexto": "Martes 29 de septiembre",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "Las cinco juntas, por primera vez",
+  "lunes": "2026-09-28",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "F8-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 46,
+    "codigo": "F9-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 46,
+    "hasta": 62,
+    "codigo": "F9-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 62,
+    "hasta": 72,
+    "codigo": "F12-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M0-10",
+  "bloque": "M0",
+  "numero": 10,
+  "fecha": "2026-10-02",
+  "fechaTexto": "Viernes 2 de octubre",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "Víspera del primer partido",
+  "lunes": "2026-09-28",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 15,
+    "codigo": "F16S",
+    "sinCanasta": true
+   },
+   {
+    "desde": 15,
+    "hasta": 30,
+    "codigo": "F3-N2",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 50,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 50,
+    "hasta": 62,
+    "codigo": "F12-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 62,
+    "hasta": 78,
+    "codigo": "F9-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 78,
+    "hasta": 88,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 88,
+    "hasta": 98,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 98,
+    "hasta": 105,
+    "codigo": "CHARLA",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-1",
+  "bloque": "M1",
+  "numero": 1,
+  "fecha": "2026-10-06",
+  "fechaTexto": "Martes 6 de octubre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B1 · La base individual",
+  "lunes": "2026-10-05",
+  "jornada": null,
+  "sinPartido": true,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F1-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 31,
+    "codigo": "F15-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 31,
+    "hasta": 38,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F6-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F13-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-2",
+  "bloque": "M1",
+  "numero": 2,
+  "fecha": "2026-10-09",
+  "fechaTexto": "Viernes 9 de octubre",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B1 · Semana de choque · el viernes carga",
+  "lunes": "2026-10-05",
+  "jornada": null,
+  "sinPartido": true,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 64,
+    "codigo": "F6-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 64,
+    "hasta": 80,
+    "codigo": "F7-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-3",
+  "bloque": "M1",
+  "numero": 3,
+  "fecha": "2026-10-13",
+  "fechaTexto": "Martes 13 de octubre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B1 · Defensa sin balón",
+  "lunes": "2026-10-12",
+  "jornada": 2,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F5-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 38,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F7-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F8-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-4",
+  "bloque": "M1",
+  "numero": 4,
+  "fecha": "2026-10-16",
+  "fechaTexto": "Viernes 16 de octubre · J2",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B1 · Ayuda y recuperación",
+  "lunes": "2026-10-12",
+  "jornada": 2,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F6-N1",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F7-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-5",
+  "bloque": "M1",
+  "numero": 5,
+  "fecha": "2026-10-20",
+  "fechaTexto": "Martes 20 de octubre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B2 · Entra la inferioridad",
+  "lunes": "2026-10-19",
+  "jornada": 3,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F19-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 38,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F11-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F13-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-6",
+  "bloque": "M1",
+  "numero": 6,
+  "fecha": "2026-10-23",
+  "fechaTexto": "Viernes 23 de octubre · J3",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B2 · La 2ª línea de la zona",
+  "lunes": "2026-10-19",
+  "jornada": 3,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F7-N1",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F9-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-7",
+  "bloque": "M1",
+  "numero": 7,
+  "fecha": "2026-10-27",
+  "fechaTexto": "Martes 27 de octubre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B2 · El tándem",
+  "lunes": "2026-10-26",
+  "jornada": null,
+  "sinPartido": true,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F1-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 31,
+    "codigo": "F15-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 31,
+    "hasta": 38,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F11-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F13-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-8",
+  "bloque": "M1",
+  "numero": 8,
+  "fecha": "2026-10-30",
+  "fechaTexto": "Viernes 30 de octubre",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B2 · Semana de choque · el viernes carga",
+  "lunes": "2026-10-26",
+  "jornada": null,
+  "sinPartido": true,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 66,
+    "codigo": "F9-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 66,
+    "hasta": 80,
+    "codigo": "F11-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-9",
+  "bloque": "M1",
+  "numero": 9,
+  "fecha": "2026-11-03",
+  "fechaTexto": "Martes 3 de noviembre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B3 · Balance y rebote ofensivo",
+  "lunes": "2026-11-02",
+  "jornada": 4,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F19-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 38,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F10-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F19-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-10",
+  "bloque": "M1",
+  "numero": 10,
+  "fecha": "2026-11-06",
+  "fechaTexto": "Viernes 6 de noviembre · J4",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B3 · Entra la transición",
+  "lunes": "2026-11-02",
+  "jornada": 4,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F7-N2",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F14-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-11",
+  "bloque": "M1",
+  "numero": 11,
+  "fecha": "2026-11-10",
+  "fechaTexto": "Martes 10 de noviembre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B3 · 4c3 y 3c4, las dos caras",
+  "lunes": "2026-11-09",
+  "jornada": 5,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F2-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 38,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F13-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F11-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-12",
+  "bloque": "M1",
+  "numero": 12,
+  "fecha": "2026-11-13",
+  "fechaTexto": "Viernes 13 de noviembre · J5",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B3 · Arrastre e inversión",
+  "lunes": "2026-11-09",
+  "jornada": 5,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F6-N1",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 72,
+    "codigo": "F14-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 92,
+    "codigo": "AP12",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-13",
+  "bloque": "M1",
+  "numero": 13,
+  "fecha": "2026-11-17",
+  "fechaTexto": "Martes 17 de noviembre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B3 · Cambio de rol a la voz",
+  "lunes": "2026-11-16",
+  "jornada": 6,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F1-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 38,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F10-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-14",
+  "bloque": "M1",
+  "numero": 14,
+  "fecha": "2026-11-20",
+  "fechaTexto": "Viernes 20 de noviembre · J6",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B3 · La regla del tiro",
+  "lunes": "2026-11-16",
+  "jornada": 6,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N4",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 76,
+    "codigo": "F14-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 76,
+    "hasta": 92,
+    "codigo": "AP3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-15",
+  "bloque": "M1",
+  "numero": 15,
+  "fecha": "2026-11-24",
+  "fechaTexto": "Martes 24 de noviembre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B4 · Coberturas y rebote",
+  "lunes": "2026-11-23",
+  "jornada": 7,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F8-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 38,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F7-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F8-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-16",
+  "bloque": "M1",
+  "numero": 16,
+  "fecha": "2026-11-27",
+  "fechaTexto": "Viernes 27 de noviembre · J7",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B4 · La zona completa",
+  "lunes": "2026-11-23",
+  "jornada": 7,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F7-N2",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F9-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-17",
+  "bloque": "M1",
+  "numero": 17,
+  "fecha": "2026-12-01",
+  "fechaTexto": "Martes 1 de diciembre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B4 · Zona a velocidad de partido",
+  "lunes": "2026-11-30",
+  "jornada": null,
+  "sinPartido": true,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F5-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 31,
+    "codigo": "F15-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 31,
+    "hasta": 38,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F9-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-18",
+  "bloque": "M1",
+  "numero": 18,
+  "fecha": "2026-12-04",
+  "fechaTexto": "Viernes 4 de diciembre",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "B4 · Semana de choque · rebote, salida y balance",
+  "lunes": "2026-11-30",
+  "jornada": null,
+  "sinPartido": true,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 64,
+    "codigo": "F12-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 64,
+    "hasta": 80,
+    "codigo": "F10-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-19",
+  "bloque": "M1",
+  "numero": 19,
+  "fecha": "2026-12-11",
+  "fechaTexto": "Viernes 11 de diciembre · J8",
+  "duracion": 105,
+  "carga": "media",
+  "tema": "B5 · Mantenimiento · única sesión de la semana",
+  "lunes": "2026-12-07",
+  "jornada": 8,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F6-N2",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F9-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-20",
+  "bloque": "M1",
+  "numero": 20,
+  "fecha": "2026-12-15",
+  "fechaTexto": "Martes 15 de diciembre",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "B5 · Inferioridad encadenada",
+  "lunes": "2026-12-14",
+  "jornada": 9,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F5-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 38,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 38,
+    "hasta": 58,
+    "codigo": "F11-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M1-21",
+  "bloque": "M1",
+  "numero": 21,
+  "fecha": "2026-12-18",
+  "fechaTexto": "Viernes 18 de diciembre · J9",
+  "duracion": 105,
+  "carga": "media",
+  "tema": "B5 · Integración y cierre del bloque",
+  "lunes": "2026-12-14",
+  "jornada": 9,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "INTEG",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "NAVIDAD",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-1",
+  "bloque": "M2",
+  "numero": 1,
+  "fecha": "2027-01-12",
+  "fechaTexto": "Martes 12 de enero",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "C1 · Test intermedio",
+  "lunes": "2027-01-11",
+  "jornada": 10,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 70,
+    "codigo": "TEST",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-2",
+  "bloque": "M2",
+  "numero": 2,
+  "fecha": "2027-01-15",
+  "fechaTexto": "Viernes 15 de enero · J10",
+  "duracion": 105,
+  "carga": "media",
+  "tema": "C1 · Recuperar el nivel de diciembre",
+  "lunes": "2027-01-11",
+  "jornada": 10,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F6-N2",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F9-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-3",
+  "bloque": "M2",
+  "numero": 3,
+  "fecha": "2027-01-19",
+  "fechaTexto": "Martes 19 de enero",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "C1 · Balance y 4c3",
+  "lunes": "2027-01-18",
+  "jornada": 11,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 58,
+    "codigo": "F10-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F13-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-4",
+  "bloque": "M2",
+  "numero": 4,
+  "fecha": "2027-01-22",
+  "fechaTexto": "Viernes 22 de enero · J11",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "C1 · Zona, rebote y contraataque",
+  "lunes": "2027-01-18",
+  "jornada": 11,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F7-N2",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F9-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-5",
+  "bloque": "M2",
+  "numero": 5,
+  "fecha": "2027-01-26",
+  "fechaTexto": "Martes 26 de enero",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "C2 · 5c4",
+  "lunes": "2027-01-25",
+  "jornada": 12,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 58,
+    "codigo": "F13-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-6",
+  "bloque": "M2",
+  "numero": 6,
+  "fecha": "2027-01-29",
+  "fechaTexto": "Viernes 29 de enero · J12",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "C2 · Entra el ataque contra zona",
+  "lunes": "2027-01-25",
+  "jornada": 12,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 64,
+    "codigo": "F18-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 64,
+    "hasta": 80,
+    "codigo": "F18-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55Z",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-7",
+  "bloque": "M2",
+  "numero": 7,
+  "fecha": "2027-02-02",
+  "fechaTexto": "Martes 2 de febrero",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "C2 · Descarga · penetrar y doblar",
+  "lunes": "2027-02-01",
+  "jornada": 13,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F1-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 58,
+    "codigo": "F18-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-8",
+  "bloque": "M2",
+  "numero": 8,
+  "fecha": "2027-02-05",
+  "fechaTexto": "Viernes 5 de febrero · J13",
+  "duracion": 105,
+  "carga": "media",
+  "tema": "C2 · Sobrecarga e inversión",
+  "lunes": "2027-02-01",
+  "jornada": 13,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F6-N1",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F18-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-9",
+  "bloque": "M2",
+  "numero": 9,
+  "fecha": "2027-02-09",
+  "fechaTexto": "Martes 9 de febrero",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "C3 · Entra la trampa",
+  "lunes": "2027-02-08",
+  "jornada": 14,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 58,
+    "codigo": "F9-N6",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-10",
+  "bloque": "M2",
+  "numero": 10,
+  "fecha": "2027-02-12",
+  "fechaTexto": "Viernes 12 de febrero · J14",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "C3 · Trampa con rotaciones",
+  "lunes": "2027-02-08",
+  "jornada": 14,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F7-N1",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F9-N6",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-11",
+  "bloque": "M2",
+  "numero": 11,
+  "fecha": "2027-02-16",
+  "fechaTexto": "Martes 16 de febrero",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "C3 · Rebote ofensivo",
+  "lunes": "2027-02-15",
+  "jornada": 15,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 52,
+    "codigo": "F19-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 68,
+    "codigo": "F19-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 68,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-12",
+  "bloque": "M2",
+  "numero": 12,
+  "fecha": "2027-02-19",
+  "fechaTexto": "Viernes 19 de febrero · J15",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "C3 · Cambio de intensidad a la voz",
+  "lunes": "2027-02-15",
+  "jornada": 15,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N4",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F9-N7",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-13",
+  "bloque": "M2",
+  "numero": 13,
+  "fecha": "2027-02-23",
+  "fechaTexto": "Martes 23 de febrero",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "C4 · Inferioridad encadenada",
+  "lunes": "2027-02-22",
+  "jornada": 16,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 58,
+    "codigo": "F11-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-14",
+  "bloque": "M2",
+  "numero": 14,
+  "fecha": "2027-02-26",
+  "fechaTexto": "Viernes 26 de febrero · J16",
+  "duracion": 105,
+  "carga": "alta",
+  "tema": "C4 · Balance a velocidad de partido",
+  "lunes": "2027-02-22",
+  "jornada": 16,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F6-N2",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F10-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-15",
+  "bloque": "M2",
+  "numero": 15,
+  "fecha": "2027-03-02",
+  "fechaTexto": "Martes 2 de marzo",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "C4 · Descarga · superioridad e inferioridad",
+  "lunes": "2027-03-01",
+  "jornada": 17,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F5-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 58,
+    "codigo": "F13-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-16",
+  "bloque": "M2",
+  "numero": 16,
+  "fecha": "2027-03-05",
+  "fechaTexto": "Viernes 5 de marzo · J17",
+  "duracion": 105,
+  "carga": "media",
+  "tema": "C4 · Obligación de fluir",
+  "lunes": "2027-03-01",
+  "jornada": 17,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F7-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "F14-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-17",
+  "bloque": "M2",
+  "numero": 17,
+  "fecha": "2027-03-09",
+  "fechaTexto": "Martes 9 de marzo",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "C5 · Zona completa con trampa",
+  "lunes": "2027-03-08",
+  "jornada": 18,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F15-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 58,
+    "codigo": "F9-N7",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M2-18",
+  "bloque": "M2",
+  "numero": 18,
+  "fecha": "2027-03-12",
+  "fechaTexto": "Viernes 12 de marzo · J18",
+  "duracion": 105,
+  "carga": "media",
+  "tema": "C5 · Integración y cierre del bloque",
+  "lunes": "2027-03-08",
+  "jornada": 18,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "INTEG",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SSANTA",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-1",
+  "bloque": "M3_M4",
+  "numero": 1,
+  "fecha": "2027-03-16",
+  "fechaTexto": "Martes 16 de marzo",
+  "duracion": 75,
+  "carga": "baja",
+  "tema": "Transición B · descarga",
+  "lunes": "2027-03-15",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 32,
+    "codigo": "F5-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-2",
+  "bloque": "M3_M4",
+  "numero": 2,
+  "fecha": "2027-03-19",
+  "fechaTexto": "Viernes 19 de marzo",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "Transición B · descarga con volumen de tiro",
+  "lunes": "2027-03-15",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 60,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 60,
+    "hasta": 80,
+    "codigo": "F4-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 98,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 98,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-3",
+  "bloque": "M3_M4",
+  "numero": 3,
+  "fecha": "2027-03-23",
+  "fechaTexto": "Martes 23 de marzo",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "Transición B · LA ÚNICA SESIÓN DE CARGA DEL PARÓN",
+  "lunes": "2027-03-22",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "F15-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 54,
+    "codigo": "F10-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 54,
+    "hasta": 64,
+    "codigo": "F17-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 64,
+    "hasta": 72,
+    "codigo": "F17-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "SSANTA",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-4",
+  "bloque": "M3_M4",
+  "numero": 4,
+  "fecha": "2027-03-30",
+  "fechaTexto": "Martes 30 de marzo",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "M3 · MC1 · reactivación tras el parón",
+  "lunes": "2027-03-29",
+  "jornada": 19,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "F8-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 32,
+    "codigo": "INTENS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "F9-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "F10-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-5",
+  "bloque": "M3_M4",
+  "numero": 5,
+  "fecha": "2027-04-02",
+  "fechaTexto": "Viernes 2 de abril · víspera de J19",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "M3 · SESIÓN OBLIGATORIA",
+  "lunes": "2027-03-29",
+  "jornada": 19,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 15,
+    "codigo": "F16S",
+    "sinCanasta": true
+   },
+   {
+    "desde": 15,
+    "hasta": 30,
+    "codigo": "MANEJO",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "F18-N2",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 84,
+    "codigo": "F17-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 84,
+    "hasta": 96,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 96,
+    "hasta": 105,
+    "codigo": "CHARLA",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-6",
+  "bloque": "M3_M4",
+  "numero": 6,
+  "fecha": "2027-04-06",
+  "fechaTexto": "Martes 6 de abril",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "M3 · MC2 · inferioridad",
+  "lunes": "2027-04-05",
+  "jornada": 20,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "REVIS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 32,
+    "codigo": "INTENS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "F11-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "F9-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-7",
+  "bloque": "M3_M4",
+  "numero": 7,
+  "fecha": "2027-04-09",
+  "fechaTexto": "Viernes 9 de abril · J20",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "M3 · plan de partido",
+  "lunes": "2027-04-05",
+  "jornada": 20,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 15,
+    "codigo": "F16S",
+    "sinCanasta": true
+   },
+   {
+    "desde": 15,
+    "hasta": 30,
+    "codigo": "MANEJO",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 84,
+    "codigo": "F17-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 84,
+    "hasta": 96,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 96,
+    "hasta": 105,
+    "codigo": "CHARLA",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-8",
+  "bloque": "M3_M4",
+  "numero": 8,
+  "fecha": "2027-04-13",
+  "fechaTexto": "Martes 13 de abril",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "M3 · MC3 · zona con trampa",
+  "lunes": "2027-04-12",
+  "jornada": 21,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "REVIS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 32,
+    "codigo": "INTENS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "F9-N7",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "F10-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-9",
+  "bloque": "M3_M4",
+  "numero": 9,
+  "fecha": "2027-04-16",
+  "fechaTexto": "Viernes 16 de abril · J21",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "M3 · gestión de faltas y reloj",
+  "lunes": "2027-04-12",
+  "jornada": 21,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 15,
+    "codigo": "F16S",
+    "sinCanasta": true
+   },
+   {
+    "desde": 15,
+    "hasta": 30,
+    "codigo": "MANEJO",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 84,
+    "codigo": "F17-N4",
+    "sinCanasta": false
+   },
+   {
+    "desde": 84,
+    "hasta": 96,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 96,
+    "hasta": 105,
+    "codigo": "CHARLA",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-10",
+  "bloque": "M3_M4",
+  "numero": 10,
+  "fecha": "2027-04-20",
+  "fechaTexto": "Martes 20 de abril",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "M3 · MC4 · lo que mejor hacemos",
+  "lunes": "2027-04-19",
+  "jornada": 22,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "REVIS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 32,
+    "codigo": "INTENS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "MEJOR",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-11",
+  "bloque": "M3_M4",
+  "numero": 11,
+  "fecha": "2027-04-23",
+  "fechaTexto": "Viernes 23 de abril · J22",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "M3 · última jornada de la 1ª Fase",
+  "lunes": "2027-04-19",
+  "jornada": 22,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 15,
+    "codigo": "F16S",
+    "sinCanasta": true
+   },
+   {
+    "desde": 15,
+    "hasta": 30,
+    "codigo": "MANEJO",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 86,
+    "codigo": "F17TODO",
+    "sinCanasta": false
+   },
+   {
+    "desde": 86,
+    "hasta": 96,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 96,
+    "hasta": 105,
+    "codigo": "CIERRE1F",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-12",
+  "bloque": "M3_M4",
+  "numero": 12,
+  "fecha": "2027-04-27",
+  "fechaTexto": "Martes 27 de abril",
+  "duracion": 75,
+  "carga": "baja",
+  "tema": "M4 · puente · descarga tras M3",
+  "lunes": "2027-04-26",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 32,
+    "codigo": "F5-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-13",
+  "bloque": "M3_M4",
+  "numero": 13,
+  "fecha": "2027-04-30",
+  "fechaTexto": "Viernes 30 de abril",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "M4 · puente · descarga",
+  "lunes": "2027-04-26",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F3-N3",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 60,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 60,
+    "hasta": 80,
+    "codigo": "F5-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 98,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 98,
+    "hasta": 105,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-14",
+  "bloque": "M3_M4",
+  "numero": 14,
+  "fecha": "2027-05-04",
+  "fechaTexto": "Martes 4 de mayo",
+  "duracion": 75,
+  "carga": "alta",
+  "tema": "M4 · puesta a punto",
+  "lunes": "2027-05-03",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 22,
+    "codigo": "INDIV",
+    "sinCanasta": false
+   },
+   {
+    "desde": 22,
+    "hasta": 36,
+    "codigo": "F15-N3",
+    "sinCanasta": false
+   },
+   {
+    "desde": 36,
+    "hasta": 58,
+    "codigo": "F10-N5",
+    "sinCanasta": false
+   },
+   {
+    "desde": 58,
+    "hasta": 72,
+    "codigo": "C44",
+    "sinCanasta": false
+   },
+   {
+    "desde": 72,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-15",
+  "bloque": "M3_M4",
+  "numero": 15,
+  "fecha": "2027-05-07",
+  "fechaTexto": "Viernes 7 de mayo",
+  "duracion": 105,
+  "carga": "media",
+  "tema": "M4 · sorteo hecho · preparar el escenario",
+  "lunes": "2027-05-03",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 18,
+    "codigo": "F16L",
+    "sinCanasta": true
+   },
+   {
+    "desde": 18,
+    "hasta": 30,
+    "codigo": "F7-N2",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 48,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 48,
+    "hasta": 80,
+    "codigo": "ESCEN",
+    "sinCanasta": false
+   },
+   {
+    "desde": 80,
+    "hasta": 92,
+    "codigo": "C55",
+    "sinCanasta": false
+   },
+   {
+    "desde": 92,
+    "hasta": 100,
+    "codigo": "SAQUES",
+    "sinCanasta": false
+   },
+   {
+    "desde": 100,
+    "hasta": 105,
+    "codigo": "PLAN",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-16",
+  "bloque": "M3_M4",
+  "numero": 16,
+  "fecha": "2027-05-11",
+  "fechaTexto": "Martes 11 de mayo",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "M4 · 2ª Fase · microciclo de M3",
+  "lunes": "2027-05-10",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "REVIS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 32,
+    "codigo": "INTENS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-17",
+  "bloque": "M3_M4",
+  "numero": 17,
+  "fecha": "2027-05-14",
+  "fechaTexto": "Viernes 14 de mayo",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "M4 · víspera de partido",
+  "lunes": "2027-05-10",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 15,
+    "codigo": "F16S",
+    "sinCanasta": true
+   },
+   {
+    "desde": 15,
+    "hasta": 30,
+    "codigo": "MANEJO",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 84,
+    "codigo": "F17TODO",
+    "sinCanasta": false
+   },
+   {
+    "desde": 84,
+    "hasta": 96,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 96,
+    "hasta": 105,
+    "codigo": "CHARLA",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-18",
+  "bloque": "M3_M4",
+  "numero": 18,
+  "fecha": "2027-05-18",
+  "fechaTexto": "Martes 18 de mayo",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "M4 · 2ª Fase",
+  "lunes": "2027-05-17",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "REVIS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 32,
+    "codigo": "INTENS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-19",
+  "bloque": "M3_M4",
+  "numero": 19,
+  "fecha": "2027-05-21",
+  "fechaTexto": "Viernes 21 de mayo",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "M4 · víspera de partido",
+  "lunes": "2027-05-17",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 15,
+    "codigo": "F16S",
+    "sinCanasta": true
+   },
+   {
+    "desde": 15,
+    "hasta": 30,
+    "codigo": "MANEJO",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 84,
+    "codigo": "F17TODO",
+    "sinCanasta": false
+   },
+   {
+    "desde": 84,
+    "hasta": 96,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 96,
+    "hasta": 105,
+    "codigo": "CHARLA",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-20",
+  "bloque": "M3_M4",
+  "numero": 20,
+  "fecha": "2027-05-25",
+  "fechaTexto": "Martes 25 de mayo",
+  "duracion": 75,
+  "carga": "media",
+  "tema": "M4 · 2ª Fase",
+  "lunes": "2027-05-24",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 12,
+    "codigo": "F16",
+    "sinCanasta": true
+   },
+   {
+    "desde": 12,
+    "hasta": 24,
+    "codigo": "REVIS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 24,
+    "hasta": 32,
+    "codigo": "INTENS",
+    "sinCanasta": false
+   },
+   {
+    "desde": 32,
+    "hasta": 52,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 75,
+    "codigo": "TL",
+    "sinCanasta": false
+   }
+  ]
+ },
+ {
+  "id": "M3_M4-21",
+  "bloque": "M3_M4",
+  "numero": 21,
+  "fecha": "2027-05-28",
+  "fechaTexto": "Viernes 28 de mayo",
+  "duracion": 105,
+  "carga": "baja",
+  "tema": "M4 · última sesión de la temporada",
+  "lunes": "2027-05-24",
+  "jornada": null,
+  "sinPartido": false,
+  "bloques": [
+   {
+    "desde": 0,
+    "hasta": 15,
+    "codigo": "F16S",
+    "sinCanasta": true
+   },
+   {
+    "desde": 15,
+    "hasta": 30,
+    "codigo": "MANEJO",
+    "sinCanasta": true
+   },
+   {
+    "desde": 30,
+    "hasta": 52,
+    "codigo": "F4-N1",
+    "sinCanasta": false
+   },
+   {
+    "desde": 52,
+    "hasta": 70,
+    "codigo": "ESPEC",
+    "sinCanasta": false
+   },
+   {
+    "desde": 70,
+    "hasta": 84,
+    "codigo": "F17TODO",
+    "sinCanasta": false
+   },
+   {
+    "desde": 84,
+    "hasta": 96,
+    "codigo": "C55C",
+    "sinCanasta": false
+   },
+   {
+    "desde": 96,
+    "hasta": 105,
+    "codigo": "CIERRE",
+    "sinCanasta": false
+   }
+  ]
+ }
+]

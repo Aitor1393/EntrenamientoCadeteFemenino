@@ -1,0 +1,128 @@
+var idx=0,t0=null,acc=0,corriendo=false,tick=null,lock=null;
+function $(s){return document.querySelector(s);}
+var tl=$("#tl"),ph=$("#playhead");
+
+$("#simbolos").innerHTML =
+ '<span><svg width="20" height="16" viewBox="-10 -8 20 16"><circle cx="0" cy="0" r="6.4" fill="'+NAVY+'"/></svg>Atacante</span>'+
+ '<span><svg width="20" height="16" viewBox="-10 -8 20 16">'+defe(0,0,"")+'</svg>Defensora</span>'+
+ '<span><svg width="20" height="16" viewBox="-10 -8 20 16">'+cono(0,1)+'</svg>Cono</span>'+
+ '<span><svg width="36" height="12" viewBox="0 0 36 12">'+defsSVG()+'<line x1="1" y1="6" x2="31" y2="6" stroke="'+NAVY+'" stroke-width="1.7" marker-end="url(#fm)"/></svg>Se mueve</span>'+
+ '<span><svg width="36" height="12" viewBox="0 0 36 12"><line x1="1" y1="6" x2="31" y2="6" stroke="'+NAVY+'" stroke-width="1.7" stroke-dasharray="6 4" marker-end="url(#fm)"/></svg>Pasa</span>'+
+ '<span><svg width="36" height="14" viewBox="0 0 36 14">'+bote(2,7,31,7)+'</svg>Bota</span>';
+
+function elegirInicial(){
+  var F=["2026-09-15","2026-09-18","2026-09-22","2026-09-25","2026-09-29","2026-10-02"];
+  var hoy=new Date(); hoy.setHours(0,0,0,0);
+  var m=0,dm=Infinity;
+  F.forEach(function(f,i){var d=Math.abs(new Date(f+"T00:00:00")-hoy); if(d<dm){dm=d;m=i;}});
+  return m;
+}
+
+function pintar(){
+  var s=S[idx];
+  $("#titulo").textContent="Sesión "+s.n+" · "+s.tema;
+  $("#fecha").textContent=s.f;
+  var cg=$("#carga"); cg.textContent="Carga "+s.c+" · "+s.d+" min"; cg.className="carga "+s.c;
+  $("#prev").disabled=(idx===0); $("#next").disabled=(idx===S.length-1);
+  Array.prototype.forEach.call(tl.querySelectorAll(".blk"),function(n){n.remove();});
+  var px=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--px-min"));
+
+  s.b.forEach(function(bl,i){
+    var a=bl[0],z=bl[1],cod=bl[2];
+    var e=E[cod]||{t:"org",n:cod,m:""};
+    var d=document.createElement("section");
+    d.className="blk b-"+e.t; d.dataset.a=a; d.dataset.z=z;
+    d.style.minHeight=((z-a)*px)+"px";
+    var esFam=/^F[0-9]+-N[0-9]+$/.test(cod);
+    var id="pz"+i;
+    var btns="";
+    if(D[cod]) btns+='<button class="piz-btn" type="button" aria-expanded="false" aria-controls="'+id+'">Pizarra</button>';
+    if(DET[cod]) btns+='<button class="piz-btn det-btn" type="button" aria-expanded="false" aria-controls="d'+id+'">Cómo se monta</button>';
+
+    d.innerHTML='<div class="min">'+a+"&ndash;"+z+'</div><div class="barra"></div>'+
+      "<h3>"+(esFam?'<span class="cod">'+cod+"</span>":"")+e.n+(bl[3]==="sc"?'<span class="sc">sin canasta</span>':"")+"</h3>"+
+      (e.m?'<div class="meta">'+e.m+"</div>":"")+
+      (e.c?'<div class="clave">'+e.c+"</div>":"")+
+      (e.d?'<div class="defe">'+e.d+"</div>":"")+
+      (e.x?'<div class="comp"><b>Marcador</b> · '+e.x+"</div>":"")+
+      (e.l?'<div class="fuente">'+cita(e.l)+"</div>":"")+
+      (btns?'<div class="btns">'+btns+"</div>":"")+
+      (D[cod]?'<div class="piz" id="'+id+'">'+pizarra(D[cod])+"</div>":"")+
+      (DET[cod]?'<div class="det" id="d'+id+'">'+detalle(DET[cod])+"</div>":"");
+    tl.appendChild(d);
+  });
+
+  Array.prototype.forEach.call(tl.querySelectorAll(".piz-btn"),function(b){
+    var esDet=b.classList.contains("det-btn");
+    var etiq=esDet?"Cómo se monta":"Pizarra";
+    b.addEventListener("click",function(){
+      var p=document.getElementById(b.getAttribute("aria-controls"));
+      var ab=p.classList.toggle("abierta");
+      b.setAttribute("aria-expanded",ab?"true":"false");
+      b.textContent=ab?"Ocultar":etiq;
+      marcar();
+    });
+  });
+  marcar();
+}
+
+function mins(){return (acc+(corriendo?Date.now()-t0:0))/60000;}
+
+function marcar(){
+  var m=mins(),activo=(corriendo||acc>0),actual=null;
+  Array.prototype.forEach.call(tl.querySelectorAll(".blk"),function(d){
+    var a=+d.dataset.a,z=+d.dataset.z;
+    d.classList.toggle("hecho",activo&&m>=z);
+    var es=activo&&m>=a&&m<z;
+    d.classList.toggle("ahora",es);
+    if(es) actual=d;
+  });
+  if(activo&&actual){
+    var a=+actual.dataset.a,z=+actual.dataset.z,fr=(m-a)/(z-a);
+    ph.style.display="block";
+    ph.style.top=(actual.offsetTop+fr*actual.offsetHeight)+"px";
+    var q=Math.max(0,Math.ceil(z-m));
+    $("#estado").innerHTML="<b>"+actual.querySelector("h3").textContent+"</b><br>"+
+      q+(q===1?" minuto":" minutos")+" para el siguiente bloque";
+  } else if(activo&&m>=S[idx].d){
+    ph.style.display="none";
+    $("#estado").innerHTML="<b>Sesión completada.</b> Recoge y cierra con una idea.";
+  } else {
+    ph.style.display="none";
+    if(!activo) $("#estado").textContent="Pulsa empezar cuando arranque el entrenamiento.";
+  }
+  var t=Math.floor(mins()*60);
+  $("#crono").textContent=String(Math.floor(t/60)).padStart(2,"0")+":"+String(t%60).padStart(2,"0");
+}
+
+function despierta(on){
+  try{
+    if(on&&("wakeLock" in navigator)){navigator.wakeLock.request("screen").then(function(l){lock=l;}).catch(function(){});}
+    else if(lock){lock.release(); lock=null;}
+  }catch(e){}
+}
+
+$("#play").addEventListener("click",function(){
+  if(corriendo){
+    acc+=Date.now()-t0; corriendo=false; clearInterval(tick); tick=null;
+    $("#play").textContent="Seguir"; $("#play").classList.remove("on"); despierta(false);
+  } else {
+    t0=Date.now(); corriendo=true; tick=setInterval(marcar,1000);
+    $("#play").textContent="Pausa"; $("#play").classList.add("on"); despierta(true);
+  }
+  marcar();
+});
+$("#reset").addEventListener("click",function(){
+  acc=0; corriendo=false; clearInterval(tick); tick=null;
+  $("#play").textContent="Empezar"; $("#play").classList.remove("on"); despierta(false); marcar();
+});
+$("#prev").addEventListener("click",function(){if(idx>0){idx--;pintar();}});
+$("#next").addEventListener("click",function(){if(idx<S.length-1){idx++;pintar();}});
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible"&&corriendo) despierta(true);});
+window.addEventListener("resize",marcar);
+
+idx=elegirInicial();
+pintar();
+</script>
+</body>
+</html>

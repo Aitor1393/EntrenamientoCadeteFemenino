@@ -1,0 +1,21 @@
+FUENTES — dónde van los PDF
+===========================
+
+Aquí NO hay archivos: son tus libros, con derechos reservados, y no se distribuyen.
+
+Para que funcionen los enlaces de herramientas/biblioteca_ejercicios.html y los botones
+"Libro" de herramientas/fichas_sesion_M0.html, copia los cinco PDF en la carpeta
+herramientas/ (no aquí), con EXACTAMENTE estos nombres:
+
+  500_Sesiones_de_Entrenamiento_de_Baloncesto_sin_cpr.pdf     320 pp · Cikic, Basketcoach.net
+  40EjerciciosdeDefensaenBaloncesto.pdf                57 pp · Pere Purra
+  75EjerciciosdeDesmarqueenBaloncesto.pdf              30 pp · Pere Purra Jr.
+  25CalentamientosListosparaBaloncesto_pdf.pdf         30 pp · Higor
+  100_Ejercicios_Extra_de_Baloncesto.pdf              110 pp · BasketballCO  [DAÑADO]
+
+El ultimo esta roto: es texto plano con extension .pdf, sin graficos. Conviene
+descargarlo otra vez del original.
+
+Tambien conviene guardar aqui:
+  - Las bases de competicion de la FBM (OJO: el archivo es un ZIP con extension .pdf)
+  - El material del curso de Entrenador Nivel I

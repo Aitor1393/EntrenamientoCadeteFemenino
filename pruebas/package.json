@@ -1,0 +1,6 @@
+{
+  "name": "pruebas-cadete-femenino",
+  "private": true,
+  "description": "Playwright vive aquí y no en la raíz, para que la web siga sin dependencias.",
+  "devDependencies": { "playwright": "^1.47.0" }
+}

@@ -1,0 +1,14 @@
+# Cabeceras para Cloudflare Pages. Se copian a _sitio/ al preparar el sitio.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+
+# Los datos se revalidan siempre. Cuestan poco y así un cambio en las fuentes se
+# ve en cuanto se despliega, sin esperar a que caduque una caché.
+/data/*
+  Cache-Control: no-cache
+
+/index.html
+  Cache-Control: no-cache

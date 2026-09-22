@@ -1,0 +1,94 @@
+{
+ "meta": {
+  "equipo": "Cadete Femenino Preferente · Serie B",
+  "temporada": "2026/2027",
+  "competicion": "Campeonato de Madrid Cadete Femenino Preferente, Serie B",
+  "jugadoras": 12,
+  "balones": 4,
+  "sesiones": 66,
+  "familias": 19,
+  "ejercicios": 95,
+  "inicio": "2026-09-15",
+  "fin": "2027-05-28"
+ },
+ "bloques": [
+  {
+   "id": "M0",
+   "nombre": "M0 · Pretemporada",
+   "corto": "M0",
+   "descripcion": "Las seis sesiones que quedan antes de la primera jornada."
+  },
+  {
+   "id": "M1",
+   "nombre": "M1 · Construcción",
+   "corto": "M1",
+   "descripcion": "Nueve jornadas y tres viernes sin partido: las únicas sesiones largas del trimestre que pueden cargar de verdad."
+  },
+  {
+   "id": "M2",
+   "nombre": "M2 · Densidad",
+   "corto": "M2",
+   "descripcion": "Nueve jornadas seguidas sin un solo viernes libre. Aquí el riesgo no es sobreentrenar, es desadaptarse."
+  },
+  {
+   "id": "M3_M4",
+   "nombre": "Transición B, M3 y M4",
+   "corto": "M3/M4",
+   "descripcion": "De Semana Santa al final: las cuatro jornadas que deciden la temporada y los tres escenarios de la segunda fase."
+  }
+ ],
+ "tipos": {
+  "prev": {
+   "nombre": "Preventivo",
+   "color": "#6E8C6B"
+  },
+  "tec": {
+   "nombre": "Técnica",
+   "color": "#1D3B54"
+  },
+  "fis": {
+   "nombre": "Físico",
+   "color": "#BE5A21"
+  },
+  "jue": {
+   "nombre": "Juego",
+   "color": "#4A6E86"
+  },
+  "org": {
+   "nombre": "Organización",
+   "color": "#C3B79F"
+  }
+ },
+ "secciones": [
+  {
+   "id": "restricciones",
+   "titulo": "Restricciones duras",
+   "html": "<div class=\"desliza\"><table class=\"tabla\"><thead><tr><th>Restricción</th><th>Detalle</th></tr></thead><tbody><tr><td><strong>2 sesiones semanales</strong></td><td><strong>Martes 75 min · Viernes 105 min</strong></td></tr><tr><td><strong>Partido el sábado</strong></td><td><strong>El viernes es siempre D-1, y es la sesión larga</strong></td></tr><tr><td><strong>Sin canasta</strong></td><td>Los <strong>primeros 30 min del viernes</strong> sin canasta, pero con balones</td></tr><tr><td><strong>12 jugadoras</strong></td><td>Nacidas en 2011 y 2012 (14-15 años)</td></tr><tr><td><strong>4 balones</strong></td><td>Un balón por cada tres. Define toda la organización</td></tr><tr><td><strong>Todo con balón</strong></td><td>Solo 4 minutos sin balón por sesión (fuerza y core del preventivo)</td></tr><tr><td><strong>Nadie parado</strong></td><td>Ninguna fila de más de 3 jugadoras</td></tr></tbody></table></div><h4>La regla que resuelve el viernes D-1</h4><blockquote><p><strong>El martes lleva toda la carga física. El viernes lleva la táctica a intensidad cognitiva, no física.</strong></p></blockquote><p>Un 5c5 pautado con correcciones cada dos posesiones no fatiga; uno continuo sí. <strong>Ningún viernes previo a jornada lleva F15 ni ejercicios continuos.</strong> Excepción: los viernes de semanas sin partido (M1 semanas 1, 4 y 9), que sí cargan.</p><h4>Cosas que NO se deben hacer</h4><ul><li><strong>Nunca castigo físico al perdedor</strong> en las competiciones internas.</li><li><strong>Nunca especializar por puestos.</strong> El marco FBM sitúa entre los 12 y los 14 la etapa de estructuración del juego. El trabajo diferenciado se agrupa <strong>por necesidad</strong>; en el 5c5 todas rotan.</li><li><strong>Nunca ejercicios analíticos sin balón</strong> más allá de los 4 minutos irreductibles.</li><li><strong>Nunca contenido nuevo el viernes</strong> con partido al día siguiente.</li><li><strong>Nunca competir</strong> en el nivel N1 de una familia, en el preventivo, en viernes D-1 ni en descarga.</li></ul><hr>"
+  },
+  {
+   "id": "prioridades",
+   "titulo": "Las prioridades del entrenador",
+   "html": "<p>Declaradas explícitamente y ordenan todo el plan:</p><ol><li><strong>Correr el contraataque</strong></li><li><strong>Defensa:</strong> individual, zona 2-3, balance, superioridad, inferioridad</li><li><strong>Técnica y táctica individual</strong></li></ol><p><strong>Lo que queda fuera por decisión:</strong> zona 3-2, bloqueo directo, y el ataque posicional más allá de tres reglas.</p><hr>"
+  },
+  {
+   "id": "modelo",
+   "titulo": "Modelo de juego",
+   "html": "<blockquote><p><strong>Defensa sólida → rebote defensivo asegurado → salida rápida → contraataque → si no hay canasta, rebote ofensivo y segunda opción.</strong></p><p>Y la otra mitad: <strong>al salir el tiro propio, o vas al rebote de ataque o vuelves a impedir el contraataque fácil.</strong></p></blockquote><ul><li><strong>Defensa base:</strong> individual. Innegociable como base formativa.</li><li><strong>Defensa principal:</strong> zona 2-3, construida <strong>por miniaturas</strong>: 1ª línea en 2c2 → 3c2 con inversión → las cinco → 2ª línea → cierre de rebote.</li><li><strong>Balance defensivo:</strong> sub-fase propia. Orden: <strong>aro → balón → líneas cercanas → atacantes alejadas → formar pares → ajustar desajustes.</strong></li><li><strong>Superioridad e inferioridad:</strong> cada desigualdad se entrena <strong>por las dos caras</strong>, con dos objetivos explícitos y el marcador midiendo los dos.</li><li><strong>Rebote ofensivo: la regla de los tres y los dos.</strong> Al salir el tiro atacan el rebote las tres más cercanas al aro y vuelven las dos más alejadas. Por distancia, no por puesto.</li></ul><hr>"
+  },
+  {
+   "id": "competicion",
+   "titulo": "Competición",
+   "html": "<p><strong>48 equipos.</strong> Serie A = grupos 1-2, Serie B = grupos 3-4. Nuestro equipo, <strong>Serie B</strong>. <strong>1ª Fase:</strong> 22 jornadas a doble vuelta.</p><div class=\"desliza\"><table class=\"tabla\"><thead><tr><th>Posición final</th><th>2ª Fase</th></tr></thead><tbody><tr><td>1º-2º</td><td>Play-Off (eliminatorias al mejor de 2)</td></tr><tr><td>3º-8º</td><td>Grupos de clasificación D/E/F</td></tr><tr><td><strong>9º-12º</strong></td><td><strong>Grupos de descenso. De 8 equipos bajan 6</strong></td></tr></tbody></table></div><p><strong>Objetivo mínimo: top 8.</strong></p><p><strong>Los partidos que valen doble:</strong> los grupos de descenso arrastran resultados. Si acabas 9º tu rival arrastrado es el 11º de tu grupo; si acabas 10º, el 12º.</p><h4>Calendario</h4><div class=\"desliza\"><table class=\"tabla\"><thead><tr><th>Bloque</th><th>Fechas</th><th>Sesiones</th><th>Jornadas</th></tr></thead><tbody><tr><td>M0 Pretemporada</td><td>1 sept – 2 oct 2026</td><td>10</td><td>0</td></tr><tr><td>M1 Construcción</td><td>6 oct – 18 dic</td><td>21</td><td>9</td></tr><tr><td>Transición A</td><td>20 dic – 8 ene 2027</td><td>3 voluntarias</td><td>0</td></tr><tr><td>M2 Densidad</td><td>12 ene – 12 mar</td><td>18</td><td>9</td></tr><tr><td>Transición B</td><td>16 – 23 mar</td><td>3</td><td>0</td></tr><tr><td>M3 Pico</td><td>30 mar – 23 abr</td><td>8</td><td>4</td></tr><tr><td>M4 2ª Fase</td><td>27 abr – 28 may</td><td>10</td><td>4+</td></tr></tbody></table></div><p><strong>Total: 73 sesiones</strong> (75 con Fase Final).</p><p><strong>Festivos que eliminan sesión</strong> (martes y viernes): 8 dic 2026, 25 dic, 1 ene 2027, 26 mar 2027.</p><h4>Los cuatro hechos que mandan</h4><ol><li><strong>M1 tiene tres viernes sin partido</strong> (semanas 1, 4, 9): las únicas sesiones largas del trimestre que pueden cargar a intensidad real.</li><li><strong>M2 no tiene ni un viernes libre.</strong> Nueve bloques de catorce minutos en nueve semanas. Aquí el riesgo no es sobreentrenar, es <strong>desadaptarse</strong>.</li><li><strong>La Transición B se ha reducido a una sesión de carga</strong> (martes 23 de marzo). Lo que quieras listo para abril tiene que estarlo el 12 de marzo.</li><li><strong>La temporada se decide el 24 de abril.</strong> La J19 es el 3 de abril, en vacaciones escolares: avisar a las familias en febrero.</li></ol><hr>"
+  },
+  {
+   "id": "decisiones",
+   "titulo": "Decisiones tomadas y por qué",
+   "html": "<p>No revertir sin motivo.</p><ol><li><strong>El trío con un balón es la unidad base.</strong></li><li><strong>Ejercicios compuestos, no analíticos.</strong> Todo ejercicio tiene recepción o bote, desplazamiento y finalización.</li><li><strong>La zona se enseña por miniaturas.</strong> 2c2 → 3c2 → las cinco → 2ª línea.</li><li><strong>El cierre de rebote entra en la zona desde el primer día</strong>, antes que el ajuste fino, porque el rebote es la prioridad y es el fallo clásico de la zona en cadete.</li><li><strong>Activación y preventivo fusionados.</strong> 12 min el martes, 18 el viernes. Multicomponente, mayoría con balón, 4 min irreductibles sin balón.</li><li><strong>Cada desigualdad se entrena por las dos caras</strong>, sin minutos adicionales.</li><li><strong>Nada de castigo físico al perdedor.</strong></li><li><strong>Reparto de minutos:</strong> nadie bajo 10 min en M1 y M2. En M3 se acorta, anunciándolo antes.</li><li><strong>Fuera de la temporada:</strong> zona 3-2 (cuesta rebote defensivo, que es el primer eslabón) y bloqueo directo (no se rentabiliza con dos sesiones semanales).</li><li><strong>Todo lo que hace falta en pista vive dentro de la ficha.</strong> Pizarra y explicación completa (montaje, errores frecuentes, ajuste). Las citas a los libros son texto, no enlaces: a pie de pista no hay tiempo de cambiar de aplicación. Los enlaces navegables están solo en el índice y la biblioteca, que son para preparar en casa.</li><li><strong>El rebote ofensivo se reparte por distancia, no por puesto</strong> (tres y dos). Es coherente con no especializar y evita que haya que decidir en caliente.</li><li><strong>El ataque contra zona se mantiene en el mínimo</strong> (F18, 45 min en todo el año) pese a no estar en las prioridades, porque en cadete la mayoría de rivales defienden en zona y sin nada preparado se pierden posesiones cada partido.</li></ol><hr>"
+  },
+  {
+   "id": "avisos",
+   "titulo": "Avisos honestos que hay que mantener",
+   "html": "<p><strong>El preventivo va por debajo de la referencia de LCA.</strong> El curso marca 20-30 min tres días por semana para prevención de LCA. Con 12+18 quedan 30 minutos semanales en dos días: entra en la horquilla general (10-30 min, 2-3 días) pero no en la específica. <strong>No presentar esto como que se cumple la recomendación.</strong></p><p><strong>De 110 sesiones posibles a 73.</strong> El volumen semanal es casi el mismo, pero se pierde un tercio de las exposiciones, y a los 14-15 años la frecuencia pesa más que la duración en aprendizaje motor. Lo que se construye por repetición —preventivo, rebote, manejo— aparece en las dos sesiones todas las semanas.</p><p><strong>M0 dejó dos agujeros</strong> que M1 corrige por calendario: defensa individual (22 min en M0 → 175 en M1) y balance defensivo (24 → 110).</p>"
+  }
+ ]
+}

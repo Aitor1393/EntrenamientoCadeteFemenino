@@ -1,0 +1,6210 @@
+{
+ "F16": {
+  "codigo": "F16",
+  "nombre": "Activación preventiva",
+  "tipo": "prev",
+  "organizacion": "12 min · multicomponente · 8 con balón",
+  "clave": "Movilidad con pases · agilidad y frenada botando · pliometría en el rebote · 4 min de fuerza y core sin balón.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "25 Calentamientos, p. 4",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F8-N2": {
+  "codigo": "F8-N2",
+  "nombre": "Rebote: 1c1 con bloqueo y salida",
+  "tipo": "tec",
+  "organizacion": "3 cuartetos · 3 balones",
+  "clave": "Contacto primero, balón después. El hábito más importante de la temporada.",
+  "defensa": "",
+  "marcador": "Tres seguidas. Si el ataque coge una, vuelta a cero.",
+  "cita": "40 Defensa, p. 40",
+  "familia": "F8",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     68,
+     "L",
+     1
+    ],
+    [
+     61,
+     37,
+     "1"
+    ],
+    [
+     23,
+     58,
+     "R"
+    ]
+   ],
+   "x": [
+    [
+     63,
+     27,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     62,
+     76,
+     20
+    ],
+    [
+     67,
+     26,
+     29,
+     55,
+     16
+    ]
+   ],
+   "mv": [
+    [
+     63,
+     31,
+     62,
+     33,
+     0
+    ]
+   ],
+   "t": "Contacto primero, balón después. Si captura, saque inmediato a R y salida en 2c0."
+  },
+  "detalle": {
+   "m": [
+    "Tres cuartetos con tres balones: atacante, defensora, lanzadora y receptora del saque.",
+    "La lanzadora tira a tablero. La defensora localiza a la atacante, hace contacto, bloquea y va al balón.",
+    "Si captura, saque inmediato a la receptora abierta en la banda y salida en 2c0."
+   ],
+   "e": [
+    "Ir al balón directamente sin tocar a la atacante. Es EL error del bloque y hay que cortarlo siempre.",
+    "Bloquear y quedarse quieta mirando el balón en lugar de ir a por él."
+   ],
+   "a": [
+    "Marcador: tres capturas seguidas con contacto previo. Si el ataque coge una, vuelta a cero."
+   ]
+  }
+ },
+ "F15-N1": {
+  "codigo": "F15-N1",
+  "nombre": "Relevo de transición 30/90",
+  "tipo": "fis",
+  "organizacion": "3 cuartetos · 1 balón cada uno",
+  "clave": "30 segundos al máximo, 90 de descanso. El cuarto balón, a tiros libres.",
+  "defensa": "",
+  "marcador": "Cuarteto que más canastas suma.",
+  "cita": "",
+  "familia": "F15",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     20,
+     75,
+     "1",
+     1
+    ]
+   ],
+   "dr": [
+    [
+     27,
+     75,
+     250,
+     75
+    ]
+   ],
+   "t": "Sprint fondo a fondo botando, entrada, vuelta y entrada. 30 seg al máximo, 90 de descanso."
+  },
+  "detalle": {
+   "m": [
+    "Tres cuartetos con un balón cada uno. El cuarto balón, a tiros libres.",
+    "Dentro del cuarteto: una sale al máximo, hace el recorrido y entrega el balón a la siguiente.",
+    "Sprint fondo a fondo botando, entrada, sprint de vuelta y entrada."
+   ],
+   "e": [
+    "Bajar el ritmo a mitad de recorrido: son treinta segundos, se hacen al máximo o no sirven.",
+    "Fallar la entrada por ir descontrolada: la entrada cuenta."
+   ],
+   "a": [
+    "Trabajo 30 segundos, descanso 90. Si no aguantan, pasa a cuartetos de cinco."
+   ]
+  }
+ },
+ "F13-N1": {
+  "codigo": "F13-N1",
+  "nombre": "Superioridad: 2c1 continuo",
+  "tipo": "fis",
+  "organizacion": "2 grupos de 6 · 1 balón · flujo permanente",
+  "clave": "Atacar el aro para obligar a la defensora a decidir. No pasar antes de tiempo.",
+  "defensa": "Defensa (F11-N1): defender el aro con fintas, no ir al balón.",
+  "marcador": "Carrera a 8. Ataque 1, defensa 2 por parada.",
+  "cita": "500 Ejercicios, p. 294",
+  "familia": "F13",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     70,
+     42,
+     "1",
+     1
+    ],
+    [
+     70,
+     110,
+     "2"
+    ]
+   ],
+   "x": [
+    [
+     192,
+     75,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     80,
+     42,
+     222,
+     54,
+     -12
+    ],
+    [
+     80,
+     110,
+     222,
+     98,
+     12
+    ]
+   ],
+   "ps": [
+    [
+     100,
+     46,
+     152,
+     100,
+     -16
+    ]
+   ],
+   "t": "2c1 continuo. Atacar el aro para obligar a la defensora a decidir. Ataque 1, defensa 2."
+  },
+  "detalle": {
+   "m": [
+    "Dos atacantes contra una defensora, flujo continuo a pista completa.",
+    "Tras la finalización, la defensora y una atacante vuelven contra la que espera.",
+    "Dos objetivos a la vez: el ataque debe atacar el aro; la defensa, protegerlo con fintas."
+   ],
+   "e": [
+    "Pasar demasiado pronto: si no se ataca el aro, la defensora no tiene que decidir nada.",
+    "La defensora se queda quieta en el aro sin amagar."
+   ],
+   "a": [
+    "Marcador: ataque 1 por canasta, defensa 2 por parada. Primera a 8."
+   ]
+  }
+ },
+ "F13-N2": {
+  "codigo": "F13-N2",
+  "nombre": "Superioridad: 3c2 continuo",
+  "tipo": "fis",
+  "organizacion": "12 jugadoras · 1 balón · 3 min trabajo, 2 de tiros libres",
+  "clave": "Leer el triángulo: si están en línea, pase interior; si escalonadas, atacar por el lado de la de atrás.",
+  "defensa": "Defensa (F11-N2): tándem. Nunca las dos a la misma altura.",
+  "marcador": "Carrera a 8.",
+  "cita": "500 Ejercicios, p. 294",
+  "familia": "F13",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     60,
+     30,
+     "1"
+    ],
+    [
+     70,
+     75,
+     "2",
+     1
+    ],
+    [
+     60,
+     120,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     212,
+     58,
+     ""
+    ],
+    [
+     212,
+     94,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     72,
+     30,
+     224,
+     32,
+     0
+    ],
+    [
+     82,
+     75,
+     190,
+     75,
+     0
+    ],
+    [
+     72,
+     120,
+     224,
+     118,
+     0
+    ]
+   ],
+   "t": "3c2 continuo. Leer el triángulo defensivo. 3 min de trabajo, 2 de tiros libres."
+  },
+  "detalle": {
+   "m": [
+    "Tres atacantes contra dos defensoras, flujo continuo.",
+    "Las dos defensoras en tándem: una al balón y otra al aro.",
+    "Tres minutos de trabajo y dos de recuperación con tiros libres. Dos series."
+   ],
+   "e": [
+    "Las tres atacantes llegando en línea, sin escalonarse.",
+    "Las defensoras a la misma altura."
+   ],
+   "a": [
+    "Lectura para el ataque: si están en línea, pase interior; si escalonadas, atacar por el lado de la de atrás."
+   ]
+  }
+ },
+ "F15-N2": {
+  "codigo": "F15-N2",
+  "nombre": "3c3 continuo a pista completa",
+  "tipo": "fis",
+  "organizacion": "4 equipos de 3 · cambio cada 90 seg",
+  "clave": "Sin parar: canasta o rebote y se corre al otro lado.",
+  "defensa": "",
+  "marcador": "Liga rápida entre los cuatro.",
+  "cita": "40 Defensa, p. 48",
+  "familia": "F15",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     100,
+     45,
+     "1"
+    ],
+    [
+     100,
+     75,
+     "2",
+     1
+    ],
+    [
+     100,
+     105,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     172,
+     45,
+     ""
+    ],
+    [
+     172,
+     75,
+     ""
+    ],
+    [
+     172,
+     105,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     112,
+     45,
+     240,
+     50,
+     -14
+    ],
+    [
+     112,
+     75,
+     240,
+     75,
+     0
+    ],
+    [
+     112,
+     105,
+     240,
+     100,
+     14
+    ]
+   ],
+   "t": "3c3 a pista completa, sin parar: canasta o rebote y se corre al otro lado. Cambio cada 90 seg."
+  },
+  "detalle": {
+   "m": [
+    "Cuatro equipos de tres. Dos juegan a pista completa y dos descansan.",
+    "Sin interrupciones: canasta o rebote y se corre al otro lado.",
+    "Cambio cada noventa segundos."
+   ],
+   "e": [
+    "Parar a discutir una falta: si el juego se para, el ejercicio pierde su sentido.",
+    "Los equipos que descansan se sientan y se enfrían."
+   ],
+   "a": [
+    "Liga rápida entre los cuatro equipos, con puntos acumulados durante todo el bloque."
+   ]
+  }
+ },
+ "TL": {
+  "codigo": "TL",
+  "nombre": "Tiros libres",
+  "tipo": "org",
+  "organizacion": "Grupos de 3",
+  "clave": "",
+  "defensa": "",
+  "marcador": "La escalera: 8 aciertos seguidos entre las doce. Un fallo, vuelta a empezar.",
+  "cita": "75 Desmarque, p. 29",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F16L": {
+  "codigo": "F16L",
+  "nombre": "Activación preventiva ampliada",
+  "tipo": "prev",
+  "organizacion": "18 min · multicomponente",
+  "clave": "Mismo bloque, con más movilidad y agilidad. Los 4 min de fuerza y core no se tocan.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "25 Calentamientos, p. 4",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F3-N3": {
+  "codigo": "F3-N3",
+  "nombre": "Juegos de desmarque sin bote",
+  "tipo": "jue",
+  "organizacion": "Dos equipos · 1 balón · sin canasta",
+  "clave": "Plantar el balón en el fondo contrario. Sin bote: solo pase y desmarque.",
+  "defensa": "",
+  "marcador": "Primera a 4 balones plantados.",
+  "cita": "75 Desmarque, p. 1",
+  "familia": "F3",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     70,
+     42,
+     "1",
+     1
+    ],
+    [
+     70,
+     76,
+     "2"
+    ],
+    [
+     70,
+     112,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     124,
+     52,
+     ""
+    ],
+    [
+     124,
+     78,
+     ""
+    ],
+    [
+     124,
+     104,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     78,
+     44,
+     152,
+     58,
+     -16
+    ],
+    [
+     158,
+     62,
+     236,
+     102,
+     -18
+    ]
+   ],
+   "mv": [
+    [
+     70,
+     112,
+     152,
+     118,
+     0
+    ]
+   ],
+   "t": "Dos equipos, un balón, sin bote y sin canasta: plantar el balón en el fondo contrario."
+  },
+  "detalle": {
+   "m": [
+    "Dos equipos de seis, un balón, sin canasta y sin botar.",
+    "Se puntúa plantando el balón en el fondo contrario, no lanzando.",
+    "Quien recibe tiene tres segundos para pasar."
+   ],
+   "e": [
+    "Quedarse quieta esperando el pase: sin bote, la única forma de recibir es desmarcarse.",
+    "Amontonarse alrededor del balón."
+   ],
+   "a": [
+    "Si es muy fácil, reduce el ancho a media pista. Si es muy difícil, permite un bote."
+   ]
+  }
+ },
+ "F12-N1": {
+  "codigo": "F12-N1",
+  "nombre": "Contraataque: las calles, 2c0",
+  "tipo": "fis",
+  "organizacion": "4 tríos · 1 balón · dos corren, una lanza",
+  "clave": "Correr pegadas a la banda. Cerrarse al centro mata el espacio.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 173",
+  "familia": "F12",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     28,
+     75,
+     "R",
+     1
+    ],
+    [
+     48,
+     24,
+     "1"
+    ],
+    [
+     72,
+     128,
+     "2"
+    ]
+   ],
+   "ps": [
+    [
+     33,
+     72,
+     45,
+     28
+    ],
+    [
+     190,
+     32,
+     238,
+     104,
+     -22
+    ]
+   ],
+   "mv": [
+    [
+     54,
+     26,
+     186,
+     30,
+     0
+    ],
+    [
+     82,
+     128,
+     240,
+     110,
+     0
+    ]
+   ],
+   "t": "Saque a la banda, conducción por la calle y pase largo. Correr pegadas a la línea de banda."
+  },
+  "detalle": {
+   "m": [
+    "Cuatro tríos con un balón: dos corren y la tercera lanza a tablero y releva.",
+    "Rebote, saque a la banda, conducción por la calle y pase largo a la que corre por el otro lado.",
+    "Finalización sin bote extra."
+   ],
+   "e": [
+    "Cerrarse hacia el centro al correr: mata el espacio del pase largo.",
+    "Botar de más antes de pasar: el balón viaja más rápido que las piernas."
+   ],
+   "a": [
+    "Cronometra del rebote a la finalización. Objetivo por debajo de cinco segundos."
+   ]
+  }
+ },
+ "F12-N2": {
+  "codigo": "F12-N2",
+  "nombre": "Contraataque: tres calles, 3c0",
+  "tipo": "fis",
+  "organizacion": "4 tríos · 1 balón",
+  "clave": "Base por el centro, aleros por las bandas.",
+  "defensa": "",
+  "marcador": "Contra el reloj: menos de 5 segundos del rebote a la finalización.",
+  "cita": "500 Ejercicios, p. 173",
+  "familia": "F12",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     26,
+     75,
+     "R",
+     1
+    ],
+    [
+     50,
+     26,
+     "1"
+    ],
+    [
+     62,
+     126,
+     "3"
+    ]
+   ],
+   "ps": [
+    [
+     31,
+     72,
+     47,
+     30
+    ],
+    [
+     158,
+     72,
+     236,
+     42,
+     -18
+    ]
+   ],
+   "mv": [
+    [
+     56,
+     30,
+     150,
+     72,
+     -12
+    ],
+    [
+     74,
+     126,
+     240,
+     114,
+     0
+    ],
+    [
+     34,
+     80,
+     150,
+     28,
+     -16
+    ]
+   ],
+   "t": "Base por el centro, aleros por las bandas. Del rebote a la finalización, menos de 5 segundos."
+  },
+  "detalle": {
+   "m": [
+    "Tres calles: base por el centro, aleros por las bandas.",
+    "Sale del rebote, saque a la banda y conducción central; los aleros corren pegados a la línea.",
+    "Finalización de quien reciba, sin frenar."
+   ],
+   "e": [
+    "Que la base adelante a los aleros: entonces no hay a quién pasar.",
+    "Aleros que se abren tarde y llegan a la altura del balón en vez de por delante."
+   ],
+   "a": [
+    "Marca las calles con conos las dos primeras repeticiones y luego quítalos."
+   ]
+  }
+ },
+ "F9-N1": {
+  "codigo": "F9-N1",
+  "nombre": "Zona: la 1ª línea, 2c2",
+  "tipo": "jue",
+  "organizacion": "Las 2 altas + 2 atacantes · resto observa con tarea",
+  "clave": "Por encima del tiro libre. Rotar entre ellas y orientar a la más alejada. Al tiro, contacto antes que balón.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": "F9",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     62,
+     64,
+     ""
+    ],
+    [
+     88,
+     64,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     40,
+     74,
+     "1"
+    ],
+    [
+     110,
+     74,
+     "2",
+     1
+    ]
+   ],
+   "ps": [
+    [
+     106,
+     76,
+     46,
+     76,
+     -16
+    ]
+   ],
+   "mv": [
+    [
+     88,
+     60,
+     74,
+     58,
+     0
+    ],
+    [
+     62,
+     60,
+     50,
+     58,
+     0
+    ]
+   ],
+   "t": "Solo las dos altas. Por encima del tiro libre, rotar entre ellas y orientar a la más alejada."
+  },
+  "detalle": {
+   "m": [
+    "Solo las dos altas de la zona contra dos atacantes exteriores. Las otras ocho observan con tarea asignada.",
+    "El entrenador mueve el balón de una atacante a otra; las dos altas ajustan y rotan.",
+    "Rotación de las que observan cada dos o tres minutos."
+   ],
+   "e": [
+    "Bajar de la línea de tiro libre: si bajan, se abre el tiro de frente.",
+    "Moverse una sí y otra no: tienen que desplazarse a la vez, en el vuelo del pase."
+   ],
+   "a": [
+    "Tarea para las que miran: contar cuántas veces una de las dos baja del tiro libre."
+   ]
+  }
+ },
+ "F6-N2": {
+  "codigo": "F6-N2",
+  "nombre": "Contención libre a media pista",
+  "tipo": "tec",
+  "organizacion": "4 tríos · 1 balón · todo el ancho",
+  "clave": "Dirigir a la atacante hacia la línea de banda.",
+  "defensa": "",
+  "marcador": "Paradas: primera a 5.",
+  "cita": "40 Defensa, p. 10",
+  "familia": "F6",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     126,
+     "1",
+     1
+    ]
+   ],
+   "x": [
+    [
+     75,
+     114,
+     ""
+    ]
+   ],
+   "dr": [
+    [
+     74,
+     120,
+     28,
+     46
+    ]
+   ],
+   "mv": [
+    [
+     72,
+     110,
+     32,
+     54,
+     0
+    ]
+   ],
+   "t": "Todo el ancho. La defensora dirige a la atacante hacia la línea de banda."
+  },
+  "detalle": {
+   "m": [
+    "Igual que el nivel anterior pero sin conos y con todo el ancho de la pista.",
+    "La defensora tiene que dirigir a la atacante hacia la línea de banda, no dejarla ir al centro.",
+    "Marcador: defensora 1 por parada, atacante 1 si llega al fondo. Primera a 5."
+   ],
+   "e": [
+    "Colocarse de frente en lugar de de lado: de frente no se puede dirigir a ningún sitio.",
+    "Perseguir el balón cuando la atacante cambia de dirección, en vez de cortar el camino."
+   ],
+   "a": [
+    "Limita a la atacante a cuatro botes si la defensora no aguanta el desgaste."
+   ]
+  }
+ },
+ "F10-N1": {
+  "codigo": "F10-N1",
+  "nombre": "Balance: salida lanzada",
+  "tipo": "jue",
+  "organizacion": "1 defensora contra 2 o 3 que ya corren",
+  "clave": "No ir al balón. Proteger el aro y amagar con fintas: cada décima que ganas es una compañera que llega.",
+  "defensa": "Orden al volver: aro, balón, líneas cercanas, atacantes alejadas.",
+  "marcador": "",
+  "cita": "40 Defensa, p. 47",
+  "familia": "F10",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     92,
+     50,
+     "1",
+     1
+    ],
+    [
+     92,
+     102,
+     "2"
+    ]
+   ],
+   "x": [
+    [
+     212,
+     75,
+     "sola"
+    ]
+   ],
+   "mv": [
+    [
+     102,
+     50,
+     216,
+     58,
+     -10
+    ],
+    [
+     102,
+     102,
+     216,
+     92,
+     10
+    ],
+    [
+     162,
+     75,
+     206,
+     75,
+     0
+    ]
+   ],
+   "t": "Vuelve sola. No ir al balón: proteger el aro y amagar con fintas para que la atacante dude."
+  },
+  "detalle": {
+   "m": [
+    "Una defensora vuelve sola contra dos o tres atacantes que ya corren.",
+    "Su única misión es proteger el aro y retrasar la decisión del ataque.",
+    "Flujo continuo: al acabar, otra defensora sale y la anterior pasa a atacar."
+   ],
+   "e": [
+    "Ir hacia el balón. Es el instinto natural y es justo lo contrario de lo que hay que hacer.",
+    "Comprometerse con una atacante: en cuanto se decide, el pase la deja fuera."
+   ],
+   "a": [
+    "Cada segundo que retrasa el tiro es una compañera que llega. Cuenta los segundos en voz alta."
+   ]
+  }
+ },
+ "F10-N2": {
+  "codigo": "F10-N2",
+  "nombre": "Balance: formar los pares",
+  "tipo": "jue",
+  "organizacion": "2 defensoras contra 3 · la segunda llega tarde",
+  "clave": "Cantar en voz alta a quién coge cada una.",
+  "defensa": "",
+  "marcador": "Ataque 1, defensa 2. Primera a 8.",
+  "cita": "40 Defensa, p. 49",
+  "familia": "F10",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     90,
+     40,
+     "1",
+     1
+    ],
+    [
+     90,
+     75,
+     "2"
+    ],
+    [
+     90,
+     112,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     206,
+     60,
+     ""
+    ],
+    [
+     152,
+     126,
+     "2ª"
+    ]
+   ],
+   "mv": [
+    [
+     100,
+     40,
+     218,
+     50,
+     -10
+    ],
+    [
+     100,
+     75,
+     198,
+     75,
+     0
+    ],
+    [
+     100,
+     112,
+     218,
+     104,
+     10
+    ],
+    [
+     160,
+     122,
+     202,
+     96,
+     0
+    ]
+   ],
+   "t": "Llega la segunda defensora. Repartirse tres atacantes cantando en voz alta a quién coge cada una."
+  },
+  "detalle": {
+   "m": [
+    "Como el anterior pero llega una segunda defensora con retraso.",
+    "Las dos tienen que repartirse tres atacantes y cantar en voz alta a quién coge cada una.",
+    "Si hay desajuste evidente, se cambia sobre la marcha."
+   ],
+   "e": [
+    "Las dos a la misma altura: el pase interior las parte.",
+    "No hablar. Sin voz no hay reparto y siempre queda una libre."
+   ],
+   "a": [
+    "Marcador: ataque 1, defensa 2 por parada. Primera a 8."
+   ]
+  }
+ },
+ "F13-N3": {
+  "codigo": "F13-N3",
+  "nombre": "Superioridad: 3c2 con recuperación diferida",
+  "tipo": "fis",
+  "organizacion": "12 jugadoras · 1 balón",
+  "clave": "Correr rápido es la única forma de anotar.",
+  "defensa": "Defensa (F10): formar los pares en cuanto llega la tercera.",
+  "marcador": "Canasta antes de que llegue la tercera, vale doble.",
+  "cita": "75 Desmarque, p. 21",
+  "familia": "F13",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     60,
+     30,
+     "1"
+    ],
+    [
+     70,
+     75,
+     "2",
+     1
+    ],
+    [
+     60,
+     120,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     212,
+     58,
+     ""
+    ],
+    [
+     212,
+     94,
+     ""
+    ],
+    [
+     22,
+     75,
+     "3ª"
+    ]
+   ],
+   "mv": [
+    [
+     72,
+     30,
+     224,
+     32,
+     0
+    ],
+    [
+     82,
+     75,
+     190,
+     75,
+     0
+    ],
+    [
+     72,
+     120,
+     224,
+     118,
+     0
+    ],
+    [
+     32,
+     75,
+     182,
+     75,
+     0
+    ]
+   ],
+   "t": "Una tercera defensora arranca del fondo y llega tarde. La ventaja se disuelve si el ataque tarda."
+  },
+  "detalle": {
+   "m": [
+    "Igual que el 3c2 pero una tercera defensora arranca del fondo cuando sale el balón.",
+    "Llega tarde: la ventaja existe solo si el ataque corre.",
+    "Se puntúa doble la canasta anotada antes de que llegue."
+   ],
+   "e": [
+    "Organizar el ataque en lugar de atacar: cada segundo perdido es la ventaja que desaparece.",
+    "La tercera defensora sale antes de tiempo."
+   ],
+   "a": [
+    "Retrasa o adelanta la salida de la tercera según lo fácil que resulte."
+   ]
+  }
+ },
+ "F6-N1": {
+  "codigo": "F6-N1",
+  "nombre": "Contención en pasillo de conos",
+  "tipo": "tec",
+  "organizacion": "4 tríos · 1 balón · pasillo de 4 m",
+  "clave": "Pies anchos, culo bajo, sin cruzar. Manos activas, no manoteando.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 9",
+  "familia": "F6",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     70,
+     124,
+     "1",
+     1
+    ]
+   ],
+   "x": [
+    [
+     70,
+     112,
+     ""
+    ]
+   ],
+   "k": [
+    [
+     48,
+     120
+    ],
+    [
+     48,
+     96
+    ],
+    [
+     48,
+     72
+    ],
+    [
+     48,
+     48
+    ],
+    [
+     92,
+     120
+    ],
+    [
+     92,
+     96
+    ],
+    [
+     92,
+     72
+    ],
+    [
+     92,
+     48
+    ]
+   ],
+   "dr": [
+    [
+     70,
+     118,
+     66,
+     50
+    ]
+   ],
+   "t": "Pasillo de 4 metros. Pies anchos, culo bajo, sin cruzar. Manos activas, no manoteando."
+  },
+  "detalle": {
+   "m": [
+    "Dos filas de conos formando un pasillo de cuatro metros a lo largo de media pista.",
+    "La atacante bota intentando llegar al fondo; la defensora contiene sin robar.",
+    "Veinte segundos por repetición y cambio de rol."
+   ],
+   "e": [
+    "Cruzar los pies al desplazarse: en cuanto se cruzan, la atacante pasa.",
+    "Ir a robar el balón en vez de contener: con las manos se roba una vez y se llega tarde diez."
+   ],
+   "a": [
+    "Si la defensora domina, ensancha el pasillo a seis metros. Si sufre, estréchalo a tres."
+   ]
+  }
+ },
+ "F9-N2": {
+  "codigo": "F9-N2",
+  "nombre": "Zona: la 1ª línea con inversión, 3c2",
+  "tipo": "jue",
+  "organizacion": "Las 2 altas + 3 atacantes · 1 balón",
+  "clave": "Al poste alto, solo brazo interior. Nunca el cuerpo por delante.",
+  "defensa": "",
+  "marcador": "Cuatro paradas limpias seguidas.",
+  "cita": "",
+  "familia": "F9",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     62,
+     64,
+     ""
+    ],
+    [
+     88,
+     64,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     40,
+     74,
+     "1",
+     1
+    ],
+    [
+     110,
+     74,
+     "2"
+    ],
+    [
+     75,
+     52,
+     "3"
+    ]
+   ],
+   "ps": [
+    [
+     44,
+     76,
+     106,
+     76,
+     16
+    ]
+   ],
+   "mv": [
+    [
+     62,
+     60,
+     74,
+     58,
+     0
+    ],
+    [
+     88,
+     60,
+     80,
+     54,
+     0
+    ]
+   ],
+   "t": "3c2 con inversión. Al poste alto, solo brazo interior, nunca el cuerpo por delante."
+  },
+  "detalle": {
+   "m": [
+    "Las dos altas contra tres atacantes: dos exteriores y una en poste alto.",
+    "Aparece la inversión de balón, que es lo que las obliga a rotar rápido.",
+    "Al defender el poste alto se usa solo el brazo interior, nunca el cuerpo por delante."
+   ],
+   "e": [
+    "Ponerse por delante del poste alto: se pierde de vista el balón y entra el pase por encima.",
+    "Llegar tarde a la inversión porque salieron después del pase en vez de durante."
+   ],
+   "a": [
+    "Marcador: cuatro paradas limpias seguidas. Si el ataque anota, vuelta a cero."
+   ]
+  }
+ },
+ "F8-N3": {
+  "codigo": "F8-N3",
+  "nombre": "Rebote: 2c2 con reparto de bloqueos",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 6 · 1 balón",
+  "clave": "Repartirse las dos atacantes sin dejar hueco.",
+  "defensa": "",
+  "marcador": "Guerra de rebotes: primera pareja a 5 capturas.",
+  "cita": "40 Defensa, p. 41",
+  "familia": "F8",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     57,
+     41,
+     "1"
+    ],
+    [
+     95,
+     41,
+     "2"
+    ],
+    [
+     75,
+     72,
+     "L",
+     1
+    ]
+   ],
+   "x": [
+    [
+     57,
+     28,
+     ""
+    ],
+    [
+     95,
+     28,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     66,
+     76,
+     20
+    ]
+   ],
+   "mv": [
+    [
+     57,
+     31,
+     57,
+     36,
+     0
+    ],
+    [
+     95,
+     31,
+     95,
+     36,
+     0
+    ]
+   ],
+   "t": "Dos defensoras se reparten dos atacantes sin dejar hueco entre ellas."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos de seis: dos atacantes, dos defensoras y dos que lanzan y rotan.",
+    "Las dos defensoras tienen que repartirse a las dos atacantes sin dejar hueco entre ellas.",
+    "Se canta en voz alta quién coge a quién antes del tiro."
+   ],
+   "e": [
+    "Las dos van a la misma atacante y la otra entra libre.",
+    "Bloquear demasiado separadas: queda un pasillo por el centro."
+   ],
+   "a": [
+    "Guerra de rebotes: primera pareja a 5 capturas defensivas."
+   ]
+  }
+ },
+ "F4-N1": {
+  "codigo": "F4-N1",
+  "nombre": "Tiro desde posiciones de contraataque",
+  "tipo": "tec",
+  "organizacion": "Sexteto: 2 balones por canasta",
+  "clave": "Pies preparados antes de que llegue el balón.",
+  "defensa": "",
+  "marcador": "Sexteto a 15.",
+  "cita": "500 Ejercicios, p. 53",
+  "familia": "F4",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     16,
+     17,
+     "1"
+    ],
+    [
+     134,
+     17,
+     "2"
+    ],
+    [
+     44,
+     62,
+     "3"
+    ],
+    [
+     106,
+     62,
+     "4"
+    ],
+    [
+     75,
+     90,
+     "5"
+    ],
+    [
+     75,
+     27,
+     "P",
+     1
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     32,
+     74,
+     84
+    ]
+   ],
+   "t": "Las cinco posiciones del contraataque: dos esquinas, dos alas y el arrastre central."
+  },
+  "detalle": {
+   "m": [
+    "Seis jugadoras por canasta con dos balones: dos tiran, dos pasan, dos rebotean.",
+    "Se tira desde las cinco posiciones del contraataque: dos esquinas, dos alas y el arrastre central.",
+    "Rotación tras cada tiro: tiradora → reboteadora → pasadora."
+   ],
+   "e": [
+    "Recibir con los pies desordenados y tener que colocarlos: se pierde el tiempo que da la ventaja.",
+    "La reboteadora se distrae y el balón se para; con dos balones el ritmo se cae enseguida."
+   ],
+   "a": [
+    "Noventa segundos por posición y se cambia. Si el porcentaje baja del 30%, acerca el tiro."
+   ]
+  }
+ },
+ "F12-N4": {
+  "codigo": "F12-N4",
+  "nombre": "Contraataque desde rebote disputado",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 6 · 1 balón",
+  "clave": "El nexo del modelo: el rebote real enlaza con la salida.",
+  "defensa": "",
+  "marcador": "Guerra de rebotes.",
+  "cita": "500 Ejercicios, p. 173",
+  "familia": "F12",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     42,
+     58,
+     "1"
+    ],
+    [
+     42,
+     96,
+     "2"
+    ],
+    [
+     64,
+     75,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     26,
+     60,
+     ""
+    ],
+    [
+     26,
+     94,
+     ""
+    ],
+    [
+     48,
+     75,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     52,
+     56,
+     152,
+     26,
+     -20
+    ],
+    [
+     52,
+     98,
+     152,
+     126,
+     20
+    ],
+    [
+     74,
+     75,
+     152,
+     75,
+     0
+    ]
+   ],
+   "t": "El contraataque arranca de un rebote disputado de verdad, no de un lanzamiento del entrenador."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos de seis: 3c3 de rebote real, no lanzamiento del entrenador.",
+    "La defensa que captura sale en contraataque; la que era atacante corre a defender.",
+    "Es el nexo entre el rebote y la salida, que es donde vive el modelo de juego."
+   ],
+   "e": [
+    "Celebrar la captura y perder medio segundo antes del saque.",
+    "Sacar hacia el centro en vez de a la banda."
+   ],
+   "a": [
+    "Si el contraataque nunca sale, revisa F8: el problema está en la captura, no aquí."
+   ]
+  }
+ },
+ "REGLAS": {
+  "codigo": "REGLAS",
+  "nombre": "Reglas de juego",
+  "tipo": "org",
+  "organizacion": "En pista, con balón",
+  "clave": "Avance ilegal, falta antideportiva y los cambios de octubre de 2024.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F9-N3": {
+  "codigo": "F9-N3",
+  "nombre": "Zona: las cinco, posiciones y desplazamiento",
+  "tipo": "jue",
+  "organizacion": "5 + 5 + 2 observando · 1 balón",
+  "clave": "Todas se mueven a la vez, en el vuelo del pase.",
+  "defensa": "",
+  "marcador": "Cuatro paradas. Rebote ofensivo rival, vuelta a cero.",
+  "cita": "500 Ejercicios, p. 253",
+  "familia": "F9",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     60,
+     66,
+     ""
+    ],
+    [
+     90,
+     66,
+     ""
+    ],
+    [
+     36,
+     34,
+     ""
+    ],
+    [
+     114,
+     34,
+     ""
+    ],
+    [
+     75,
+     24,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     16,
+     17,
+     "1"
+    ],
+    [
+     134,
+     17,
+     "2"
+    ],
+    [
+     30,
+     66,
+     "3"
+    ],
+    [
+     120,
+     66,
+     "4",
+     1
+    ],
+    [
+     75,
+     94,
+     "5"
+    ]
+   ],
+   "ps": [
+    [
+     116,
+     68,
+     80,
+     92
+    ]
+   ],
+   "mv": [
+    [
+     90,
+     62,
+     79,
+     60,
+     0
+    ],
+    [
+     60,
+     62,
+     53,
+     58,
+     0
+    ],
+    [
+     114,
+     30,
+     105,
+     38,
+     0
+    ]
+   ],
+   "t": "Las cinco. Todas se mueven a la vez, en el vuelo del pase. Si una llega tarde, se abre el hueco."
+  },
+  "detalle": {
+   "m": [
+    "Las cinco en zona contra cinco atacantes que mueven el balón por el perímetro sin atacar.",
+    "El ritmo de pase va subiendo: primero lento, después a velocidad de partido.",
+    "Dos observadoras rotan cada dos minutos."
+   ],
+   "e": [
+    "Que se muevan cuatro y una llegue tarde: ese hueco es por donde se rompe la zona.",
+    "Mirar solo al balón y perder la referencia de la atacante más cercana."
+   ],
+   "a": [
+    "Cuando salga limpio, añade tiro y cierre de rebote: contacto antes que balón."
+   ]
+  }
+ },
+ "F16S": {
+  "codigo": "F16S",
+  "nombre": "Activación preventiva suave",
+  "tipo": "prev",
+  "organizacion": "15 min · sin exigencia",
+  "clave": "Versión de víspera de partido.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "25 Calentamientos, p. 26",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F3-N2": {
+  "codigo": "F3-N2",
+  "nombre": "Pase largo en carrera",
+  "tipo": "tec",
+  "organizacion": "6 parejas a lo largo",
+  "clave": "Pasar delante de la compañera, nunca al cuerpo. Que no frene para recibir.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 88",
+  "familia": "F3",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     30,
+     42,
+     "1",
+     1
+    ],
+    [
+     62,
+     124,
+     "2"
+    ]
+   ],
+   "ps": [
+    [
+     36,
+     44,
+     198,
+     112,
+     -26
+    ]
+   ],
+   "mv": [
+    [
+     74,
+     124,
+     232,
+     118,
+     0
+    ]
+   ],
+   "t": "Pase largo sobre la compañera que corre, sin que frene. Pasar delante, nunca al cuerpo."
+  },
+  "detalle": {
+   "m": [
+    "Seis parejas a lo largo de la pista, una en cada banda.",
+    "La de la banda sale corriendo sin balón; la otra espera en el fondo con él.",
+    "Pase largo por delante, recepción sin frenar, y vuelta cambiando de rol."
+   ],
+   "e": [
+    "Pasar al cuerpo en vez de al espacio: la receptora tiene que frenar y se pierde la ventaja.",
+    "Esperar a que la compañera esté lejos para pasar: cuanto antes salga el balón, más fácil es."
+   ],
+   "a": [
+    "Si el pase no llega, acorta la distancia a tres cuartos de pista antes de volver al largo."
+   ]
+  }
+ },
+ "SAQUES": {
+  "codigo": "SAQUES",
+  "nombre": "Saques de banda y fondo",
+  "tipo": "jue",
+  "organizacion": "Dos jugadas sencillas, nada más",
+  "clave": "",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "C55": {
+  "codigo": "C55",
+  "nombre": "5c5 controlado",
+  "tipo": "jue",
+  "organizacion": "10 en pista + 2 rotando cada posesión",
+  "clave": "Poco volumen, mucha corrección.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "CHARLA": {
+  "codigo": "CHARLA",
+  "nombre": "Charla del partido",
+  "tipo": "org",
+  "organizacion": "Tres ideas, no más",
+  "clave": "",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F1-N3": {
+  "codigo": "F1-N3",
+  "nombre": "Salida y primer paso desde parada",
+  "tipo": "tec",
+  "organizacion": "3 cuartetos · 3 balones",
+  "clave": "El primer paso gana la ventaja; los siguientes solo la mantienen.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 41",
+  "familia": "F1",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     86,
+     "P",
+     1
+    ],
+    [
+     46,
+     60,
+     "1"
+    ],
+    [
+     100,
+     30,
+     "R"
+    ]
+   ],
+   "k": [
+    [
+     52,
+     48
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     86,
+     50,
+     62
+    ]
+   ],
+   "mv": [
+    [
+     48,
+     64,
+     66,
+     26,
+     8
+    ]
+   ],
+   "t": "Recepción en parada, lectura del pie de la defensora y salida directa o cruzada. Máximo 3 botes."
+  },
+  "detalle": {
+   "m": [
+    "Tres cuartetos: pasadora, ejecutante, defensora que hace de referencia y reboteadora.",
+    "Recepción en parada, lectura del pie adelantado de la defensora y salida directa o cruzada.",
+    "Máximo tres botes hasta la finalización."
+   ],
+   "e": [
+    "Salir siempre por el mismo lado sin mirar a la defensora.",
+    "Dar un paso atrás antes de arrancar: regala la ventaja que daba la parada."
+   ],
+   "a": [
+    "Si les cuesta leer, que la defensora exagere el pie adelantado los primeros minutos."
+   ]
+  }
+ },
+ "F6-N3": {
+  "codigo": "F6-N3",
+  "nombre": "Closeout",
+  "tipo": "tec",
+  "organizacion": "4 grupos de 3 · salida desde el aro",
+  "clave": "Carrera larga, últimos pasos cortos, mano arriba y frenar equilibrada.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 12",
+  "familia": "F6",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     120,
+     58,
+     "1"
+    ],
+    [
+     75,
+     27,
+     "P",
+     1
+    ]
+   ],
+   "x": [
+    [
+     70,
+     32,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     30,
+     116,
+     58
+    ]
+   ],
+   "mv": [
+    [
+     70,
+     36,
+     112,
+     56,
+     0
+    ]
+   ],
+   "t": "Closeout: carrera larga, últimos pasos cortos, mano arriba y frenar equilibrada."
+  },
+  "detalle": {
+   "m": [
+    "Cuatro grupos de tres por canasta. La defensora empieza debajo del aro.",
+    "Sale a cerrar sobre una tiradora: carrera larga y últimos pasos cortos, mano arriba.",
+    "La atacante puede tirar o botar una vez."
+   ],
+   "e": [
+    "Llegar corriendo y no poder frenar: la atacante bota y se va.",
+    "Saltar al amago."
+   ],
+   "a": [
+    "Si la defensora llega siempre tarde, acerca su punto de salida medio metro."
+   ]
+  }
+ },
+ "F4-N2": {
+  "codigo": "F4-N2",
+  "nombre": "Desplazamiento, cambio en cono y tiro",
+  "tipo": "tec",
+  "organizacion": "Sexteto · 2 balones",
+  "clave": "Llegar al tiro en movimiento, con el equilibrio comprometido.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 53",
+  "familia": "F4",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     122,
+     42,
+     "1"
+    ],
+    [
+     75,
+     27,
+     "P",
+     1
+    ]
+   ],
+   "k": [
+    [
+     104,
+     62
+    ]
+   ],
+   "mv": [
+    [
+     121,
+     47,
+     107,
+     59,
+     0
+    ],
+    [
+     100,
+     65,
+     76,
+     86,
+     -10
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     32,
+     72,
+     84
+    ]
+   ],
+   "t": "Cambia de dirección en el cono, se abre y recibe. Llegar al tiro en movimiento."
+  },
+  "detalle": {
+   "m": [
+    "Sexteto por canasta con dos balones. La tiradora recorre el perímetro y cambia de dirección en un cono.",
+    "Se abre, recibe y tira sin colocarse.",
+    "Rotación: tiradora, reboteadora, pasadora."
+   ],
+   "e": [
+    "Llegar al cono y frenar: el cambio de dirección es lo que crea la ventaja.",
+    "Recibir mirando al balón en vez de al aro."
+   ],
+   "a": [
+    "Noventa segundos por lado. Si el porcentaje se hunde, acerca la posición al aro."
+   ]
+  }
+ },
+ "F6-N4": {
+  "codigo": "F6-N4",
+  "nombre": "Recuperación desde desventaja",
+  "tipo": "tec",
+  "organizacion": "3 cuartetos · 3 balones",
+  "clave": "Recuperar por el camino corto, no persiguiendo el balón.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 13",
+  "familia": "F6",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     110,
+     92,
+     "1",
+     1
+    ]
+   ],
+   "x": [
+    [
+     126,
+     80,
+     ""
+    ]
+   ],
+   "dr": [
+    [
+     108,
+     88,
+     82,
+     30
+    ]
+   ],
+   "mv": [
+    [
+     122,
+     78,
+     88,
+     36,
+     -10
+    ]
+   ],
+   "t": "La atacante sale con ventaja. Recuperar por el camino corto, no persiguiendo el balón."
+  },
+  "detalle": {
+   "m": [
+    "Tres cuartetos. La atacante arranca con un metro de ventaja.",
+    "La defensora recupera por el camino corto, cortando la trayectoria, no persiguiendo el balón.",
+    "Termina en finalización o en parada."
+   ],
+   "e": [
+    "Correr detrás en línea recta: nunca se alcanza así.",
+    "Estirar el brazo para tocar el balón mientras corre y perder el equilibrio."
+   ],
+   "a": [
+    "Ajusta la ventaja inicial: metro y medio si recupera fácil, medio metro si nunca llega."
+   ]
+  }
+ },
+ "F7-N1": {
+  "codigo": "F7-N1",
+  "nombre": "Defensa de la línea de pase",
+  "tipo": "tec",
+  "organizacion": "4 tríos · 1 balón",
+  "clave": "Negar la recepción a 45º: mano y pie adelantados, vista al balón y a la atacante.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 15",
+  "familia": "F7",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     90,
+     "P",
+     1
+    ],
+    [
+     122,
+     58,
+     "1"
+    ]
+   ],
+   "x": [
+    [
+     104,
+     68,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     78,
+     88,
+     118,
+     60
+    ]
+   ],
+   "mv": [
+    [
+     104,
+     64,
+     111,
+     61,
+     0
+    ]
+   ],
+   "t": "Negar la recepción a 45º: mano y pie adelantados, vista al balón y a la atacante a la vez."
+  },
+  "detalle": {
+   "m": [
+    "Cuatro tríos: pasadora arriba, atacante en el ala y defensora negando.",
+    "La defensora impide la recepción a 45º con mano y pie adelantados.",
+    "Veinte segundos de negación y cambio de rol."
+   ],
+   "e": [
+    "Perder de vista el balón por mirar solo a la atacante: entra el pase por encima.",
+    "Ponerse de espaldas al balón, que es el error que sigue al anterior."
+   ],
+   "a": [
+    "Si la atacante recibe siempre, permite a la defensora un contacto legal con el antebrazo."
+   ]
+  }
+ },
+ "F15-N3": {
+  "codigo": "F15-N3",
+  "nombre": "4c4 continuo con transición obligada",
+  "tipo": "fis",
+  "organizacion": "3 equipos de 4 · tiro antes de 14 seg",
+  "clave": "",
+  "defensa": "",
+  "marcador": "Liga rápida. Canasta en transición vale 3.",
+  "cita": "",
+  "familia": "F15",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     96,
+     35,
+     "1"
+    ],
+    [
+     96,
+     64,
+     "2",
+     1
+    ],
+    [
+     96,
+     90,
+     "3"
+    ],
+    [
+     96,
+     118,
+     "4"
+    ]
+   ],
+   "x": [
+    [
+     176,
+     35,
+     ""
+    ],
+    [
+     176,
+     64,
+     ""
+    ],
+    [
+     176,
+     90,
+     ""
+    ],
+    [
+     176,
+     118,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     108,
+     35,
+     240,
+     40,
+     -14
+    ],
+    [
+     108,
+     64,
+     240,
+     70,
+     0
+    ],
+    [
+     108,
+     118,
+     240,
+     112,
+     14
+    ]
+   ],
+   "t": "4c4 continuo. Tiro antes de 14 segundos. Canasta en transición vale 3."
+  },
+  "detalle": {
+   "m": [
+    "Tres equipos de cuatro, uno descansa.",
+    "Cada posesión acaba en tiro antes de 14 segundos.",
+    "Sin interrupciones: canasta o rebote y se corre al otro lado."
+   ],
+   "e": [
+    "Estirar la posesión buscando el tiro perfecto.",
+    "El equipo que descansa se sienta y se enfría."
+   ],
+   "a": [
+    "Liga rápida con puntos acumulados. Canasta en transición vale 3."
+   ]
+  }
+ },
+ "F5-N1": {
+  "codigo": "F5-N1",
+  "nombre": "1c1 desde recepción con ventaja",
+  "tipo": "jue",
+  "organizacion": "3 cuartetos · máximo 3 botes",
+  "clave": "",
+  "defensa": "",
+  "marcador": "Atacante 1, defensora 2. Primera a 8.",
+  "cita": "500 Ejercicios, p. 271",
+  "familia": "F5",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     86,
+     "P",
+     1
+    ],
+    [
+     16,
+     17,
+     "1"
+    ]
+   ],
+   "x": [
+    [
+     46,
+     60,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     86,
+     50,
+     63
+    ]
+   ],
+   "mv": [
+    [
+     17,
+     22,
+     46,
+     64,
+     -14
+    ]
+   ],
+   "t": "1c1 desde recepción con un paso de ventaja. Máximo 3 botes."
+  },
+  "detalle": {
+   "m": [
+    "Tres cuartetos. La atacante recibe con un paso de ventaja sobre su defensora.",
+    "Máximo tres botes hasta canasta.",
+    "Se juega hasta canasta o hasta que la defensa capture el rebote."
+   ],
+   "e": [
+    "Gastar los tres botes sin avanzar.",
+    "La defensora intenta robar en el primer bote y queda batida."
+   ],
+   "a": [
+    "Marcador: atacante 1, defensora 2 por parada. Primera a 8."
+   ]
+  }
+ },
+ "F7-N2": {
+  "codigo": "F7-N2",
+  "nombre": "De lado débil a lado fuerte",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 6 · 1 balón",
+  "clave": "Todas ajustan a la vez cuando el balón cambia de lado.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 17",
+  "familia": "F7",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     30,
+     64,
+     "1"
+    ],
+    [
+     122,
+     64,
+     "2",
+     1
+    ],
+    [
+     75,
+     92,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     44,
+     56,
+     ""
+    ],
+    [
+     108,
+     56,
+     ""
+    ],
+    [
+     75,
+     40,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     118,
+     66,
+     36,
+     66,
+     -18
+    ]
+   ],
+   "mv": [
+    [
+     44,
+     54,
+     62,
+     48,
+     0
+    ],
+    [
+     75,
+     40,
+     64,
+     46,
+     0
+    ],
+    [
+     108,
+     54,
+     96,
+     50,
+     0
+    ]
+   ],
+   "t": "Al cambiar el balón de lado, la del lado débil pasa a lado fuerte. Todas ajustan a la vez."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos de seis. Tres atacantes en el perímetro y tres defensoras ajustando.",
+    "El balón cambia de lado y todas se reajustan: la del lado débil pasa a lado fuerte.",
+    "Primero en seco y después con pase real."
+   ],
+   "e": [
+    "Moverse cuando el balón ya ha llegado, en vez de durante el vuelo del pase.",
+    "Que se muevan dos y una se quede: ese hueco es la penetración."
+   ],
+   "a": [
+    "Cuenta en voz alta el pase y exige que todas estén colocadas al llegar."
+   ]
+  }
+ },
+ "F7-N3": {
+  "codigo": "F7-N3",
+  "nombre": "2c2 ayuda y recuperación",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 6 · 1 balón",
+  "clave": "Cantar la ayuda en voz alta. Sin voz no hay ayuda.",
+  "defensa": "",
+  "marcador": "Paradas: primera a 5.",
+  "cita": "40 Defensa, p. 18",
+  "familia": "F7",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     40,
+     72,
+     "1",
+     1
+    ],
+    [
+     112,
+     72,
+     "2"
+    ]
+   ],
+   "x": [
+    [
+     46,
+     59,
+     ""
+    ],
+    [
+     105,
+     59,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     44,
+     76,
+     66,
+     32,
+     -8
+    ],
+    [
+     104,
+     63,
+     86,
+     42,
+     0
+    ]
+   ],
+   "ps": [
+    [
+     46,
+     70,
+     107,
+     70,
+     -12
+    ]
+   ],
+   "t": "1 penetra, la del lado contrario ayuda y se recupera al pase. Cantar la ayuda en voz alta."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos de seis: dos atacantes, dos defensoras y dos que pasan y rotan.",
+    "Una atacante penetra, la defensora del lado contrario ayuda y se recupera al pase.",
+    "La ayuda se canta en voz alta, siempre."
+   ],
+   "e": [
+    "Ayudar sin cantar: la compañera no sabe que está sola y no rota.",
+    "Ayudar demasiado pronto y dejar el pase servido."
+   ],
+   "a": [
+    "Marcador: paradas, primera a 5. Si no hubo voz, la parada no cuenta."
+   ]
+  }
+ },
+ "PLAN": {
+  "codigo": "PLAN",
+  "nombre": "Plan de partido",
+  "tipo": "org",
+  "organizacion": "Tres ideas, no más",
+  "clave": "",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F19-N1": {
+  "codigo": "F19-N1",
+  "nombre": "Rebote ofensivo: tiro propio y palmeo",
+  "tipo": "tec",
+  "organizacion": "4 tríos · 1 balón",
+  "clave": "Se gana en el primer paso, no saltando más alto.",
+  "defensa": "",
+  "marcador": "Contra el reloj: segundas opciones en 90 segundos.",
+  "cita": "500 Ejercicios, p. 122",
+  "familia": "F19",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     62,
+     58,
+     "1",
+     1
+    ],
+    [
+     100,
+     30,
+     "R"
+    ]
+   ],
+   "ps": [
+    [
+     62,
+     54,
+     74,
+     20
+    ]
+   ],
+   "mv": [
+    [
+     61,
+     53,
+     70,
+     29,
+     7
+    ]
+   ],
+   "t": "Tira y ataca su propio rebote antes de que caiga. Se gana en el primer paso, no saltando más."
+  },
+  "detalle": {
+   "m": [
+    "Cuatro tríos con un balón. Tira desde distancia media y ataca su propio rebote.",
+    "Si llega arriba, palmea; si no, captura y segunda opción.",
+    "Sin oposición."
+   ],
+   "e": [
+    "Quedarse mirando el tiro. El rebote ofensivo se gana en el primer paso, no en el salto.",
+    "Palmear con dos manos desde abajo en vez de dirigir el balón."
+   ],
+   "a": [
+    "Contra el reloj: segundas opciones en 90 segundos, se apunta el registro."
+   ]
+  }
+ },
+ "F11-N1": {
+  "codigo": "F11-N1",
+  "nombre": "Inferioridad: 1c2, defender el aro",
+  "tipo": "jue",
+  "organizacion": "Flujo continuo · 1 balón",
+  "clave": "No ir al balón. Amagar con fintas: cada décima ganada es una compañera que llega.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 27",
+  "familia": "F11",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     92,
+     52,
+     "1",
+     1
+    ],
+    [
+     92,
+     100,
+     "2"
+    ]
+   ],
+   "x": [
+    [
+     214,
+     75,
+     "sola"
+    ]
+   ],
+   "mv": [
+    [
+     102,
+     52,
+     218,
+     60,
+     -10
+    ],
+    [
+     102,
+     100,
+     218,
+     90,
+     10
+    ],
+    [
+     214,
+     68,
+     208,
+     74,
+     0
+    ]
+   ],
+   "t": "Vuelve sola contra dos. No ir al balón: proteger el aro y amagar con fintas para que duden."
+  },
+  "detalle": {
+   "m": [
+    "Una defensora vuelve sola contra dos atacantes que ya corren.",
+    "Su única misión es proteger el aro y retrasar la decisión con fintas.",
+    "Flujo continuo: al acabar, otra sale."
+   ],
+   "e": [
+    "Salir al balón. Se come el pase y la canasta es libre.",
+    "Quedarse totalmente quieta: sin amago, la atacante decide con calma."
+   ],
+   "a": [
+    "Cuenta en voz alta los segundos que aguanta. Cada uno es una compañera que llega."
+   ]
+  }
+ },
+ "F4-N3": {
+  "codigo": "F4-N3",
+  "nombre": "Tiro con closeout",
+  "tipo": "tec",
+  "organizacion": "Sexteto + defensora saliendo del aro",
+  "clave": "Carrera larga, últimos pasos cortos, mano arriba.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 53",
+  "familia": "F4",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     46,
+     68,
+     "1"
+    ],
+    [
+     75,
+     27,
+     "P",
+     1
+    ]
+   ],
+   "x": [
+    [
+     70,
+     32,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     32,
+     51,
+     66
+    ]
+   ],
+   "mv": [
+    [
+     69,
+     36,
+     51,
+     60,
+     0
+    ]
+   ],
+   "t": "Tiro con closeout: carrera larga, últimos pasos cortos y mano arriba."
+  },
+  "detalle": {
+   "m": [
+    "Sexteto más una defensora que sale desde debajo del aro al cerrar.",
+    "Carrera larga, últimos pasos cortos, mano arriba.",
+    "La tiradora tira si la defensora llega tarde."
+   ],
+   "e": [
+    "La defensora salta al tiro: se come la finta y comete falta.",
+    "Cerrar de frente en vez de de lado, sin poder girar después."
+   ],
+   "a": [
+    "Marca en el suelo desde dónde sale la defensora para controlar lo fácil o difícil que es."
+   ]
+  }
+ },
+ "F9-N4": {
+  "codigo": "F9-N4",
+  "nombre": "Zona: la 2ª línea, sobrecargas en esquina",
+  "tipo": "jue",
+  "organizacion": "5 + 5 + 2 observando · 1 balón",
+  "clave": "La baja del lado del balón no abandona el poste. La ayuda al fondo llega de la contraria.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": "F9",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     60,
+     66,
+     ""
+    ],
+    [
+     90,
+     66,
+     ""
+    ],
+    [
+     36,
+     34,
+     ""
+    ],
+    [
+     114,
+     34,
+     ""
+    ],
+    [
+     75,
+     24,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     136,
+     14,
+     "1",
+     1
+    ],
+    [
+     122,
+     60,
+     "2"
+    ],
+    [
+     96,
+     48,
+     "3"
+    ],
+    [
+     30,
+     64,
+     "4"
+    ],
+    [
+     75,
+     92,
+     "5"
+    ]
+   ],
+   "mv": [
+    [
+     114,
+     30,
+     129,
+     20,
+     0
+    ],
+    [
+     75,
+     26,
+     100,
+     30,
+     0
+    ],
+    [
+     90,
+     64,
+     102,
+     54,
+     0
+    ],
+    [
+     36,
+     34,
+     46,
+     30,
+     0
+    ]
+   ],
+   "t": "Sobrecarga en esquina. La baja del lado no abandona el poste; la ayuda al fondo llega de la contraria."
+  },
+  "detalle": {
+   "m": [
+    "La zona completa contra cinco atacantes que sobrecargan un lado.",
+    "La baja del lado del balón no abandona el poste; la ayuda al fondo llega de la baja contraria.",
+    "Se trabaja lado a lado hasta que salga automático."
+   ],
+   "e": [
+    "Que la baja del lado salga a la esquina y deje el poste libre.",
+    "Que la baja contraria no cruce y el fondo quede abierto."
+   ],
+   "a": [
+    "Empieza con el balón fijo en la esquina y solo ajuste; después añade movimiento."
+   ]
+  }
+ },
+ "F1-N4": {
+  "codigo": "F1-N4",
+  "nombre": "Manejo con defensora semiactiva",
+  "tipo": "tec",
+  "organizacion": "3 cuartetos · 3 balones",
+  "clave": "Proteger con el cuerpo, cabeza alta. Cinco segundos para llegar.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 20",
+  "familia": "F1",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     128,
+     "1",
+     1
+    ],
+    [
+     100,
+     30,
+     "R"
+    ]
+   ],
+   "k": [
+    [
+     58,
+     108
+    ],
+    [
+     92,
+     86
+    ]
+   ],
+   "x": [
+    [
+     58,
+     64,
+     ""
+    ]
+   ],
+   "dr": [
+    [
+     74,
+     122,
+     61,
+     111
+    ],
+    [
+     59,
+     104,
+     89,
+     90
+    ],
+    [
+     91,
+     82,
+     63,
+     68
+    ]
+   ],
+   "mv": [
+    [
+     58,
+     60,
+     70,
+     26,
+     8
+    ]
+   ],
+   "t": "Defensora semiactiva: puede desplazarse y tocar el balón, no robar de frente. Cinco segundos."
+  },
+  "detalle": {
+   "m": [
+    "Tres cuartetos con tres balones. Dos conos en zigzag y una defensora semiactiva al final.",
+    "La defensora puede desplazarse y tocar el balón, pero no robar de frente ni contactar.",
+    "Cinco segundos para llegar a canasta desde que arranca."
+   ],
+   "e": [
+    "Bajar la vista al balón al llegar a la defensora.",
+    "Botar alto: con presión, el bote tiene que ir por debajo de la rodilla."
+   ],
+   "a": [
+    "Si nadie llega en cinco segundos, quita un cono. Si llegan todas, sube a siete segundos y defensora activa."
+   ]
+  }
+ },
+ "F11-N2": {
+  "codigo": "F11-N2",
+  "nombre": "Inferioridad: el tándem",
+  "tipo": "jue",
+  "organizacion": "2 defensoras contra 3",
+  "clave": "Una al balón, otra al aro. Nunca las dos a la misma altura.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 28",
+  "familia": "F11",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     60,
+     32,
+     "1"
+    ],
+    [
+     70,
+     75,
+     "2",
+     1
+    ],
+    [
+     60,
+     118,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     206,
+     60,
+     "bal"
+    ],
+    [
+     206,
+     92,
+     "aro"
+    ]
+   ],
+   "mv": [
+    [
+     72,
+     32,
+     222,
+     34,
+     0
+    ],
+    [
+     82,
+     75,
+     192,
+     75,
+     0
+    ],
+    [
+     72,
+     118,
+     222,
+     116,
+     0
+    ]
+   ],
+   "t": "Tándem: una al balón, otra al aro. Nunca las dos a la misma altura: el pase interior las parte."
+  },
+  "detalle": {
+   "m": [
+    "Dos defensoras contra tres atacantes que llegan corriendo.",
+    "Una defiende el balón y la otra protege el aro; rotan según dónde vaya el balón.",
+    "Flujo continuo a pista completa."
+   ],
+   "e": [
+    "Ponerse las dos a la misma altura.",
+    "Que la de arriba salga al balón y la de abajo no suba a ocupar su sitio."
+   ],
+   "a": [
+    "Si el ataque anota siempre, permite a la defensa empezar un metro más adelante."
+   ]
+  }
+ },
+ "F11-N3": {
+  "codigo": "F11-N3",
+  "nombre": "Inferioridad desde puerta atrás",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 6 · 1 balón",
+  "clave": "La inferioridad nace de un corte, no de un rebote.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 30",
+  "familia": "F11",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     122,
+     64,
+     "1"
+    ],
+    [
+     75,
+     92,
+     "2",
+     1
+    ],
+    [
+     30,
+     64,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     100,
+     50,
+     ""
+    ],
+    [
+     56,
+     50,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     122,
+     66,
+     96,
+     24,
+     -12
+    ],
+    [
+     100,
+     50,
+     88,
+     38,
+     0
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     88,
+     92,
+     30
+    ]
+   ],
+   "t": "La inferioridad nace de un corte, no de un rebote: cambian el punto de partida y las referencias."
+  },
+  "detalle": {
+   "m": [
+    "La inferioridad nace de un corte, no de un rebote: cambia el punto de partida.",
+    "Dos defensoras contra tres tras una puerta atrás.",
+    "Se juega la posesión entera."
+   ],
+   "e": [
+    "Aplicar el tándem de memoria sin mirar dónde está el balón.",
+    "No reconocer que ya están en inferioridad y defender uno contra uno."
+   ],
+   "a": [
+    "Si les cuesta, empieza pautando quién defiende el aro y quién el balón."
+   ]
+  }
+ },
+ "F19-N2": {
+  "codigo": "F19-N2",
+  "nombre": "Rebote ofensivo: líneas de penetración",
+  "tipo": "tec",
+  "organizacion": "3 cuartetos · 3 balones",
+  "clave": "No empujar de frente: rodear por el lado del bloqueo.",
+  "defensa": "",
+  "marcador": "Atacante 1 por captura, defensora 2 por bloqueo limpio.",
+  "cita": "500 Ejercicios, p. 123",
+  "familia": "F19",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     58,
+     41,
+     "1"
+    ],
+    [
+     75,
+     64,
+     "L",
+     1
+    ]
+   ],
+   "x": [
+    [
+     58,
+     29,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     58,
+     76,
+     20
+    ]
+   ],
+   "mv": [
+    [
+     53,
+     43,
+     42,
+     27,
+     10
+    ]
+   ],
+   "t": "No empujar de frente: rodear por el lado del bloqueo buscando el hueco."
+  },
+  "detalle": {
+   "m": [
+    "Tres cuartetos: atacante, defensora que bloquea, lanzadora y reboteadora.",
+    "La atacante rodea por el lado del bloqueo buscando el hueco, no empuja de frente.",
+    "La defensora hace un bloqueo real, no simbólico."
+   ],
+   "e": [
+    "Empujar de frente. Contra un bloqueo bien hecho no funciona nunca.",
+    "Rodear tan abierto que se llega fuera de la zona de caída."
+   ],
+   "a": [
+    "Marcador: atacante 1 por captura, defensora 2 por bloqueo limpio. Primera a 8."
+   ]
+  }
+ },
+ "F10-N3": {
+  "codigo": "F10-N3",
+  "nombre": "Balance: 3c3 todo campo",
+  "tipo": "jue",
+  "organizacion": "12 jugadoras · 1 balón · sin parar",
+  "clave": "Los pares se forman como salgan y hay que ajustarlos sobre la marcha.",
+  "defensa": "Orden al volver: aro, balón, líneas cercanas, atacantes alejadas.",
+  "marcador": "Ataque 1, defensa 2. Primera a 10.",
+  "cita": "40 Defensa, p. 48",
+  "familia": "F10",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     100,
+     45,
+     "1"
+    ],
+    [
+     100,
+     75,
+     "2",
+     1
+    ],
+    [
+     100,
+     105,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     168,
+     45,
+     ""
+    ],
+    [
+     168,
+     75,
+     ""
+    ],
+    [
+     168,
+     105,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     112,
+     45,
+     238,
+     50,
+     -14
+    ],
+    [
+     112,
+     75,
+     238,
+     75,
+     0
+    ],
+    [
+     112,
+     105,
+     238,
+     100,
+     14
+    ],
+    [
+     178,
+     78,
+     246,
+     78,
+     0
+    ]
+   ],
+   "t": "3c3 todo campo sin parar. Al llegar atrás los pares se forman como salgan y hay que ajustarlos."
+  },
+  "detalle": {
+   "m": [
+    "Doce jugadoras, 3c3 a pista completa sin parar.",
+    "Al llegar atrás los pares se forman como salgan y hay que ajustarlos sobre la marcha.",
+    "Orden al volver: aro, balón, líneas de pase cercanas, atacantes alejadas."
+   ],
+   "e": [
+    "Correr hacia el balón en vez de hacia el aro. Es el instinto natural y hay que corregirlo cada vez.",
+    "Formar los pares en silencio y quedarse dos con la misma atacante."
+   ],
+   "a": [
+    "Marcador: ataque 1, defensa 2 por parada. Primera a 10."
+   ]
+  }
+ },
+ "F19-N5": {
+  "codigo": "F19-N5",
+  "nombre": "Rebote ofensivo: la regla de los tres y los dos",
+  "tipo": "jue",
+  "organizacion": "10 en pista + 2 rotando",
+  "clave": "Las tres más cercanas al aro van al rebote; las dos más alejadas vuelven. Por distancia, no por puesto.",
+  "defensa": "Corrige parando el juego en el momento del tiro: ¿quién es la tercera más cercana?",
+  "marcador": "Segunda opción vale 3; canasta rival en transición resta 2.",
+  "cita": "",
+  "familia": "F19",
+  "nivel": "N5",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     52,
+     50,
+     "1"
+    ],
+    [
+     98,
+     50,
+     "2"
+    ],
+    [
+     75,
+     78,
+     "3",
+     1
+    ],
+    [
+     26,
+     68,
+     "4"
+    ],
+    [
+     124,
+     68,
+     "5"
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     74,
+     76,
+     20
+    ]
+   ],
+   "mv": [
+    [
+     52,
+     46,
+     62,
+     26,
+     -6
+    ],
+    [
+     98,
+     46,
+     88,
+     26,
+     6
+    ],
+    [
+     75,
+     72,
+     75,
+     36,
+     0
+    ],
+    [
+     26,
+     72,
+     26,
+     112,
+     0
+    ],
+    [
+     124,
+     72,
+     124,
+     112,
+     0
+    ]
+   ],
+   "t": "Al salir el tiro: 1, 2 y 3 son las tres más cercanas y van al rebote. 4 y 5 vuelven al balance."
+  },
+  "detalle": {
+   "m": [
+    "5c5 real. Al salir el tiro, las tres más cercanas al aro atacan el rebote y las dos más alejadas vuelven.",
+    "Por distancia, no por puesto: se mira dónde estás cuando sale el balón.",
+    "Se corrige la decisión, no el resultado."
+   ],
+   "e": [
+    "Ir cuatro al rebote: se anota algún punto más y se encajan muchos en contraataque.",
+    "Ir solo dos: se renuncia a las segundas opciones."
+   ],
+   "a": [
+    "Para el juego en el momento del tiro y pregunta quién es la tercera más cercana. Tres o cuatro paradas por sesión y se automatiza."
+   ]
+  }
+ },
+ "F14-N1": {
+  "codigo": "F14-N1",
+  "nombre": "Transición: posiciones de llegada, 5c0",
+  "tipo": "jue",
+  "organizacion": "10 + 2 · 1 balón",
+  "clave": "Nadie se para. Se corre hasta la posición y se sigue moviendo.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 173",
+  "familia": "F14",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     94,
+     "1",
+     1
+    ],
+    [
+     16,
+     18,
+     "2"
+    ],
+    [
+     134,
+     18,
+     "3"
+    ],
+    [
+     100,
+     28,
+     "4"
+    ],
+    [
+     96,
+     62,
+     "5"
+    ]
+   ],
+   "mv": [
+    [
+     75,
+     90,
+     75,
+     82,
+     0
+    ],
+    [
+     96,
+     66,
+     96,
+     58,
+     0
+    ]
+   ],
+   "t": "Posiciones de llegada: base arriba, aleros en las esquinas, interior al poste bajo contrario, arrastre al codo."
+  },
+  "detalle": {
+   "m": [
+    "Cinco jugadoras sin oposición ocupando las posiciones de llegada.",
+    "Base con balón arriba, aleros en las esquinas, interior al poste bajo del lado contrario, arrastre al codo.",
+    "Se corre hasta la posición y se sigue moviendo: nadie se para."
+   ],
+   "e": [
+    "Llegar y quedarse quieta esperando instrucciones.",
+    "Dos jugadoras en la misma zona porque nadie miró antes de correr."
+   ],
+   "a": [
+    "Marca las cinco posiciones con conos las dos primeras veces y luego quítalos."
+   ]
+  }
+ },
+ "F2-N4": {
+  "codigo": "F2-N4",
+  "nombre": "Finalización con defensora que llega tarde",
+  "tipo": "tec",
+  "organizacion": "3 cuartetos · 3 balones",
+  "clave": "Leer los pies de la defensora, no sus brazos.",
+  "defensa": "",
+  "marcador": "Atacante 1, defensora 2. Primera a 8.",
+  "cita": "500 Ejercicios, p. 41",
+  "familia": "F2",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     86,
+     "P",
+     1
+    ],
+    [
+     16,
+     17,
+     "1"
+    ],
+    [
+     100,
+     31,
+     "R"
+    ]
+   ],
+   "x": [
+    [
+     75,
+     27,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     86,
+     51,
+     63
+    ]
+   ],
+   "mv": [
+    [
+     17,
+     22,
+     47,
+     62,
+     -14
+    ],
+    [
+     52,
+     60,
+     66,
+     26,
+     8
+    ],
+    [
+     73,
+     32,
+     58,
+     52,
+     -8
+    ]
+   ],
+   "t": "La defensora arranca del aro al salir el pase y llega con un paso de retraso. Leer sus pies."
+  },
+  "detalle": {
+   "m": [
+    "Tres cuartetos. La pasadora arriba, la ejecutante corta desde la esquina, la defensora sale del aro cuando sale el pase.",
+    "La defensora llega con un paso de retraso: la atacante decide entrada o parada y tiro.",
+    "Reboteadora que recupera y rota."
+   ],
+   "e": [
+    "Decidir antes de ver a la defensora: el ejercicio es la lectura, no el gesto.",
+    "Frenar del todo cuando la defensora llega: la parada tiene que ser en dos tiempos, no un frenazo."
+   ],
+   "a": [
+    "Marcador: atacante 1, defensora 2 por parada. Primera a 8."
+   ]
+  }
+ },
+ "F13-N4": {
+  "codigo": "F13-N4",
+  "nombre": "Superioridad: 4c3",
+  "tipo": "fis",
+  "organizacion": "2 grupos de 7 · 1 balón",
+  "clave": "Leer la última ayuda y dar el pase extra.",
+  "defensa": "Defensa (F11-N4): la rotación que cubre la última ayuda.",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 307",
+  "familia": "F13",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     60,
+     28,
+     "1"
+    ],
+    [
+     70,
+     58,
+     "2",
+     1
+    ],
+    [
+     70,
+     94,
+     "3"
+    ],
+    [
+     60,
+     122,
+     "4"
+    ]
+   ],
+   "x": [
+    [
+     208,
+     48,
+     ""
+    ],
+    [
+     208,
+     75,
+     ""
+    ],
+    [
+     208,
+     102,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     72,
+     28,
+     224,
+     30,
+     0
+    ],
+    [
+     82,
+     58,
+     192,
+     60,
+     0
+    ],
+    [
+     82,
+     94,
+     192,
+     92,
+     0
+    ],
+    [
+     72,
+     122,
+     224,
+     120,
+     0
+    ]
+   ],
+   "t": "4c3. Leer la última ayuda y dar el pase extra a la que queda sola."
+  },
+  "detalle": {
+   "m": [
+    "Cuatro atacantes contra tres defensoras, flujo continuo.",
+    "Aparece el pase extra: el primer pase crea la ventaja, el segundo la aprovecha.",
+    "Doble objetivo: el ataque lee la última ayuda, la defensa rota para cubrirla."
+   ],
+   "e": [
+    "Tirar el primero que queda libre en vez de dar el pase extra.",
+    "Atacar en línea, sin ocupar las esquinas."
+   ],
+   "a": [
+    "Puntúa doble la canasta que llega tras dos pases seguidos sin bote."
+   ]
+  }
+ },
+ "F11-N4": {
+  "codigo": "F11-N4",
+  "nombre": "Inferioridad: 3c4 con última ayuda",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 7 · 1 balón",
+  "clave": "Aparece la última ayuda y la rotación que la cubre.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 31",
+  "familia": "F11",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     16,
+     18,
+     "1"
+    ],
+    [
+     134,
+     18,
+     "2"
+    ],
+    [
+     40,
+     66,
+     "3",
+     1
+    ],
+    [
+     112,
+     66,
+     "4"
+    ]
+   ],
+   "x": [
+    [
+     52,
+     52,
+     ""
+    ],
+    [
+     100,
+     52,
+     ""
+    ],
+    [
+     75,
+     26,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     44,
+     70,
+     64,
+     30,
+     -10
+    ],
+    [
+     75,
+     26,
+     58,
+     28,
+     0
+    ],
+    [
+     100,
+     54,
+     84,
+     40,
+     0
+    ]
+   ],
+   "t": "3c4. Aparece la última ayuda y la rotación que la cubre."
+  },
+  "detalle": {
+   "m": [
+    "Tres defensoras contra cuatro atacantes.",
+    "Aparece el concepto de última ayuda y la rotación que la cubre.",
+    "Se canta quién es la última ayuda antes de cada repetición."
+   ],
+   "e": [
+    "Que ayuden dos a la vez y quede un lado entero vacío.",
+    "Que nadie asuma ser la última ayuda."
+   ],
+   "a": [
+    "Empieza con las atacantes sin tirar de tres para simplificar las rotaciones."
+   ]
+  }
+ },
+ "F4-N4": {
+  "codigo": "F4-N4",
+  "nombre": "Tirar o botar según el closeout",
+  "tipo": "tec",
+  "organizacion": "Sexteto · 2 balones",
+  "clave": "La decisión sustituye a la orden.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 53",
+  "familia": "F4",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     46,
+     68,
+     "1"
+    ],
+    [
+     75,
+     27,
+     "P",
+     1
+    ]
+   ],
+   "x": [
+    [
+     60,
+     44,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     32,
+     51,
+     66
+    ]
+   ],
+   "mv": [
+    [
+     60,
+     40,
+     51,
+     61,
+     0
+    ],
+    [
+     48,
+     72,
+     66,
+     32,
+     -10
+    ]
+   ],
+   "t": "Si la defensora llega descontrolada, bota y finaliza. Si llega equilibrada, tira."
+  },
+  "detalle": {
+   "m": [
+    "Igual que el closeout pero la atacante decide: tira o bota.",
+    "Si la defensora llega descontrolada, se bota y se finaliza. Si llega equilibrada, se tira.",
+    "Máximo dos botes."
+   ],
+   "e": [
+    "Botar siempre, por costumbre, aunque el tiro esté libre.",
+    "Tirar con la defensora encima porque estaba decidido de antemano."
+   ],
+   "a": [
+    "Pide a la defensora que alterne a propósito entre llegar bien y llegar pasada."
+   ]
+  }
+ },
+ "F14-N2": {
+  "codigo": "F14-N2",
+  "nombre": "Transición: arrastre e inversión",
+  "tipo": "jue",
+  "organizacion": "10 + 2 · 1 balón",
+  "clave": "El arrastre llega al codo y recibe. Poste bajo o inversión al lado débil.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": "F14",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     92,
+     "1",
+     1
+    ],
+    [
+     16,
+     18,
+     "2"
+    ],
+    [
+     134,
+     18,
+     "3"
+    ],
+    [
+     100,
+     26,
+     "4"
+    ],
+    [
+     96,
+     58,
+     "5"
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     88,
+     93,
+     60
+    ],
+    [
+     93,
+     56,
+     26,
+     22,
+     -16
+    ]
+   ],
+   "mv": [
+    [
+     96,
+     62,
+     90,
+     44,
+     0
+    ]
+   ],
+   "t": "El arrastre llega al codo y recibe. Dos opciones: poste bajo o inversión al lado débil."
+  },
+  "detalle": {
+   "m": [
+    "El arrastre llega al codo y recibe mirando a canasta.",
+    "Dos opciones y ninguna más: pase al poste bajo o inversión al lado débil.",
+    "Se repite hasta que las dos salgan sin pensar."
+   ],
+   "e": [
+    "Recibir de espaldas: se pierde la ventaja entera.",
+    "Botar al recibir en el codo."
+   ],
+   "a": [
+    "Al principio dile tú cuál de las dos opciones; después que decida ella."
+   ]
+  }
+ },
+ "AP12": {
+  "codigo": "AP12",
+  "nombre": "Ataque posicional · reglas 1 y 2",
+  "tipo": "jue",
+  "organizacion": "5c5 · 5 abiertos",
+  "clave": "Espaciado de 5 abiertos, sin puestos. Nadie con el balón más de 3-4 segundos.",
+  "defensa": "",
+  "marcador": "Cada incumplimiento es pérdida de posesión.",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F1-N5": {
+  "codigo": "F1-N5",
+  "nombre": "Bote bajo presión a media pista",
+  "tipo": "tec",
+  "organizacion": "4 tríos · 1 balón",
+  "clave": "",
+  "defensa": "",
+  "marcador": "Atacante 1 si llega al fondo, defensora 2 si la para.",
+  "cita": "500 Ejercicios, p. 20",
+  "familia": "F1",
+  "nivel": "N5",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     126,
+     "1",
+     1
+    ]
+   ],
+   "x": [
+    [
+     75,
+     114,
+     ""
+    ]
+   ],
+   "dr": [
+    [
+     74,
+     120,
+     30,
+     44
+    ]
+   ],
+   "mv": [
+    [
+     72,
+     110,
+     34,
+     52,
+     0
+    ]
+   ],
+   "t": "Bote bajo presión a media pista. Atacante 1 si llega al fondo, defensora 2 si la para."
+  },
+  "detalle": {
+   "m": [
+    "Cuatro tríos. La atacante bota desde media pista buscando la línea de fondo.",
+    "La defensora contiene a todo el ancho, sin conos.",
+    "Marcador: atacante 1 si llega al fondo, defensora 2 si la para o la saca de la pista."
+   ],
+   "e": [
+    "Cargar con el hombro para pasar: es falta y además no hace falta.",
+    "La defensora se queda plantada esperando en vez de acompañar."
+   ],
+   "a": [
+    "Si el ataque gana siempre, limita a cuatro botes."
+   ]
+  }
+ },
+ "F10-N4": {
+  "codigo": "F10-N4",
+  "nombre": "Balance: 4c4 con cambio de rol a la voz",
+  "tipo": "jue",
+  "organizacion": "2 equipos de 4 + 4 rotando",
+  "clave": "El que atacaba pasa a defender en el sitio, sin tiempo para colocarse.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 50",
+  "familia": "F10",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     96,
+     35,
+     "1",
+     1
+    ],
+    [
+     96,
+     65,
+     "2"
+    ],
+    [
+     96,
+     92,
+     "3"
+    ],
+    [
+     96,
+     118,
+     "4"
+    ]
+   ],
+   "x": [
+    [
+     170,
+     35,
+     ""
+    ],
+    [
+     170,
+     65,
+     ""
+    ],
+    [
+     170,
+     92,
+     ""
+    ],
+    [
+     170,
+     118,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     108,
+     35,
+     238,
+     42,
+     -12
+    ],
+    [
+     108,
+     118,
+     238,
+     110,
+     12
+    ],
+    [
+     178,
+     68,
+     112,
+     70,
+     0
+    ]
+   ],
+   "t": "A la voz, el equipo que atacaba pasa a defender en el sitio. Sin tiempo para colocarse."
+  },
+  "detalle": {
+   "m": [
+    "Dos equipos de cuatro más cuatro rotando.",
+    "A la voz, el equipo que atacaba pasa a defender en el sitio, sin tiempo para colocarse.",
+    "El cambio se canta en cualquier momento de la posesión."
+   ],
+   "e": [
+    "Quedarse mirando medio segundo al oír la voz: ese medio segundo es una canasta.",
+    "Volver todas al mismo sitio en lugar de repartirse."
+   ],
+   "a": [
+    "Al principio canta el cambio solo tras canasta; después, en cualquier momento."
+   ]
+  }
+ },
+ "C44": {
+  "codigo": "C44",
+  "nombre": "4c4 competitivo",
+  "tipo": "jue",
+  "organizacion": "3 equipos de 4 · 1 balón",
+  "clave": "",
+  "defensa": "",
+  "marcador": "Liga rápida. Canasta en transición vale 3.",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F3-N4": {
+  "codigo": "F3-N4",
+  "nombre": "4c2 con pase extra",
+  "tipo": "jue",
+  "organizacion": "Dos grupos · 1 balón · sin canasta",
+  "clave": "Obligación de dar un pase más antes de puntuar.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "75 Desmarque, p. 22",
+  "familia": "F3",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     80,
+     40,
+     "1",
+     1
+    ],
+    [
+     80,
+     110,
+     "2"
+    ],
+    [
+     190,
+     40,
+     "3"
+    ],
+    [
+     190,
+     110,
+     "4"
+    ]
+   ],
+   "x": [
+    [
+     130,
+     62,
+     ""
+    ],
+    [
+     130,
+     90,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     88,
+     42,
+     182,
+     44,
+     -14
+    ],
+    [
+     186,
+     112,
+     92,
+     108,
+     -14
+    ]
+   ],
+   "t": "4c2 con pase extra: obligación de dar un pase más antes de puntuar."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos: cuatro atacantes fuera y dos defensoras dentro, sin canasta.",
+    "Obligación de dar un pase más antes de puntuar: no vale el primero que queda libre.",
+    "Quien pierde el balón entra a defender."
+   ],
+   "e": [
+    "Pasar al que está más cerca en vez de al que está libre.",
+    "Las defensoras persiguen el balón las dos juntas."
+   ],
+   "a": [
+    "Reduce el espacio si el ataque no pierde nunca la posesión."
+   ]
+  }
+ },
+ "F14-N4": {
+  "codigo": "F14-N4",
+  "nombre": "Transición: 5c5 con obligación de fluir",
+  "tipo": "jue",
+  "organizacion": "10 + 2 rotando · 1 balón",
+  "clave": "Prohibido parar el balón y organizar.",
+  "defensa": "",
+  "marcador": "Canasta desde transición vale 2; desde contraataque, 1.",
+  "cita": "",
+  "familia": "F14",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     92,
+     "1",
+     1
+    ],
+    [
+     16,
+     18,
+     "2"
+    ],
+    [
+     134,
+     18,
+     "3"
+    ],
+    [
+     102,
+     30,
+     "4"
+    ],
+    [
+     96,
+     60,
+     "5"
+    ]
+   ],
+   "x": [
+    [
+     75,
+     74,
+     ""
+    ],
+    [
+     30,
+     32,
+     ""
+    ],
+    [
+     120,
+     32,
+     ""
+    ],
+    [
+     92,
+     46,
+     ""
+    ],
+    [
+     86,
+     26,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     88,
+     94,
+     62
+    ],
+    [
+     94,
+     58,
+     26,
+     22,
+     -16
+    ]
+   ],
+   "t": "Si el contraataque no da canasta, transición completa antes de tirar. Prohibido parar el balón."
+  },
+  "detalle": {
+   "m": [
+    "5c5 con obligación de fluir: si el contraataque no da canasta, hay que ejecutar la transición completa antes de tirar.",
+    "Prohibido parar el balón y organizar.",
+    "Se corta y se repite cada vez que el balón se para."
+   ],
+   "e": [
+    "Frenar al cruzar el medio campo y esperar a que lleguen todas.",
+    "Tirar el primer tiro disponible sin haber fluido."
+   ],
+   "a": [
+    "Marcador: canasta desde transición 2 puntos, desde contraataque 1."
+   ]
+  }
+ },
+ "AP3": {
+  "codigo": "AP3",
+  "nombre": "Ataque posicional · regla 3",
+  "tipo": "jue",
+  "organizacion": "5c5",
+  "clave": "Al salir el tiro: o vas al rebote de ataque, o vuelves a impedir el contraataque fácil.",
+  "defensa": "Es la regla que conecta el ataque con el balance. La más importante de las tres.",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F7-N4": {
+  "codigo": "F7-N4",
+  "nombre": "3c3 con coberturas",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 6 · 1 balón",
+  "clave": "Cada ayuda se canta; sin voz, la parada no cuenta.",
+  "defensa": "",
+  "marcador": "Paradas: primera a 5.",
+  "cita": "40 Defensa, p. 22",
+  "familia": "F7",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     26,
+     62,
+     "1",
+     1
+    ],
+    [
+     75,
+     94,
+     "2"
+    ],
+    [
+     124,
+     62,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     38,
+     54,
+     ""
+    ],
+    [
+     75,
+     76,
+     ""
+    ],
+    [
+     112,
+     54,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     30,
+     66,
+     58,
+     30,
+     -10
+    ],
+    [
+     75,
+     76,
+     62,
+     48,
+     0
+    ],
+    [
+     112,
+     56,
+     98,
+     50,
+     0
+    ]
+   ],
+   "t": "3c3 con coberturas. Cada ayuda se canta; sin voz, la parada no cuenta."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos de seis, 3c3 real con coberturas.",
+    "Cada penetración obliga a una ayuda y a una rotación de la tercera.",
+    "Obligación de comunicar cada ayuda."
+   ],
+   "e": [
+    "Que ayude la que está más lejos.",
+    "Rotar solo dos y dejar a una atacante libre en el lado débil."
+   ],
+   "a": [
+    "Empieza con las atacantes sin botar, solo pasando, y añade la penetración cuando las rotaciones salgan."
+   ]
+  }
+ },
+ "F8-N4": {
+  "codigo": "F8-N4",
+  "nombre": "Rebote: 3c3 sin bote",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 6 · 1 balón",
+  "clave": "La posesión no cambia hasta que la defensa capture.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "40 Defensa, p. 43",
+  "familia": "F8",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     52,
+     44,
+     "1"
+    ],
+    [
+     98,
+     44,
+     "2"
+    ],
+    [
+     75,
+     74,
+     "3",
+     1
+    ]
+   ],
+   "x": [
+    [
+     52,
+     28,
+     ""
+    ],
+    [
+     98,
+     28,
+     ""
+    ],
+    [
+     75,
+     54,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     70,
+     76,
+     20
+    ]
+   ],
+   "mv": [
+    [
+     52,
+     32,
+     52,
+     38,
+     0
+    ],
+    [
+     98,
+     32,
+     98,
+     38,
+     0
+    ],
+    [
+     75,
+     54,
+     75,
+     44,
+     0
+    ]
+   ],
+   "t": "3c3 sin bote: solo pase y tiro. La posesión no cambia hasta que la defensa capture."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos de seis. Solo pase y tiro, sin botar.",
+    "El ataque conserva la posesión hasta que la defensa capture el rebote.",
+    "Muy exigente: no encadenes más de cuatro minutos seguidos."
+   ],
+   "e": [
+    "Ir al balón sin contactar, que es el error de siempre.",
+    "La defensa se rinde tras dos rebotes ofensivos seguidos."
+   ],
+   "a": [
+    "Si la defensa nunca captura, revisa antes F8-N2: el problema está en el contacto individual."
+   ]
+  }
+ },
+ "F9-N5": {
+  "codigo": "F9-N5",
+  "nombre": "Zona completa, cierre de rebote y salida",
+  "tipo": "jue",
+  "organizacion": "5 + 5 + 2 · 1 balón",
+  "clave": "Contacto con la más cercana antes de ir al balón.",
+  "defensa": "",
+  "marcador": "Cuatro paradas limpias. Rebote ofensivo rival, vuelta a cero.",
+  "cita": "500 Ejercicios, p. 253",
+  "familia": "F9",
+  "nivel": "N5",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     60,
+     62,
+     ""
+    ],
+    [
+     90,
+     62,
+     ""
+    ],
+    [
+     40,
+     34,
+     ""
+    ],
+    [
+     110,
+     34,
+     ""
+    ],
+    [
+     75,
+     24,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     52,
+     52,
+     "1"
+    ],
+    [
+     98,
+     52,
+     "2"
+    ],
+    [
+     30,
+     30,
+     "3"
+    ],
+    [
+     120,
+     30,
+     "4"
+    ],
+    [
+     75,
+     82,
+     "5",
+     1
+    ]
+   ],
+   "mv": [
+    [
+     60,
+     58,
+     55,
+     50,
+     0
+    ],
+    [
+     90,
+     58,
+     95,
+     50,
+     0
+    ],
+    [
+     39,
+     31,
+     33,
+     30,
+     0
+    ],
+    [
+     111,
+     31,
+     117,
+     30,
+     0
+    ],
+    [
+     75,
+     29,
+     75,
+     36,
+     0
+    ]
+   ],
+   "t": "Al salir el tiro, contacto con la más cercana antes de ir al balón. Si captura, sale en contraataque."
+  },
+  "detalle": {
+   "m": [
+    "Zona completa, tiro del ataque y cierre de rebote.",
+    "Al salir el tiro, cada defensora busca contacto con la atacante más cercana antes de ir al balón.",
+    "Si el ataque captura el rebote ofensivo, se repite la posesión."
+   ],
+   "e": [
+    "Ir al balón directamente. Es el fallo clásico de la zona y destruye el contraataque.",
+    "Bloquear a quien no está cerca, dejando libre a la que sí."
+   ],
+   "a": [
+    "Marcador: cuatro paradas limpias seguidas. Un rebote ofensivo rival y vuelta a cero."
+   ]
+  }
+ },
+ "F5-N3": {
+  "codigo": "F5-N3",
+  "nombre": "1c1 continuo con closeout",
+  "tipo": "jue",
+  "organizacion": "Flujo permanente: la que defiende ataca después",
+  "clave": "",
+  "defensa": "",
+  "marcador": "",
+  "cita": "75 Desmarque, p. 16",
+  "familia": "F5",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     46,
+     66,
+     "1"
+    ],
+    [
+     75,
+     26,
+     "P",
+     1
+    ]
+   ],
+   "x": [
+    [
+     70,
+     30,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     30,
+     50,
+     64
+    ]
+   ],
+   "mv": [
+    [
+     68,
+     34,
+     50,
+     58,
+     0
+    ]
+   ],
+   "t": "1c1 continuo con closeout: la que defiende pasa a atacar en la repetición siguiente."
+  },
+  "detalle": {
+   "m": [
+    "Flujo continuo: la que defiende pasa a atacar en la repetición siguiente.",
+    "Arranca con un closeout, así que la atacante siempre tiene algo de ventaja.",
+    "Máximo dos botes."
+   ],
+   "e": [
+    "Pararse a celebrar o a protestar: el ejercicio se corta y pierde el ritmo.",
+    "No cambiar de rol con decisión y que se acumulen dos atacantes."
+   ],
+   "a": [
+    "Si se hace largo, juega a una sola posesión por repetición."
+   ]
+  }
+ },
+ "F11-N5": {
+  "codigo": "F11-N5",
+  "nombre": "Inferioridad encadenada 1c2 → 2c3 → 3c4",
+  "tipo": "jue",
+  "organizacion": "12 jugadoras · 1 balón",
+  "clave": "Sin parar, para que reconozcan sobre la marcha en cuál están.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": "F11",
+  "nivel": "N5",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     60,
+     30,
+     "1"
+    ],
+    [
+     70,
+     75,
+     "2",
+     1
+    ],
+    [
+     60,
+     120,
+     "3"
+    ]
+   ],
+   "x": [
+    [
+     212,
+     58,
+     ""
+    ],
+    [
+     212,
+     94,
+     ""
+    ],
+    [
+     22,
+     75,
+     "3ª"
+    ]
+   ],
+   "mv": [
+    [
+     72,
+     30,
+     224,
+     32,
+     0
+    ],
+    [
+     82,
+     75,
+     190,
+     75,
+     0
+    ],
+    [
+     72,
+     120,
+     224,
+     118,
+     0
+    ],
+    [
+     32,
+     75,
+     182,
+     75,
+     0
+    ]
+   ],
+   "t": "Encadenado 1c2 → 2c3 → 3c4 sin parar, para que reconozcan sobre la marcha en cuál están."
+  },
+  "detalle": {
+   "m": [
+    "Encadenado 1c2, después 2c3 y después 3c4, sin parar entre situaciones.",
+    "Se van añadiendo defensoras sobre la marcha.",
+    "El objetivo no es defender bien cada una, es reconocer en cuál estás."
+   ],
+   "e": [
+    "Seguir defendiendo como en la situación anterior cuando ya ha cambiado.",
+    "No hablar al entrar la nueva defensora."
+   ],
+   "a": [
+    "Si se lía, para y pregunta en voz alta cuántas son y cuántas hay delante."
+   ]
+  }
+ },
+ "INTEG": {
+  "codigo": "INTEG",
+  "nombre": "Integración",
+  "tipo": "jue",
+  "organizacion": "5c5 completo",
+  "clave": "Zona → rebote → calles → superioridad → balance, encadenado sin parar.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "NAVIDAD": {
+  "codigo": "NAVIDAD",
+  "nombre": "Entrega del plan de Navidad",
+  "tipo": "org",
+  "organizacion": "Una hoja por jugadora, en papel",
+  "clave": "Preventivo 3 días/semana · manejo 7 min · objetivo personal 8 min.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "TEST": {
+  "codigo": "TEST",
+  "nombre": "Test intermedio",
+  "tipo": "org",
+  "organizacion": "4 estaciones de 3 · rotación cada 10 min",
+  "clave": "Salto, sprint 20 m, agilidad en T, tiros libres y resistencia. Se compara con septiembre.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "INDIV": {
+  "codigo": "INDIV",
+  "nombre": "Trabajo individual por necesidad",
+  "tipo": "tec",
+  "organizacion": "3 grupos de 4 · 1 balón cada uno",
+  "clave": "Agrupados por lo que cada una necesita, NO por puesto. Rotan cada dos semanas.",
+  "defensa": "En el 5c5 todas siguen jugando en todas las posiciones.",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F13-N5": {
+  "codigo": "F13-N5",
+  "nombre": "Superioridad: 5c4",
+  "tipo": "fis",
+  "organizacion": "10 + 2 · la defensa llega incompleta",
+  "clave": "Encontrar la ventaja antes de que se cierre.",
+  "defensa": "Defensa (F10): ajustar los desajustes al llegar la quinta.",
+  "marcador": "",
+  "cita": "",
+  "familia": "F13",
+  "nivel": "N5",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     60,
+     26,
+     "1"
+    ],
+    [
+     70,
+     56,
+     "2",
+     1
+    ],
+    [
+     70,
+     94,
+     "3"
+    ],
+    [
+     60,
+     124,
+     "4"
+    ],
+    [
+     40,
+     75,
+     "5"
+    ]
+   ],
+   "x": [
+    [
+     208,
+     44,
+     ""
+    ],
+    [
+     208,
+     70,
+     ""
+    ],
+    [
+     208,
+     100,
+     ""
+    ],
+    [
+     208,
+     126,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     72,
+     26,
+     224,
+     28,
+     0
+    ],
+    [
+     82,
+     56,
+     192,
+     58,
+     0
+    ],
+    [
+     82,
+     94,
+     192,
+     92,
+     0
+    ],
+    [
+     72,
+     124,
+     224,
+     122,
+     0
+    ],
+    [
+     52,
+     75,
+     180,
+     75,
+     0
+    ]
+   ],
+   "t": "5c4: la defensa llega incompleta. Encontrar la ventaja antes de que se cierre."
+  },
+  "detalle": {
+   "m": [
+    "5c4: la quinta defensora entra con retraso.",
+    "Hay que encontrar la ventaja antes de que se cierre.",
+    "Doble objetivo: la defensa ajusta los desajustes al llegar la quinta."
+   ],
+   "e": [
+    "Organizar el ataque y perder la ventaja mientras se coloca.",
+    "La quinta defensora entra al balón en vez de al hueco."
+   ],
+   "a": [
+    "Regula cuándo entra la quinta según lo fácil que resulte."
+   ]
+  }
+ },
+ "F18-N1": {
+  "codigo": "F18-N1",
+  "nombre": "Ataque a zona: velocidad de balón",
+  "tipo": "jue",
+  "organizacion": "5 + 5 + 2 observando · 1 balón · sin bote",
+  "clave": "La zona se rompe con velocidad de balón, no con bote: un pase viaja más rápido que cualquier jugadora.",
+  "defensa": "La primera debilidad declarada de la zona par es la facilidad para invertir el balón.",
+  "marcador": "",
+  "cita": "",
+  "familia": "F18",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     60,
+     66,
+     ""
+    ],
+    [
+     90,
+     66,
+     ""
+    ],
+    [
+     36,
+     34,
+     ""
+    ],
+    [
+     114,
+     34,
+     ""
+    ],
+    [
+     75,
+     24,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     16,
+     17,
+     "1"
+    ],
+    [
+     134,
+     17,
+     "2"
+    ],
+    [
+     28,
+     64,
+     "3",
+     1
+    ],
+    [
+     122,
+     64,
+     "4"
+    ],
+    [
+     75,
+     48,
+     "5"
+    ]
+   ],
+   "ps": [
+    [
+     33,
+     62,
+     70,
+     49
+    ],
+    [
+     80,
+     48,
+     117,
+     62
+    ],
+    [
+     124,
+     60,
+     133,
+     23
+    ]
+   ],
+   "t": "Cinco posiciones que rompen la 2-3: dos esquinas, dos alas y una en poste alto. El balón va de lado a lado con pases directos, SIN BOTE."
+  },
+  "detalle": {
+   "m": [
+    "Cinco atacantes en las posiciones que rompen la 2-3: dos esquinas, dos alas y una en poste alto.",
+    "El balón va de lado a lado con pases directos, SIN BOTE.",
+    "Se sube el ritmo de pase progresivamente."
+   ],
+   "e": [
+    "Botar. Es la tentación constante y es justo lo que la zona quiere.",
+    "Pasar en horizontal sin atraer a nadie: el pase tiene que amenazar."
+   ],
+   "a": [
+    "Empieza sin defensa, después con la zona pasiva y por último activa."
+   ]
+  }
+ },
+ "F18-N2": {
+  "codigo": "F18-N2",
+  "nombre": "Ataque a zona: penetrar y doblar",
+  "tipo": "jue",
+  "organizacion": "Primero 3c2 en espacio limitado, después 5c5",
+  "clave": "Fijar a dos defensoras y pasar a la que queda con ventaja. El recurso más rentable contra zona en cadete.",
+  "defensa": "",
+  "marcador": "Canasta de penetración doblada vale 3.",
+  "cita": "",
+  "familia": "F18",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     60,
+     66,
+     ""
+    ],
+    [
+     90,
+     66,
+     ""
+    ],
+    [
+     36,
+     34,
+     ""
+    ],
+    [
+     114,
+     34,
+     ""
+    ],
+    [
+     75,
+     24,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     28,
+     66,
+     "1",
+     1
+    ],
+    [
+     16,
+     17,
+     "2"
+    ],
+    [
+     122,
+     66,
+     "3"
+    ],
+    [
+     134,
+     17,
+     "4"
+    ],
+    [
+     75,
+     50,
+     "5"
+    ]
+   ],
+   "mv": [
+    [
+     34,
+     64,
+     56,
+     34,
+     -8
+    ],
+    [
+     60,
+     62,
+     54,
+     44,
+     0
+    ],
+    [
+     36,
+     34,
+     47,
+     37,
+     0
+    ]
+   ],
+   "ps": [
+    [
+     56,
+     32,
+     20,
+     20
+    ]
+   ],
+   "t": "Penetrar por el hueco entre la alta y la baja: fija a dos defensoras y se dobla a la que queda sola en la esquina."
+  },
+  "detalle": {
+   "m": [
+    "Primero en 3c2 en espacio limitado, después en 5c5.",
+    "Se penetra por el hueco entre la alta y la baja, fijando a dos defensoras.",
+    "Se dobla a la que queda sola en la esquina o en el lado débil."
+   ],
+   "e": [
+    "Penetrar sin fijar: si nadie sale, el pase no vale nada.",
+    "Botar hacia la línea de fondo y quedarse sin ángulo de pase."
+   ],
+   "a": [
+    "Marcador: canasta de penetración doblada vale 3."
+   ]
+  }
+ },
+ "C55Z": {
+  "codigo": "C55Z",
+  "nombre": "5c5 contra zona",
+  "tipo": "jue",
+  "organizacion": "10 en pista + 2 rotando · 18 segundos de posesión",
+  "clave": "",
+  "defensa": "",
+  "marcador": "Canasta tras inversión o tras penetración doblada, vale 3.",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F18-N3": {
+  "codigo": "F18-N3",
+  "nombre": "Ataque a zona: sobrecarga e inversión",
+  "tipo": "jue",
+  "organizacion": "5c5 · 18 segundos",
+  "clave": "Cuatro al lado del balón, una sola en el débil. El tiro está siempre en el lado contrario al balón.",
+  "defensa": "",
+  "marcador": "Carrera a 15. Canasta tras inversión, 3 puntos.",
+  "cita": "",
+  "familia": "F18",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     60,
+     66,
+     ""
+    ],
+    [
+     90,
+     66,
+     ""
+    ],
+    [
+     36,
+     34,
+     ""
+    ],
+    [
+     114,
+     34,
+     ""
+    ],
+    [
+     75,
+     24,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     134,
+     17,
+     "1"
+    ],
+    [
+     122,
+     58,
+     "2",
+     1
+    ],
+    [
+     96,
+     42,
+     "3"
+    ],
+    [
+     75,
+     84,
+     "4"
+    ],
+    [
+     22,
+     58,
+     "5"
+    ]
+   ],
+   "ps": [
+    [
+     118,
+     58,
+     28,
+     58,
+     -18
+    ]
+   ],
+   "mv": [
+    [
+     60,
+     66,
+     76,
+     60,
+     0
+    ],
+    [
+     90,
+     66,
+     104,
+     58,
+     0
+    ],
+    [
+     36,
+     34,
+     48,
+     32,
+     0
+    ]
+   ],
+   "t": "Sobrecarga: cuatro al lado del balón y 5 sola en el débil. La zona se desplaza y la inversión la encuentra libre."
+  },
+  "detalle": {
+   "m": [
+    "Sobrecarga: cuatro jugadoras al lado del balón y una sola en el débil.",
+    "La zona se desplaza y la inversión encuentra a la que está sola.",
+    "18 segundos de posesión."
+   ],
+   "e": [
+    "Invertir demasiado pronto, antes de que la zona se haya desplazado.",
+    "Dejar a la del lado débil demasiado lejos del aro para tirar."
+   ],
+   "a": [
+    "Marcador: carrera a 15. Canasta tras inversión, 3 puntos."
+   ]
+  }
+ },
+ "F9-N6": {
+  "codigo": "F9-N6",
+  "nombre": "Zona: trampa en esquina",
+  "tipo": "jue",
+  "organizacion": "5 + 5 + 2 · 1 balón",
+  "clave": "La trampa se pone SOLO en la esquina, nunca en otro sitio.",
+  "defensa": "Si el pase sale de la trampa, quedáis en 5c3. Solo con ventaja o para cambiar el ritmo.",
+  "marcador": "Robo en la trampa, 3 puntos.",
+  "cita": "",
+  "familia": "F9",
+  "nivel": "N6",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     60,
+     66,
+     ""
+    ],
+    [
+     90,
+     66,
+     ""
+    ],
+    [
+     36,
+     34,
+     ""
+    ],
+    [
+     114,
+     34,
+     ""
+    ],
+    [
+     75,
+     24,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     134,
+     16,
+     "1",
+     1
+    ],
+    [
+     120,
+     62,
+     "2"
+    ],
+    [
+     75,
+     52,
+     "3"
+    ],
+    [
+     30,
+     62,
+     "4"
+    ],
+    [
+     16,
+     16,
+     "5"
+    ]
+   ],
+   "mv": [
+    [
+     92,
+     62,
+     118,
+     30,
+     -8
+    ],
+    [
+     114,
+     30,
+     127,
+     22,
+     0
+    ],
+    [
+     60,
+     62,
+     80,
+     52,
+     0
+    ],
+    [
+     36,
+     34,
+     62,
+     28,
+     0
+    ],
+    [
+     75,
+     22,
+     75,
+     17,
+     0
+    ]
+   ],
+   "t": "Trampa SOLO en la esquina. Las otras tres rotan: la alta contraria al centro, la baja contraria al poste, la central al aro."
+  },
+  "detalle": {
+   "m": [
+    "Zona 2-3 con trampa: cuando el balón llega a la esquina, la alta y la baja de ese lado atrapan.",
+    "Las otras tres rotan: la alta contraria al centro, la baja contraria al poste, la central al aro.",
+    "La trampa se pone SOLO en la esquina."
+   ],
+   "e": [
+    "Poner la trampa en otro sitio: la zona queda en cinco contra tres.",
+    "Atrapar dejando hueco entre las dos: el pase sale por ahí."
+   ],
+   "a": [
+    "Marcador: robo en la trampa, 3 puntos. Si sale el pase, el ataque suma 2."
+   ]
+  }
+ },
+ "F19-N3": {
+  "codigo": "F19-N3",
+  "nombre": "Rebote ofensivo: dónde cae el balón",
+  "tipo": "tec",
+  "organizacion": "2 grupos de 6 · tiros desde 5 posiciones",
+  "clave": "Colocarse antes del tiro vale más que correr después.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "500 Ejercicios, p. 128",
+  "familia": "F19",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     75,
+     62,
+     "P",
+     1
+    ],
+    [
+     52,
+     30,
+     "1"
+    ],
+    [
+     98,
+     30,
+     "2"
+    ],
+    [
+     75,
+     22,
+     "3"
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     58,
+     76,
+     20
+    ]
+   ],
+   "mv": [
+    [
+     52,
+     30,
+     38,
+     24,
+     0
+    ],
+    [
+     98,
+     30,
+     112,
+     24,
+     0
+    ]
+   ],
+   "t": "Dónde cae: el tiro largo da rebote largo y el tiro de lado cae más veces al lado contrario."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos de seis. Se tira desde cinco posiciones distintas.",
+    "Las jugadoras anticipan la zona de caída y se colocan antes del tiro.",
+    "Se comenta en voz alta dónde ha caído cada uno."
+   ],
+   "e": [
+    "Reaccionar cuando el balón ya ha botado.",
+    "Colocarse siempre en el mismo sitio independientemente de desde dónde se tire."
+   ],
+   "a": [
+    "Dos referencias: tiro largo, rebote largo. Tiro de lado, cae más veces al lado contrario."
+   ]
+  }
+ },
+ "F19-N4": {
+  "codigo": "F19-N4",
+  "nombre": "Rebote ofensivo: 3c3 sin bote",
+  "tipo": "jue",
+  "organizacion": "2 grupos de 6 · 1 balón",
+  "clave": "Si la defensa tarda cuatro posesiones en capturar, el problema está en F8, no aquí.",
+  "defensa": "",
+  "marcador": "Cada rebote ofensivo capturado suma 1 y mantiene la posesión. Primera a 8.",
+  "cita": "500 Ejercicios, p. 131",
+  "familia": "F19",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     52,
+     44,
+     "1"
+    ],
+    [
+     98,
+     44,
+     "2"
+    ],
+    [
+     75,
+     74,
+     "3",
+     1
+    ]
+   ],
+   "x": [
+    [
+     52,
+     28,
+     ""
+    ],
+    [
+     98,
+     28,
+     ""
+    ],
+    [
+     75,
+     54,
+     ""
+    ]
+   ],
+   "ps": [
+    [
+     75,
+     70,
+     76,
+     20
+    ]
+   ],
+   "mv": [
+    [
+     52,
+     32,
+     52,
+     38,
+     0
+    ],
+    [
+     98,
+     32,
+     98,
+     38,
+     0
+    ],
+    [
+     75,
+     54,
+     75,
+     44,
+     0
+    ]
+   ],
+   "t": "3c3 sin bote: solo pase y tiro. El ataque conserva la posesión hasta que la defensa capture."
+  },
+  "detalle": {
+   "m": [
+    "Dos grupos de seis. Solo pase y tiro, sin botar.",
+    "El ataque conserva la posesión hasta que la defensa capture.",
+    "Cada rebote ofensivo capturado suma 1 además de mantener la posesión."
+   ],
+   "e": [
+    "El ataque se relaja tras el tiro en vez de atacar el rebote.",
+    "La defensa deja de bloquear cuando encadena dos rebotes concedidos."
+   ],
+   "a": [
+    "Si la defensa tarda cuatro posesiones en capturar, el problema está en F8, no aquí."
+   ]
+  }
+ },
+ "F9-N7": {
+  "codigo": "F9-N7",
+  "nombre": "Zona: cambio de intensidad a la voz",
+  "tipo": "jue",
+  "organizacion": "5c5 · alternar zona normal y trampa",
+  "clave": "El cambio se canta en el saque, con una palabra corta que todas entiendan.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": "F9",
+  "nivel": "N7",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     60,
+     62,
+     ""
+    ],
+    [
+     90,
+     62,
+     ""
+    ],
+    [
+     40,
+     34,
+     ""
+    ],
+    [
+     110,
+     34,
+     ""
+    ],
+    [
+     75,
+     24,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     52,
+     52,
+     "1"
+    ],
+    [
+     98,
+     52,
+     "2"
+    ],
+    [
+     30,
+     30,
+     "3"
+    ],
+    [
+     120,
+     30,
+     "4"
+    ],
+    [
+     75,
+     82,
+     "5",
+     1
+    ]
+   ],
+   "mv": [
+    [
+     60,
+     58,
+     55,
+     50,
+     0
+    ],
+    [
+     90,
+     58,
+     95,
+     50,
+     0
+    ],
+    [
+     39,
+     31,
+     33,
+     30,
+     0
+    ],
+    [
+     111,
+     31,
+     117,
+     30,
+     0
+    ],
+    [
+     75,
+     29,
+     75,
+     36,
+     0
+    ]
+   ],
+   "t": "Cambio de intensidad a la voz: zona normal o trampa. Se canta en el saque, con una palabra corta."
+  },
+  "detalle": {
+   "m": [
+    "5c5 alternando zona normal y trampa según la orden.",
+    "El cambio se canta en el saque, con una palabra corta que todas entiendan.",
+    "No se avisa antes: tienen que reconocerlo sobre la marcha."
+   ],
+   "e": [
+    "Cambiar con el juego en marcha: la mitad no se entera.",
+    "Usar una palabra larga o parecida a otra."
+   ],
+   "a": [
+    "Empieza cantando tú y termina dejando que lo cante la base."
+   ]
+  }
+ },
+ "F10-N5": {
+  "codigo": "F10-N5",
+  "nombre": "Balance: 5c5 con transición obligada",
+  "tipo": "jue",
+  "organizacion": "10 + 2 rotando · tiro antes de 14 seg",
+  "clave": "",
+  "defensa": "Orden al volver: aro, balón, líneas cercanas, atacantes alejadas, pares, ajuste.",
+  "marcador": "Canasta rival en transición resta 2.",
+  "cita": "",
+  "familia": "F10",
+  "nivel": "N5",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     96,
+     30,
+     "1"
+    ],
+    [
+     96,
+     60,
+     "2",
+     1
+    ],
+    [
+     96,
+     90,
+     "3"
+    ],
+    [
+     96,
+     120,
+     "4"
+    ],
+    [
+     70,
+     75,
+     "5"
+    ]
+   ],
+   "x": [
+    [
+     176,
+     30,
+     ""
+    ],
+    [
+     176,
+     60,
+     ""
+    ],
+    [
+     176,
+     90,
+     ""
+    ],
+    [
+     176,
+     120,
+     ""
+    ],
+    [
+     202,
+     75,
+     ""
+    ]
+   ],
+   "mv": [
+    [
+     108,
+     30,
+     238,
+     36,
+     -12
+    ],
+    [
+     108,
+     60,
+     236,
+     60,
+     0
+    ],
+    [
+     108,
+     120,
+     238,
+     114,
+     12
+    ]
+   ],
+   "t": "Cada posesión acaba en tiro antes de 14 segundos. El balance se ejecuta a velocidad de partido."
+  },
+  "detalle": {
+   "m": [
+    "5c5 con tiro obligatorio antes de 14 segundos.",
+    "El balance se ejecuta a velocidad de partido, sin pausa entre posesiones.",
+    "Se puntúa en contra la canasta rival en transición."
+   ],
+   "e": [
+    "Reclamar la falta y no volver.",
+    "Ir tres al rebote ofensivo cuando tocaba volver."
+   ],
+   "a": [
+    "Marcador: canasta rival en transición resta 2 al equipo que atacaba."
+   ]
+  }
+ },
+ "SSANTA": {
+  "codigo": "SSANTA",
+  "nombre": "Entrega del plan de Semana Santa",
+  "tipo": "org",
+  "organizacion": "Una hoja por jugadora",
+  "clave": "Preventivo 3 días/semana y 15 min de manejo y tiro.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F17-N1": {
+  "codigo": "F17-N1",
+  "nombre": "Saque de fondo contra individual · «Caja»",
+  "tipo": "jue",
+  "organizacion": "Dos bloqueos abajo",
+  "clave": "Los bloqueos con los pies quietos. 1 no saca hasta ver el corte.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": "F17",
+  "nivel": "N1",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     30,
+     3,
+     "1",
+     1
+    ],
+    [
+     52,
+     16,
+     "2"
+    ],
+    [
+     98,
+     16,
+     "3"
+    ],
+    [
+     52,
+     54,
+     "4"
+    ],
+    [
+     98,
+     54,
+     "5"
+    ]
+   ],
+   "mv": [
+    [
+     98,
+     50,
+     98,
+     28,
+     0
+    ],
+    [
+     98,
+     18,
+     74,
+     22,
+     -8
+    ],
+    [
+     52,
+     50,
+     52,
+     28,
+     0
+    ],
+    [
+     50,
+     18,
+     20,
+     15,
+     8
+    ],
+    [
+     100,
+     26,
+     84,
+     60,
+     -12
+    ]
+   ],
+   "ps": [
+    [
+     33,
+     5,
+     72,
+     21
+    ]
+   ],
+   "t": "Caja. 5 y 4 bajan a bloquear: 3 corta al aro y 2 sale a la esquina. 5 se abre arriba de seguridad."
+  },
+  "detalle": {
+   "m": [
+    "Las cuatro en caja: dos en los codos y dos en los postes bajos. La sacadora en el fondo.",
+    "5 y 4 bajan a bloquear. 3 corta al aro por el centro y 2 sale a la esquina.",
+    "5 se abre arriba como seguridad."
+   ],
+   "e": [
+    "Sacar antes de que se abra el hueco.",
+    "Poner el bloqueo en movimiento: es falta y se pierde la posesión."
+   ],
+   "a": [
+    "Primera opción 3 al aro, segunda 2 en la esquina, seguridad 5 arriba. Tres opciones y ninguna más."
+   ]
+  }
+ },
+ "F17-N2": {
+  "codigo": "F17-N2",
+  "nombre": "Saque de fondo contra zona · «Sobrecarga»",
+  "tipo": "jue",
+  "organizacion": "Tres al lado del balón, una sola en el débil",
+  "clave": "Contra zona el tiro está en el lado contrario al balón. Si el balón no cruza, la jugada no existe.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": "F17",
+  "nivel": "N2",
+  "diagrama": {
+   "v": "m",
+   "x": [
+    [
+     61,
+     46,
+     ""
+    ],
+    [
+     90,
+     46,
+     ""
+    ],
+    [
+     38,
+     26,
+     ""
+    ],
+    [
+     112,
+     26,
+     ""
+    ],
+    [
+     75,
+     18,
+     ""
+    ]
+   ],
+   "o": [
+    [
+     118,
+     3,
+     "1",
+     1
+    ],
+    [
+     136,
+     16,
+     "2"
+    ],
+    [
+     126,
+     58,
+     "3"
+    ],
+    [
+     75,
+     54,
+     "4"
+    ],
+    [
+     22,
+     58,
+     "5"
+    ]
+   ],
+   "mv": [
+    [
+     75,
+     50,
+     104,
+     44,
+     0
+    ]
+   ],
+   "ps": [
+    [
+     121,
+     6,
+     80,
+     50
+    ],
+    [
+     73,
+     56,
+     28,
+     58,
+     -14
+    ]
+   ],
+   "t": "Sobrecarga. La zona marca espacios, no personas: se carga un lado y 5 queda sola en el otro."
+  },
+  "detalle": {
+   "m": [
+    "Tres jugadoras al lado del balón, una en poste alto y una sola en el lado débil.",
+    "El balón entra al poste alto y sale invertido al lado contrario.",
+    "La zona marca espacios, no personas: por eso funciona cargar un lado."
+   ],
+   "e": [
+    "No cruzar el balón: si no cruza, la jugada no existe.",
+    "Recibir en el poste alto de espaldas."
+   ],
+   "a": [
+    "Si la zona no se desplaza, añade un pase más por el lado cargado antes de invertir."
+   ]
+  }
+ },
+ "INTENS": {
+  "codigo": "INTENS",
+  "nombre": "Bloque corto de intensidad",
+  "tipo": "fis",
+  "organizacion": "8 min · sin acumulación",
+  "clave": "Mantener el tono. El desarrollo físico del año terminó el 23 de marzo.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "MANEJO": {
+  "codigo": "MANEJO",
+  "nombre": "Manejo y pase cómodo",
+  "tipo": "tec",
+  "organizacion": "4 tríos · 1 balón · a lo ancho",
+  "clave": "Sin exigencia. Manos calientes y cabeza alta.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "C55C": {
+  "codigo": "C55C",
+  "nombre": "5c5 controlado",
+  "tipo": "jue",
+  "organizacion": "10 + 2 rotando · corrección mínima",
+  "clave": "Poco volumen. Que salgan convencidas vale más que cualquier contenido añadido.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "REVIS": {
+  "codigo": "REVIS",
+  "nombre": "Revisión del partido",
+  "tipo": "org",
+  "organizacion": "Dos o tres correcciones concretas, no más",
+  "clave": "Se corrige lo que se repitió, no lo que salió mal una vez.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "ESPEC": {
+  "codigo": "ESPEC",
+  "nombre": "Trabajo específico contra el próximo rival",
+  "tipo": "jue",
+  "organizacion": "Qué defensa de inicio, cómo atacar la suya, a quién no dejar tirar",
+  "clave": "",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F17-N3": {
+  "codigo": "F17-N3",
+  "nombre": "Saque de banda en ataque · «Dos cortes»",
+  "tipo": "jue",
+  "organizacion": "Fila en la línea de tiro libre",
+  "clave": "El corte solo funciona si la segunda no se mueve antes: la fila es lo que tapa a la defensora.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": "F17",
+  "nivel": "N3",
+  "diagrama": {
+   "v": "m",
+   "o": [
+    [
+     148,
+     60,
+     "1",
+     1
+    ],
+    [
+     75,
+     56,
+     "2"
+    ],
+    [
+     75,
+     68,
+     "3"
+    ],
+    [
+     26,
+     62,
+     "4"
+    ],
+    [
+     120,
+     18,
+     "5"
+    ]
+   ],
+   "mv": [
+    [
+     75,
+     54,
+     84,
+     24,
+     8
+    ],
+    [
+     75,
+     70,
+     124,
+     62,
+     -8
+    ]
+   ],
+   "ps": [
+    [
+     144,
+     58,
+     90,
+     26
+    ]
+   ],
+   "t": "Dos cortes. 2 corta al aro desde la fila y 3 sale al balón por detrás. 3 no se mueve antes que 2."
+  },
+  "detalle": {
+   "m": [
+    "Dos jugadoras en fila en la línea de tiro libre.",
+    "La primera corta al aro; la segunda sale al balón por detrás.",
+    "Una arriba y una en la esquina contraria, como espaciado y seguridad."
+   ],
+   "e": [
+    "Que la segunda se mueva antes que la primera: la fila es lo que tapa a la defensora.",
+    "Cortar de lado en vez de al aro."
+   ],
+   "a": [
+    "Si la defensa lo lee, cambia el orden: que salga primero la de detrás."
+   ]
+  }
+ },
+ "F17-N4": {
+  "codigo": "F17-N4",
+  "nombre": "Saque de banda bajo presión · «Estructura»",
+  "tipo": "jue",
+  "organizacion": "Pista completa · no es una jugada",
+  "clave": "Tres funciones cubiertas siempre: la que viene, la que queda y la que sale.",
+  "defensa": "Aquí es donde los equipos cadete pierden partidos ganados.",
+  "marcador": "",
+  "cita": "",
+  "familia": "F17",
+  "nivel": "N4",
+  "diagrama": {
+   "v": "c",
+   "o": [
+    [
+     60,
+     4,
+     "1",
+     1
+    ],
+    [
+     88,
+     46,
+     "2"
+    ],
+    [
+     42,
+     112,
+     "3"
+    ],
+    [
+     146,
+     30,
+     "4"
+    ],
+    [
+     100,
+     20,
+     "5"
+    ]
+   ],
+   "mv": [
+    [
+     84,
+     42,
+     68,
+     24,
+     8
+    ],
+    [
+     98,
+     22,
+     88,
+     38,
+     0
+    ],
+    [
+     152,
+     32,
+     230,
+     42,
+     0
+    ]
+   ],
+   "ps": [
+    [
+     63,
+     7,
+     68,
+     20
+    ]
+   ],
+   "t": "Bajo presión. Una viene al balón, una queda atrás de seguridad y una sale larga. Siempre las tres."
+  },
+  "detalle": {
+   "m": [
+    "No es una jugada, es una colocación que hay que saber siempre.",
+    "Una viene al balón con bloqueo, una queda atrás como receptora de seguridad y una sale larga.",
+    "Si a la que viene le niegan, va puerta atrás y entra la de seguridad."
+   ],
+   "e": [
+    "Que la receptora de seguridad se aleje buscando el balón: si se va, no hay salida.",
+    "Que salgan todas hacia el balón y quede el campo vacío."
+   ],
+   "a": [
+    "Ensáyalo con presión real, no con defensa pasiva. Sin presión no se aprende nada aquí."
+   ]
+  }
+ },
+ "MEJOR": {
+  "codigo": "MEJOR",
+  "nombre": "Lo que mejor hace el equipo, repetido",
+  "tipo": "jue",
+  "organizacion": "Sin contenido nuevo",
+  "clave": "Última semana: solo lo que sale bien, ejecutado mejor.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "F17TODO": {
+  "codigo": "F17TODO",
+  "nombre": "F17 completo · los cuatro saques",
+  "tipo": "jue",
+  "organizacion": "Repaso de las cuatro situaciones",
+  "clave": "",
+  "defensa": "",
+  "marcador": "Escenarios resueltos: seis situaciones de últimos segundos, se anota cuántas resuelve cada equipo.",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "CIERRE1F": {
+  "codigo": "CIERRE1F",
+  "nombre": "Charla de cierre de la 1ª Fase",
+  "tipo": "org",
+  "organizacion": "Tres ideas y el escenario que viene",
+  "clave": "",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "ESCEN": {
+  "codigo": "ESCEN",
+  "nombre": "Preparación del escenario de 2ª Fase",
+  "tipo": "jue",
+  "organizacion": "Sorteo hecho el 28 de abril",
+  "clave": "Play-Off: eliminatoria al mejor de 2, la diferencia de puntos decide el empate. Grupos de clasificación: reparto de minutos máximo. Descenso: microciclo de M3.",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ },
+ "CIERRE": {
+  "codigo": "CIERRE",
+  "nombre": "Cierre de temporada",
+  "tipo": "org",
+  "organizacion": "Test final · reunión individual · informe de junio",
+  "clave": "",
+  "defensa": "",
+  "marcador": "",
+  "cita": "",
+  "familia": null,
+  "nivel": null,
+  "diagrama": null,
+  "detalle": null
+ }
+}

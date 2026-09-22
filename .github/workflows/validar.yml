@@ -1,0 +1,66 @@
+name: Validar
+
+# La web se despliega desde Cloudflare Pages, que compila por su cuenta al
+# empujar a main. Aquí solo se valida, para que un fallo salte en el repositorio
+# y no en un móvil a pie de pista.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerar los datos desde las fuentes
+        run: python3 scripts/generar.py
+
+      # La comprobación que de verdad importa. Si alguien edita un documento de
+      # fuentes/ y no vuelve a generar, la web serviría la versión vieja sin
+      # avisar a nadie. Aquí se ve.
+      - name: Comprobar que data/ está al día con fuentes/
+        run: |
+          if ! git diff --quiet -- data/; then
+            echo "::error::data/ no coincide con fuentes/. Ejecuta: python3 scripts/generar.py"
+            git diff --stat -- data/
+            exit 1
+          fi
+          echo "lo generado está al día"
+
+      - name: Validar la sintaxis del JavaScript
+        run: for f in assets/js/*.js; do node --check "$f"; done
+
+      - name: Comprobar que el sitio se arma
+        run: bash scripts/preparar-sitio.sh
+
+      # Lo que NO se publica es tan importante como lo que sí: fuentes/ son los
+      # documentos de trabajo del entrenador y no tienen por qué ser
+      # descargables desde la dirección que se reparte.
+      - name: Comprobar que no se publica nada de fuentes/
+        run: |
+          if find _sitio -path '*fuentes*' | grep -q .; then
+            echo "::error::se estaría publicando algo de fuentes/"
+            exit 1
+          fi
+          echo "_sitio/ lleva solo la web"
+
+      - name: Instalar Playwright
+        working-directory: pruebas
+        run: npm install --no-audit --no-fund
+
+      - name: Instalar el navegador
+        working-directory: pruebas
+        run: npx playwright install --with-deps chromium
+
+      - name: Pasar las pruebas del navegador
+        run: |
+          python3 -m http.server 8777 &
+          sleep 2
+          node pruebas/ejecutar.js
