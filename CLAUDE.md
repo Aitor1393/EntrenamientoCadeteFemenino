@@ -160,15 +160,22 @@ reparto se guardan en `localStorage` (`cf:rotaciones`) del navegador del
 entrenador y no salen de ahí. Ni `data/`, ni el repositorio, ni ningún
 servidor. Cualquier cambio que la sincronice o la comparta se plantea antes.
 
+Las reglas del reparto son del entrenador, no del plan, y obligan. Si un
+partido no da para todas, `D.repartirMinutos` afloja en un orden fijo —el
+mínimo general, luego los mínimos individuales, y lo último quién tiene que
+estar en pista— y **lo dice**. Nunca se salta una regla en silencio. Los
+minutos van por tandas enteras: «máximo 8» con tandas de 5 es 5, y con tandas
+de 10 es no jugar, y también se avisa.
+
 ---
 
 ## Probar los cambios
 
-Hay **26 pruebas en `pruebas/`** que abren la web en un Chromium de verdad.
+Hay **28 pruebas en `pruebas/`** que abren la web en un Chromium de verdad.
 
 ```bash
 python3 -m http.server 8777          # desde la raíz, en otra terminal
-node pruebas/ejecutar.js             # las 26
+node pruebas/ejecutar.js             # las 28
 node pruebas/ejecutar.js ficha       # solo las que contengan «ficha»
 ```
 

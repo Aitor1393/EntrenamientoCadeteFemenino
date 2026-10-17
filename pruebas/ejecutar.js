@@ -373,7 +373,7 @@ prueba('rotaciones: cada tanda lleva cinco y nadie baja del mínimo si da', asyn
         const f = { cuartos: 4, minCuarto: 10, cambiosPorCuarto, minimo: 10 };
         const js = Array.from({ length: n }, (_, i) => ({
           id: 'j' + i, baja: false, prioridad: ['mas', 'normal', 'menos'][i % 3] }));
-        const plan = D.repartirMinutos(f, js, null, 0);
+        const plan = D.repartirMinutos(f, js, null, 0, []).plan;
         const res = D.resumenRotacion(f, js, plan);
         const tandas = D.tandas(f);
         if (plan.length !== tandas.length) malos.push(`${n}: ${plan.length} tandas`);
@@ -387,6 +387,56 @@ prueba('rotaciones: cada tanda lleva cinco y nadie baja del mínimo si da', asyn
     return malos;
   });
   afirmar(fallos.length === 0, 'el reparto falla: ' + fallos.join(' | '));
+});
+
+prueba('rotaciones: las reglas se cumplen en cada tanda cuando se puede', async (page) => {
+  await ir(page, '/hoy');
+  /* Reglas de los cuatro tipos sobre grupos que se pisan y que no. Las
+     jugadoras de cada regla salen de la convocatoria, no de nombres fijos. */
+  const fallos = await page.evaluate(() => {
+    const malos = [];
+    const js = Array.from({ length: 12 }, (_, i) => ({ id: 'j' + i, prioridad: 'normal', baja: false }));
+    const g = (a, b) => js.slice(a, b).map((j) => j.id);
+    const juegos = [
+      [{ tipo: 'almenos', n: 2, jugadoras: g(0, 3) }, { tipo: 'comomucho', n: 1, jugadoras: g(3, 6) },
+       { tipo: 'maximo', n: 10, jugadoras: g(6, 8) }],
+      [{ tipo: 'almenos', n: 1, jugadoras: g(0, 4) }, { tipo: 'almenos', n: 1, jugadoras: g(2, 6) },
+       { tipo: 'minimo', n: 20, jugadoras: g(10, 12) }],
+      [{ tipo: 'comomucho', n: 2, jugadoras: g(0, 6) }, { tipo: 'maximo', n: 15, jugadoras: g(6, 12) }]
+    ];
+    for (const cambiosPorCuarto of [1, 2]) {
+      juegos.forEach((reglas, n) => {
+        const f = { cuartos: 4, minCuarto: 10, cambiosPorCuarto, minimo: 10 };
+        const r = D.repartirMinutos(f, js, null, 0, reglas);
+        const res = D.resumenRotacion(f, js, r.plan, reglas);
+        if (r.plan.some((t) => t.length !== D.EN_PISTA)) malos.push(`${n}: tanda sin cinco`);
+        /* Si el reparto no avisa de haber aflojado nada, todo tiene que cumplirse. */
+        if (!r.avisos.some((a) => /no las tiene en cuenta/.test(a)) && res.malas.length) {
+          malos.push(`${n}/${cambiosPorCuarto}: ${res.malas.length} tandas se saltan una regla sin avisar`);
+        }
+        if (res.porEncima.length) malos.push(`${n}/${cambiosPorCuarto}: alguna pasa de su máximo`);
+      });
+    }
+    return malos;
+  });
+  afirmar(fallos.length === 0, 'las reglas fallan: ' + fallos.join(' | '));
+});
+
+prueba('rotaciones: una regla se añade desde la pantalla y entra en el reparto', async (page) => {
+  await ir(page, '/rotaciones');
+  await page.click('[data-accion="rot-doce"]');
+  const ids = await page.evaluate(() => App.rot().plantilla.map((j) => j.id));
+  await page.click('[data-accion="rot-regla-tipo"][data-valor="comomucho"]');
+  await page.fill('#rotReglaN', '1');
+  for (const id of ids.slice(0, 3)) {
+    await page.click(`[data-accion="rot-regla-jugadora"][data-id="${id}"]`);
+  }
+  await page.click('[data-accion="rot-regla-anadir"]');
+  afirmar(await page.$$eval('.rot__reglas li', (n) => n.length) === 1, 'la regla no aparece en la lista');
+  await page.click('[data-accion="rot-repartir"]');
+  const juntas = await page.evaluate((grupo) => App.rot().partido.plan
+    .filter((t) => t.filter((id) => grupo.includes(id)).length > 1).length, ids.slice(0, 3));
+  afirmar(juntas === 0, `${juntas} tandas tienen a dos del grupo de «como mucho una»`);
 });
 
 prueba('rotaciones: una baja recalcula el resto sin tocar lo jugado', async (page) => {

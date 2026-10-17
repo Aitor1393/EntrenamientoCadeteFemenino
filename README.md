@@ -15,7 +15,7 @@ compilación, sin framework. Se sirve la carpeta y funciona.
 |---|---|
 | **Hoy** | Qué toca hoy. Si hay sesión, el titular es su tema y el botón grande abre la ficha; si no, dice cuál es la siguiente y cuántos días faltan |
 | **Calendario** | Las 66 sesiones por bloque, agrupadas por semana, con la jornada del sábado y una barra que enseña el reparto de cada sesión |
-| **Rotaciones** | El reparto de minutos del partido: convocatoria, quién juega cada tanda, quién entra y quién sale en cada cambio, y recálculo si una se lesiona o se carga de faltas. Aplica el mínimo que fija el plan para el bloque. La plantilla se guarda solo en el navegador |
+| **Rotaciones** | El reparto de minutos del partido: convocatoria, quién juega cada tanda, quién entra y quién sale en cada cambio, y recálculo si una se lesiona o se carga de faltas. Aplica el mínimo que fija el plan para el bloque y las reglas del entrenador: «siempre al menos N de estas en pista», «como mucho N a la vez», y máximos o mínimos de minutos por jugadora. La plantilla se guarda solo en el navegador |
 | **Familias** | Las 19 familias con sus niveles, buscador y filtro por grupo. Cada familia enseña cuántos minutos se lleva en la temporada y cómo se reparten entre bloques |
 | **El plan** | Las decisiones que ordenan la temporada y los diez documentos completos |
 
@@ -41,7 +41,7 @@ Es la pantalla que se usa de verdad, con el teléfono en la mano:
 ```bash
 python3 scripts/generar.py          # fuentes/ -> data/
 python3 -m http.server 8777         # y abrir http://localhost:8777
-node pruebas/ejecutar.js            # las 26 pruebas, en un Chromium de verdad
+node pruebas/ejecutar.js            # las 28 pruebas, en un Chromium de verdad
 ```
 
 **`data/` no se edita a mano nunca.** Se genera. El contenido deportivo vive en

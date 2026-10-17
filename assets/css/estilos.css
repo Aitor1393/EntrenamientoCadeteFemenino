@@ -528,6 +528,16 @@ p { margin: .5rem 0; }
 }
 .rot__celda[aria-pressed="true"] { background: var(--acento); border-color: var(--acento); }
 
+.rot__reglas { list-style: none; padding: 0; margin: .5rem 0; display: grid; gap: .35rem; }
+.rot__reglas li {
+  display: flex; justify-content: space-between; align-items: center; gap: .5rem;
+  background: var(--papel); border: 1px solid var(--borde); border-radius: var(--radio);
+  padding: .45rem .6rem; line-height: 1.3;
+}
+.rot__n { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; margin: .3rem 0; }
+.rot__n input { width: 4.5rem; text-align: center; }
+.btn[disabled] { opacity: .45; cursor: default; }
+
 .rot__recalcular { display: flex; flex-wrap: wrap; align-items: end; gap: .5rem; }
 .rot__recalcular label { display: grid; gap: .2rem; font-size: .8rem; color: var(--tinta-suave); }
 
@@ -583,5 +593,5 @@ p { margin: .5rem 0; }
   /* El reparto en papel: casillas con tinta aunque la impresora quite fondos. */
   .rot__celda { border-color: #666; }
   .rot__celda[aria-pressed="true"] { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .rot__recalcular, .rot__convocatoria, .rot__formato, #rotPlantilla, .filtros { display: none !important; }
+  .rot__recalcular, .rot__convocatoria, .rot__formato, .rot__nueva, #rotPlantilla, .filtros { display: none !important; }
 }

@@ -572,6 +572,48 @@
     return t.cuarto + 'º cuarto' + (formato.cambiosPorCuarto === 1 ? '' : ' · minuto ' + t.desde);
   }
 
+  /* Las reglas del entrenador: las que hay, y el formulario para añadir otra. */
+  V.reglas = function (r, nueva, nombres) {
+    var h = '<h3>Reglas</h3><p class="pequeno silencio">Se cumplen siempre que se pueda. ' +
+      'Si un partido no da para todas, el reparto lo dice.</p>';
+    var frase = function (rg) {
+      var t = D.TIPOS_REGLA[rg.tipo];
+      return t.texto + ' ' + rg.n + ' ' + t.unidad;
+    };
+    if (r.reglas.length) {
+      h += '<ul class="rot__reglas">' + r.reglas.map(function (rg) {
+        return '<li><div><b>' + e(frase(rg)) + '</b><br><span class="pequeno">' +
+          rg.jugadoras.map(function (id) { return e(nombres[id] || '?'); }).join(', ') +
+          '</span></div><button class="btn btn--icono" type="button" data-accion="rot-regla-quitar" ' +
+          'data-id="' + e(rg.id) + '" aria-label="Quitar la regla ' + e(frase(rg)) + '">×</button></li>';
+      }).join('') + '</ul>';
+    }
+
+    var tipo = D.TIPOS_REGLA[nueva.tipo];
+    h += '<details class="plegable rot__nueva" id="rotNueva"' +
+      (r.reglas.length && !nueva.abierta ? '' : ' open') +
+      '><summary>Añadir una regla</summary>';
+    h += '<div class="filtros" role="group" aria-label="Tipo de regla">' +
+      [['almenos', 'Siempre al menos N en pista'], ['comomucho', 'Como mucho N a la vez'],
+       ['maximo', 'Máximo de minutos'], ['minimo', 'Mínimo de minutos']].map(function (o) {
+        return '<button class="filtro" type="button" data-accion="rot-regla-tipo" data-valor="' +
+          o[0] + '" aria-pressed="' + (nueva.tipo === o[0]) + '">' + o[1] + '</button>';
+      }).join('') + '</div>';
+    h += '<label class="rot__n">' + e(tipo.texto) + ' <input class="campoTexto" id="rotReglaN" ' +
+      'type="number" inputmode="numeric" min="0" max="80" value="' + nueva.n + '"> ' +
+      e(tipo.unidad) + '</label>';
+    h += '<p class="pequeno silencio">' + (tipo.grupo ? 'De estas jugadoras:' : 'Para cada una de estas:') +
+      '</p><div class="filtros" role="group" aria-label="Jugadoras de la regla">' +
+      r.plantilla.map(function (j) {
+        return '<button class="filtro" type="button" data-accion="rot-regla-jugadora" data-id="' +
+          e(j.id) + '" aria-pressed="' + (nueva.jugadoras.indexOf(j.id) >= 0) + '">' +
+          e(nombres[j.id]) + '</button>';
+      }).join('') + '</div>';
+    h += '<p><button class="btn" type="button" data-accion="rot-regla-anadir"' +
+      (nueva.jugadoras.length ? '' : ' disabled') + '>Añadir regla</button></p></details>';
+    return h;
+  };
+
   V.rotaciones = function (r, ui) {
     var p = r.partido;
     var nombres = {};
@@ -659,6 +701,8 @@
     });
     h += '</div>';
 
+    h += V.reglas(r, ui.regla, nombres);
+
     var jugadoras = D.convocadas(r);
     if (jugadoras.length < D.EN_PISTA) {
       return h + '<div class="caja caja--aviso"><p>Hacen falta al menos cinco convocadas ' +
@@ -676,10 +720,11 @@
     }
 
     /* -- el reparto */
-    var res = D.resumenRotacion(p, jugadoras, plan);
+    var res = D.resumenRotacion(p, jugadoras, plan, r.reglas);
     h += '<h2 id="rotReparto">El reparto</h2>';
-    if (res.avisos.length) {
-      h += '<div class="caja caja--aviso">' + res.avisos.map(function (a) {
+    var avisos = p.avisosReparto.concat(res.avisos);
+    if (avisos.length) {
+      h += '<div class="caja caja--aviso">' + avisos.map(function (a) {
         return '<p>' + e(a) + '</p>';
       }).join('') + '</div>';
     }
@@ -694,7 +739,7 @@
     });
     h += '<th class="rot__min">Min</th></tr></thead><tbody>';
     jugadoras.forEach(function (j) {
-      var bajo = res.porDebajo.indexOf(j.id) >= 0;
+      var bajo = res.porDebajo.indexOf(j.id) >= 0 || res.porEncima.indexOf(j.id) >= 0;
       h += '<tr' + (j.baja ? ' class="rot__baja"' : '') + '><th scope="row">' + e(nombres[j.id]) +
         (j.baja ? ' <span class="eti eti--alarma">baja</span>' : '') + '</th>';
       plan.forEach(function (t, i) {
@@ -709,7 +754,7 @@
     });
     h += '</tbody><tfoot><tr><th>En pista</th>';
     plan.forEach(function (t, i) {
-      h += '<td class="rot__td' + (t.length !== D.EN_PISTA ? ' rot__min--bajo' : '') +
+      h += '<td class="rot__td' + (res.malas.indexOf(i) >= 0 ? ' rot__min--bajo' : '') +
         (res.tandas[i].desde === 0 && i ? ' rot__th--cuarto' : '') + '">' + t.length + '</td>';
     });
     h += '<td></td></tr></tfoot></table></div>';

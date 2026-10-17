@@ -17,7 +17,8 @@
     [/^\/familia\/(F\d+)$/, function (m) { return V.familia(m[1]); }],
     [/^\/ejercicio\/([\w-]+)$/, function (m) { return V.ejercicio(m[1]); }],
     [/^\/rotaciones$/, function () {
-      return V.rotaciones(App.rot(), { hoy: U.hoyIso(), plantillaAbierta: App.estado.plantillaAbierta });
+      return V.rotaciones(App.rot(), { hoy: U.hoyIso(), plantillaAbierta: App.estado.plantillaAbierta,
+                                       regla: App.estado.regla });
     }],
     [/^\/plan$/, function () { return V.plan(); }],
     [/^\/doc\/([\w-]+)$/, function (m) { return V.documento(m[1]); }]
@@ -214,8 +215,14 @@
     var r = App.rot();
     var p = r.partido;
     p.desde = desde;
-    p.plan = D.repartirMinutos(p, D.convocadas(r), D.planVigente(r), desde);
+    var res = D.repartirMinutos(p, D.convocadas(r), D.planVigente(r), desde, r.reglas);
+    p.plan = res.plan;
+    p.avisosReparto = res.avisos;
   };
+
+  /* La regla que se está escribiendo. Vive aquí y no en lo guardado: hasta
+     que no se pulsa «Añadir regla» no es una regla. */
+  App.estado.regla = { tipo: 'almenos', n: 1, jugadoras: [] };
 
   /* Las acciones de la pantalla de rotaciones. Devuelve true si la ha atendido. */
   App.accionRot = function (boton) {
@@ -231,6 +238,10 @@
       App.estado.plantillaAbierta = true;
     } else if (accion === 'rot-quitar') {
       r.plantilla = r.plantilla.filter(function (j) { return j.id !== id; });
+      r.reglas.forEach(function (rg) {
+        rg.jugadoras = rg.jugadoras.filter(function (x) { return x !== id; });
+      });
+      r.reglas = r.reglas.filter(function (rg) { return rg.jugadoras.length; });
     } else if (accion === 'rot-borrar') {
       if (!window.confirm('¿Borrar la plantilla y el reparto de este navegador?')) return true;
       App._rot = D.normalizarRotaciones(null);
@@ -240,6 +251,22 @@
       p.convocadas[id] = p.convocadas[id] === false;
     } else if (accion === 'rot-prioridad') {
       p.prioridad[id] = valor;
+    } else if (accion === 'rot-regla-tipo') {
+      App.estado.regla.tipo = valor;
+      App.estado.regla.n = D.TIPOS_REGLA[valor].grupo ? 1 : 10;
+    } else if (accion === 'rot-regla-jugadora') {
+      var sel = App.estado.regla.jugadoras;
+      var at = sel.indexOf(id);
+      if (at >= 0) sel.splice(at, 1); else sel.push(id);
+    } else if (accion === 'rot-regla-anadir') {
+      var nueva = App.estado.regla;
+      if (!nueva.jugadoras.length) return true;
+      r.reglas.push({ id: 'r' + Date.now(), tipo: nueva.tipo, n: nueva.n,
+                      jugadoras: nueva.jugadoras.slice() });
+      /* Se queda abierto: lo normal es meter varias reglas seguidas. */
+      App.estado.regla = { tipo: nueva.tipo, n: nueva.n, jugadoras: [], abierta: true };
+    } else if (accion === 'rot-regla-quitar') {
+      r.reglas = r.reglas.filter(function (rg) { return rg.id !== id; });
     } else if (accion === 'rot-repartir') {
       p.bajas = {};
       App.repartir(0);
@@ -333,6 +360,10 @@
     });
 
     document.addEventListener('change', function (ev) {
+      if (ev.target.id === 'rotReglaN') {
+        App.estado.regla.n = Math.max(0, Math.round(+ev.target.value) || 0);
+        return;
+      }
       var formato = ev.target.getAttribute('data-formato');
       if (!formato) return;
       var p = App.rot().partido;
@@ -343,6 +374,7 @@
 
     document.addEventListener('toggle', function (ev) {
       if (ev.target.id === 'rotPlantilla') App.estado.plantillaAbierta = ev.target.open;
+      if (ev.target.id === 'rotNueva') App.estado.regla.abierta = ev.target.open;
     }, true);
 
     document.addEventListener('input', function (ev) {

@@ -334,6 +334,12 @@
       return isFinite(v) && v >= min && v <= max ? v : def;
     };
     return {
+      reglas: (Array.isArray(r.reglas) ? r.reglas : []).filter(function (rg) {
+        return rg && D.TIPOS_REGLA[rg.tipo] && Array.isArray(rg.jugadoras);
+      }).map(function (rg, i) {
+        return { id: String(rg.id || 'r' + Date.now() + i), tipo: rg.tipo,
+                 n: entero(rg.n, 1, 0, 80), jugadoras: rg.jugadoras.map(String) };
+      }),
       plantilla: plantilla.map(function (j, i) {
         return { id: String(j.id || 'j' + Date.now() + i),
                  dorsal: String(j.dorsal || ''), nombre: String(j.nombre || '') };
@@ -347,6 +353,7 @@
         prioridad: p.prioridad && typeof p.prioridad === 'object' ? p.prioridad : {},
         bajas: p.bajas && typeof p.bajas === 'object' ? p.bajas : {},
         plan: Array.isArray(p.plan) ? p.plan : null,
+        avisosReparto: Array.isArray(p.avisosReparto) ? p.avisosReparto : [],
         desde: entero(p.desde, 0, 0, 40)
       }
     };
@@ -400,15 +407,123 @@
     return Math.max(1, Math.ceil(minimo / largo));
   }
 
+  /* ------------------------------------------------------------- reglas
+
+     Cuatro tipos, todos del entrenador y no del plan:
+       almenos   · siempre al menos N de estas en pista
+       comomucho · como mucho N de estas a la vez
+       maximo    · cada una de estas, como mucho N minutos
+       minimo    · cada una de estas, al menos N minutos
+     Los minutos se cuentan en tandas enteras: un máximo de 8 con tandas de 5
+     es una tanda, porque una segunda ya serían 10. */
+
+  D.TIPOS_REGLA = {
+    almenos: { texto: 'Siempre al menos', unidad: 'en pista', grupo: true },
+    comomucho: { texto: 'Como mucho', unidad: 'a la vez en pista', grupo: true },
+    maximo: { texto: 'Máximo', unidad: 'minutos cada una', grupo: false },
+    minimo: { texto: 'Mínimo', unidad: 'minutos cada una', grupo: false }
+  };
+
+  /* Las reglas que tocan a esta convocatoria, ya traducidas a tandas y sin
+     las jugadoras de baja o no convocadas. Una regla de grupo que pide más de
+     las que quedan se rebaja a las que hay, y se avisa. */
+  function reglasEfectivas(reglas, libres, largo, total) {
+    var ids = libres.map(function (j) { return j.id; });
+    var grupos = [], limites = {}, avisos = [];
+    ids.forEach(function (id) { limites[id] = { min: 0, max: total }; });
+    (reglas || []).forEach(function (rg) {
+      var dentro = (rg.jugadoras || []).filter(function (id) { return ids.indexOf(id) >= 0; });
+      if (!dentro.length) return;
+      if (rg.tipo === 'almenos' || rg.tipo === 'comomucho') {
+        var n = rg.n;
+        if (rg.tipo === 'almenos' && n > dentro.length) {
+          avisos.push('«Siempre al menos ' + n + '» solo tiene ' + dentro.length +
+            ' disponibles: se pide a las ' + dentro.length + '.');
+          n = dentro.length;
+        }
+        grupos.push({ tipo: rg.tipo, n: n, ids: dentro });
+      } else if (rg.tipo === 'maximo') {
+        var tope = Math.floor(rg.n / largo);
+        if (tope * largo !== rg.n) {
+          avisos.push('Con tandas de ' + largo + ' minutos, un máximo de ' + rg.n +
+            (tope ? ' se queda en ' + tope * largo + '.' : ' es no jugar.'));
+        }
+        dentro.forEach(function (id) {
+          limites[id].max = Math.min(limites[id].max, tope);
+        });
+      } else if (rg.tipo === 'minimo') {
+        dentro.forEach(function (id) {
+          limites[id].min = Math.max(limites[id].min, Math.ceil(rg.n / largo));
+        });
+      }
+    });
+    return { grupos: grupos, limites: limites, avisos: avisos };
+  }
+
+  function cumpleGrupos(quinteto, grupos) {
+    for (var g = 0; g < grupos.length; g++) {
+      var c = 0;
+      for (var i = 0; i < quinteto.length; i++) if (grupos[g].ids.indexOf(quinteto[i]) >= 0) c++;
+      if (grupos[g].tipo === 'almenos' ? c < grupos[g].n : c > grupos[g].n) return false;
+    }
+    return true;
+  }
+
+  /* Todos los quintetos posibles que cumplen las reglas de grupo. Con doce son
+     792 como mucho: se pueden mirar todos. */
+  function quintetos(ids, k, grupos) {
+    var out = [], actual = [];
+    function rec(desde) {
+      if (actual.length === k) {
+        if (cumpleGrupos(actual, grupos)) out.push(actual.slice());
+        return;
+      }
+      for (var i = desde; i <= ids.length - (k - actual.length); i++) {
+        actual.push(ids[i]); rec(i + 1); actual.pop();
+      }
+    }
+    rec(0);
+    return out;
+  }
+
   /* Reparte las tandas de `desde` en adelante; las anteriores se quedan como
      están, porque ya se han jugado.
 
-     Primero se asegura el mínimo; las tandas que sobran se dan una a una a
-     quien lleve menos en proporción a su peso. Luego se colocan: en cada tanda
-     salen las que más tandas les quedan, que es lo que garantiza llenar todas
-     sin que a nadie le sobren. A igualdad, sigue en pista quien acaba de
-     entrar —menos cambios— y descansa quien lleva dos seguidas. */
-  D.repartirMinutos = function (formato, jugadoras, plan, desde) {
+     Primero decide cuántas tandas le tocan a cada una: el mínimo, y lo que
+     sobra a quien lleve menos en proporción a su prioridad, sin pasar ningún
+     máximo. Eso es el objetivo, y se persigue sin obligar.
+
+     Lo que obliga son las reglas. Se busca tanda a tanda entre los quintetos
+     que las cumplen, prefiriendo a quien más lejos está de su objetivo; a
+     igualdad sigue en pista quien acaba de entrar —menos cambios— y descansa
+     quien lleva dos seguidas. Si una elección deja el resto sin salida, se
+     vuelve atrás. Si no hay manera de cumplirlo todo, se afloja en este orden
+     y se dice: primero el mínimo general, luego las reglas de grupo. */
+  D.repartirMinutos = function (formato, jugadoras, plan, desde, reglas) {
+    /* De lo que menos a lo que más pesa: el mínimo general, los mínimos de
+       cada una y, al final, quién tiene que estar en pista. «Nadie a cero» no
+       se suelta mientras quede alguna regla de grupo en pie. */
+    var sinMinimos = (reglas || []).filter(function (rg) { return rg.tipo !== 'minimo'; });
+    var intentos = [
+      { reglas: reglas, minimo: true, grupos: true, aviso: null },
+      { reglas: reglas, minimo: false, grupos: true,
+        aviso: 'Con estas reglas no llegan todas al mínimo general: se ha asegurado solo que nadie se quede a cero.' },
+      { reglas: sinMinimos, minimo: false, grupos: true,
+        aviso: 'Con estas reglas no caben los mínimos de minutos que has puesto: se han dejado fuera.' },
+      { reglas: reglas, minimo: false, grupos: false,
+        aviso: 'No hay forma de cumplir las reglas de «siempre al menos» y «como mucho» con esta convocatoria: este reparto no las tiene en cuenta. Revísalas.' }
+    ];
+    for (var i = 0; i < intentos.length; i++) {
+      var r = repartir(formato, jugadoras, plan, desde, intentos[i].reglas, intentos[i]);
+      if (r.plan) {
+        if (intentos[i].aviso) r.avisos.push(intentos[i].aviso);
+        return r;
+      }
+    }
+    return repartir(formato, jugadoras, plan, desde, [], { minimo: false, grupos: false, forzar: true });
+  };
+
+  function repartir(formato, jugadoras, plan, desde, reglas, modo) {
     var tandas = D.tandas(formato);
     var total = tandas.length;
     var largo = tandas[0].minutos;
@@ -424,64 +539,162 @@
     });
 
     var libres = jugadoras.filter(function (j) { return !j.baja; });
+    var libresIds = libres.map(function (j) { return j.id; });
     var quedan = total - desde;
-    var huecos = Math.min(D.EN_PISTA, libres.length) * quedan;
-    var minimas = tandasMinimas(formato.minimo, largo);
+    var k = Math.min(D.EN_PISTA, libres.length);
+    var ef = reglasEfectivas(reglas, libres, largo, total);
+    var grupos = modo.grupos ? ef.grupos : [];
+    var avisos = ef.avisos.slice();
+    var general = modo.minimo ? tandasMinimas(formato.minimo, largo) : 1;
 
-    var extra = {};
+    /* Límites de cada una en tandas totales, contando lo ya jugado. Si una
+       regla de máximo choca con el mínimo, manda la regla: es más concreta. */
+    var lim = {};
     libres.forEach(function (j) {
-      extra[j.id] = Math.min(quedan, Math.max(0, minimas - jugadas[j.id]));
+      var l = ef.limites[j.id];
+      var max = Math.max(jugadas[j.id], Math.min(l.max, jugadas[j.id] + quedan));
+      var min = Math.max(general, l.min);
+      if (l.max < min && l.max < general) min = l.max;
+      lim[j.id] = { min: Math.min(min, max), max: max };
     });
-    var suma = function () {
-      return libres.reduce(function (n, j) { return n + extra[j.id]; }, 0);
-    };
+
+    /* El objetivo. */
     var peso = function (j) { return D.PESOS[j.prioridad] || 1; };
-
-    /* Si no cabe el mínimo de todas, se quita a las que más llevan. */
-    while (suma() > huecos) {
-      var mayor = libres.filter(function (j) { return extra[j.id] > 0; }).sort(function (a, b) {
-        return (jugadas[b.id] + extra[b.id]) - (jugadas[a.id] + extra[a.id]);
-      })[0];
-      extra[mayor.id]--;
-    }
-    while (suma() < huecos) {
-      var candidata = null, mejor = Infinity;
-      libres.forEach(function (j) {
-        if (extra[j.id] >= quedan) return;
-        var v = (jugadas[j.id] + extra[j.id]) / peso(j);
-        if (v < mejor - 1e-9) { mejor = v; candidata = j; }
+    var obj = {};
+    libres.forEach(function (j) { obj[j.id] = Math.max(jugadas[j.id], lim[j.id].min); });
+    var extra = function (lista) {
+      return lista.reduce(function (n, id) { return n + obj[id] - jugadas[id]; }, 0);
+    };
+    var cabeEnGrupos = function (id) {
+      return grupos.every(function (g) {
+        return g.tipo !== 'comomucho' || g.ids.indexOf(id) < 0 || extra(g.ids) < g.n * quedan;
       });
-      if (!candidata) break;
-      extra[candidata.id]++;
-    }
-
-    var nuevo = fijas.map(function (t) { return t.slice(); });
-    var racha = {};
-    libres.forEach(function (j) {
-      racha[j.id] = 0;
-      for (var i = desde - 1; i >= 0 && fijas[i].indexOf(j.id) >= 0; i--) racha[j.id]++;
+    };
+    var dar = function (lista) {
+      var mejor = null, v = Infinity;
+      lista.forEach(function (id) {
+        var j = libres[libresIds.indexOf(id)];
+        if (obj[id] >= lim[id].max || !cabeEnGrupos(id)) return;
+        var x = obj[id] / peso(j);
+        if (x < v - 1e-9) { v = x; mejor = id; }
+      });
+      if (mejor) obj[mejor]++;
+      return mejor;
+    };
+    grupos.forEach(function (g) {
+      if (g.tipo !== 'almenos') return;
+      while (extra(g.ids) < g.n * quedan && dar(g.ids)) { /* sigue */ }
     });
+    while (extra(libresIds) < k * quedan && dar(libresIds)) { /* sigue */ }
 
-    for (var t = desde; t < total; t++) {
-      var orden = libres.filter(function (j) { return extra[j.id] > 0; }).sort(function (a, b) {
-        if (extra[b.id] !== extra[a.id]) return extra[b.id] - extra[a.id];
-        var sa = racha[a.id] === 1 ? 0 : 1, sb = racha[b.id] === 1 ? 0 : 1;
-        if (sa !== sb) return sa - sb;
-        if (racha[a.id] !== racha[b.id]) return racha[a.id] - racha[b.id];
-        return ids.indexOf(a.id) - ids.indexOf(b.id);
+    /* La búsqueda. */
+    var candidatos = quintetos(libresIds, k, grupos);
+    var racha = {};
+    libresIds.forEach(function (id) {
+      racha[id] = 0;
+      for (var i = desde - 1; i >= 0 && fijas[i].indexOf(id) >= 0; i--) racha[id]++;
+    });
+    var cuenta = {};
+    libresIds.forEach(function (id) { cuenta[id] = jugadas[id]; });
+
+    /* Los sitios que las reglas de «siempre al menos» se quedan en cada tanda.
+       Si los grupos no se pisan, se suman; si se pisan, vale el mayor. Lo que
+       sobra es todo lo que tienen las demás para llegar a su mínimo. */
+    var almenos = grupos.filter(function (g) { return g.tipo === 'almenos'; });
+    var reservados = 0, enGrupo = [];
+    var disjuntos = almenos.every(function (g, i) {
+      return almenos.slice(i + 1).every(function (h) {
+        return g.ids.every(function (id) { return h.ids.indexOf(id) < 0; });
       });
-      var dentro = orden.slice(0, D.EN_PISTA).map(function (j) { return j.id; });
-      libres.forEach(function (j) {
-        if (dentro.indexOf(j.id) >= 0) { extra[j.id]--; racha[j.id]++; } else { racha[j.id] = 0; }
+    });
+    almenos.forEach(function (g) {
+      reservados = disjuntos ? reservados + g.n : Math.max(reservados, g.n);
+      g.ids.forEach(function (id) { if (enGrupo.indexOf(id) < 0) enGrupo.push(id); });
+    });
+    var fuera = libresIds.filter(function (id) { return enGrupo.indexOf(id) < 0; });
+
+    /* ¿Puede acabarse todavía con `n` tandas por delante? No lo asegura del
+       todo, pero corta casi todos los callejones antes de entrar en ellos. */
+    function viable(n) {
+      var faltaFuera = 0;
+      fuera.forEach(function (id) { faltaFuera += Math.max(0, lim[id].min - cuenta[id]); });
+      if (faltaFuera > Math.max(0, k - reservados) * n) return false;
+      var huecos = 0, falta = 0;
+      for (var i = 0; i < libresIds.length; i++) {
+        var id = libresIds[i];
+        var puede = Math.min(n, lim[id].max - cuenta[id]);
+        var necesita = Math.max(0, lim[id].min - cuenta[id]);
+        if (necesita > puede) return false;
+        huecos += puede; falta += necesita;
+      }
+      if (huecos < k * n || falta > k * n) return false;
+      return grupos.every(function (g) {
+        var p = 0, f = 0;
+        g.ids.forEach(function (id) {
+          p += Math.min(n, lim[id].max - cuenta[id]);
+          f += Math.max(0, lim[id].min - cuenta[id]);
+        });
+        return g.tipo === 'almenos' ? p >= g.n * n : f <= g.n * n;
       });
-      nuevo.push(ids.filter(function (id) { return dentro.indexOf(id) >= 0; }));
     }
-    return nuevo;
-  };
+
+    var elegidos = [], pasos = 0, LIMITE = 4000;
+    function buscar(t) {
+      if (t === total) return true;
+      if (++pasos > LIMITE) return false;
+      var n = total - t;
+      var puntuados = [];
+      for (var c = 0; c < candidatos.length; c++) {
+        var q = candidatos[c], ok = true, pts = 0;
+        for (var i = 0; i < q.length; i++) {
+          var id = q[i];
+          if (cuenta[id] >= lim[id].max) { ok = false; break; }
+          pts += (obj[id] - cuenta[id]) / n;
+          /* Llegar al mínimo pesa más que acercarse al objetivo. */
+          pts += 2 * Math.max(0, lim[id].min - cuenta[id]) / n;
+          if (racha[id] === 1) pts += 0.01;
+          else if (racha[id] >= 2) pts -= 0.01;
+        }
+        if (!ok) continue;
+        /* Quien necesita todas las que quedan para su mínimo tiene que estar. */
+        for (var x = 0; x < libresIds.length && ok; x++) {
+          var y = libresIds[x];
+          if (lim[y].min - cuenta[y] >= n && q.indexOf(y) < 0) ok = false;
+        }
+        if (ok) puntuados.push([pts, c]);
+      }
+      puntuados.sort(function (a, b) { return b[0] - a[0] || a[1] - b[1]; });
+      for (var p = 0; p < puntuados.length && p < 40; p++) {
+        var elegido = candidatos[puntuados[p][1]];
+        var antes = {};
+        libresIds.forEach(function (id) {
+          antes[id] = racha[id];
+          if (elegido.indexOf(id) >= 0) { cuenta[id]++; racha[id]++; } else racha[id] = 0;
+        });
+        elegidos.push(elegido);
+        if ((modo.forzar || viable(n - 1)) && buscar(t + 1)) return true;
+        elegidos.pop();
+        libresIds.forEach(function (id) {
+          if (elegido.indexOf(id) >= 0) cuenta[id]--;
+          racha[id] = antes[id];
+        });
+        if (pasos > LIMITE) return false;
+      }
+      return false;
+    }
+
+    if (!buscar(desde)) return { plan: null, avisos: avisos };
+    var nuevo = fijas.map(function (t) { return t.slice(); });
+    elegidos.forEach(function (q) {
+      nuevo.push(ids.filter(function (id) { return q.indexOf(id) >= 0; }));
+    });
+    return { plan: nuevo, avisos: avisos };
+  }
 
   /* Todo lo que se lee de un reparto: minutos de cada una, cuántas hay en pista
-     en cada tanda, quién entra y quién sale, y lo que no cuadra. */
-  D.resumenRotacion = function (formato, jugadoras, plan) {
+     en cada tanda, quién entra y quién sale, y lo que no cuadra. Sirve igual
+     para el reparto calculado que para uno tocado a mano. */
+  D.resumenRotacion = function (formato, jugadoras, plan, reglas) {
     var tandas = D.tandas(formato);
     var largo = tandas[0].minutos;
     var minutos = {};
@@ -500,17 +713,40 @@
     });
 
     var minimo = tandasMinimas(formato.minimo, largo) * largo;
+    var ef = reglasEfectivas(reglas, jugadoras.filter(function (j) { return !j.baja; }), largo,
+      tandas.length);
     var avisos = [];
-    var cortas = plan.map(function (t, i) { return t.length !== D.EN_PISTA ? i : -1; })
-      .filter(function (i) { return i >= 0; });
-    if (cortas.length) {
-      avisos.push(U.plural(cortas.length, 'tanda no tiene', 'tandas no tienen') +
+    var malas = plan.map(function (t, i) {
+      return t.length !== D.EN_PISTA || !cumpleGrupos(t, ef.grupos) ? i : -1;
+    }).filter(function (i) { return i >= 0; });
+    var cortas = plan.filter(function (t) { return t.length !== D.EN_PISTA; }).length;
+    if (cortas) {
+      avisos.push(U.plural(cortas, 'tanda no tiene', 'tandas no tienen') +
         ' exactamente cinco en pista.');
     }
-    var porDebajo = jugadoras.filter(function (j) { return minutos[j.id] < minimo; });
+    var fuera = plan.filter(function (t) { return !cumpleGrupos(t, ef.grupos); }).length;
+    if (fuera) {
+      avisos.push(U.plural(fuera, 'tanda se salta', 'tandas se saltan') +
+        ' una regla de quién tiene que estar en pista.');
+    }
+
+    /* Por debajo: del mínimo general, o del de su regla. Por encima: de su
+       máximo. Una regla de máximo por debajo del general manda sobre él. */
+    var porDebajo = [], porEncima = [];
+    jugadoras.forEach(function (j) {
+      var l = ef.limites[j.id] || { min: 0, max: tandas.length };
+      var min = Math.max(minimo, l.min * largo);
+      if (l.max * largo < min) min = l.max * largo;
+      if (minutos[j.id] < min) porDebajo.push(j.id);
+      if (minutos[j.id] > l.max * largo) porEncima.push(j.id);
+    });
     if (porDebajo.length) {
       avisos.push(U.plural(porDebajo.length, 'jugadora se queda', 'jugadoras se quedan') +
-        ' por debajo de ' + minimo + ' minutos.');
+        ' por debajo de su mínimo.');
+    }
+    if (porEncima.length) {
+      avisos.push(U.plural(porEncima.length, 'jugadora pasa', 'jugadoras pasan') +
+        ' de su máximo de minutos.');
     }
     var posible = Math.floor(D.EN_PISTA * tandas.length / Math.max(1, jugadoras.length)) * largo;
     if (minimo > posible) {
@@ -520,7 +756,7 @@
 
     return {
       tandas: tandas, minutos: minutos, cambios: cambios, minimo: minimo,
-      porDebajo: porDebajo.map(function (j) { return j.id; }), avisos: avisos
+      porDebajo: porDebajo, porEncima: porEncima, malas: malas, avisos: avisos
     };
   };
 
