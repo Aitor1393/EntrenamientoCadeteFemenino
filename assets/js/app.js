@@ -16,6 +16,9 @@
     [/^\/familias$/, function () { return V.familias(App.estado); }],
     [/^\/familia\/(F\d+)$/, function (m) { return V.familia(m[1]); }],
     [/^\/ejercicio\/([\w-]+)$/, function (m) { return V.ejercicio(m[1]); }],
+    [/^\/rotaciones$/, function () {
+      return V.rotaciones(App.rot(), { hoy: U.hoyIso(), plantillaAbierta: App.estado.plantillaAbierta });
+    }],
     [/^\/plan$/, function () { return V.plan(); }],
     [/^\/doc\/([\w-]+)$/, function (m) { return V.documento(m[1]); }]
   ];
@@ -185,6 +188,82 @@
     App.marcar();
   };
 
+  /* ------------------------------------------------------------ rotaciones
+
+     La plantilla y los repartos se guardan solo en este navegador. Son datos
+     de menores: no van a data/, ni al repositorio, ni a ningún servidor. */
+
+  App.rot = function () {
+    if (!App._rot) App._rot = D.normalizarRotaciones(U.leer('rotaciones', null));
+    return App._rot;
+  };
+
+  App.guardarRot = function (repintar) {
+    U.guardar('rotaciones', App._rot);
+    if (!repintar) return;
+    /* Repintar se lleva el foco por delante; se devuelve al campo que lo tenía
+       para que pasar de un nombre al siguiente no obligue a tocar dos veces. */
+    var activo = document.activeElement && document.activeElement.id;
+    App.sinSubir = true;
+    App.pintar();
+    var campo = activo && document.getElementById(activo);
+    if (campo) campo.focus();
+  };
+
+  App.repartir = function (desde) {
+    var r = App.rot();
+    var p = r.partido;
+    p.desde = desde;
+    p.plan = D.repartirMinutos(p, D.convocadas(r), D.planVigente(r), desde);
+  };
+
+  /* Las acciones de la pantalla de rotaciones. Devuelve true si la ha atendido. */
+  App.accionRot = function (boton) {
+    var r = App.rot(), p = r.partido;
+    var accion = boton.getAttribute('data-accion');
+    var id = boton.getAttribute('data-id');
+    var valor = boton.getAttribute('data-valor');
+
+    if (accion === 'rot-doce') {
+      for (var i = 0; i < 12; i++) r.plantilla.push({ id: 'j' + Date.now() + i, dorsal: '', nombre: '' });
+    } else if (accion === 'rot-anadir') {
+      r.plantilla.push({ id: 'j' + Date.now(), dorsal: '', nombre: '' });
+      App.estado.plantillaAbierta = true;
+    } else if (accion === 'rot-quitar') {
+      r.plantilla = r.plantilla.filter(function (j) { return j.id !== id; });
+    } else if (accion === 'rot-borrar') {
+      if (!window.confirm('¿Borrar la plantilla y el reparto de este navegador?')) return true;
+      App._rot = D.normalizarRotaciones(null);
+    } else if (accion === 'rot-cambios') {
+      p.cambiosPorCuarto = +valor;
+    } else if (accion === 'rot-convocar') {
+      p.convocadas[id] = p.convocadas[id] === false;
+    } else if (accion === 'rot-prioridad') {
+      p.prioridad[id] = valor;
+    } else if (accion === 'rot-repartir') {
+      p.bajas = {};
+      App.repartir(0);
+      App.guardarRot(true);
+      var destino = U.$('#rotReparto');
+      if (destino) destino.scrollIntoView({ block: 'start' });
+      return true;
+    } else if (accion === 'rot-celda') {
+      var plan = D.planVigente(r);
+      var t = plan[+boton.getAttribute('data-tanda')];
+      var k = t.indexOf(id);
+      if (k >= 0) t.splice(k, 1); else t.push(id);
+      p.plan = plan;
+    } else if (accion === 'rot-baja') {
+      p.bajas[id] = !p.bajas[id];
+    } else if (accion === 'rot-recalcular') {
+      App.repartir(+U.$('#rotDesde').value);
+    } else {
+      return false;
+    }
+    App.guardarRot(true);
+    return true;
+  };
+
   /* ------------------------------------------------------------------ tema */
 
   App.tema = function (valor) {
@@ -229,6 +308,9 @@
         return;
       }
 
+      var rot = t.closest('[data-accion^="rot-"]');
+      if (rot && App.accionRot(rot)) return;
+
       var filtro = t.closest('.filtro[data-grupo]');
       if (filtro) {
         App.estado.grupo = filtro.getAttribute('data-grupo');
@@ -236,6 +318,32 @@
         App.pintar();
       }
     });
+
+    /* Los nombres se guardan al teclear y no se repinta: repintar movería el
+       cursor, y hacerlo al salir del campo se come el toque que lo ha hecho
+       salir —el botón de Repartir desaparece bajo el dedo—. Lo que enseña los
+       nombres se pinta con el siguiente toque en cualquier botón. */
+    document.addEventListener('input', function (ev) {
+      var campo = ev.target.getAttribute('data-campo');
+      if (!campo) return;
+      var j = App.rot().plantilla.filter(function (x) {
+        return x.id === ev.target.getAttribute('data-id');
+      })[0];
+      if (j) { j[campo] = ev.target.value; App.guardarRot(false); }
+    });
+
+    document.addEventListener('change', function (ev) {
+      var formato = ev.target.getAttribute('data-formato');
+      if (!formato) return;
+      var p = App.rot().partido;
+      p[formato] = +ev.target.value;
+      App._rot = D.normalizarRotaciones(App._rot);
+      App.guardarRot(true);
+    });
+
+    document.addEventListener('toggle', function (ev) {
+      if (ev.target.id === 'rotPlantilla') App.estado.plantillaAbierta = ev.target.open;
+    }, true);
 
     document.addEventListener('input', function (ev) {
       if (ev.target.id !== 'buscarFamilia') return;

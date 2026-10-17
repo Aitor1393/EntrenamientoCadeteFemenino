@@ -1,11 +1,11 @@
 # Pruebas
 
-23 pruebas que abren la web en un Chromium de verdad y comprueban lo que se ve,
+26 pruebas que abren la web en un Chromium de verdad y comprueban lo que se ve,
 no lo que debería verse.
 
 ```bash
 python3 -m http.server 8777      # desde la raíz, en otra terminal
-node pruebas/ejecutar.js         # las 23, alrededor de un minuto
+node pruebas/ejecutar.js         # las 26, alrededor de un minuto
 node pruebas/ejecutar.js ficha   # solo las que contengan «ficha»
 ```
 
@@ -32,6 +32,7 @@ CHROMIUM=/opt/pw-browsers/chromium node pruebas/ejecutar.js
 | **Familias** | que están todas, que los grupos suman el total y que el buscador no pierde lo tecleado |
 | **Ejercicio** | que trae pizarra y montaje, que enlaza a todas las sesiones donde aparece y que enseña la consigna de la otra cara |
 | **Plan** | que los diez documentos se abren con contenido y que no entra HTML del original sin escapar |
+| **Rotaciones** | que con cualquier convocatoria de 5 a 12 cada tanda lleva cinco y nadie baja del mínimo si da, que una baja recalcula el resto sin tocar lo jugado, y que la plantilla sobrevive a recargar sin que el primer toque en «Repartir» se pierda |
 | **Bordes** | que una ruta inventada avisa, y que al imprimir se despliega todo y desaparece el cronómetro |
 
 ## Al escribir una nueva

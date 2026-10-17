@@ -362,6 +362,67 @@ prueba('plan: los documentos no traen HTML del original sin escapar', async (pag
   afirmar(script === 0, 'ha entrado un <script> desde el markdown');
 });
 
+prueba('rotaciones: cada tanda lleva cinco y nadie baja del mínimo si da', async (page) => {
+  await ir(page, '/hoy');
+  /* Todas las convocatorias posibles, con los dos ritmos de cambio y con
+     prioridades mezcladas. Los números salen del propio formato. */
+  const fallos = await page.evaluate(() => {
+    const malos = [];
+    for (const cambiosPorCuarto of [1, 2]) {
+      for (let n = 5; n <= 12; n++) {
+        const f = { cuartos: 4, minCuarto: 10, cambiosPorCuarto, minimo: 10 };
+        const js = Array.from({ length: n }, (_, i) => ({
+          id: 'j' + i, baja: false, prioridad: ['mas', 'normal', 'menos'][i % 3] }));
+        const plan = D.repartirMinutos(f, js, null, 0);
+        const res = D.resumenRotacion(f, js, plan);
+        const tandas = D.tandas(f);
+        if (plan.length !== tandas.length) malos.push(`${n}: ${plan.length} tandas`);
+        if (plan.some((t) => t.length !== D.EN_PISTA)) malos.push(`${n}: una tanda sin cinco`);
+        const posible = Math.floor(D.EN_PISTA * tandas.length / n) * tandas[0].minutos;
+        if (res.minimo <= posible && res.porDebajo.length) malos.push(`${n}: alguna bajo el mínimo`);
+        const suma = Object.values(res.minutos).reduce((a, b) => a + b, 0);
+        if (suma !== D.EN_PISTA * f.cuartos * f.minCuarto) malos.push(`${n}: suman ${suma}`);
+      }
+    }
+    return malos;
+  });
+  afirmar(fallos.length === 0, 'el reparto falla: ' + fallos.join(' | '));
+});
+
+prueba('rotaciones: una baja recalcula el resto sin tocar lo jugado', async (page) => {
+  await ir(page, '/rotaciones');
+  await page.click('[data-accion="rot-doce"]');
+  await page.click('[data-accion="rot-repartir"]');
+  const tandas = await page.$$eval('#rotDesde option', (n) => n.length);
+  const corte = Math.floor(tandas / 2);
+  const antes = await page.evaluate((c) => JSON.stringify(App.rot().partido.plan.slice(0, c)), corte);
+  const id = await page.evaluate(() => App.rot().plantilla[0].id);
+  await page.click(`[data-accion="rot-baja"][data-id="${id}"]`);
+  await page.selectOption('#rotDesde', String(corte));
+  await page.click('[data-accion="rot-recalcular"]');
+  const despues = await page.evaluate(() => App.rot().partido.plan);
+  afirmar(JSON.stringify(despues.slice(0, corte)) === antes, 'recalcular ha cambiado tandas ya jugadas');
+  afirmar(!despues.slice(corte).some((t) => t.includes(id)), 'la baja sigue saliendo a pista');
+  afirmar(despues.every((t) => t.length === 5), 'tras la baja alguna tanda no tiene cinco');
+});
+
+prueba('rotaciones: la plantilla se queda en el navegador y sobrevive a recargar', async (page) => {
+  await ir(page, '/rotaciones');
+  await page.click('[data-accion="rot-doce"]');
+  const id = await page.evaluate(() => App.rot().plantilla[0].id);
+  await page.fill('#rotNombre-' + id, 'Prueba');
+  /* Escribir un nombre y pulsar Repartir sin cerrar el teclado: si el campo
+     repintara al perder el foco, el toque se perdería. */
+  await page.click('[data-accion="rot-repartir"]');
+  afirmar(await page.$('.rot__tabla'), 'el primer toque en Repartir después de escribir se pierde');
+  await ir(page, '/rotaciones');
+  const tabla = await page.textContent('.rot__tabla');
+  afirmar(tabla.includes('Prueba'), 'el nombre no sobrevive a recargar');
+  const casillas = await page.$$eval('.rot__celda[aria-pressed="true"]', (n) => n.length);
+  const tandas = await page.$$eval('#rotDesde option', (n) => n.length);
+  afirmar(casillas === 5 * tandas, `hay ${casillas} casillas en pista y deberían ser ${5 * tandas}`);
+});
+
 prueba('una ruta que no existe no deja la pantalla en blanco', async (page) => {
   await ir(page, '/no-existe');
   const texto = await page.textContent('#app');

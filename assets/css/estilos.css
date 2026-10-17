@@ -483,6 +483,60 @@ p { margin: .5rem 0; }
 }
 .desliza { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
+/* ============================================================ rotaciones */
+
+.campoTexto {
+  font: inherit; font-size: 1rem; padding: .45rem .6rem; min-height: 2.6rem;
+  border: 1px solid var(--borde-fuerte); border-radius: var(--radio);
+  background: var(--papel); color: var(--tinta); min-width: 0;
+}
+
+.rot__plantilla { display: grid; gap: .35rem; margin: .5rem 0; }
+.rot__jugadora { display: grid; grid-template-columns: 3.6rem 1fr auto; gap: .35rem; }
+.rot__dorsal { text-align: center; }
+
+.rot__formato { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+.rot__formato label { display: grid; gap: .2rem; font-size: .8rem; color: var(--tinta-suave); }
+
+.rot__convocatoria { display: grid; gap: .35rem; margin: .5rem 0 1rem; }
+.rot__conv {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .35rem;
+  padding: .3rem 0; border-bottom: 1px solid var(--borde);
+}
+.rot__conv--fuera > .filtro { opacity: .55; text-decoration: line-through; }
+.rot__prio { display: inline-flex; gap: .2rem; }
+.rot__prio .filtro { padding: .3rem .55rem; font-size: .82rem; }
+
+/* La tabla tiene que caber en 400 px con ocho tandas: la columna del nombre
+   se lleva lo que sobra y las casillas tienen ancho fijo. */
+.rot__tabla th, .rot__tabla td { padding: .2rem .1rem; vertical-align: middle; }
+.rot__tabla tbody th, .rot__tabla tfoot th {
+  font-size: .8rem; text-transform: none; letter-spacing: 0; color: var(--tinta);
+  white-space: normal; min-width: 4.5rem; line-height: 1.2;
+}
+.rot__th, .rot__td { width: 1.8rem; text-align: center !important; font-variant-numeric: tabular-nums; }
+.rot__th small { font-weight: 400; }
+.rot__th--cuarto { border-left: 2px solid var(--borde-fuerte); }
+.rot__min { width: 2.2rem; text-align: right !important; font-weight: 700; font-variant-numeric: tabular-nums; }
+.rot__min--bajo { color: var(--alarma); }
+.rot__baja th { color: var(--tinta-tenue); }
+
+.rot__celda {
+  display: block; width: 1.65rem; height: 1.9rem; margin: 0 auto; padding: 0;
+  border: 1px solid var(--borde-fuerte); border-radius: 6px;
+  background: var(--papel); cursor: pointer;
+}
+.rot__celda[aria-pressed="true"] { background: var(--acento); border-color: var(--acento); }
+
+.rot__recalcular { display: flex; flex-wrap: wrap; align-items: end; gap: .5rem; }
+.rot__recalcular label { display: grid; gap: .2rem; font-size: .8rem; color: var(--tinta-suave); }
+
+.rot__cambios { padding-left: 1.3rem; }
+.rot__cambios li { margin: .45rem 0; }
+.rot__cuando { font-size: .8rem; font-weight: 700; color: var(--tinta-tenue); text-transform: uppercase; letter-spacing: .04em; }
+.rot__entra { color: var(--salvia); }
+.rot__sale { color: var(--cuero); }
+
 /* ------------------------------------------------------------------- pie */
 
 .pie {
@@ -526,4 +580,8 @@ p { margin: .5rem 0; }
   .tarjeta, .enlace-tarjeta { box-shadow: none; border-color: #999; break-inside: avoid; }
   a { color: #000; text-decoration: none; }
   h1 { font-size: 16pt; }
+  /* El reparto en papel: casillas con tinta aunque la impresora quite fondos. */
+  .rot__celda { border-color: #666; }
+  .rot__celda[aria-pressed="true"] { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .rot__recalcular, .rot__convocatoria, .rot__formato, #rotPlantilla, .filtros { display: none !important; }
 }

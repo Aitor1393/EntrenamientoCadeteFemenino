@@ -80,6 +80,8 @@
       h += '<h1 class="hoy__titulo">Partido · J' + estado.semana.jornada + '</h1></div>';
       h += '<div class="caja caja--acento"><p>Hoy se juega. La sesión del viernes ya ' +
         'era la víspera: nada nuevo y nada de carga.</p></div>';
+      h += '<p><a class="btn btn--principal btn--ancho" href="#/rotaciones">' +
+        'Abrir las rotaciones</a></p>';
       return h + V.proximaTarjeta(D.proximaSesion(estado.fecha));
     }
 
@@ -562,6 +564,189 @@
       '<div class="prosa">' + d.html + '</div>' +
       '<p class="pequeno silencio">Sale de <code>' + e(d.origen) + '</code>. ' +
       'La web no decide nada de lo deportivo: lo hace consultable.</p>';
+  };
+
+  /* ----------------------------------------------------------- rotaciones */
+
+  function nombreTanda(t, formato) {
+    return t.cuarto + 'º cuarto' + (formato.cambiosPorCuarto === 1 ? '' : ' · minuto ' + t.desde);
+  }
+
+  V.rotaciones = function (r, ui) {
+    var p = r.partido;
+    var nombres = {};
+    r.plantilla.forEach(function (j, i) { nombres[j.id] = D.nombreJugadora(j, i); });
+    var lista = function (ids) {
+      return ids.map(function (id) { return e(nombres[id]); }).join(', ');
+    };
+
+    var h = '<h1>Rotaciones</h1>';
+    var jornada = D.proximaJornada(ui.hoy);
+    var criterio = D.criterioMinutos(jornada ? jornada.bloque : null);
+    if (jornada) {
+      var bloque = D.bloque(jornada.bloque);
+      h += '<p class="sub">Reparto de minutos del próximo partido: J' + jornada.jornada +
+        ' · sábado ' + e(U.fechaCorta(jornada.sabado)) +
+        (bloque ? ' · ' + e(bloque.corto) : '') + '</p>';
+    } else {
+      h += '<p class="sub">Reparto de minutos de un partido.</p>';
+    }
+    h += '<div class="caja caja--acento"><h3>Lo que dice el plan</h3><p>' + e(criterio.texto) +
+      '</p></div>';
+
+    /* -- plantilla */
+    h += '<details class="plegable" id="rotPlantilla"' +
+      (ui.plantillaAbierta || !r.plantilla.length ? ' open' : '') + '>' +
+      '<summary>Plantilla · ' + U.plural(r.plantilla.length, 'jugadora', 'jugadoras') + '</summary>';
+    h += '<p class="pequeno silencio">Se guarda solo en este navegador. No se sube al ' +
+      'repositorio ni a ningún servidor. Si lo prefieres, basta con el dorsal.</p>';
+    if (!r.plantilla.length) {
+      h += '<p><button class="btn btn--principal" type="button" data-accion="rot-doce">' +
+        'Empezar con 12 jugadoras</button></p>';
+    }
+    h += '<div class="rot__plantilla">';
+    r.plantilla.forEach(function (j, i) {
+      h += '<div class="rot__jugadora">' +
+        '<input class="campoTexto rot__dorsal" id="rotDorsal-' + e(j.id) + '" data-campo="dorsal" ' +
+        'data-id="' + e(j.id) + '" value="' + e(j.dorsal) + '" placeholder="Nº" ' +
+        'inputmode="numeric" maxlength="3" aria-label="Dorsal">' +
+        '<input class="campoTexto" id="rotNombre-' + e(j.id) + '" data-campo="nombre" ' +
+        'data-id="' + e(j.id) + '" value="' + e(j.nombre) + '" placeholder="Jugadora ' + (i + 1) +
+        '" maxlength="30" aria-label="Nombre">' +
+        '<button class="btn btn--icono" type="button" data-accion="rot-quitar" data-id="' +
+        e(j.id) + '" aria-label="Quitar a ' + e(nombres[j.id]) + '">×</button></div>';
+    });
+    h += '</div><p><button class="btn" type="button" data-accion="rot-anadir">Añadir jugadora</button>' +
+      (r.plantilla.length ? ' <button class="btn" type="button" data-accion="rot-borrar">' +
+        'Borrar todo</button>' : '') + '</p></details>';
+
+    if (!r.plantilla.length) return h;
+
+    /* -- formato y convocatoria */
+    h += '<h2>El partido</h2>';
+    h += '<div class="rot__formato">' +
+      '<label>Cuartos <input class="campoTexto" type="number" inputmode="numeric" min="1" max="8" ' +
+      'data-formato="cuartos" value="' + p.cuartos + '"></label>' +
+      '<label>Minutos por cuarto <input class="campoTexto" type="number" inputmode="numeric" ' +
+      'min="2" max="20" data-formato="minCuarto" value="' + p.minCuarto + '"></label>' +
+      '<label>Mínimo (min) <input class="campoTexto" type="number" inputmode="numeric" ' +
+      'min="0" max="80" data-formato="minimo" value="' + p.minimo + '"></label></div>';
+    h += '<div class="filtros" role="group" aria-label="Cuándo se cambia">' +
+      '<button class="filtro" type="button" data-accion="rot-cambios" data-valor="2" aria-pressed="' +
+      (p.cambiosPorCuarto !== 1) + '">Cambios a mitad de cuarto</button>' +
+      '<button class="filtro" type="button" data-accion="rot-cambios" data-valor="1" aria-pressed="' +
+      (p.cambiosPorCuarto === 1) + '">Solo entre cuartos</button></div>';
+    h += '<p class="pequeno silencio">Mínimo por jugadora. Se cuenta en tandas enteras de ' +
+      D.tandas(p)[0].minutos + ' minutos, y con 0 nadie se queda a cero igualmente.</p>';
+
+    h += '<h3>Convocatoria</h3><p class="pequeno silencio">«Más» y «menos» acortan o ' +
+      'alargan la rotación sin bajar nunca del mínimo.</p><div class="rot__convocatoria">';
+    r.plantilla.forEach(function (j) {
+      var va = p.convocadas[j.id] !== false;
+      var pr = p.prioridad[j.id] || 'normal';
+      h += '<div class="rot__conv' + (va ? '' : ' rot__conv--fuera') + '">' +
+        '<button class="filtro" type="button" data-accion="rot-convocar" data-id="' + e(j.id) +
+        '" aria-pressed="' + va + '">' + e(nombres[j.id]) + '</button>';
+      if (va) {
+        h += '<span class="rot__prio" role="group" aria-label="Minutos de ' + e(nombres[j.id]) + '">' +
+          [['menos', 'Menos'], ['normal', 'Igual'], ['mas', 'Más']].map(function (o) {
+            return '<button class="filtro" type="button" data-accion="rot-prioridad" data-id="' +
+              e(j.id) + '" data-valor="' + o[0] + '" aria-pressed="' + (pr === o[0]) + '">' +
+              o[1] + '</button>';
+          }).join('') + '</span>';
+      }
+      h += '</div>';
+    });
+    h += '</div>';
+
+    var jugadoras = D.convocadas(r);
+    if (jugadoras.length < D.EN_PISTA) {
+      return h + '<div class="caja caja--aviso"><p>Hacen falta al menos cinco convocadas ' +
+        'para repartir.</p></div>';
+    }
+    h += '<p><button class="btn btn--principal btn--ancho" type="button" data-accion="rot-repartir">' +
+      'Repartir minutos</button></p>';
+
+    var plan = D.planVigente(r);
+    if (!plan) {
+      if (p.plan) {
+        h += '<p class="silencio">El formato ha cambiado desde el último reparto: vuelve a repartir.</p>';
+      }
+      return h;
+    }
+
+    /* -- el reparto */
+    var res = D.resumenRotacion(p, jugadoras, plan);
+    h += '<h2 id="rotReparto">El reparto</h2>';
+    if (res.avisos.length) {
+      h += '<div class="caja caja--aviso">' + res.avisos.map(function (a) {
+        return '<p>' + e(a) + '</p>';
+      }).join('') + '</div>';
+    }
+    h += '<p class="pequeno silencio">Toca una casilla para meter o sacar a una jugadora de ' +
+      'esa tanda. Los minutos se recalculan solos.</p>';
+
+    h += '<div class="desliza"><table class="tabla rot__tabla"><thead><tr><th>Jugadora</th>';
+    res.tandas.forEach(function (t, i) {
+      h += '<th class="rot__th' + (t.desde === 0 && i ? ' rot__th--cuarto' : '') + '">' +
+        t.cuarto + 'º' + (p.cambiosPorCuarto === 1 ? '' : '<br><small>' + t.desde + '′</small>') +
+        '</th>';
+    });
+    h += '<th class="rot__min">Min</th></tr></thead><tbody>';
+    jugadoras.forEach(function (j) {
+      var bajo = res.porDebajo.indexOf(j.id) >= 0;
+      h += '<tr' + (j.baja ? ' class="rot__baja"' : '') + '><th scope="row">' + e(nombres[j.id]) +
+        (j.baja ? ' <span class="eti eti--alarma">baja</span>' : '') + '</th>';
+      plan.forEach(function (t, i) {
+        var dentro = t.indexOf(j.id) >= 0;
+        h += '<td class="rot__td' + (res.tandas[i].desde === 0 && i ? ' rot__th--cuarto' : '') + '">' +
+          '<button class="rot__celda" type="button" data-accion="rot-celda" data-tanda="' + i +
+          '" data-id="' + e(j.id) + '" aria-pressed="' + dentro + '" aria-label="' +
+          e(nombres[j.id]) + ', ' + e(nombreTanda(res.tandas[i], p)) + '"></button></td>';
+      });
+      h += '<td class="rot__min' + (bajo ? ' rot__min--bajo' : '') + '">' +
+        res.minutos[j.id] + '</td></tr>';
+    });
+    h += '</tbody><tfoot><tr><th>En pista</th>';
+    plan.forEach(function (t, i) {
+      h += '<td class="rot__td' + (t.length !== D.EN_PISTA ? ' rot__min--bajo' : '') +
+        (res.tandas[i].desde === 0 && i ? ' rot__th--cuarto' : '') + '">' + t.length + '</td>';
+    });
+    h += '<td></td></tr></tfoot></table></div>';
+
+    /* -- durante el partido */
+    h += '<h2>Durante el partido</h2>' +
+      '<p class="pequeno silencio">Si una se lesiona o se carga de faltas, márcala de baja y ' +
+      'recalcula desde la tanda que va a empezar. Lo ya jugado no se toca.</p>';
+    h += '<div class="filtros" role="group" aria-label="Bajas">' + jugadoras.map(function (j) {
+      return '<button class="filtro" type="button" data-accion="rot-baja" data-id="' + e(j.id) +
+        '" aria-pressed="' + j.baja + '">' + (j.baja ? 'Baja · ' : '') + e(nombres[j.id]) + '</button>';
+    }).join('') + '</div>';
+    h += '<div class="rot__recalcular"><label>Desde <select class="campoTexto" id="rotDesde">' +
+      res.tandas.map(function (t, i) {
+        return '<option value="' + i + '"' + (i === p.desde ? ' selected' : '') + '>' +
+          e(nombreTanda(t, p)) + '</option>';
+      }).join('') + '</select></label>' +
+      '<button class="btn" type="button" data-accion="rot-recalcular">Recalcular el resto</button></div>';
+
+    /* -- los cambios, para leerlos en el banquillo */
+    h += '<h2>Los cambios</h2><ol class="rot__cambios">';
+    res.cambios.forEach(function (c, i) {
+      h += '<li><div class="rot__cuando">' + e(nombreTanda(c.tanda, p)) + '</div>';
+      if (!i) {
+        h += '<div><b>Quinteto inicial:</b> ' + lista(plan[0]) + '</div>';
+      } else if (!c.entran.length && !c.salen.length) {
+        h += '<div class="silencio">Sin cambios</div>';
+      } else {
+        h += '<div><b class="rot__entra">Entran:</b> ' + lista(c.entran) + '</div>' +
+          '<div><b class="rot__sale">Salen:</b> ' + lista(c.salen) + '</div>';
+      }
+      h += '</li>';
+    });
+    h += '</ol>';
+    h += '<p class="no-imprimir"><button class="btn" type="button" data-accion="imprimir">' +
+      'Imprimir el reparto</button></p>';
+    return h;
   };
 
   window.V = V;

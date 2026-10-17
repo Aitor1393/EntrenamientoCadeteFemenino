@@ -155,15 +155,20 @@ funcionalidad que los suba al repositorio sin plantearlo antes: hay
 implicaciones de protección de datos y el club tiene un Delegado de Protección
 de Menores.
 
+La pantalla de **Rotaciones** es la excepción controlada: la plantilla y el
+reparto se guardan en `localStorage` (`cf:rotaciones`) del navegador del
+entrenador y no salen de ahí. Ni `data/`, ni el repositorio, ni ningún
+servidor. Cualquier cambio que la sincronice o la comparta se plantea antes.
+
 ---
 
 ## Probar los cambios
 
-Hay **23 pruebas en `pruebas/`** que abren la web en un Chromium de verdad.
+Hay **26 pruebas en `pruebas/`** que abren la web en un Chromium de verdad.
 
 ```bash
 python3 -m http.server 8777          # desde la raíz, en otra terminal
-node pruebas/ejecutar.js             # las 23
+node pruebas/ejecutar.js             # las 26
 node pruebas/ejecutar.js ficha       # solo las que contengan «ficha»
 ```
 
