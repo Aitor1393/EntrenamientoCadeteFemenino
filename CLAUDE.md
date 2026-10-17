@@ -165,17 +165,19 @@ partido no da para todas, `D.repartirMinutos` afloja en un orden fijo —el
 mínimo general, luego los mínimos individuales, y lo último quién tiene que
 estar en pista— y **lo dice**. Nunca se salta una regla en silencio. Los
 minutos van por tandas enteras: «máximo 8» con tandas de 5 es 5, y con tandas
-de 10 es no jugar, y también se avisa.
+de 10 es no jugar, y también se avisa. Si un máximo del entrenador queda por
+debajo del mínimo del plan, **manda el máximo** —lo decidió él— y el reparto
+lo dice.
 
 ---
 
 ## Probar los cambios
 
-Hay **28 pruebas en `pruebas/`** que abren la web en un Chromium de verdad.
+Hay **29 pruebas en `pruebas/`** que abren la web en un Chromium de verdad.
 
 ```bash
 python3 -m http.server 8777          # desde la raíz, en otra terminal
-node pruebas/ejecutar.js             # las 28
+node pruebas/ejecutar.js             # las 29
 node pruebas/ejecutar.js ficha       # solo las que contengan «ficha»
 ```
 

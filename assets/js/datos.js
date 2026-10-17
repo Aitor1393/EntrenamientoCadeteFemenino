@@ -748,6 +748,16 @@
       avisos.push(U.plural(porEncima.length, 'jugadora pasa', 'jugadoras pasan') +
         ' de su máximo de minutos.');
     }
+    /* Que una regla del entrenador baje a alguien del mínimo del plan es una
+       decisión suya, y manda; pero tiene que verse, no quedar escondida. */
+    var bajoPlan = jugadoras.filter(function (j) {
+      var l = ef.limites[j.id];
+      return l && l.max * largo < minimo;
+    }).length;
+    if (bajoPlan) {
+      avisos.push(U.plural(bajoPlan, 'jugadora tiene', 'jugadoras tienen') + ' un máximo por ' +
+        'debajo del mínimo del plan (' + minimo + ' minutos). Manda tu regla.');
+    }
     var posible = Math.floor(D.EN_PISTA * tandas.length / Math.max(1, jugadoras.length)) * largo;
     if (minimo > posible) {
       avisos.push('Con ' + jugadoras.length + ' convocadas no da para que todas lleguen a ' +

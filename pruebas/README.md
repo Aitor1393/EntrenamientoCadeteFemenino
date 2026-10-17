@@ -1,11 +1,11 @@
 # Pruebas
 
-28 pruebas que abren la web en un Chromium de verdad y comprueban lo que se ve,
+29 pruebas que abren la web en un Chromium de verdad y comprueban lo que se ve,
 no lo que debería verse.
 
 ```bash
 python3 -m http.server 8777      # desde la raíz, en otra terminal
-node pruebas/ejecutar.js         # las 28, alrededor de un minuto
+node pruebas/ejecutar.js         # las 29, alrededor de un minuto
 node pruebas/ejecutar.js ficha   # solo las que contengan «ficha»
 ```
 

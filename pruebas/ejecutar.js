@@ -422,6 +422,24 @@ prueba('rotaciones: las reglas se cumplen en cada tanda cuando se puede', async 
   afirmar(fallos.length === 0, 'las reglas fallan: ' + fallos.join(' | '));
 });
 
+prueba('rotaciones: un máximo del entrenador manda sobre el mínimo del plan, y se avisa', async (page) => {
+  await ir(page, '/hoy');
+  const r = await page.evaluate(() => {
+    const js = Array.from({ length: 12 }, (_, i) => ({ id: 'j' + i, prioridad: 'normal', baja: false }));
+    const f = { cuartos: 4, minCuarto: 10, cambiosPorCuarto: 2, minimo: 10 };
+    const largo = D.tandas(f)[0].minutos;
+    /* Un máximo de una sola tanda, por debajo de un mínimo de dos. */
+    const reglas = [{ tipo: 'maximo', n: largo, jugadoras: ['j0'] }];
+    const x = D.repartirMinutos(f, js, null, 0, reglas);
+    const res = D.resumenRotacion(f, js, x.plan, reglas);
+    return { min: res.minutos.j0, largo, aviso: res.avisos.some((a) => /Manda tu regla/.test(a)),
+             debajo: res.porDebajo.includes('j0') };
+  });
+  afirmar(r.min === r.largo, `con un máximo de ${r.largo} ha jugado ${r.min}`);
+  afirmar(!r.debajo, 'la marca como por debajo del mínimo cuando manda su regla');
+  afirmar(r.aviso, 'no avisa de que la regla baja del mínimo del plan');
+});
+
 prueba('rotaciones: una regla se añade desde la pantalla y entra en el reparto', async (page) => {
   await ir(page, '/rotaciones');
   await page.click('[data-accion="rot-doce"]');

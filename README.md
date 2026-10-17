@@ -41,7 +41,7 @@ Es la pantalla que se usa de verdad, con el teléfono en la mano:
 ```bash
 python3 scripts/generar.py          # fuentes/ -> data/
 python3 -m http.server 8777         # y abrir http://localhost:8777
-node pruebas/ejecutar.js            # las 28 pruebas, en un Chromium de verdad
+node pruebas/ejecutar.js            # las 29 pruebas, en un Chromium de verdad
 ```
 
 **`data/` no se edita a mano nunca.** Se genera. El contenido deportivo vive en
